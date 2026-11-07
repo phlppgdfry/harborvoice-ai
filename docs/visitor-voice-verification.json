@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-07T19:35:52.078Z",
+  "url": "https://harborvoice-ai.vercel.app",
+  "scope": "One real public visitor WebSocket conversation with a synthetic prerecorded microphone question; actual ASR, agent response, read-only shipment tool and incoming speech audio. A human microphone and subjective voice quality were not assessed.",
+  "authenticatedOperator": false,
+  "lookups": [
+    {
+      "status": 200,
+      "found": true
+    }
+  ],
+  "incomingAudioFrames": 9,
+  "messages": [
+    {
+      "role": "agent",
+      "text": "Hello, I'm Nora, an AI assistant in a fictional logistics demo. We have one minute. Ask about shipment HV-2048 or Gate A."
+    },
+    {
+      "role": "user",
+      "text": "Please look up shipment HV-2048. What is its current status?"
+    },
+    {
+      "role": "agent",
+      "text": "This shipment is currently on customs hold and its estimated time of arrival is November ninth, two thousand twenty-six at eight thirty AM CET.\n"
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

@@ -1,6 +1,6 @@
 {
   "name": "harborvoice-ai",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "private": true,
   "type": "module",
   "description": "A logistics voice operations workbench powered by ElevenLabs",
@@ -17,7 +17,9 @@
     "verify:live": "tsx scripts/verify-live.ts",
     "agent:sync": "tsx scripts/sync-agent.ts",
     "agent:evaluate": "tsx scripts/evaluate-agent.ts",
-    "verify:hosted": "tsx scripts/verify-hosted.ts"
+    "verify:hosted": "tsx scripts/verify-hosted.ts",
+    "guest:provision": "tsx scripts/provision-guest.ts",
+    "audio:exercise": "tsx scripts/exercise-audio.ts"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "2.77.0",

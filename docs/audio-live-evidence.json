@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-11-07T19:34:25.555Z",
+  "scope": "Real SDK and official CLI OAuth requests using synthetic audio. Dubbing creation via the project API key was denied: missing dubbing_write. A distinct official CLI OAuth request created the published Dutch dub. Audio decoding verifies technical validity, not a subjective quality score.",
+  "operations": [
+    {
+      "name": "effects-v3",
+      "status": "passed",
+      "model": "eleven_text_to_sound_v3",
+      "sha256": "f2f797b5618603fc6a150db2af81dc78197f4a45c20f8f5d49fa78a532d9bbc7",
+      "durationSeconds": 2,
+      "file": "experience/effects-v3.mp3",
+      "observedAccountCreditDelta": 0
+    },
+    {
+      "name": "transcribe",
+      "status": "passed",
+      "model": "scribe_v1",
+      "file": "experience/transcribe.json",
+      "observedAccountCreditDelta": 0
+    },
+    {
+      "name": "align",
+      "status": "passed",
+      "model": "forced-alignment",
+      "file": "experience/align.json",
+      "observedAccountCreditDelta": 0
+    },
+    {
+      "name": "change",
+      "status": "passed",
+      "model": "eleven_multilingual_sts_v2",
+      "sha256": "b458559a9f377df7180f2e30027b02a108ad110528fdea2f20565dc33601e38e",
+      "durationSeconds": 14.814331,
+      "file": "experience/change.mp3",
+      "observedAccountCreditDelta": 0
+    },
+    {
+      "name": "isolate",
+      "status": "passed",
+      "model": "audio-isolation",
+      "sha256": "fd0b570918637f55659ad79dedd9b3f784dc1fc2c62050b0e6ea21603abcc1ad",
+      "durationSeconds": 14.791111,
+      "file": "experience/isolate.mp3",
+      "observedAccountCreditDelta": 0
+    },
+    {
+      "name": "dubbing",
+      "status": "failed",
+      "model": "automatic-dubbing",
+      "note": "Status code: 401\nBody: {\n  \"detail\": {\n    \"type\": \"authentication_error\",\n    \"code\": \"unauthorized\",\n    \"message\": \"The API key you used is missing the permission dubbing_write to execute this operation.\",\n    \"status\": \"missing_permissions\",\n    \"request_id\": \"af6541b3c306761720618bba6d56df7e\"\n  }\n}"
+    },
+    {
+      "name": "dubbing-oauth",
+      "status": "passed",
+      "model": "automatic-dubbing",
+      "note": "Official CLI OAuth, independent of project API key permissions.",
+      "file": "experience/dubbing.mp3",
+      "durationSeconds": 14.8
+    }
+  ]
+}

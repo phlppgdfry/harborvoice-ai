@@ -389,3 +389,56 @@ test("RAG-enabled agents index newly attached knowledge after attaching it", asy
     },
     { rag: true },
   ));
+
+test("current audio model selections serialize distinct Creative and API model names correctly", () =>
+  fixture(async (base, calls) => {
+    for (const [tool, body, expected] of [
+      [
+        "speech",
+        {
+          text: "Cargo ready.",
+          voiceId: "voice-fixture",
+          modelId: "eleven_v4",
+        },
+        "eleven_v4",
+      ],
+      [
+        "effects",
+        {
+          text: "Soft chime.",
+          modelId: "eleven_text_to_sound_v3",
+          durationSeconds: 2,
+        },
+        "eleven_text_to_sound_v3",
+      ],
+      [
+        "music",
+        {
+          text: "Calm instrumental.",
+          modelId: "music_v2_5",
+          durationSeconds: 3,
+        },
+        "music_v2_5",
+      ],
+    ] as const) {
+      const r = await fetch(`${base}/audio/${tool}`, {
+        method: "POST",
+        headers: { ...headers, "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      assert.equal(r.status, 200);
+      assert.equal(calls.at(-1)?.json?.model_id, expected);
+    }
+    const before = calls.length;
+    const rejected = await fetch(`${base}/audio/music`, {
+      method: "POST",
+      headers: { ...headers, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: "Calm music",
+        modelId: "eleven_music_v2_5",
+        durationSeconds: 600,
+      }),
+    });
+    assert.equal(rejected.status, 400);
+    assert.equal(calls.length, before);
+  }));

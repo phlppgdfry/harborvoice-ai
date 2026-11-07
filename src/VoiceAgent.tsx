@@ -127,7 +127,8 @@ function VoiceAgentInner({
       setBusy(false);
     }
   };
-  const start = async () => {
+  const guestSession = useRef(false);
+  const start = async (visitor = false) => {
     setBusy(true);
     try {
       await init();
@@ -137,13 +138,21 @@ function VoiceAgentInner({
             ? "Open the live workspace to start a voice session. This portfolio preview has no API server."
             : "The live API is not ready. Open Settings and refresh the connection.",
         );
-      if (config.operatorRequired && !config.operatorAuthenticated)
+      if (visitor && !config.guestVoice?.enabled)
+        throw new Error(
+          "The visitor trial is not available. Try the public audio examples.",
+        );
+      if (!visitor && config.operatorRequired && !config.operatorAuthenticated)
         throw new Error(
           "Sign in with your operator access code in Settings to start live voice.",
         );
       const media = await navigator.mediaDevices.getUserMedia({ audio: true });
       media.getTracks().forEach((t) => t.stop());
-      const { signedUrl } = await request("/agent/session", {});
+      const { signedUrl } = await request(
+        visitor ? "/guest/session" : "/agent/session",
+        {},
+      );
+      guestSession.current = visitor;
       transcript.current = [];
       setMessages([]);
       setTranscriptMode("live");
@@ -156,7 +165,12 @@ function VoiceAgentInner({
         overrides: { agent: { language: language as "en" } },
         clientTools: {
           lookup_shipment: async ({ reference }: { reference: string }) =>
-            JSON.stringify(await request("/tools/lookup", { reference })),
+            JSON.stringify(
+              await request(
+                guestSession.current ? "/guest/lookup" : "/tools/lookup",
+                { reference },
+              ),
+            ),
           request_escalation: async ({
             reference,
             reason,
@@ -164,6 +178,11 @@ function VoiceAgentInner({
             reference: string;
             reason: string;
           }) => {
+            if (guestSession.current)
+              return JSON.stringify({
+                error:
+                  "Visitor conversations are read-only. No escalation was created.",
+              });
             const ticket = await escalation(reference, reason);
             await refresh();
             return JSON.stringify(ticket);
@@ -236,7 +255,31 @@ function VoiceAgentInner({
           config.operatorRequired &&
           !config.operatorAuthenticated && (
             <div className="voice-access">
-              <strong>Nora is ready. Sign in to start a live session.</strong>
+              <div>
+                <strong>
+                  {config.guestVoice?.enabled
+                    ? "Try Nora without an access code."
+                    : "Nora is ready. Operator sign-in unlocks private live features."}
+                </strong>
+                <p>
+                  {config.guestVoice?.enabled
+                    ? `Visitor trial: ${config.guestVoice.maxDurationSeconds} seconds, ${config.guestVoice.dailyLimit} conversations per day shared by all visitors. Read-only fictional data. Trial ends ${new Date(config.guestVoice.expiresAt!).toLocaleString()}. Your microphone audio is processed by ElevenLabs.`
+                    : "The public examples and scripted text demo remain available without signing in."}
+                </p>
+                {config.guestVoice?.enabled && (
+                  <button
+                    className="button primary"
+                    disabled={busy || connecting || connected}
+                    onClick={() => start(true)}
+                  >
+                    <Mic size={15} />
+                    Try visitor voice
+                  </button>
+                )}
+                <a className="button" href="#experience-lab">
+                  Listen to public examples
+                </a>
+              </div>
               <a className="button primary" href="#settings">
                 Operator sign-in
                 <ArrowUpRight size={14} />
@@ -270,9 +313,13 @@ function VoiceAgentInner({
                 busy ||
                 connecting ||
                 !config.agentReady ||
-                (!!config.operatorRequired && !config.operatorAuthenticated)
+                (!connected &&
+                  !!config.operatorRequired &&
+                  !config.operatorAuthenticated)
               }
-              onClick={connected ? () => conversation.endSession() : start}
+              onClick={
+                connected ? () => conversation.endSession() : () => start()
+              }
             >
               {busy ? (
                 <LoaderCircle size={16} className="spin" />
@@ -390,7 +437,15 @@ function VoiceAgentInner({
                 "Knowledge retrieval",
                 "Terminal procedures & policies",
               ],
-              [Workflow, "Human handoff", "Escalation with operator review"],
+              [
+                Workflow,
+                config.operatorRequired && !config.operatorAuthenticated
+                  ? "Read-only visitor access"
+                  : "Human review proposals",
+                config.operatorRequired && !config.operatorAuthenticated
+                  ? "No escalation or external actions"
+                  : "Escalation with operator review",
+              ],
               [
                 ShieldCheck,
                 "Clear boundaries",

@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-11-07T19:39:59.965Z",
+  "modelId": "music_v2_5",
+  "scope": "One short real Music v2.5 generation through the authenticated hosted API; media metadata decoded.",
+  "durationSeconds": 6.03425,
+  "file": "experience/music-api.mp3",
+  "passed": true
+}

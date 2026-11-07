@@ -1,0 +1,117 @@
+{
+  "createdAt": "2026-11-07T19:05:37.033Z",
+  "flowUrl": "https://elevenlabs.io/app/flows/Xf1iuvlDWlQzdy9RhgdZ",
+  "scope": "Real account generations. Public playback uses static files and spends no additional ElevenLabs credits.",
+  "assets": [
+    {
+      "id": "eleven_v4-1",
+      "category": "Voiceover",
+      "model": "eleven_v4",
+      "take": 1,
+      "durationSeconds": 14.8,
+      "credits": 240.9759,
+      "file": "experience/eleven_v4-1.mp3",
+      "sha256": "7169d0faf3b9185156509e241cf44db8caa94370b5b7f5f241574129ff6b40f0",
+      "prompt": "[warmly] Welcome to HarborVoice. I'm Nora, your AI terminal assistant. Explore shipment questions, multilingual support and human review, using fictional logistics data. [short pause] Listen to the ex"
+    },
+    {
+      "id": "eleven_v4-2",
+      "category": "Voiceover",
+      "model": "eleven_v4",
+      "take": 2,
+      "durationSeconds": 14.88,
+      "credits": 240.9759,
+      "file": "experience/eleven_v4-2.mp3",
+      "sha256": "edf64558ea159bcc6d1df0ff5cdde4789af3a7df193845a7778bfc18b99a627e",
+      "prompt": "[warmly] Welcome to HarborVoice. I'm Nora, your AI terminal assistant. Explore shipment questions, multilingual support and human review, using fictional logistics data. [short pause] Listen to the ex"
+    },
+    {
+      "id": "eleven_music_v2_5-1",
+      "category": "Music",
+      "model": "eleven_music_v2_5",
+      "take": 1,
+      "durationSeconds": 12,
+      "credits": 179.96,
+      "file": "experience/eleven_music_v2_5-1.mp3",
+      "sha256": "476978d8dc9fb95b523e7597a6fe878eb038692951778cd8988eb66f2bc27e98",
+      "prompt": "Minimal ambient electronica, warm soft synth pads, a gentle marimba motif and a restrained pulse at 90 BPM. Calm, quietly optimistic, clean modern production, no vocals; a clear beginning and soft end"
+    },
+    {
+      "id": "eleven_music_v2_5-2",
+      "category": "Music",
+      "model": "eleven_music_v2_5",
+      "take": 2,
+      "durationSeconds": 12,
+      "credits": 179.96,
+      "file": "experience/eleven_music_v2_5-2.mp3",
+      "sha256": "e8e111379d8bfa9e488b44a8399f23d49944fb37af178df28812400a5437b0fb",
+      "prompt": "Minimal ambient electronica, warm soft synth pads, a gentle marimba motif and a restrained pulse at 90 BPM. Calm, quietly optimistic, clean modern production, no vocals; a clear beginning and soft end"
+    },
+    {
+      "id": "eleven_music_v2_5-3",
+      "category": "Music",
+      "model": "eleven_music_v2_5",
+      "take": 3,
+      "durationSeconds": 12,
+      "credits": 179.96,
+      "file": "experience/eleven_music_v2_5-3.mp3",
+      "sha256": "25f74f142bb7145741e4c267119e305f7c744afdb30276237ed59912ae6a4cb2",
+      "prompt": "Minimal ambient electronica, warm soft synth pads, a gentle marimba motif and a restrained pulse at 90 BPM. Calm, quietly optimistic, clean modern production, no vocals; a clear beginning and soft end"
+    },
+    {
+      "id": "eleven_music_v2_5-4",
+      "category": "Music",
+      "model": "eleven_music_v2_5",
+      "take": 4,
+      "durationSeconds": 12,
+      "credits": 179.96,
+      "file": "experience/eleven_music_v2_5-4.mp3",
+      "sha256": "35c723d11650671cce7eab92969c1ad3950316ae47be09454e7044b4a20e385a",
+      "prompt": "Minimal ambient electronica, warm soft synth pads, a gentle marimba motif and a restrained pulse at 90 BPM. Calm, quietly optimistic, clean modern production, no vocals; a clear beginning and soft end"
+    },
+    {
+      "id": "eleven_text_to_sound_v2-1",
+      "category": "Sound effects",
+      "model": "eleven_text_to_sound_v2",
+      "take": 1,
+      "durationSeconds": 2,
+      "credits": 6.666,
+      "file": "experience/eleven_text_to_sound_v2-1.mp3",
+      "sha256": "2a966decd2a3892cdb2729df42d4ddd6b6b8fae9a1e8cf9688b9b61ad12f862b",
+      "prompt": "Two soft rounded glass notification notes, gently ascending, short clean decay, no alarm, no speech."
+    },
+    {
+      "id": "eleven_text_to_sound_v2-2",
+      "category": "Sound effects",
+      "model": "eleven_text_to_sound_v2",
+      "take": 2,
+      "durationSeconds": 2,
+      "credits": 6.666,
+      "file": "experience/eleven_text_to_sound_v2-2.mp3",
+      "sha256": "3841e7a0e491ce2e32bf89cac6f5dff75fc48006d389ea122e71b66d3772ae73",
+      "prompt": "Two soft rounded glass notification notes, gently ascending, short clean decay, no alarm, no speech."
+    },
+    {
+      "id": "eleven_text_to_sound_v2-3",
+      "category": "Sound effects",
+      "model": "eleven_text_to_sound_v2",
+      "take": 3,
+      "durationSeconds": 2,
+      "credits": 6.666,
+      "file": "experience/eleven_text_to_sound_v2-3.mp3",
+      "sha256": "ce99264632939ae7f2d200bc10852dcbe6eea3e11d924475a263f51a080121cf",
+      "prompt": "Two soft rounded glass notification notes, gently ascending, short clean decay, no alarm, no speech."
+    },
+    {
+      "id": "eleven_text_to_sound_v2-4",
+      "category": "Sound effects",
+      "model": "eleven_text_to_sound_v2",
+      "take": 4,
+      "durationSeconds": 2,
+      "credits": 6.666,
+      "file": "experience/eleven_text_to_sound_v2-4.mp3",
+      "sha256": "cf9cbe5ee52c9eeb42f022642789b2898b841010cccd74858735e8e3dcaa0437",
+      "prompt": "Two soft rounded glass notification notes, gently ascending, short clean decay, no alarm, no speech."
+    }
+  ]
+}

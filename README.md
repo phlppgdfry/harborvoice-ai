@@ -8,11 +8,11 @@ Meet **Nora**: a multilingual terminal assistant that looks up shipments, explai
 
 ![HarborVoice operations dashboard](docs/screenshots/overview.png)
 
-> Independent portfolio project by Philippe Godfroy. The company, shipments and operating procedures are fictional. Demo conversations are deterministic scripts, not AI responses. Live account access, the provisioned agent, four indexed knowledge sources, two tools and signed-session issuance have now been verified. Short real text-to-speech requests succeeded through official onboarding and the hosted browser/API; the browser decoded the hosted audio successfully. Six real multilingual ElevenLabs LLM simulations passed; their business-tool responses are synthetic fixtures, and they do not exercise microphone audio. The eight-tool contract/browser tests still use fixtures; a real microphone conversation and the other audio products have not yet been exercised end to end. No certification, LinkedIn badge, partnership or platform endorsement is claimed.
+> Independent portfolio project by Philippe Godfroy. The company, shipments and operating procedures are fictional. Demo conversations are deterministic scripts, not AI responses. Live account access, the provisioned agent, four indexed knowledge sources, two tools and signed-session issuance have now been verified. Short real text-to-speech requests succeeded through official onboarding and the hosted browser/API; the browser decoded the hosted audio successfully. Six real multilingual ElevenLabs LLM simulations passed; their business-tool responses are synthetic fixtures, and they do not exercise microphone audio. A real visitor WebSocket conversation also passed using a synthetic recorded microphone question: ASR, shipment tool and incoming speech audio were observed. Real speech-to-text, sound effects v3, music v2.5, voice changing, noise isolation and alignment outputs are published. Dutch dubbing succeeded through official CLI OAuth; the project API key still needs dubbing_write for new website dubs. A human microphone and subjective audio quality were not assessed. No certification, LinkedIn badge, partnership or platform endorsement is claimed.
 
 ## Live workspace
 
-The [hosted workbench](https://harborvoice-ai.vercel.app) has its ElevenLabs API and Nora agent configured server-side. Open **Settings**, enter your private operator access code, then verify the connection or start a live voice session. The public portfolio preview links to this workspace. Never paste the ElevenLabs API key into the browser.
+The [public Experience lab](https://harborvoice-ai.vercel.app/#experience-lab) offers real recordings, comparison takes, transcripts and a limited live visitor trial without an access code. The [hosted workbench](https://harborvoice-ai.vercel.app) has its ElevenLabs API and Nora agent configured server-side. Open **Settings**, enter your private operator access code, then verify the connection or start a live voice session. The public portfolio preview links to this workspace. Never paste the ElevenLabs API key into the browser.
 
 Hosted workspace records stay in your browser; the serverless API handles live ElevenLabs requests. Hosted uploads are limited to 4 MiB, and webhook retention is disabled. The local server offers SQLite persistence and 20 MiB uploads. See [hosting](docs/hosting.md), [real agent evaluation](docs/agent-evaluation.json) and [LinkedIn recognition](docs/linkedin-recognition.md).
 
@@ -52,6 +52,12 @@ Open **http://127.0.0.1:5173**. No credentials are needed for the demo. The API 
 
 This is a broad ElevenLabs integration showcase, **not every endpoint or enterprise feature in ElevenLabs**. See the [coverage matrix](docs/feature-coverage.md) for explicit boundaries.
 
+## Public experience and native ElevenLabs resources
+
+Open **Experience lab** to play the actual v4 narration, Music v2.5 takes, Sound Effects v2/v3, changed voice, noisy/isolated comparison and Dutch dub. Playback spends no additional ElevenLabs credits. The user-owned [ElevenCreative flow](https://elevenlabs.io/app/flows/Xf1iuvlDWlQzdy9RhgdZ) stores native generations and imported completed API/CLI outputs. Editing requires membership in that workspace. Nora and Nora Visitor Trial live in ElevenAgents; source code, reproducible scripts and sanitized evidence live in this repository. These are separate resources, not a claim to implement every ElevenLabs product.
+
+The visitor trial uses a separate read-only agent, authenticated signed URLs, two calls per day shared by all visitors, one concurrent call and a provider-enforced 60-second maximum. Issuing new visitor sessions stops at the fixed expiry configured in GUEST_VOICE_EXPIRES_AT (initially 8 November 2026 19:06:58 UTC). Already issued URLs can start a call for 15 more minutes. Browser/IP throttling is only supplementary; the provider enforces the agent call and duration limits. Visitors cannot access the private audio generation, knowledge or review routes. The original budget reserved 6,000 credits for this bounded trial; the reserve is an estimate, not a distributed credit meter.
+
 ## Live ElevenLabs setup
 
 1. Create an ElevenLabs API key with the permissions needed for the features you intend to use. Enter it only into your local server environment; never into GitHub source or a `VITE_` variable.
@@ -90,7 +96,7 @@ The agent's `lookup_shipment` and `request_escalation` tools execute through the
 
 ### Operator access
 
-The default server binds to loopback. To bind to a network interface, set `HOST=0.0.0.0` and a strong `OPERATOR_TOKEN`. The server refuses non-loopback binding without a token. Enter that token in **Settings**. The server exchanges it for an eight-hour HttpOnly session cookie; the hosted cookie also requires HTTPS. Sign out to clear the current browser session. Rotating the server token invalidates all existing sessions.
+The default server binds to loopback. To bind to a network interface, set `HOST=0.0.0.0` and a strong `OPERATOR_TOKEN`. The server refuses non-loopback binding without a token. Enter that token in **Settings**. The server exchanges it for an HttpOnly session cookie lasting eight hours, or 30 days with Keep me signed in selected; the hosted cookie also requires HTTPS. Sign out to clear the current browser session. Rotating the server token invalidates all existing sessions.
 
 This shared operator token is for a single-user workbench, not enterprise SSO or role separation. Do not deploy it as a public customer service without an authentication layer, TLS, per-user permissions, caller verification, retention controls and spend limits. Operator access includes all workspace data and paid features.
 
@@ -101,7 +107,7 @@ Expose `POST /api/webhooks/elevenlabs` over HTTPS using your deployment infrastr
 ## Verification
 
 ```bash
-npm run check                 # TypeScript + production build + 45 tests
+npm run check                 # TypeScript + production build + 50 tests
 npm run verify:live           # Explicit read-only verification against your configured account
 npm run verify:hosted         # Production browser/login check; requires a private operator code
 npm run agent:evaluate        # Refresh existing real agent test results, no new suite

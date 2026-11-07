@@ -18,6 +18,12 @@ export type Config = {
   uploadLimitBytes?: number;
   operatorRequired?: boolean;
   operatorAuthenticated?: boolean;
+  guestVoice?: {
+    enabled: boolean;
+    expiresAt: string | null;
+    maxDurationSeconds: number;
+    dailyLimit: number;
+  };
 };
 export let config: Config = {
   mode: "demo",

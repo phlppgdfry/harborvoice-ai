@@ -16,6 +16,7 @@ export default function ConnectionSettings({
   notify: (s: string) => void;
 }) {
   const [code, setCode] = useState(""),
+    [remember, setRemember] = useState(true),
     [busy, setBusy] = useState(false),
     [message, setMessage] = useState("");
   const preview = config.deployment === "static";
@@ -159,7 +160,7 @@ export default function ConnectionSettings({
                   setBusy(true);
                   setMessage("");
                   try {
-                    await request("/auth/session", { code });
+                    await request("/auth/session", { code, remember });
                     sessionStorage.removeItem("hv-operator-token");
                     setCode("");
                     notify("Signed in to the live workspace.");
@@ -181,6 +182,14 @@ export default function ConnectionSettings({
                     required
                     maxLength={300}
                   />
+                </label>
+                <label className="remember-choice">
+                  <input
+                    type="checkbox"
+                    checked={remember}
+                    onChange={(e) => setRemember(e.target.checked)}
+                  />
+                  Keep me signed in for 30 days on this device
                 </label>
                 <button
                   className="button primary"

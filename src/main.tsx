@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 const ConnectionSettings = React.lazy(() => import("./ConnectionSettings"));
 const PortfolioEvidence = React.lazy(() => import("./PortfolioEvidence"));
+const ExperienceLab = React.lazy(() => import("./ExperienceLab"));
 import { LIVE_APP_URL } from "./deployment";
 const AudioStudio = React.lazy(() => import("./AudioStudio"));
 const VoiceAgent = React.lazy(() => import("./VoiceAgent"));
@@ -51,6 +52,7 @@ import {
 import "./styles.css";
 const tabs = [
   ["Overview", LayoutDashboard],
+  ["Experience lab", Play],
   ["Voice agents", Mic],
   ["Audio studio", AudioLines],
   ["Knowledge base", BookOpen],
@@ -234,15 +236,16 @@ function App() {
                 <div>
                   <strong>Live API connected</strong>
                   <span>
-                    Sign in to unlock live voice and audio. The demo is ready to
-                    explore.
+                    {config.guestVoice?.enabled
+                      ? "Public audio examples and a limited live visitor trial are available."
+                      : "Public audio examples and the text demo are ready. Sign in for private generation tools."}
                   </span>
                 </div>
                 <button
                   className="button primary"
-                  onClick={() => setPage("Settings")}
+                  onClick={() => setPage("Experience lab")}
                 >
-                  Operator sign-in
+                  Listen and try Nora
                 </button>
               </div>
             )}
@@ -569,6 +572,11 @@ function App() {
           )}
           {page === "Evaluations" && <Evaluations fail={fail} />}
           {page === "Conversations" && <Conversations state={state} />}
+          {page === "Experience lab" && (
+            <React.Suspense fallback={<p>Loading audio examples…</p>}>
+              <ExperienceLab />
+            </React.Suspense>
+          )}
           {page === "Portfolio evidence" && (
             <React.Suspense fallback={<p>Loading evidence…</p>}>
               <PortfolioEvidence />
@@ -595,6 +603,7 @@ function App() {
   );
 }
 const descriptions: Record<string, string> = {
+  "Experience lab": "Listen, compare and try the public voice experience.",
   "Voice agents":
     "Talk to Nora, inspect the transcript, and turn questions into reviewed actions.",
   "Audio studio": "Create, transcribe and transform audio with ElevenLabs.",

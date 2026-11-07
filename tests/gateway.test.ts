@@ -113,6 +113,23 @@ test("cookie signatures reject tampering, expiry and a rotated secret", () => {
   );
   assert.equal(validOperatorSession(cookie, "new-secret", now), false);
 });
+test("remembered session lasts thirty days and can still be revoked by key rotation", async () => {
+  const login = await fetch(base + "/api/auth/session", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ code: secret, remember: true }),
+  });
+  assert.equal(login.status, 200);
+  assert.match(login.headers.get("set-cookie")!, /Max-Age=2592000/);
+  const now = Date.now();
+  const cookie = "hv_operator=" + issueOperatorSession(secret, now, true);
+  assert.equal(validOperatorSession(cookie, secret, now + 29 * 86400000), true);
+  assert.equal(
+    validOperatorSession(cookie, secret, now + 30 * 86400000),
+    false,
+  );
+  assert.equal(validOperatorSession(cookie, "rotated", now), false);
+});
 test("Vercel rewrite routes preserve nested API paths", async () => {
   const r = await fetch(base + "/api/index?route=tools%2Flookup", {
     method: "POST",

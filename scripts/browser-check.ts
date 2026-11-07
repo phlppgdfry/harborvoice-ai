@@ -89,6 +89,50 @@ try {
     await page.getByRole("heading", { name: tab, exact: true }).waitFor();
   }
   checks.push("All workspace pages render");
+  await page
+    .getByRole("button", { name: "Experience lab", exact: true })
+    .click();
+  await page
+    .getByRole("heading", {
+      name: "Hear what HarborVoice can do.",
+      exact: true,
+    })
+    .waitFor();
+  const audio = page.getByLabel("Selected demo audio");
+  await audio.evaluate(async (element: HTMLAudioElement) => {
+    if (element.readyState < 1)
+      await new Promise<void>((resolve, reject) => {
+        element.addEventListener("loadedmetadata", () => resolve(), {
+          once: true,
+        });
+        element.addEventListener(
+          "error",
+          () => reject(Error("Public media did not decode")),
+          { once: true },
+        );
+      });
+    if (!Number.isFinite(element.duration) || element.duration <= 0)
+      throw Error("Invalid public audio duration");
+  });
+  for (const name of [
+    "Music",
+    "Sound effects",
+    "Transformations",
+    "Voiceover",
+  ]) {
+    await page.getByRole("tab", { name, exact: true }).click();
+    await page
+      .getByRole("tabpanel", { name: `${name} examples`, exact: true })
+      .waitFor();
+  }
+  await page.getByRole("status").waitFor({ state: "hidden" });
+  await page.screenshot({
+    path: "docs/screenshots/experience-lab.png",
+    fullPage: true,
+  });
+  checks.push(
+    "Public Experience lab audio decodes without operator login; comparison categories render",
+  );
   await page.getByRole("button", { name: "Audio studio", exact: true }).click();
   await page.getByRole("tab", { name: "Music", exact: true }).click();
   assert.ok(

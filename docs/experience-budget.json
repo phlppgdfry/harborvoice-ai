@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-11-07T19:35:51.668Z",
+  "authorizedCredits": 20000,
+  "creativeGenerationCredits": 1228.4557999999997,
+  "observedAccountCreditDelta": 2346,
+  "visitorReserveCredits": 6000,
+  "note": "The account delta is not an itemized bill: provider billing may lag and other account activity may contribute. Short SDK tests were gated with conservative per-request allowances. Visitor access is bounded separately by provider call count, duration and a fixed issuance cutoff; the reserve is not a provider-enforced exact credit cap."
+}

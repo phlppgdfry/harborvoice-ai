@@ -233,6 +233,16 @@ function StudioForm({
   onConfigure: () => void;
 }) {
   const [text, setText] = useState<string>(tool.sample),
+    [modelId, setModelId] = useState(
+      tool.id === "speech"
+        ? "eleven_v4"
+        : tool.id === "music"
+          ? "music_v2_5"
+          : "eleven_text_to_sound_v3",
+    ),
+    [durationSeconds, setDurationSeconds] = useState(
+      tool.id === "effects" ? 2 : 12,
+    ),
     [file, setFile] = useState<File | null>(null),
     [voices, setVoices] = useState<{ voiceId: string; name: string }[]>([]),
     [voice, setVoice] = useState(""),
@@ -309,7 +319,12 @@ function StudioForm({
         form.append("text", text);
         body = form;
       } else {
-        body = JSON.stringify({ text, voiceId: voice });
+        body = JSON.stringify({
+          text,
+          voiceId: voice,
+          modelId,
+          durationSeconds,
+        });
         headers["Content-Type"] = "application/json";
       }
       const response = await fetch(`/api/audio/${tool.id}`, {
@@ -348,6 +363,54 @@ function StudioForm({
         <span className="soft-tag">{tool.output}</span>
       </div>
       <p>{tool.description}</p>
+      {tool.input === "text" && (
+        <div className="studio-model-options">
+          <label className="field">
+            Model
+            <select
+              value={modelId}
+              onChange={(e) => setModelId(e.target.value)}
+              disabled={busy}
+            >
+              {(tool.id === "speech"
+                ? [
+                    ["eleven_v4", "Eleven v4"],
+                    ["eleven_v3", "Eleven v3"],
+                    ["eleven_multilingual_v2", "Multilingual v2"],
+                    ["eleven_flash_v2_5", "Flash v2.5"],
+                  ]
+                : tool.id === "music"
+                  ? [
+                      ["music_v2_5", "Music v2.5"],
+                      ["music_v2", "Music v2"],
+                    ]
+                  : [
+                      ["eleven_text_to_sound_v3", "Sound Effects v3"],
+                      ["eleven_text_to_sound_v2", "Sound Effects v2"],
+                    ]
+              ).map(([value, label]) => (
+                <option value={value} key={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </label>
+          {tool.id !== "speech" && (
+            <label className="field">
+              Duration in seconds
+              <input
+                type="number"
+                value={durationSeconds}
+                min={tool.id === "effects" ? 0.5 : 3}
+                max={30}
+                step={0.5}
+                disabled={busy}
+                onChange={(e) => setDurationSeconds(Number(e.target.value))}
+              />
+            </label>
+          )}
+        </div>
+      )}
       {(!config.configured ||
         (config.operatorRequired && !config.operatorAuthenticated)) && (
         <div className="connection-callout">

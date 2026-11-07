@@ -17,6 +17,11 @@ import {
 import { client, agentId, attachKnowledge } from "./elevenlabs.js";
 import { equalSecret, verifyWebhook } from "./security.js";
 import { issueOperatorSession, isOperator } from "./operator-auth.js";
+import {
+  guestPolicy,
+  guestMaxDurationSeconds,
+  guestDailyLimit,
+} from "./guest-policy.js";
 import type { Store } from "./store.js";
 const text = z.string().trim().min(1).max(2000);
 const reference = z.string().trim().min(1).max(50);
@@ -96,6 +101,7 @@ export function createApp(
         process.env.OPERATOR_TOKEN,
       ),
       configured: !!process.env.ELEVENLABS_API_KEY,
+      guestVoice: guestPolicy(),
       agentReady:
         !!process.env.ELEVENLABS_API_KEY && !!process.env.ELEVENLABS_AGENT_ID,
     }),
@@ -137,19 +143,26 @@ export function createApp(
         return;
       }
       const parsed = z
-        .object({ code: z.string().min(1).max(300) })
+        .object({
+          code: z.string().min(1).max(300),
+          remember: z.boolean().optional(),
+        })
         .safeParse(req.body);
       if (!parsed.success || !equalSecret(parsed.data.code, token)) {
         res.status(401).json({ error: "Incorrect operator access code." });
         return;
       }
-      res.cookie("hv_operator", issueOperatorSession(token), {
-        httpOnly: true,
-        secure: workspaceStorage === "browser",
-        sameSite: "strict",
-        maxAge: 8 * 60 * 60 * 1000,
-        path: "/",
-      });
+      res.cookie(
+        "hv_operator",
+        issueOperatorSession(token, Date.now(), parsed.data.remember),
+        {
+          httpOnly: true,
+          secure: workspaceStorage === "browser",
+          sameSite: "strict",
+          maxAge: (parsed.data.remember ? 30 * 24 : 8) * 60 * 60 * 1000,
+          path: "/",
+        },
+      );
       res.json({ authenticated: true });
     },
   );
@@ -161,6 +174,81 @@ export function createApp(
       path: "/",
     });
     res.json({ authenticated: false });
+  });
+  app.use("/api/guest", (req, res, next) => {
+    const origin = req.get("origin");
+    if (origin && origin !== `${req.protocol}://${req.get("host")}`) {
+      res
+        .status(403)
+        .json({ error: "Cross-origin visitor access is not allowed." });
+      return;
+    }
+    if (!guestPolicy().enabled) {
+      res.status(410).json({
+        error:
+          "The limited live visitor trial has ended. Public audio examples and the text demo remain available.",
+      });
+      return;
+    }
+    next();
+  });
+  const guestLimit = rateLimit({
+    windowMs: 60 * 60 * 1000,
+    limit: 2,
+    legacyHeaders: false,
+    standardHeaders: "draft-8",
+    message: {
+      error:
+        "Visitor session requests are limited. Try the public examples instead.",
+    },
+  });
+  app.post("/api/guest/session", guestLimit, async (_req, res, next) => {
+    try {
+      const sdk = sdkFactory(),
+        id = process.env.ELEVENLABS_GUEST_AGENT_ID!;
+      const agent = await sdk.conversationalAi.agents.get(id);
+      const duration =
+        agent.conversationConfig.conversation?.maxDurationSeconds;
+      const calls = agent.platformSettings?.callLimits;
+      if (
+        !agent.platformSettings?.auth?.enableAuth ||
+        !duration ||
+        duration > guestMaxDurationSeconds ||
+        !calls?.dailyLimit ||
+        calls.dailyLimit > guestDailyLimit ||
+        !calls.agentConcurrencyLimit ||
+        calls.agentConcurrencyLimit > 1
+      ) {
+        res.status(503).json({
+          error:
+            "Visitor voice is paused because its provider limits are not configured correctly.",
+        });
+        return;
+      }
+      res.json(
+        await sdk.conversationalAi.conversations.getSignedUrl({ agentId: id }),
+      );
+    } catch (error) {
+      next(error);
+    }
+  });
+  app.post("/api/guest/lookup", express.json({ limit: "4kb" }), (req, res) => {
+    const parsed = z.object({ reference }).safeParse(req.body);
+    if (!parsed.success) {
+      res
+        .status(400)
+        .json({ error: "An exact synthetic shipment reference is required." });
+      return;
+    }
+    const shipment = findShipment(store.read(), parsed.data.reference);
+    res.json(
+      shipment
+        ? { found: true, shipment }
+        : {
+            found: false,
+            message: "Shipment not found. Verify the reference.",
+          },
+    );
   });
   app.use("/api", (req, res, next) => {
     if (
@@ -391,34 +479,61 @@ export function createApp(
   }
   app.post("/api/audio/speech", paid, async (req, res) => {
     const v = z
-      .object({ text, voiceId: z.string().min(1).max(100) })
+      .object({
+        text,
+        voiceId: z.string().min(1).max(100),
+        modelId: z
+          .enum([
+            "eleven_v4",
+            "eleven_v3",
+            "eleven_multilingual_v2",
+            "eleven_flash_v2_5",
+          ])
+          .default("eleven_multilingual_v2"),
+      })
       .parse(req.body);
     await audio(
       res,
       await sdkFactory().textToSpeech.convert(v.voiceId, {
         text: v.text,
-        modelId: "eleven_multilingual_v2",
+        modelId: v.modelId,
         outputFormat: "mp3_44100_128",
       }),
     );
   });
   app.post("/api/audio/effects", paid, async (req, res) => {
-    const v = z.object({ text }).parse(req.body);
+    const v = z
+      .object({
+        text,
+        modelId: z
+          .enum(["eleven_text_to_sound_v2", "eleven_text_to_sound_v3"])
+          .optional(),
+        durationSeconds: z.number().min(0.5).max(30).default(5),
+      })
+      .parse(req.body);
     await audio(
       res,
       await sdkFactory().textToSoundEffects.convert({
         text: v.text,
-        durationSeconds: 5,
+        durationSeconds: v.durationSeconds,
+        modelId: v.modelId,
       }),
     );
   });
   app.post("/api/audio/music", paid, async (req, res) => {
-    const v = z.object({ text }).parse(req.body);
+    const v = z
+      .object({
+        text,
+        modelId: z.enum(["music_v1", "music_v2", "music_v2_5"]).optional(),
+        durationSeconds: z.number().min(3).max(30).default(10),
+      })
+      .parse(req.body);
     await audio(
       res,
       await sdkFactory().music.compose({
         prompt: v.text,
-        musicLengthMs: 10000,
+        musicLengthMs: Math.round(v.durationSeconds * 1000),
+        modelId: v.modelId,
         forceInstrumental: true,
         outputFormat: "mp3_44100_128",
       }),
@@ -533,6 +648,19 @@ export function createApp(
         return;
       }
       const e = err as { statusCode?: number; message?: string };
+      const detail = (
+        err as { body?: { detail?: { status?: string; message?: string } } }
+      ).body?.detail;
+      if (
+        detail?.status === "missing_permissions" &&
+        detail.message?.includes("dubbing_write")
+      ) {
+        res.status(403).json({
+          error:
+            "Creating dubs requires Dubbing write permission on the server's project key. Enable that permission in ElevenLabs → Developers → API keys. Existing public Dutch audio examples remain available in Experience lab.",
+        });
+        return;
+      }
       if ((err as { type?: string }).type === "entity.parse.failed") {
         res.status(400).json({ error: "Invalid JSON request body." });
         return;

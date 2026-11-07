@@ -32,6 +32,7 @@ try {
     (cookie) => cookie.name === "hv_operator",
   );
   assert.ok(cookie?.httpOnly && cookie.secure && cookie.sameSite === "Strict");
+  assert.ok(cookie.expires - Date.now() / 1000 > 29 * 24 * 60 * 60);
   await page
     .getByRole("button", { name: "Verify ElevenLabs connection", exact: true })
     .click();
@@ -106,7 +107,7 @@ try {
     checks: [
       "Hosted configuration shown correctly",
       "Unauthenticated paid route rejected",
-      "Operator login and secure HttpOnly cookie",
+      "Operator login and secure HttpOnly cookie with remembered session",
       "Real ElevenLabs voice-library access",
       "Authenticated signed-session URL issued (not opened)",
       "Six real evaluation results rendered",
@@ -115,7 +116,7 @@ try {
     ],
     audioGenerated,
     audioScope: audioGenerated
-      ? "One short real text-to-speech request through the hosted browser and API; media metadata decoded successfully. Other audio products and microphone conversations remain unverified end to end."
+      ? "One short real text-to-speech request through the hosted browser and API; media metadata decoded successfully. This check covers short TTS only; separate evidence records describe visitor voice and other audio-product tests."
       : "No audio generation requested.",
     errors,
   };

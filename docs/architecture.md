@@ -24,7 +24,7 @@ flowchart LR
 
 **Local full stack:** Express serves the API and optionally the production UI. All credentials remain server-side. Workspace mutations run inside a synchronous SQLite transaction (`BEGIN IMMEDIATE`); an exception rolls back. SQLite WAL provides local persistence. Sessions and activity records are bounded at the API level; raw webhook payloads need an operator retention policy.
 
-**Hosted live gateway:** Vercel serves the frontend and a same-origin Express API. Credentials remain in encrypted production environment variables. Browser storage owns workspace persistence; no ephemeral serverless database is presented as durable. SQLite-only routes and webhook intake are disabled. Operator access uses an eight-hour signed HttpOnly, Secure, SameSite=Strict cookie; login checks origin and a constant-time access-code comparison. Rotating OPERATOR_TOKEN revokes existing cookies. Provider calls remain protected behind operator authentication.
+**Hosted live gateway:** Vercel serves the frontend and a same-origin Express API. Credentials remain in encrypted production environment variables. Browser storage owns workspace persistence; no ephemeral serverless database is presented as durable. SQLite-only routes and webhook intake are disabled. Operator access uses a signed HttpOnly, Secure, SameSite=Strict cookie (eight hours, optionally 30 days); login checks origin and a constant-time access-code comparison. Rotating OPERATOR_TOKEN revokes existing cookies. Provider calls remain protected behind operator authentication.
 
 ## Agent responsibilities
 
@@ -74,7 +74,7 @@ All API routes except status and signed webhook intake require the configured op
 
 `tests/elevenlabs-contract.test.ts` injects a real ElevenLabs SDK instance with a custom fetch transport. The transport returns synthetic provider responses and records paths, JSON, multipart fields and query parameters. No real account or billable generation is involved. Coverage includes all eight audio operations, signed sessions, dubbing download gating, read-only connection checks, concurrent knowledge uploads and the current create/run/poll test lifecycle.
 
-The browser walkthrough additionally mocks API responses for all eight studio forms. This proves form submission/result rendering and download availability, not the quality or playability of provider-generated audio. Actual microphone sessions and the remaining audio products are still unverified end to end. Live account reads, agent provisioning, signed-session issuance and one approved TTS generation have since been verified.
+The browser walkthrough additionally mocks API responses for all eight studio forms. This proves form submission/result rendering and download availability, not the quality or playability of provider-generated audio. A subsequent real visitor WebSocket test exercised ASR, the shipment lookup and incoming speech audio using a synthetic microphone recording. Human microphone capture and subjective quality remain unassessed. Real audio-product results and the API-key dubbing permission limitation are recorded in docs/audio-live-evidence.json. Live account reads, agent provisioning, signed-session issuance and one approved TTS generation have since been verified.
 
 Knowledge read/append/update operations are queued by agent ID inside one server process. This avoids lost attachments from simultaneous app uploads; it is not a distributed lock for independent processes or external agent editors.
 
