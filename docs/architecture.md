@@ -44,7 +44,7 @@ The application registers two client tools. A tool call passes through the same 
 
 The server validates text, enums, file count, MIME category and a 20 MB upload limit. Uploads stay in memory and are passed as File objects to the official SDK. MIME checks are not full media-content inspection. Generated audio is streamed to the browser; browser object URLs are revoked after replacement/unmount. Dubbing creates an asynchronous job, exposes its status, and streams the original automatic audio dub only after the provider reports `dubbed`. Edited Studio renders remain outside this version.
 
-Eight operations are exposed: TTS, STT, effects, isolation, dubbing, music, voice changing and forced alignment. A feature can still fail due to account permissions, credits, plan restrictions, voice access or model availability. None of these live operations has been validated against an authenticated account in this delivery.
+Eight operations are exposed: TTS, STT, effects, isolation, dubbing, music, voice changing and forced alignment. A feature can still fail due to account permissions, credits, plan restrictions, voice access or model availability. Basic TTS connectivity was subsequently verified with an explicitly approved official onboarding request (HTTP 200, valid MP3). The other audio operations remain covered by SDK transport fixtures and still need live account runs.
 
 ## API surface
 
@@ -72,7 +72,7 @@ All API routes except status and signed webhook intake require the configured op
 
 `tests/elevenlabs-contract.test.ts` injects a real ElevenLabs SDK instance with a custom fetch transport. The transport returns synthetic provider responses and records paths, JSON, multipart fields and query parameters. No real account or billable generation is involved. Coverage includes all eight audio operations, signed sessions, dubbing download gating, read-only connection checks, concurrent knowledge uploads and the current create/run/poll test lifecycle.
 
-The browser walkthrough additionally mocks API responses for all eight studio forms. This proves form submission/result rendering and download availability, not the quality or playability of provider-generated audio. Actual microphone sessions, provider billing and end-to-end account behavior remain unverified.
+The browser walkthrough additionally mocks API responses for all eight studio forms. This proves form submission/result rendering and download availability, not the quality or playability of provider-generated audio. Actual microphone sessions and the remaining audio products are still unverified end to end. Live account reads, agent provisioning, signed-session issuance and one approved TTS generation have since been verified.
 
 Knowledge read/append/update operations are queued by agent ID inside one server process. This avoids lost attachments from simultaneous app uploads; it is not a distributed lock for independent processes or external agent editors.
 
@@ -86,3 +86,7 @@ The voice UI follows `onConnect`/`onDisconnect` instead of treating the SDK's vo
 ## Production work remaining
 
 Enterprise identity and tenant isolation; caller authorisation; service-side tools; network/TLS design; independent reviewer permissions; provider transcript reconciliation; per-identity credit budgets; media inspection; retention/deletion jobs; reliable queues for long audio jobs; backups; observability; real multilingual agent evaluations; deployment smoke tests; accessibility audit and load testing. None is implied by the term "workbench" or the presence of a Dockerfile.
+
+## Credential loading
+
+The server entry point and provisioning/read-only verification scripts import `server/environment.ts`, which loads ignored `.env.local` first and `.env` second, without overriding inherited process credentials. Official onboarding owns `.env.local`; the real agent ID is stored in ignored `.env`. No API key is placed in client bundles or MCP configuration files. The static GitHub Pages demo has no access to these local files.

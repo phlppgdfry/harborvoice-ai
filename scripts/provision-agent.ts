@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "../server/environment.js";
 import { mkdirSync, writeFileSync, existsSync, readFileSync } from "node:fs";
 import { client } from "../server/elevenlabs.js";
 import { knowledge } from "../src/domain.js";
@@ -121,6 +121,23 @@ if (!manifest.agentId) {
   });
   manifest.agentId = result.agentId;
   save();
+}
+// Enabling RAG does not itself build searchable indexes for the attached documents.
+const configured = await sdk.conversationalAi.agents.get(manifest.agentId!);
+const rag = configured.conversationConfig.agent?.prompt?.rag;
+if (rag?.enabled && rag.embeddingModel) {
+  for (const document of manifest.documents) {
+    const index =
+      await sdk.conversationalAi.knowledgeBase.document.computeRagIndex(
+        document.id,
+        { model: rag.embeddingModel },
+      );
+    console.log(`RAG index: ${document.name}: ${index.status}`);
+    if (index.status === "failed")
+      throw new Error(
+        `RAG indexing failed for ${document.name}. Retry provisioning after reviewing the document.`,
+      );
+  }
 }
 console.log(
   `Agent ready. Set ELEVENLABS_AGENT_ID=${manifest.agentId} in .env.\nManifest: ${path}\nNo audio has been generated. Creating account resources may be subject to plan limits.`,

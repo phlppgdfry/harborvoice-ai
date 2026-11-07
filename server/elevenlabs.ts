@@ -30,10 +30,18 @@ export async function attachKnowledge(
       text,
     });
   const previous = attachments.get(id) || Promise.resolve();
+  let rag:
+    | {
+        enabled?: boolean;
+        embeddingModel?:
+          "e5_mistral_7b_instruct" | "multilingual_e5_large_instruct";
+      }
+    | undefined;
   const update = previous
     .catch(() => {})
     .then(async () => {
       const agent = await sdk.conversationalAi.agents.get(id);
+      rag = agent.conversationConfig.agent?.prompt?.rag;
       await sdk.conversationalAi.agents.update(id, {
         conversationConfig: {
           agent: {
@@ -57,6 +65,18 @@ export async function attachKnowledge(
     );
   } finally {
     if (attachments.get(id) === update) attachments.delete(id);
+  }
+  if (rag?.enabled && rag.embeddingModel) {
+    try {
+      await sdk.conversationalAi.knowledgeBase.document.computeRagIndex(
+        document.id,
+        { model: rag.embeddingModel },
+      );
+    } catch {
+      throw new Error(
+        `Document ${document.id} is attached, but RAG indexing failed. Retry indexing in ElevenLabs; do not upload it again.`,
+      );
+    }
   }
   return document;
 }

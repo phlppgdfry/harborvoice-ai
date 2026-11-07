@@ -13,7 +13,7 @@ type Captured = {
 };
 async function fixture(
   run: (base: string, calls: Captured[]) => Promise<void>,
-  options: { status?: string; failProvider?: boolean } = {},
+  options: { status?: string; failProvider?: boolean; rag?: boolean } = {},
 ) {
   const calls: Captured[] = [];
   let documents = 0;
@@ -87,11 +87,31 @@ async function fixture(
           agent_id: "agent-fixture",
           name: "Nora fixture",
           conversation_config: {
-            agent: { prompt: { knowledge_base: knowledgeBase } },
+            agent: {
+              prompt: {
+                knowledge_base: knowledgeBase,
+                ...(options.rag
+                  ? {
+                      rag: {
+                        enabled: true,
+                        embedding_model: "e5_mistral_7b_instruct",
+                      },
+                    }
+                  : {}),
+              },
+            },
           },
           metadata: { created_at_unix_secs: 1, updated_at_unix_secs: 2 },
         });
       }
+      if (c.path.endsWith("/rag-index") && req.method === "POST")
+        return Response.json({
+          id: "index-fixture",
+          model: "e5_mistral_7b_instruct",
+          status: "succeeded",
+          progress_percentage: 100,
+          document_model_index_usage: { used_bytes: 100 },
+        });
       if (c.path === "/v1/convai/agent-testing/create")
         return Response.json({ id: "test-fixture" });
       if (
@@ -349,3 +369,23 @@ test("live simulation creates the current test type and polls the returned invoc
     assert.equal(poll.status, 200);
     assert.deepEqual((await poll.json()).testRuns, []);
   }));
+
+test("RAG-enabled agents index newly attached knowledge after attaching it", async () =>
+  fixture(
+    async (base, calls) => {
+      const response = await fetch(`${base}/knowledge`, {
+        method: "POST",
+        headers: { ...headers, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Gate policy",
+          text: "A source-grounded collection policy for authorised terminal operators.",
+        }),
+      });
+      assert.equal(response.status, 200, await response.clone().text());
+      const patch = calls.findIndex((c) => c.method === "PATCH");
+      const indexing = calls.findIndex((c) => c.path.endsWith("/rag-index"));
+      assert.ok(patch >= 0 && indexing > patch);
+      assert.equal(calls[indexing].json?.model, "e5_mistral_7b_instruct");
+    },
+    { rag: true },
+  ));

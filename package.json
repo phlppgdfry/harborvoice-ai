@@ -13,7 +13,8 @@
     "agent:provision": "tsx scripts/provision-agent.ts",
     "test:browser": "node --import tsx scripts/browser-check.ts",
     "format": "prettier --write src server scripts tests docs/*.md README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml",
-    "format:check": "prettier --check src server scripts tests docs/*.md README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml"
+    "format:check": "prettier --check src server scripts tests docs/*.md README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml",
+    "verify:live": "tsx scripts/verify-live.ts"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "2.77.0",

@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "./environment.js";
 import { createStore } from "./store.js";
 import { createApp } from "./app.js";
 const host = process.env.HOST || "127.0.0.1";

@@ -10,6 +10,12 @@ const page = await browser.newPage({ viewport: { width: 1440, height: 1100 } });
 page.setDefaultTimeout(15000);
 const errors: string[] = [];
 page.on("pageerror", (e) => errors.push(e.message));
+// Keep demo QA isolated from local account credentials; billable flows use explicit fixtures below.
+await page.route("**/api/status", (route) =>
+  route.fulfill({
+    json: { mode: "demo", configured: false, agentReady: false },
+  }),
+);
 const checks: string[] = [];
 const log = checks.push.bind(checks);
 checks.push = (...items: string[]) => {

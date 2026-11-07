@@ -4,11 +4,11 @@
 
 Meet **Nora**: a multilingual terminal assistant that looks up shipments, explains terminal procedures and prepares escalations for operator review. Explore an interactive terminal map, eight ElevenLabs audio workflows, knowledge management, conversation history and reproducible evaluations.
 
-[Explore the demo](https://phlppgdfry.github.io/harborvoice-ai/) · [Feature coverage](docs/feature-coverage.md) · [Architecture](docs/architecture.md) · [Verification evidence](docs/browser-verification.json)
+[Explore the demo](https://phlppgdfry.github.io/harborvoice-ai/) · [Feature coverage](docs/feature-coverage.md) · [Architecture](docs/architecture.md) · [Browser evidence](docs/browser-verification.json) · [Live setup evidence](docs/live-verification.json)
 
 ![HarborVoice operations dashboard](docs/screenshots/overview.png)
 
-> Independent portfolio project by Philippe Godfroy. The company, shipments and operating procedures are fictional. Demo conversations are deterministic scripts, not AI responses. Live ElevenLabs features are implemented and type-checked, but have **not been exercised against an authenticated ElevenLabs account** in the recorded verification run. No certification, LinkedIn badge, partnership or platform endorsement is claimed.
+> Independent portfolio project by Philippe Godfroy. The company, shipments and operating procedures are fictional. Demo conversations are deterministic scripts, not AI responses. Live account access, the provisioned agent, four indexed knowledge sources, two tools and signed-session issuance have now been verified. An approved official onboarding text-to-speech request also returned HTTP 200 and produced a playable MP3. The eight-tool contract/browser tests still use fixtures; a real microphone conversation and the other audio products have not yet been exercised end to end. No certification, LinkedIn badge, partnership or platform endorsement is claimed.
 
 ## Run locally
 
@@ -49,13 +49,21 @@ This is a broad ElevenLabs integration showcase, **not every endpoint or enterpr
 ## Live ElevenLabs setup
 
 1. Create an ElevenLabs API key with the permissions needed for the features you intend to use. Enter it only into your local server environment; never into GitHub source or a `VITE_` variable.
-2. Prepare the environment file:
+2. Use the official project onboarding (it stores a private key in ignored `.env.local`):
+
+   ```bash
+   npx -y @elevenlabs/cli@latest onboard init
+   ```
+
+   Follow its printed steps. The server and provisioning script load `.env.local` first, then `.env`. Keep credentials server-side.
+
+   To configure environment values manually:
 
    ```bash
    cp .env.example .env
    ```
 
-   Set `ELEVENLABS_API_KEY` in `.env`. The file is ignored by Git.
+   Set `ELEVENLABS_API_KEY` in your local environment file if you are configuring manually. Both `.env` and `.env.local` are ignored by Git.
 
 3. Provision the agent:
 
@@ -63,12 +71,12 @@ This is a broad ElevenLabs integration showcase, **not every endpoint or enterpr
    npm run agent:provision
    ```
 
-   This creates four knowledge documents, two client tools and one authenticated Nora agent in your ElevenLabs account. The ignored `var/agent-manifest.json` records completed steps so a retry can resume without recreating completed resources. It is a bootstrap script, not a reconciler: changes to local playbooks do not update existing account resources automatically. Keep the manifest to avoid duplicate resources. Account permissions, supported models and plan availability can affect provisioning.
+   This creates four knowledge documents, two client tools and one authenticated Nora agent, and requests a RAG index for each document using the agent’s configured embedding model in your ElevenLabs account. Indexing runs asynchronously; `npm run verify:live` only succeeds once the configured sources are indexed. The ignored `var/agent-manifest.json` records completed steps so a retry can resume without recreating completed resources. It is a bootstrap script, not a reconciler: changes to local playbooks do not update existing account resources automatically. Keep the manifest to avoid duplicate resources. Account permissions, supported models and plan availability can affect provisioning.
 
 4. Set the printed `ELEVENLABS_AGENT_ID` in `.env`, restart the server and reload the application.
 5. Open **Voice agents → Start live voice**. Grant microphone access. The language selector is passed as a permitted language override. Test each intended language before relying on it.
 
-Audio requests, live calls and simulations may consume account credits. Creating resources also depends on your account permissions and limits. No live requests are made just by opening the unconfigured demo. Voice lists are read when a configured audio studio is opened. The live simulation creates a new test resource per run; remove unwanted test resources in ElevenLabs.
+Audio requests, live calls and simulations may consume account credits. An authenticated `verify:live` check reads voices/agent configuration and issues a signed session URL; it does not start a conversation or generate audio. Creating resources also depends on your account permissions and limits. No live requests are made just by opening the unconfigured demo. Voice lists are read when a configured audio studio is opened. The live simulation creates a new test resource per run; remove unwanted test resources in ElevenLabs.
 
 The agent's `lookup_shipment` and `request_escalation` tools execute through the connected HarborVoice browser. They are suitable for this browser demo, not standalone telephone calls. A telephony deployment needs authenticated server tools, caller authorisation and separate production infrastructure.
 
@@ -85,10 +93,13 @@ Expose `POST /api/webhooks/elevenlabs` over HTTPS using your deployment infrastr
 ## Verification
 
 ```bash
-npm run check                 # TypeScript + production build + 35 tests
+npm run check                 # TypeScript + production build + 36 tests
+npm run verify:live           # Explicit read-only verification against your configured account
 npm run dev                   # In another terminal
 npm run test:browser          # Installed Google Chrome, or BROWSER_CHANNEL=chromium
 ```
+
+The demo browser check masks configuration availability so running it never automatically exercises your local live account.
 
 The API tests use temporary in-memory SQLite and an ephemeral local HTTP server. Contract tests run the real official SDK with a custom HTTP transport returning provider fixtures: they inspect the serialized requests for all eight audio tools, signed sessions, dubbing downloads, connection checks, concurrent knowledge attachments and test invocations. They never call ElevenLabs and never spend credits. The browser script performs a real demo conversation, Dutch reply, escalation approval, evidence export, history inspection, all-page navigation and a 390px mobile overflow check. It also checks contextual studio defaults, keyboard tabs, deep links, visible mobile navigation labels and all eight audio forms against explicitly mocked provider responses. It writes screenshots and a verification report to `docs/` and changes the local demo workspace while testing.
 
@@ -142,3 +153,5 @@ docs/       Feature matrix, architecture, screenshots and verification evidence
 Built against the installed official [`@elevenlabs/react`](https://github.com/elevenlabs/packages) and [`@elevenlabs/elevenlabs-js`](https://github.com/elevenlabs/elevenlabs-js) packages. Versions are locked in `package-lock.json`. [ElevenAgents documentation](https://elevenlabs.io/docs/eleven-agents/overview) · [ElevenLabs API documentation](https://elevenlabs.io/docs/overview).
 
 MIT licensed. This repository supplies project evidence, not proof of usage, certification or professional accreditation. LinkedIn Connected Apps, if available to your account, must be connected and validated in the relevant platforms.
+
+Live verification also retrieved the correct customs policy through the remote MCP semantic search using Nora’s actual RAG defaults. This validates retrieval, not a complete spoken customer conversation.

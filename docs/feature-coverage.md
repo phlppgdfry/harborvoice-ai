@@ -35,3 +35,13 @@ Context7 was used to resolve the official ElevenLabs packages and fetch React/se
 The lockfile is the reproducibility reference. Types validate request shape; they do not prove account access or successful network behavior. A live account verification run is the next required evidence for operational claims.
 
 Version 1.1 adds transport-level contract tests using the real installed SDK with synthetic provider responses. These test serialization, response normalization and application behavior; they do not replace live account verification. Voice cloning, telephony and the other explicitly excluded features remain outside scope.
+
+## Live setup verification (2026-11-07)
+
+The creator account was successfully read through the installed official CLI. Codex and Claude Code completed their own remote MCP OAuth flows. The official shared audio MCP initialized and performed an authenticated voice search. It is configured in six agent clients; those clients may need a reload to discover newly added tools.
+
+The real Nora agent was provisioned with four knowledge sources, two client tools, RAG enabled and authenticated sessions. `npm run verify:live` verifies account voice access, agent settings and signed-session issuance. An explicitly approved official onboarding TTS request returned HTTP 200 and produced a 1.724-second MP3. These results supersede the earlier blanket “live untested” status for provisioning, read-only access and basic TTS connectivity. They do not establish real microphone call behavior, voice quality or live success of every audio operation.
+
+Credentials, signed URLs, account identifiers and bootstrap manifests are not published. GitHub Pages remains a static review demo; the authenticated backend runs locally.
+
+Knowledge indexing is now explicitly requested during provisioning and after uploads to RAG-enabled agents. Live verification checks for a succeeded index on every configured source; an enabled RAG flag alone is not treated as retrieval readiness.
