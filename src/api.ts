@@ -13,6 +13,11 @@ export type Config = {
   configured: boolean;
   agentReady: boolean;
   backend: boolean;
+  deployment?: "local" | "hosted" | "static" | "unavailable";
+  workspaceStorage?: "sqlite" | "browser";
+  uploadLimitBytes?: number;
+  operatorRequired?: boolean;
+  operatorAuthenticated?: boolean;
 };
 export let config: Config = {
   mode: "demo",
@@ -63,6 +68,17 @@ export async function request<T = any>(
   return data;
 }
 export async function init() {
+  if (import.meta.env.VITE_STATIC_DEMO === "true") {
+    config = {
+      mode: "demo",
+      configured: false,
+      agentReady: false,
+      backend: false,
+      deployment: "static",
+      workspaceStorage: "browser",
+    };
+    return config;
+  }
   try {
     config = { ...(await request("/status")), backend: true };
   } catch {
@@ -71,9 +87,14 @@ export async function init() {
       configured: false,
       agentReady: false,
       backend: false,
+      deployment: "unavailable",
+      workspaceStorage: "browser",
     };
   }
   return config;
+}
+function serverWorkspace() {
+  return config.backend && config.workspaceStorage !== "browser";
 }
 function save() {
   try {
@@ -83,10 +104,10 @@ function save() {
   }
 }
 export async function getState(): Promise<State> {
-  return config.backend ? request("/state") : structuredClone(memory);
+  return serverWorkspace() ? request("/state") : structuredClone(memory);
 }
 export async function chat(text: string, language: string, sessionId: string) {
-  if (config.backend)
+  if (serverWorkspace())
     return request("/demo/chat", { text, language, sessionId });
   const reply = demoReply(memory, text, language);
   let session = memory.sessions.find((s) => s.id === sessionId);
@@ -108,19 +129,25 @@ export async function chat(text: string, language: string, sessionId: string) {
   return { reply };
 }
 export async function escalation(shipmentId: string, reason: string) {
-  if (config.backend) return request("/escalations", { shipmentId, reason });
+  if (serverWorkspace()) return request("/escalations", { shipmentId, reason });
   const t = proposeEscalation(memory, shipmentId, reason);
   save();
   return t;
 }
 export async function review(id: string, decision: "Approved" | "Rejected") {
-  if (config.backend) return request("/escalations/review", { id, decision });
+  if (serverWorkspace())
+    return request("/escalations/review", { id, decision });
   const t = decideTicket(memory, id, decision);
   save();
   return t;
 }
 export async function saveLive(session: Session) {
-  if (config.backend) return request("/sessions", session);
+  if (serverWorkspace()) return request("/sessions", session);
+  if (!memory.sessions.some((s) => s.id === session.id))
+    memory.sessions.unshift(session);
+  memory.sessions = memory.sessions.slice(0, 100);
+  record(memory, "Live transcript saved in browser (client reported)");
+  save();
 }
 export function exportJson(data: unknown, name: string) {
   const url = URL.createObjectURL(

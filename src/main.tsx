@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
+const ConnectionSettings = React.lazy(() => import("./ConnectionSettings"));
+const PortfolioEvidence = React.lazy(() => import("./PortfolioEvidence"));
+import { LIVE_APP_URL } from "./deployment";
 const AudioStudio = React.lazy(() => import("./AudioStudio"));
 const VoiceAgent = React.lazy(() => import("./VoiceAgent"));
 import {
@@ -26,6 +29,7 @@ import {
   Plus,
   LoaderCircle,
   Activity,
+  ClipboardCheck,
   ChevronDown,
 } from "lucide-react";
 import {
@@ -53,6 +57,7 @@ const tabs = [
   ["Workflows", Workflow],
   ["Evaluations", FlaskConical],
   ["Conversations", Headphones],
+  ["Portfolio evidence", ClipboardCheck],
   ["Settings", Settings],
 ] as const;
 
@@ -207,6 +212,41 @@ function App() {
           </div>
         </header>
         <div className="content">
+          {ready && config.deployment === "static" && (
+            <div className="environment-banner">
+              <div>
+                <strong>Portfolio preview</strong>
+                <span>
+                  Live voice and audio are available in the operator workspace.
+                </span>
+              </div>
+              <a className="button primary" href={LIVE_APP_URL}>
+                Open live workspace
+                <ArrowUpRight size={14} />
+              </a>
+            </div>
+          )}
+          {ready &&
+            config.deployment === "hosted" &&
+            config.operatorRequired &&
+            !config.operatorAuthenticated && (
+              <div className="environment-banner">
+                <div>
+                  <strong>Live API connected</strong>
+                  <span>
+                    Sign in to unlock live voice and audio. The demo is ready to
+                    explore.
+                  </span>
+                </div>
+                <button
+                  className="button primary"
+                  onClick={() => setPage("Settings")}
+                >
+                  Operator sign-in
+                </button>
+              </div>
+            )}
+
           <div className="page-heading">
             <div>
               <div className="eyebrow">
@@ -529,7 +569,20 @@ function App() {
           )}
           {page === "Evaluations" && <Evaluations fail={fail} />}
           {page === "Conversations" && <Conversations state={state} />}
-          {page === "Settings" && <SettingsPage notify={notify} />}
+          {page === "Portfolio evidence" && (
+            <React.Suspense fallback={<p>Loading evidence…</p>}>
+              <PortfolioEvidence />
+            </React.Suspense>
+          )}
+          {page === "Settings" && (
+            <React.Suspense
+              fallback={
+                <div className="panel empty">Loading connection settings…</div>
+              }
+            >
+              <ConnectionSettings notify={notify} />
+            </React.Suspense>
+          )}
         </div>
       </main>
       {notice && (
@@ -551,8 +604,9 @@ const descriptions: Record<string, string> = {
     "Reproducible checks, with a clear distinction between demo logic and live agent tests.",
   Conversations:
     "Your conversation history and the evidence behind each answer.",
-  Settings:
-    "Connect your ElevenLabs account and configure the local workspace.",
+  "Portfolio evidence":
+    "Real test results and official recognition information.",
+  Settings: "Check the live connection and manage your operator session.",
 };
 function Metric({
   title,
@@ -1179,109 +1233,6 @@ function Conversations({ state }: { state: State }) {
         </div>
       )}
     </>
-  );
-}
-function SettingsPage({ notify }: { notify: (s: string) => void }) {
-  const [checking, setChecking] = useState(false),
-    [connectionResult, setConnectionResult] = useState("");
-  const [token, setToken] = useState(
-    sessionStorage.getItem("hv-operator-token") || "",
-  );
-  return (
-    <div className="two-column">
-      <section className="panel padded">
-        <h2>Connection status</h2>
-        {[
-          [
-            "Backend",
-            config.backend ? "Connected" : "Static demo · browser storage",
-          ],
-          [
-            "ElevenLabs API",
-            config.configured
-              ? "Configured · not yet verified by a live request"
-              : "Not configured",
-          ],
-          [
-            "Voice agent",
-            config.agentReady ? "Agent ID configured" : "Not configured",
-          ],
-          ["Demo adapter", "Ready · deterministic, no AI model"],
-        ].map(([k, v]) => (
-          <div className="settings-row" key={k}>
-            <strong>{k}</strong>
-            <span>{v}</span>
-          </div>
-        ))}
-        <button
-          className="button"
-          style={{ marginTop: 20 }}
-          disabled={!config.configured || checking}
-          onClick={async () => {
-            setChecking(true);
-            try {
-              const r = await request("/connection/check", {});
-              setConnectionResult(
-                `${r.voiceCount} voices available. ${r.scope}`,
-              );
-            } catch (e) {
-              setConnectionResult((e as Error).message);
-            } finally {
-              setChecking(false);
-            }
-          }}
-        >
-          {checking ? (
-            <LoaderCircle size={16} className="spin" />
-          ) : (
-            <ShieldCheck size={16} />
-          )}
-          Verify ElevenLabs connection
-        </button>
-        {connectionResult && <p role="status">{connectionResult}</p>}
-        <label className="field">
-          Operator access token
-          <input
-            type="password"
-            autoComplete="off"
-            value={token}
-            onChange={(e) => setToken(e.target.value)}
-            placeholder="Matches OPERATOR_TOKEN on your server"
-          />
-        </label>
-        <button
-          className="button primary"
-          onClick={() => {
-            if (token) sessionStorage.setItem("hv-operator-token", token);
-            else sessionStorage.removeItem("hv-operator-token");
-            notify("Token saved for this browser tab. Reload to reconnect.");
-          }}
-        >
-          Save operator token
-        </button>
-      </section>
-      <section className="panel padded">
-        <h2>Enable live ElevenLabs</h2>
-        <p>
-          Run the backend locally and configure its environment file. Never
-          place API keys in the browser.
-        </p>
-        <pre className="result">{`cp .env.example .env\n# Set ELEVENLABS_API_KEY in .env\nnpm run agent:provision\n# Add the returned agent ID to .env\nnpm run dev`}</pre>
-        <p>
-          The provisioning script creates Nora, attaches the four playbooks and
-          registers shipment lookup and escalation tools. Live requests are
-          billed to your ElevenLabs account.
-        </p>
-        <a
-          className="button"
-          href="https://github.com/phlppgdfry/harborvoice-ai#live-elevenlabs-setup"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Read setup guide <ArrowUpRight size={15} />
-        </a>
-      </section>
-    </div>
   );
 }
 

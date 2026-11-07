@@ -315,7 +315,7 @@ test("connection check reads provider access without generating billable audio",
     const result = await response.json();
     assert.equal(result.verified, true);
     assert.equal(result.voiceCount, 0);
-    assert.match(result.scope, /have not been tested/);
+    assert.match(result.scope, /does not start a call or generate audio/);
     assert.deepEqual(
       calls.map((c) => [c.method, c.path]),
       [["GET", "/v1/voices"]],

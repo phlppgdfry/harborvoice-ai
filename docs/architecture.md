@@ -18,11 +18,13 @@ flowchart LR
   WH --> EV[(Deduplicated raw events)]
 ```
 
-## Two execution modes
+## Execution modes
 
-**Static review demo:** Vite output is hosted on GitHub Pages. If the status endpoint is unavailable, the application explicitly selects demo mode. Its state is kept in browser storage, and shared domain functions answer scripted text questions. No audio, AI model or external operation is simulated as a successful live result.
+**Static review demo:** Vite output is hosted on GitHub Pages. The Pages build explicitly selects preview mode; an unavailable backend in a live build is reported as unreachable. Its state is kept in browser storage, and shared domain functions answer scripted text questions. No audio, AI model or external operation is simulated as a successful live result.
 
 **Local full stack:** Express serves the API and optionally the production UI. All credentials remain server-side. Workspace mutations run inside a synchronous SQLite transaction (`BEGIN IMMEDIATE`); an exception rolls back. SQLite WAL provides local persistence. Sessions and activity records are bounded at the API level; raw webhook payloads need an operator retention policy.
+
+**Hosted live gateway:** Vercel serves the frontend and a same-origin Express API. Credentials remain in encrypted production environment variables. Browser storage owns workspace persistence; no ephemeral serverless database is presented as durable. SQLite-only routes and webhook intake are disabled. Operator access uses an eight-hour signed HttpOnly, Secure, SameSite=Strict cookie; login checks origin and a constant-time access-code comparison. Rotating OPERATOR_TOKEN revokes existing cookies. Provider calls remain protected behind operator authentication.
 
 ## Agent responsibilities
 
@@ -42,7 +44,7 @@ The application registers two client tools. A tool call passes through the same 
 
 ## Audio pipeline
 
-The server validates text, enums, file count, MIME category and a 20 MB upload limit. Uploads stay in memory and are passed as File objects to the official SDK. MIME checks are not full media-content inspection. Generated audio is streamed to the browser; browser object URLs are revoked after replacement/unmount. Dubbing creates an asynchronous job, exposes its status, and streams the original automatic audio dub only after the provider reports `dubbed`. Edited Studio renders remain outside this version.
+The server validates text, enums, file count, MIME category and a 20 MiB local / 4 MiB hosted upload limit. Uploads stay in memory and are passed as File objects to the official SDK. MIME checks are not full media-content inspection. Generated audio is streamed to the browser; browser object URLs are revoked after replacement/unmount. Dubbing creates an asynchronous job, exposes its status, and streams the original automatic audio dub only after the provider reports `dubbed`. Edited Studio renders remain outside this version.
 
 Eight operations are exposed: TTS, STT, effects, isolation, dubbing, music, voice changing and forced alignment. A feature can still fail due to account permissions, credits, plan restrictions, voice access or model availability. Basic TTS connectivity was subsequently verified with an explicitly approved official onboarding request (HTTP 200, valid MP3). The other audio operations remain covered by SDK transport fixtures and still need live account runs.
 
@@ -66,7 +68,7 @@ Eight operations are exposed: TTS, STT, effects, isolation, dubbing, music, voic
 | `GET /api/dubbing/:id`          | Dubbing job status                            |
 | `POST /api/webhooks/elevenlabs` | Signed, deduplicated event intake             |
 
-All API routes except status and signed webhook intake require the configured operator token. Origin checks reject mismatched origins; unauthenticated loopback access also rejects unexpected Host headers. Ordinary routes permit 90 requests/minute per IP; credit-consuming endpoints additionally permit 8/minute. These are local process limits, not distributed spend controls. The server does not trust proxy headers by default.
+All API routes except status and signed webhook intake require the configured operator token. Origin checks reject mismatched origins; unauthenticated loopback access also rejects unexpected Host headers. Ordinary routes permit 90 requests/minute per IP; credit-consuming endpoints additionally permit 8/minute. These are local process limits, not distributed spend controls. The local server does not trust proxy headers; the hosted gateway trusts one platform proxy hop. Per-instance rate limits do not replace provider spending caps.
 
 ## Version 1.1 verification and lifecycle
 
@@ -83,9 +85,13 @@ The voice UI follows `onConnect`/`onDisconnect` instead of treating the SDK's vo
 | `POST /api/connection/check`           | Explicit read-only voice-library access check                |
 | `GET /api/dubbing/:id/audio/:language` | Gate on completed status, then stream original automatic dub |
 
+## Real agent validation
+
+Six bounded ElevenLabs LLM simulation tests passed in English, Dutch, French and German. They cover recorded shipment data, unknown references, customs refusal, pending human review, tool failure and knowledge-grounded gate procedures. Business tools use explicit synthetic fixtures. See `docs/agent-evaluation.json`; this is separate from microphone and telephony verification.
+
 ## Production work remaining
 
-Enterprise identity and tenant isolation; caller authorisation; service-side tools; network/TLS design; independent reviewer permissions; provider transcript reconciliation; per-identity credit budgets; media inspection; retention/deletion jobs; reliable queues for long audio jobs; backups; observability; real multilingual agent evaluations; deployment smoke tests; accessibility audit and load testing. None is implied by the term "workbench" or the presence of a Dockerfile.
+Enterprise identity and tenant isolation; caller authorisation; service-side tools; network/TLS design; independent reviewer permissions; provider transcript reconciliation; per-identity credit budgets; media inspection; retention/deletion jobs; reliable queues for long audio jobs; backups; observability; broader multilingual voice evaluations; accessibility audit and load testing. None is implied by the term "workbench" or the presence of a Dockerfile.
 
 ## Credential loading
 

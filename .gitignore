@@ -7,3 +7,7 @@ var/
 test-results/
 playwright-report/
 .DS_Store
+
+.vercel/
+.firecrawl/
+.vercel

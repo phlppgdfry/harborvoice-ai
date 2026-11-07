@@ -18,7 +18,8 @@ import {
   ArrowUpRight,
   Send,
 } from "lucide-react";
-import { config, chat, request, escalation, saveLive } from "./api";
+import { config, init, chat, request, escalation, saveLive } from "./api";
+import { LIVE_APP_URL } from "./deployment";
 import type { Message, Shipment } from "./domain";
 const languages = [
   ["en", "English"],
@@ -129,9 +130,16 @@ function VoiceAgentInner({
   const start = async () => {
     setBusy(true);
     try {
+      await init();
       if (!config.agentReady)
         throw new Error(
-          "Set ELEVENLABS_API_KEY and ELEVENLABS_AGENT_ID in .env, restart the server, then reload. The text demo is ready below.",
+          config.deployment === "static"
+            ? "Open the live workspace to start a voice session. This portfolio preview has no API server."
+            : "The live API is not ready. Open Settings and refresh the connection.",
+        );
+      if (config.operatorRequired && !config.operatorAuthenticated)
+        throw new Error(
+          "Sign in with your operator access code in Settings to start live voice.",
         );
       const media = await navigator.mediaDevices.getUserMedia({ audio: true });
       media.getTracks().forEach((t) => t.stop());
@@ -197,6 +205,44 @@ function VoiceAgentInner({
             ))}
           </select>
         </div>
+        {!config.agentReady && (
+          <div className="voice-access">
+            <strong>
+              {config.deployment === "static"
+                ? "Live voice runs in your operator workspace"
+                : "Live voice needs an available API connection"}
+            </strong>
+            <p>
+              {config.deployment === "static"
+                ? "This portfolio preview supports the scripted text demo below."
+                : "Open connection settings to refresh the server status."}
+            </p>
+            {config.deployment === "static" ? (
+              <a
+                className="button primary"
+                href={`${LIVE_APP_URL}/#voice-agents`}
+              >
+                Open live Nora
+                <ArrowUpRight size={14} />
+              </a>
+            ) : (
+              <a className="button" href="#settings">
+                Open connection settings
+              </a>
+            )}
+          </div>
+        )}
+        {config.agentReady &&
+          config.operatorRequired &&
+          !config.operatorAuthenticated && (
+            <div className="voice-access">
+              <strong>Nora is ready. Sign in to start a live session.</strong>
+              <a className="button primary" href="#settings">
+                Operator sign-in
+                <ArrowUpRight size={14} />
+              </a>
+            </div>
+          )}
         <div className={"conversation-orb " + (connected ? "connected" : "")}>
           <div className="voice-orb">
             <div className="orb-core">
@@ -220,7 +266,12 @@ function VoiceAgentInner({
           <div className="voice-controls">
             <button
               className="button primary"
-              disabled={busy || connecting}
+              disabled={
+                busy ||
+                connecting ||
+                !config.agentReady ||
+                (!!config.operatorRequired && !config.operatorAuthenticated)
+              }
               onClick={connected ? () => conversation.endSession() : start}
             >
               {busy ? (

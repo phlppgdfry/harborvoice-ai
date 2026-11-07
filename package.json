@@ -1,6 +1,6 @@
 {
   "name": "harborvoice-ai",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "description": "A logistics voice operations workbench powered by ElevenLabs",
@@ -12,9 +12,12 @@
     "check": "npm run build && npm test",
     "agent:provision": "tsx scripts/provision-agent.ts",
     "test:browser": "node --import tsx scripts/browser-check.ts",
-    "format": "prettier --write src server scripts tests docs/*.md README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml",
-    "format:check": "prettier --check src server scripts tests docs/*.md README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml",
-    "verify:live": "tsx scripts/verify-live.ts"
+    "format": "prettier --write src server scripts tests agent api docs/*.md README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml vercel.json",
+    "format:check": "prettier --check src server scripts tests agent api docs/*.md README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml vercel.json",
+    "verify:live": "tsx scripts/verify-live.ts",
+    "agent:sync": "tsx scripts/sync-agent.ts",
+    "agent:evaluate": "tsx scripts/evaluate-agent.ts",
+    "verify:hosted": "tsx scripts/verify-hosted.ts"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "2.77.0",
@@ -44,6 +47,6 @@
     "vite": "8.3.6"
   },
   "engines": {
-    "node": ">=22.13"
+    "node": "24.x"
   }
 }

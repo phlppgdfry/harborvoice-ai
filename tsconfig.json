@@ -14,5 +14,13 @@
     "types": ["node"],
     "noUnusedLocals": true
   },
-  "include": ["src", "server", "scripts", "tests", "vite.config.ts"]
+  "include": [
+    "src",
+    "server",
+    "scripts",
+    "tests",
+    "vite.config.ts",
+    "api",
+    "agent"
+  ]
 }

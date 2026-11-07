@@ -16,14 +16,46 @@ import {
 } from "../src/domain.js";
 import { client, agentId, attachKnowledge } from "./elevenlabs.js";
 import { equalSecret, verifyWebhook } from "./security.js";
+import { issueOperatorSession, isOperator } from "./operator-auth.js";
 import type { Store } from "./store.js";
 const text = z.string().trim().min(1).max(2000);
 const reference = z.string().trim().min(1).max(50);
 const lang = z.enum(["en", "nl", "fr", "de"]);
 const id = z.string().min(1).max(100);
-export function createApp(store: Store, sdkFactory: typeof client = client) {
+export function createApp(
+  store: Store,
+  sdkFactory: typeof client = client,
+  options: {
+    workspaceStorage?: "sqlite" | "browser";
+    serveFrontend?: boolean;
+    maxUploadBytes?: number;
+  } = {},
+) {
   const app = express();
   app.disable("x-powered-by");
+  const workspaceStorage = options.workspaceStorage || "sqlite";
+  if (workspaceStorage === "browser") app.set("trust proxy", 1);
+  app.use("/api", (req, res, next) => {
+    res.setHeader("Cache-Control", "no-store");
+    if (
+      workspaceStorage === "browser" &&
+      [
+        "/state",
+        "/demo/chat",
+        "/escalations",
+        "/escalations/review",
+        "/sessions",
+        "/webhooks/elevenlabs",
+      ].includes(req.path)
+    ) {
+      res.status(409).json({
+        error:
+          "This hosted gateway stores the workspace in your browser. Server workspace mutations and webhook retention are disabled.",
+      });
+      return;
+    }
+    next();
+  });
   app.use(helmet({ contentSecurityPolicy: false }));
   app.post(
     "/api/webhooks/elevenlabs",
@@ -52,14 +84,84 @@ export function createApp(store: Store, sdkFactory: typeof client = client) {
       res.json({ received: true, duplicate: !inserted });
     },
   );
-  app.get("/api/status", (_req, res) =>
+  app.get("/api/status", (req, res) =>
     res.json({
       mode: process.env.ELEVENLABS_API_KEY ? "live" : "demo",
+      deployment: workspaceStorage === "browser" ? "hosted" : "local",
+      workspaceStorage,
+      uploadLimitBytes: options.maxUploadBytes || 20 * 1024 * 1024,
+      operatorRequired: !!process.env.OPERATOR_TOKEN,
+      operatorAuthenticated: isOperator(
+        req.headers,
+        process.env.OPERATOR_TOKEN,
+      ),
       configured: !!process.env.ELEVENLABS_API_KEY,
       agentReady:
         !!process.env.ELEVENLABS_API_KEY && !!process.env.ELEVENLABS_AGENT_ID,
     }),
   );
+  app.use("/api/auth/session", (req, res, next) => {
+    const origin = req.get("origin");
+    if (origin) {
+      try {
+        if (new URL(origin).host !== req.get("host")) {
+          res
+            .status(403)
+            .json({ error: "Cross-origin authentication is not allowed." });
+          return;
+        }
+      } catch {
+        res.status(403).json({ error: "Invalid origin." });
+        return;
+      }
+    }
+    next();
+  });
+  const loginLimit = rateLimit({
+    windowMs: 60000,
+    limit: 8,
+    legacyHeaders: false,
+    standardHeaders: "draft-8",
+    message: { error: "Too many sign-in attempts. Try again in a minute." },
+  });
+  app.post(
+    "/api/auth/session",
+    loginLimit,
+    express.json({ limit: "4kb" }),
+    (req, res) => {
+      const token = process.env.OPERATOR_TOKEN;
+      if (!token) {
+        res.status(400).json({
+          error: "This local workspace does not require an operator code.",
+        });
+        return;
+      }
+      const parsed = z
+        .object({ code: z.string().min(1).max(300) })
+        .safeParse(req.body);
+      if (!parsed.success || !equalSecret(parsed.data.code, token)) {
+        res.status(401).json({ error: "Incorrect operator access code." });
+        return;
+      }
+      res.cookie("hv_operator", issueOperatorSession(token), {
+        httpOnly: true,
+        secure: workspaceStorage === "browser",
+        sameSite: "strict",
+        maxAge: 8 * 60 * 60 * 1000,
+        path: "/",
+      });
+      res.json({ authenticated: true });
+    },
+  );
+  app.delete("/api/auth/session", (_req, res) => {
+    res.clearCookie("hv_operator", {
+      httpOnly: true,
+      secure: workspaceStorage === "browser",
+      sameSite: "strict",
+      path: "/",
+    });
+    res.json({ authenticated: false });
+  });
   app.use("/api", (req, res, next) => {
     if (
       !process.env.OPERATOR_TOKEN &&
@@ -87,13 +189,11 @@ export function createApp(store: Store, sdkFactory: typeof client = client) {
       }
     }
     const token = process.env.OPERATOR_TOKEN;
-    if (
-      token &&
-      !equalSecret(req.get("authorization") || "", `Bearer ${token}`)
-    ) {
-      res
-        .status(401)
-        .json({ error: "Enter your operator token in Settings, then reload." });
+    if (token && !isOperator(req.headers, token)) {
+      res.status(401).json({
+        error:
+          "Sign in with your operator access code in Settings to use live ElevenLabs features.",
+      });
       return;
     }
     next();
@@ -213,7 +313,7 @@ export function createApp(store: Store, sdkFactory: typeof client = client) {
       voiceCount: voices.voices.length,
       checkedAt: new Date().toISOString(),
       scope:
-        "Voice library access verified. Agent calls and paid audio features have not been tested.",
+        "Voice library access verified. This check does not start a call or generate audio.",
     });
   });
   app.post("/api/knowledge", paid, async (req, res) => {
@@ -255,7 +355,7 @@ export function createApp(store: Store, sdkFactory: typeof client = client) {
   );
   const upload = multer({
     storage: multer.memoryStorage(),
-    limits: { fileSize: 20 * 1024 * 1024, files: 1 },
+    limits: { fileSize: options.maxUploadBytes || 20 * 1024 * 1024, files: 1 },
     fileFilter: (_req, file, cb) => {
       if (
         ![
@@ -398,8 +498,12 @@ export function createApp(store: Store, sdkFactory: typeof client = client) {
   app.use("/api", (_req, res) =>
     res.status(404).json({ error: "API route not found." }),
   );
-  app.use(express.static(resolve("dist")));
-  app.get("/{*path}", (_req, res) => res.sendFile(resolve("dist/index.html")));
+  if (options.serveFrontend !== false) {
+    app.use(express.static(resolve("dist")));
+    app.get("/{*path}", (_req, res) =>
+      res.sendFile(resolve("dist/index.html")),
+    );
+  }
   app.use(
     (
       err: unknown,
@@ -423,7 +527,7 @@ export function createApp(store: Store, sdkFactory: typeof client = client) {
         res.status(400).json({
           error:
             err.code === "LIMIT_FILE_SIZE"
-              ? "Maximum upload size is 20 MB."
+              ? `Maximum upload size is ${Math.floor((options.maxUploadBytes || 20 * 1024 * 1024) / 1024 / 1024)} MB.`
               : err.message,
         });
         return;

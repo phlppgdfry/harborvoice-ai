@@ -206,7 +206,9 @@ export default function AudioStudio({
             <strong>{selected.output}</strong>
             <span>Input limit</span>
             <strong>
-              {selected.input === "text" ? "2,000 characters" : "20 MB audio"}
+              {selected.input === "text"
+                ? "2,000 characters"
+                : `${(config.uploadLimitBytes || 20 * 1024 * 1024) / 1024 / 1024} MB audio`}
             </strong>
           </div>
         </section>
@@ -252,7 +254,11 @@ function StudioForm({
   );
   useEffect(() => {
     let active = true;
-    if (needsVoice && config.configured)
+    if (
+      needsVoice &&
+      config.configured &&
+      (!config.operatorRequired || config.operatorAuthenticated)
+    )
       request<{ voices: typeof voices }>("/voices")
         .then((d) => {
           if (active) {
@@ -274,6 +280,7 @@ function StudioForm({
   }, [busy]);
   const valid =
     config.configured &&
+    (!config.operatorRequired || !!config.operatorAuthenticated) &&
     !busy &&
     (tool.input === "text" ? !!text.trim() : !!file) &&
     (!needsVoice || !!voice) &&
@@ -341,14 +348,19 @@ function StudioForm({
         <span className="soft-tag">{tool.output}</span>
       </div>
       <p>{tool.description}</p>
-      {!config.configured && (
+      {(!config.configured ||
+        (config.operatorRequired && !config.operatorAuthenticated)) && (
         <div className="connection-callout">
           <Settings size={18} />
           <div>
-            <strong>Connect ElevenLabs to generate audio</strong>
+            <strong>
+              {config.configured
+                ? "Sign in to generate audio"
+                : "Live audio is available in the operator workspace"}
+            </strong>
             <p>
-              You can explore every workflow here. Add your server API key to
-              enable generation.
+              You can explore every workflow here. Open connection settings to
+              access the live workspace.
             </p>
             <button className="button" onClick={onConfigure}>
               Open connection settings
@@ -372,7 +384,10 @@ function StudioForm({
         <label className="upload">
           <FileAudio size={30} />
           <strong>{file?.name || "Choose an audio recording"}</strong>
-          <span>MP3, WAV, M4A, OGG or WebM · up to 20 MB</span>
+          <span>
+            MP3, WAV, M4A, OGG or WebM · up to{" "}
+            {(config.uploadLimitBytes || 20 * 1024 * 1024) / 1024 / 1024} MB
+          </span>
           <input
             aria-label="Audio recording"
             type="file"
@@ -380,10 +395,14 @@ function StudioForm({
             accept="audio/*"
             onChange={(e) => {
               const f = e.target.files?.[0];
-              if (f && f.size > 20 * 1024 * 1024) {
+              if (f && f.size > (config.uploadLimitBytes || 20 * 1024 * 1024)) {
                 e.target.value = "";
                 setFile(null);
-                fail(new Error("Maximum upload size is 20 MB."));
+                fail(
+                  new Error(
+                    `Maximum upload size is ${(config.uploadLimitBytes || 20 * 1024 * 1024) / 1024 / 1024} MB.`,
+                  ),
+                );
                 return;
               }
               setFile(f || null);

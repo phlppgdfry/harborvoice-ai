@@ -1930,3 +1930,62 @@ textarea {
     display: none;
   }
 }
+.environment-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 20px;
+  margin: 0 0 25px;
+  border: 1px solid #cddfd9;
+  border-radius: 8px;
+  background: #edf5f1;
+}
+.environment-banner strong {
+  display: block;
+  font-size: 12px;
+  color: #36695b;
+}
+.environment-banner span {
+  display: block;
+  font-size: 11px;
+  color: #7a9689;
+  margin-top: 5px;
+}
+.voice-access {
+  margin: 20px 22px;
+  padding: 18px;
+  background: #eef6f2;
+  border: 1px solid #d7e7dd;
+  border-radius: 8px;
+}
+.voice-access > strong {
+  font-size: 12px;
+  display: block;
+}
+.voice-access > p {
+  font-size: 11px;
+  margin: 8px 0 14px;
+}
+.voice-access > .button {
+  margin-top: 10px;
+}
+@media (max-width: 700px) {
+  .environment-banner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    padding: 17px;
+  }
+  .environment-banner span {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  .ticket-actions {
+    flex-wrap: wrap;
+  }
+  .voice-access {
+    margin: 15px;
+    padding: 15px;
+  }
+}

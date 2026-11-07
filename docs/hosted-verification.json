@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-07T16:04:05.201Z",
+  "url": "https://harborvoice-ai.vercel.app",
+  "checks": [
+    "Hosted configuration shown correctly",
+    "Unauthenticated paid route rejected",
+    "Operator login and secure HttpOnly cookie",
+    "Real ElevenLabs voice-library access",
+    "Authenticated signed-session URL issued (not opened)",
+    "Six real evaluation results rendered",
+    "Mobile layout within viewport",
+    "Operator logout"
+  ],
+  "audioGenerated": true,
+  "audioScope": "One short real text-to-speech request through the hosted browser and API; media metadata decoded successfully. Other audio products and microphone conversations remain unverified end to end.",
+  "errors": []
+}

@@ -4,15 +4,21 @@
 
 Meet **Nora**: a multilingual terminal assistant that looks up shipments, explains terminal procedures and prepares escalations for operator review. Explore an interactive terminal map, eight ElevenLabs audio workflows, knowledge management, conversation history and reproducible evaluations.
 
-[Explore the demo](https://phlppgdfry.github.io/harborvoice-ai/) · [Feature coverage](docs/feature-coverage.md) · [Architecture](docs/architecture.md) · [Browser evidence](docs/browser-verification.json) · [Live setup evidence](docs/live-verification.json)
+[Open the live workspace](https://harborvoice-ai.vercel.app) · [Static portfolio preview](https://phlppgdfry.github.io/harborvoice-ai/) · [Feature coverage](docs/feature-coverage.md) · [Architecture](docs/architecture.md) · [Browser evidence](docs/browser-verification.json) · [Live setup evidence](docs/live-verification.json)
 
 ![HarborVoice operations dashboard](docs/screenshots/overview.png)
 
-> Independent portfolio project by Philippe Godfroy. The company, shipments and operating procedures are fictional. Demo conversations are deterministic scripts, not AI responses. Live account access, the provisioned agent, four indexed knowledge sources, two tools and signed-session issuance have now been verified. An approved official onboarding text-to-speech request also returned HTTP 200 and produced a playable MP3. The eight-tool contract/browser tests still use fixtures; a real microphone conversation and the other audio products have not yet been exercised end to end. No certification, LinkedIn badge, partnership or platform endorsement is claimed.
+> Independent portfolio project by Philippe Godfroy. The company, shipments and operating procedures are fictional. Demo conversations are deterministic scripts, not AI responses. Live account access, the provisioned agent, four indexed knowledge sources, two tools and signed-session issuance have now been verified. Short real text-to-speech requests succeeded through official onboarding and the hosted browser/API; the browser decoded the hosted audio successfully. Six real multilingual ElevenLabs LLM simulations passed; their business-tool responses are synthetic fixtures, and they do not exercise microphone audio. The eight-tool contract/browser tests still use fixtures; a real microphone conversation and the other audio products have not yet been exercised end to end. No certification, LinkedIn badge, partnership or platform endorsement is claimed.
+
+## Live workspace
+
+The [hosted workbench](https://harborvoice-ai.vercel.app) has its ElevenLabs API and Nora agent configured server-side. Open **Settings**, enter your private operator access code, then verify the connection or start a live voice session. The public portfolio preview links to this workspace. Never paste the ElevenLabs API key into the browser.
+
+Hosted workspace records stay in your browser; the serverless API handles live ElevenLabs requests. Hosted uploads are limited to 4 MiB, and webhook retention is disabled. The local server offers SQLite persistence and 20 MiB uploads. See [hosting](docs/hosting.md), [real agent evaluation](docs/agent-evaluation.json) and [LinkedIn recognition](docs/linkedin-recognition.md).
 
 ## Run locally
 
-Requires Node.js **22.13+** (24 LTS recommended) and npm.
+Requires Node.js **24 LTS** and npm.
 
 ```bash
 git clone https://github.com/phlppgdfry/harborvoice-ai.git
@@ -78,11 +84,13 @@ This is a broad ElevenLabs integration showcase, **not every endpoint or enterpr
 
 Audio requests, live calls and simulations may consume account credits. An authenticated `verify:live` check reads voices/agent configuration and issues a signed session URL; it does not start a conversation or generate audio. Creating resources also depends on your account permissions and limits. No live requests are made just by opening the unconfigured demo. Voice lists are read when a configured audio studio is opened. The live simulation creates a new test resource per run; remove unwanted test resources in ElevenLabs.
 
+After provisioning, `npm run agent:sync` idempotently attaches the multilingual settings, three evaluation criteria and six versioned simulation tests. `npm run agent:evaluate -- --run` starts one paid suite (six cases, four turns each, repeat count one). `npm run agent:evaluate` only refreshes the recorded invocation and exports sanitized evidence. Test resource IDs and full synthetic transcripts stay in ignored `var/`.
+
 The agent's `lookup_shipment` and `request_escalation` tools execute through the connected HarborVoice browser. They are suitable for this browser demo, not standalone telephone calls. A telephony deployment needs authenticated server tools, caller authorisation and separate production infrastructure.
 
 ### Operator access
 
-The default server binds to loopback. To bind to a network interface, set `HOST=0.0.0.0` and a strong `OPERATOR_TOKEN`. The server refuses non-loopback binding without a token. Enter that token in **Settings**; it is held in session storage for the current browser tab. Reload to reconnect.
+The default server binds to loopback. To bind to a network interface, set `HOST=0.0.0.0` and a strong `OPERATOR_TOKEN`. The server refuses non-loopback binding without a token. Enter that token in **Settings**. The server exchanges it for an eight-hour HttpOnly session cookie; the hosted cookie also requires HTTPS. Sign out to clear the current browser session. Rotating the server token invalidates all existing sessions.
 
 This shared operator token is for a single-user workbench, not enterprise SSO or role separation. Do not deploy it as a public customer service without an authentication layer, TLS, per-user permissions, caller verification, retention controls and spend limits. Operator access includes all workspace data and paid features.
 
@@ -93,8 +101,10 @@ Expose `POST /api/webhooks/elevenlabs` over HTTPS using your deployment infrastr
 ## Verification
 
 ```bash
-npm run check                 # TypeScript + production build + 36 tests
+npm run check                 # TypeScript + production build + 45 tests
 npm run verify:live           # Explicit read-only verification against your configured account
+npm run verify:hosted         # Production browser/login check; requires a private operator code
+npm run agent:evaluate        # Refresh existing real agent test results, no new suite
 npm run dev                   # In another terminal
 npm run test:browser          # Installed Google Chrome, or BROWSER_CHANNEL=chromium
 ```
