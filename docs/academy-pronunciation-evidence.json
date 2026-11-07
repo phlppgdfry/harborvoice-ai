@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-07T20:19:24.032Z",
+  "modelId": "eleven_multilingual_v2",
+  "text": "In this fictional exercise, check the ETA in the TMS for shipment HV-2048. An estimated arrival is not a guarantee. If the lookup fails, explain the limitation and ask an operator to review the request.",
+  "scope": "Two real generations of the same short synthetic script, without and with the project dictionary, then real Scribe transcription. Transcription is model output, not an independent pronunciation quality assessment.",
+  "samples": [
+    {
+      "aliases": false,
+      "file": "academy/pronunciation-original.mp3",
+      "durationSeconds": 13.188934,
+      "transcript": "In this fictional exercise, check the ETA in the TMS for shipment HV2048. An estimated arrival is not a guarantee. If the lookup fails, explain the limitation and ask an operator to review the request"
+    },
+    {
+      "aliases": true,
+      "file": "academy/pronunciation-aliases.mp3",
+      "durationSeconds": 17.461406,
+      "transcript": "In this fictional exercise, check the estimated time of arrival in the transport management system for shipment HV2048. An estimated arrival is not a guarantee. If the lookup fails, explain the limitation and ask an operator to review the request."
+    }
+  ],
+  "aliasExpansionObserved": true,
+  "completed": true
+}

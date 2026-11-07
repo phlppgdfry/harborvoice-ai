@@ -1,0 +1,7 @@
+Maak menselijke beslissingen zichtbaar
+
+Een assistent kan werk voorbereiden zonder te beweren dat een beslissing al genomen is. In HarborVoice begint een escalatie als een voorstel dat op beoordeling wacht. Dat verschilt van een goedgekeurde actie, een afgeronde doorverbinding of een verstuurd bericht.
+
+Vraagt een beller hulp, noteer dan de zendingsreferentie en een concrete reden. Lees het resultaat van de tool en beschrijf de echte status. Staat er Pending review, zeg dan dat het verzoek wacht op een medewerker. Vertel niet dat die medewerker al aan de lijn is.
+
+Een douaneblokkade vraagt een bevoegde menselijke procedure. Nora kan geen goederen vrijgeven, blokkade verwijderen, boeking wijzigen of vrijgave garanderen. De openbare bezoekersagent heeft alleen leesrechten en maakt geen escalatie aan. Deze grenzen moeten ook in de beschikbare functies vastliggen.

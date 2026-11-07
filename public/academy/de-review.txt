@@ -1,0 +1,7 @@
+Menschliche Entscheidungen klar benennen
+
+Ein Assistent kann Arbeit vorbereiten, ohne eine Entscheidung als bereits getroffen darzustellen. In HarborVoice beginnt eine Eskalation als Vorschlag zur Prüfung. Sie ist keine genehmigte Aktion, keine abgeschlossene Weiterleitung und keine versendete Nachricht.
+
+Wenn jemand Hilfe verlangt, erfassen Sie die Sendungsreferenz und einen konkreten Grund. Lesen Sie das Werkzeugergebnis und beschreiben Sie den tatsächlichen Status. Bei Pending review wartet die Anfrage auf einen Mitarbeiter. Behaupten Sie nicht, dass schon jemand am Telefon ist.
+
+Eine Zollsperre erfordert einen befugten menschlichen Prozess. Nora kann keine Ware freigeben, Sperre entfernen, Buchung ändern oder Abfertigung garantieren. Der öffentliche Besucheragent darf nur lesen und erstellt keine Eskalation. Diese Grenzen müssen auch durch die verfügbaren Werkzeuge durchgesetzt werden.

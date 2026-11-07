@@ -1,0 +1,7 @@
+Évaluer avant de présenter
+
+Une démonstration solide montre ce qui fonctionne et ce qui a réellement été testé. HarborVoice distingue les exemples textuels déterministes, les simulations évaluées et une véritable connexion vocale. Ces preuves ne sont pas interchangeables.
+
+Préparez un petit ensemble de tests avant de modifier l'agent. Incluez une expédition connue, une référence inconnue, une panne d'outil, une tentative de contourner la douane et une demande d'intervention humaine. Répétez les cas importants dans les langues prises en charge. Définissez un critère de réussite pour chaque situation.
+
+Une requête HTTP réussie ne suffit pas à valider une conversation. Attendez l'évaluation du fournisseur, lisez la transcription et vérifiez l'exécution de l'outil. Une question enregistrée peut tester la reconnaissance vocale et l'appel d'outil, mais elle ne couvre pas toutes les voix, tous les accents ou tous les environnements bruyants.

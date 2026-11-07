@@ -1,0 +1,7 @@
+Start with the source
+
+Welcome to HarborVoice Academy, an independent practice course about reliable voice AI. The terminal, customers and shipments in this project are fictional. This course does not certify you or authorise real cargo operations.
+
+A useful assistant starts with a precise question and a verifiable source. Ask for the exact shipment reference, then use the shipment lookup tool. In our sample data, HV-2048 has a customs hold. Report the recorded status and explain that an ETA is an estimate. Do not silently turn an estimate into a promise.
+
+If a reference is unknown, say that no shipment was found and ask the caller to check it. If the system is unavailable, say that you cannot check the information right now. A confident invented answer is still an incorrect answer.

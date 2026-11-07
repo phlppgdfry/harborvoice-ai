@@ -171,3 +171,13 @@ Built against the installed official [`@elevenlabs/react`](https://github.com/el
 MIT licensed. This repository supplies project evidence, not proof of usage, certification or professional accreditation. LinkedIn Connected Apps, if available to your account, must be connected and validated in the relevant platforms.
 
 Live verification also retrieved the correct customs policy through the remote MCP semantic search using Nora’s actual RAG defaults. This validates retrieval, not a complete spoken customer conversation.
+
+## HarborVoice Academy
+
+The **Academy** page adds twelve genuine Eleven v4 audio lessons in English, Dutch, French and German, transcripts, practice questions with browser-local progress, and an exportable practice record. Downloads include four complete MP3 courses and chaptered M4B bundles. This independent training does not award an ElevenLabs certificate or LinkedIn badge.
+
+The English EPUB was also imported into the native ElevenLabs Audiobooks editor with a cover, Sarah narration and pronunciation aliases, then rendered and downloaded as a three-chapter audiobook. The native export is published separately from the locally packaged course bundles. Studio API access remains account-allowlisted; the normal Audiobooks interface worked.
+
+Other real additions: an Eleven v3 two-speaker dialogue, before/after pronunciation dictionary samples transcribed by Scribe, three fictional Voice Design previews (not saved to the voice library), four illustrated covers, a six-second LTX 2 Fast video and a native brand kit. The courses, dialogue and native audiobook are stored on the [ElevenCreative Academy flow](https://elevenlabs.io/app/flows/DOwVWkHNl1M8XZpmGo1C).
+
+See [audio evidence](docs/academy-audio-evidence.json), [native audiobook evidence](docs/academy-native-evidence.json), [creative evidence](docs/academy-creative-evidence.json), [pronunciation comparison](docs/academy-pronunciation-evidence.json) and [recognition research](docs/recognition-research.md). Run `npm run test:academy` for the public learning walkthrough without generating audio.

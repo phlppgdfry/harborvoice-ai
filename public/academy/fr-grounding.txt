@@ -1,0 +1,7 @@
+Commencer par la source
+
+Bienvenue dans HarborVoice Academy, un parcours indépendant consacré à la fiabilité des assistants vocaux. Le terminal, les clients et les expéditions de ce projet sont fictifs. Cette formation ne délivre aucune certification et n'autorise aucune opération réelle sur des marchandises.
+
+Un assistant utile commence par une question précise et une source vérifiable. Demandez la référence exacte de l'expédition, puis utilisez l'outil de recherche. Dans nos données d'exemple, HV-2048 fait l'objet d'un blocage douanier. Présentez le statut enregistré et précisez qu'une heure d'arrivée prévue est une estimation, jamais une promesse.
+
+Si la référence est inconnue, indiquez que l'expédition n'a pas été trouvée et demandez de vérifier la référence. Si le système est indisponible, dites que vous ne pouvez pas consulter les données pour le moment. Une réponse inventée reste fausse, même si elle paraît assurée.

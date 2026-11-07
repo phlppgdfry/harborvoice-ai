@@ -25,4 +25,6 @@ Verified 7 November 2026. Synthetic logistics data; no external terminal is conn
 
 See [creative evidence](creative-evidence.json), [real audio checks](audio-live-evidence.json), [visitor voice](visitor-voice-verification.json), [agent evaluations](agent-evaluation.json) and [budget notes](experience-budget.json). Transport and browser fixtures are separate from these real account requests.
 
-Not covered: every Studio or audiobook workflow, voice design/cloning, image/video generation, telephone provisioning, production TMS access, enterprise SSO, distributed credit metering, provider transcript reconciliation, independent reviewer identities and load testing. No certificate or Top User status is awarded by this project.
+Academy extension: twelve real multilingual lessons, EPUB, four MP3/M4B bundles, native Audiobooks UI export, three unsaved Voice Design previews, pronunciation dictionary and real before/after samples, two-speaker dialogue, image/video generation and a native brand kit. See the Academy evidence reports.
+
+Not covered: every Studio or audiobook workflow, voice cloning, telephone provisioning, production TMS access, enterprise SSO, distributed credit metering, provider transcript reconciliation, independent reviewer identities and load testing. No certificate or Top User status is awarded by this project.

@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-11-07T20:05:15.731Z",
+  "modelId": "eleven_v3",
+  "file": "academy/review-dialogue.mp3",
+  "durationSeconds": 51.2,
+  "voices": 2,
+  "turns": 6,
+  "scope": "A real multi-speaker generation of a scripted fictional training scenario; not an agent evaluation or a real customer recording.",
+  "passed": true
+}

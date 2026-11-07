@@ -1,0 +1,7 @@
+Begin bij de bron
+
+Welkom bij HarborVoice Academy, een onafhankelijke oefentraining over betrouwbare spraak-AI. De terminal, klanten en zendingen in dit project zijn fictief. Deze training geeft geen certificaat en verleent geen toestemming voor echte goederenafhandeling.
+
+Een bruikbare assistent begint met een precieze vraag en een controleerbare bron. Vraag de exacte zendingsreferentie en gebruik daarna de opzoekfunctie. In onze voorbeeldgegevens heeft HV-2048 een douaneblokkade. Meld de geregistreerde status en leg uit dat een verwachte aankomsttijd een schatting is. Maak daar geen belofte van.
+
+Is een referentie onbekend, zeg dan dat de zending niet is gevonden en vraag de beller de referentie te controleren. Is het systeem onbereikbaar, vertel dan dat je de gegevens nu niet kunt nakijken. Een zelfverzekerd verzonnen antwoord blijft een fout antwoord.

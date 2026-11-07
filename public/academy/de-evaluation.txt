@@ -1,0 +1,7 @@
+Vor der Präsentation testen
+
+Eine gute Demonstration zeigt sowohl funktionierende Abläufe als auch den tatsächlich geprüften Umfang. HarborVoice trennt feste Textbeispiele, bewertete Agentensimulationen und eine echte Sprachverbindung. Diese Nachweise haben unterschiedliche Aussagekraft.
+
+Erstellen Sie einen kleinen Testsatz, bevor Sie den Agenten ändern. Prüfen Sie eine bekannte Sendung, eine unbekannte Referenz, einen Werkzeugfehler, den Versuch einer Zollumgehung und eine Bitte um menschliche Hilfe. Wiederholen Sie wichtige Fälle in den unterstützten Sprachen. Definieren Sie für jede Situation ein klares Erfolgskriterium.
+
+Eine erfolgreiche HTTP-Anfrage ist noch kein erfolgreiches Gespräch. Warten Sie auf die Bewertung, lesen Sie das Transkript und prüfen Sie den tatsächlichen Werkzeugaufruf. Eine aufgezeichnete Mikrofonfrage kann Spracherkennung und Werkzeugaufruf testen. Sie bewertet jedoch nicht jede menschliche Stimme, jeden Akzent oder jede laute Umgebung.

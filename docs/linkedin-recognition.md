@@ -2,6 +2,8 @@
 
 Checked 7 November 2026. This project does not grant a certificate or badge.
 
+See the [expanded official-source research](recognition-research.md) for the distinction between Top User, Power User, Ambassador and partner certification, plus practical next steps. There is no verified credit-spending shortcut.
+
 | Recognition                     | What is established                                                                                                           |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Capability statement            | LinkedIn displays a partner-validated account-use description through Connected Apps.                                         |
@@ -27,3 +29,5 @@ HarborVoice provides a live signed-session integration, indexed knowledge, clien
 ## Ambassador application preparation — not submitted
 
 Use the [official application page](https://elevenlabs.io/ambassador). Present HarborVoice as an independent synthetic logistics workbench; include the live app, repository, a short walkthrough, technical design and bounded test evidence. State your actual audience and contributions accurately. Power User status does not have an application route under the published terms.
+
+Latest recheck: Connect is now available and the previous “Keep using” message is absent. LinkedIn sign-in opened; the owner will complete the connection personally. No Top User status was observed.

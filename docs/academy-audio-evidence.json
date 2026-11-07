@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-11-07T20:03:05.565Z",
+  "model": "eleven_v4",
+  "scope": "One real API generation per completed lesson. Media metadata decoded; linguistic and subjective audio quality were not independently scored.",
+  "lessons": [
+    {
+      "id": "en-grounding",
+      "status": "completed",
+      "durationSeconds": 53.6,
+      "file": "academy/en-grounding.mp3",
+      "sha256": "36b2823f301bf4747b43106c33bbbfee762bc1e003df30c4f2bba9987a18c319"
+    },
+    {
+      "id": "en-review",
+      "status": "completed",
+      "durationSeconds": 52.64,
+      "file": "academy/en-review.mp3",
+      "sha256": "b029ea019b26e737faa9dc89920429c17e11fe091512d050d0bf27af354cb636"
+    },
+    {
+      "id": "en-evaluation",
+      "status": "completed",
+      "durationSeconds": 56.4,
+      "file": "academy/en-evaluation.mp3",
+      "sha256": "de44412444b3a2639e93a57eb50f28084db64de7f2ebacc9538fe709a68c45b8"
+    },
+    {
+      "id": "nl-grounding",
+      "status": "completed",
+      "durationSeconds": 57.6,
+      "file": "academy/nl-grounding.mp3",
+      "sha256": "8dcfd60a2bda834a22adb077478896e0d9f1404d2bdb7ce3f9e221fdfeb60c73"
+    },
+    {
+      "id": "nl-review",
+      "status": "completed",
+      "durationSeconds": 54.24,
+      "file": "academy/nl-review.mp3",
+      "sha256": "7dc5c4e87c423395e1e5d4058f6acdcd17d9be4a6fbdcfcdecfbe2b2b7e907a7"
+    },
+    {
+      "id": "nl-evaluation",
+      "status": "completed",
+      "durationSeconds": 57.12,
+      "file": "academy/nl-evaluation.mp3",
+      "sha256": "9c0d75e77ed629af884b674876cff1232b4ba29fbfc53bef27ede5eb1dd031f3"
+    },
+    {
+      "id": "fr-grounding",
+      "status": "completed",
+      "durationSeconds": 56.32,
+      "file": "academy/fr-grounding.mp3",
+      "sha256": "08cc5027dd958bae13e6649f08a91166250d4569bb46dc6e4adaba5d0bf4256e"
+    },
+    {
+      "id": "fr-review",
+      "status": "completed",
+      "durationSeconds": 54.16,
+      "file": "academy/fr-review.mp3",
+      "sha256": "bb1b92494085000acc20bf0fb4a86ffb96f8e61886f2fed40906ae65e6e3cdd0"
+    },
+    {
+      "id": "fr-evaluation",
+      "status": "completed",
+      "durationSeconds": 55.76,
+      "file": "academy/fr-evaluation.mp3",
+      "sha256": "9ff0e070d3e0ee2041de7dd746bac118a8a352b07da5f5ab921bf1312e6c2b05"
+    },
+    {
+      "id": "de-grounding",
+      "status": "completed",
+      "durationSeconds": 58.88,
+      "file": "academy/de-grounding.mp3",
+      "sha256": "389794b980af2d253305cb96ab54a2dce5fe3eeb9455830cd8815f4c8f328694"
+    },
+    {
+      "id": "de-review",
+      "status": "completed",
+      "durationSeconds": 54.4,
+      "file": "academy/de-review.mp3",
+      "sha256": "b3b8cf39268584418f8470c0bca80729bdc3622d343a80297893d37344580a2e"
+    },
+    {
+      "id": "de-evaluation",
+      "status": "completed",
+      "durationSeconds": 64.16,
+      "file": "academy/de-evaluation.mp3",
+      "sha256": "e2ebfd45b79781f22c243930789c05822a31641e4242fa401ea2082a3f30e0b5"
+    }
+  ],
+  "reservedCredits": 14410
+}

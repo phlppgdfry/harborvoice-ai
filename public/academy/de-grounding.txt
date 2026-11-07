@@ -1,0 +1,7 @@
+Mit der Quelle beginnen
+
+Willkommen bei HarborVoice Academy, einem unabhängigen Übungskurs über zuverlässige Sprachassistenten. Das Terminal, die Kunden und die Sendungen in diesem Projekt sind fiktiv. Dieser Kurs vergibt kein Zertifikat und berechtigt nicht zu echten Warenbewegungen.
+
+Ein hilfreicher Assistent beginnt mit einer genauen Frage und einer überprüfbaren Quelle. Fragen Sie nach der exakten Sendungsreferenz und nutzen Sie dann das Suchwerkzeug. In unseren Beispieldaten hat HV-2048 eine Zollsperre. Geben Sie den gespeicherten Status wieder und erklären Sie, dass eine erwartete Ankunftszeit eine Schätzung ist. Machen Sie daraus keine Zusage.
+
+Ist die Referenz unbekannt, sagen Sie, dass keine Sendung gefunden wurde, und bitten Sie um Prüfung. Ist das System nicht erreichbar, erklären Sie, dass Sie die Daten gerade nicht nachsehen können. Eine selbstbewusst erfundene Antwort bleibt falsch.

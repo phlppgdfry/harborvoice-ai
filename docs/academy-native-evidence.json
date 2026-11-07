@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-07T20:17:48.320Z",
+  "dictionary": {
+    "created": true,
+    "ruleCount": 3
+  },
+  "studioApi": {
+    "available": false,
+    "reason": "Official API rejects this account: explicit Studio API allowlisting required."
+  },
+  "nativeAudiobook": {
+    "created": true,
+    "renderCompleted": true,
+    "chapterCount": 3,
+    "pronunciationRules": 2,
+    "model": "Eleven v4",
+    "voice": "Sarah",
+    "file": "academy/native-audiobook-en.mp3",
+    "durationSeconds": 185.662154,
+    "renderEstimateCredits": 2528,
+    "sha256": "0aebb51d03d18ec0f4896ea6521eee59cb495947ba8007d6254646785486232c",
+    "method": "Normal ElevenLabs Audiobooks UI: EPUB import, cover, voice selection, pronunciation aliases, full-project MP3 export."
+  },
+  "scope": "A native Audiobooks editor project and completed exported audio, separate from the locally compiled multilingual lesson bundles. The Studio API remains restricted."
+}

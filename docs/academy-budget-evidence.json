@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-11-07T20:26:45.083Z",
+  "maximumCredits": 20000,
+  "reservedCredits": 19810,
+  "accountCreditDelta": 9967,
+  "withinBudget": true,
+  "reservations": {
+    "creative-media": {
+      "allowance": 2300,
+      "status": "completed",
+      "note": "Four covers and one six-second video completed."
+    },
+    "voice-design": {
+      "allowance": 1000,
+      "status": "completed"
+    },
+    "en-grounding": {
+      "allowance": 829,
+      "status": "completed"
+    },
+    "en-review": {
+      "allowance": 872,
+      "status": "completed"
+    },
+    "en-evaluation": {
+      "allowance": 887,
+      "status": "completed"
+    },
+    "nl-grounding": {
+      "allowance": 911,
+      "status": "completed"
+    },
+    "nl-review": {
+      "allowance": 894,
+      "status": "completed"
+    },
+    "nl-evaluation": {
+      "allowance": 935,
+      "status": "completed"
+    },
+    "fr-grounding": {
+      "allowance": 977,
+      "status": "completed"
+    },
+    "fr-review": {
+      "allowance": 930,
+      "status": "completed"
+    },
+    "fr-evaluation": {
+      "allowance": 986,
+      "status": "completed"
+    },
+    "de-grounding": {
+      "allowance": 949,
+      "status": "completed"
+    },
+    "de-review": {
+      "allowance": 923,
+      "status": "completed"
+    },
+    "de-evaluation": {
+      "allowance": 1017,
+      "status": "completed"
+    },
+    "multi-speaker-dialogue": {
+      "allowance": 1600,
+      "status": "completed"
+    },
+    "native-audiobook-ui": {
+      "allowance": 2900,
+      "status": "completed",
+      "note": "Rendered and downloaded through the normal Audiobooks interface."
+    },
+    "pronunciation-comparison": {
+      "allowance": 900,
+      "status": "completed"
+    }
+  },
+  "itemizedCreativeCredits": 2192.5864952844827,
+  "nativeAudiobookUiQuoteCredits": 2528,
+  "scope": "Account-wide counter delta since this Academy run began, not an itemized invoice. Billing can be delayed and other account activity can affect the counter. Reservations are conservative request allowances, not actual charges. No generation is performed by this report."
+}

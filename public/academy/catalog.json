@@ -1,0 +1,263 @@
+{
+  "generatedAt": "2026-11-07T20:03:05.565Z",
+  "title": "HarborVoice Academy",
+  "scope": "Independent practice using fictional logistics data. Audio generated with Eleven v4. Quiz progress is local to this browser and is not a certification.",
+  "courses": [
+    {
+      "language": "en",
+      "label": "English",
+      "title": "Reliable voice AI for logistics",
+      "lessons": [
+        {
+          "id": "grounding",
+          "title": "Start with the source",
+          "text": "Welcome to HarborVoice Academy, an independent practice course about reliable voice AI. The terminal, customers and shipments in this project are fictional. This course does not certify you or authorise real cargo operations.\n\nA useful assistant starts with a precise question and a verifiable source. Ask for the exact shipment reference, then use the shipment lookup tool. In our sample data, HV-2048 has a customs hold. Report the recorded status and explain that an ETA is an estimate. Do not silently turn an estimate into a promise.\n\nIf a reference is unknown, say that no shipment was found and ask the caller to check it. If the system is unavailable, say that you cannot check the information right now. A confident invented answer is still an incorrect answer.",
+          "question": "The shipment lookup fails. What should Nora do?",
+          "choices": [
+            "Use the last ETA she remembers.",
+            "Explain that the system cannot be checked and offer human review.",
+            "Promise that the cargo will arrive today."
+          ],
+          "answer": 1,
+          "explanation": "A failed lookup provides no current shipment facts. Explain the limitation and keep estimates separate from guarantees.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 53.6,
+            "file": "academy/en-grounding.mp3",
+            "sha256": "36b2823f301bf4747b43106c33bbbfee762bc1e003df30c4f2bba9987a18c319"
+          }
+        },
+        {
+          "id": "review",
+          "title": "Keep human decisions clear",
+          "text": "An assistant can prepare work without claiming that a decision has already been made. In HarborVoice, an escalation begins as a proposal waiting for operator review. That is different from an approved action, a completed transfer or a message sent to a customer.\n\nWhen a caller requests help, record the shipment reference and a concrete reason. Read the tool result and describe its actual status. If it says Pending review, say that the request is waiting for an operator. Do not say that a human is already on the line.\n\nA customs hold requires an authorised human process. Nora cannot release cargo, remove a hold, change a booking or guarantee clearance. The public visitor agent is read-only and cannot create an escalation. These restrictions belong in the available tools as well as in the instructions.",
+          "question": "An escalation tool returns Pending review. What has happened?",
+          "choices": [
+            "Cargo has been released.",
+            "A live phone transfer has completed.",
+            "A request is waiting for an operator decision."
+          ],
+          "answer": 2,
+          "explanation": "A pending request is a proposal. It does not change cargo status or prove that a person has acted.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 52.64,
+            "file": "academy/en-review.mp3",
+            "sha256": "b029ea019b26e737faa9dc89920429c17e11fe091512d050d0bf27af354cb636"
+          }
+        },
+        {
+          "id": "evaluation",
+          "title": "Test before you present",
+          "text": "A good demonstration shows both what works and what was actually tested. HarborVoice separates scripted text examples, simulated agent evaluations and a real voice connection. They provide different kinds of evidence.\n\nBuild a small evaluation set before changing your agent. Include the known shipment, an unknown reference, a tool failure, a request to bypass customs and a human review request. Repeat the important cases in the languages you intend to support. Write a clear pass condition for each case.\n\nA successful HTTP request is not a successful conversation. Wait for the provider evaluation to finish, inspect the transcript and check whether a tool really ran. A prerecorded microphone question can test speech recognition and tool dispatch, but it does not assess every human voice, accent or noisy environment.",
+          "question": "Which statement best describes a passed provider simulation?",
+          "choices": [
+            "Every real conversation is guaranteed to succeed.",
+            "The stated scenario passed under the recorded test conditions.",
+            "The author has earned an official expert certificate."
+          ],
+          "answer": 1,
+          "explanation": "A bounded test supports a bounded claim. It does not establish universal reliability or award a credential.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 56.4,
+            "file": "academy/en-evaluation.mp3",
+            "sha256": "de44412444b3a2639e93a57eb50f28084db64de7f2ebacc9538fe709a68c45b8"
+          }
+        }
+      ]
+    },
+    {
+      "language": "nl",
+      "label": "Nederlands",
+      "title": "Betrouwbare spraak-AI voor logistiek",
+      "lessons": [
+        {
+          "id": "grounding",
+          "title": "Begin bij de bron",
+          "text": "Welkom bij HarborVoice Academy, een onafhankelijke oefentraining over betrouwbare spraak-AI. De terminal, klanten en zendingen in dit project zijn fictief. Deze training geeft geen certificaat en verleent geen toestemming voor echte goederenafhandeling.\n\nEen bruikbare assistent begint met een precieze vraag en een controleerbare bron. Vraag de exacte zendingsreferentie en gebruik daarna de opzoekfunctie. In onze voorbeeldgegevens heeft HV-2048 een douaneblokkade. Meld de geregistreerde status en leg uit dat een verwachte aankomsttijd een schatting is. Maak daar geen belofte van.\n\nIs een referentie onbekend, zeg dan dat de zending niet is gevonden en vraag de beller de referentie te controleren. Is het systeem onbereikbaar, vertel dan dat je de gegevens nu niet kunt nakijken. Een zelfverzekerd verzonnen antwoord blijft een fout antwoord.",
+          "question": "De opzoekfunctie valt uit. Wat doet Nora?",
+          "choices": [
+            "Een oude aankomsttijd als actuele informatie geven.",
+            "Uitleggen dat controleren nu niet lukt en menselijke beoordeling aanbieden.",
+            "Beloven dat de zending vandaag aankomt."
+          ],
+          "answer": 1,
+          "explanation": "Een mislukte opzoeking levert geen actuele feiten op. Benoem de beperking en maak geen garantie van een schatting.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 57.6,
+            "file": "academy/nl-grounding.mp3",
+            "sha256": "8dcfd60a2bda834a22adb077478896e0d9f1404d2bdb7ce3f9e221fdfeb60c73"
+          }
+        },
+        {
+          "id": "review",
+          "title": "Maak menselijke beslissingen zichtbaar",
+          "text": "Een assistent kan werk voorbereiden zonder te beweren dat een beslissing al genomen is. In HarborVoice begint een escalatie als een voorstel dat op beoordeling wacht. Dat verschilt van een goedgekeurde actie, een afgeronde doorverbinding of een verstuurd bericht.\n\nVraagt een beller hulp, noteer dan de zendingsreferentie en een concrete reden. Lees het resultaat van de tool en beschrijf de echte status. Staat er Pending review, zeg dan dat het verzoek wacht op een medewerker. Vertel niet dat die medewerker al aan de lijn is.\n\nEen douaneblokkade vraagt een bevoegde menselijke procedure. Nora kan geen goederen vrijgeven, blokkade verwijderen, boeking wijzigen of vrijgave garanderen. De openbare bezoekersagent heeft alleen leesrechten en maakt geen escalatie aan. Deze grenzen moeten ook in de beschikbare functies vastliggen.",
+          "question": "De tool geeft Pending review terug. Wat is er gebeurd?",
+          "choices": [
+            "De goederen zijn vrijgegeven.",
+            "Een telefonische doorverbinding is afgerond.",
+            "Een verzoek wacht op een beslissing van een medewerker."
+          ],
+          "answer": 2,
+          "explanation": "Een wachtend verzoek is een voorstel. Het verandert de goederenstatus niet en bewijst geen menselijke uitvoering.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 54.24,
+            "file": "academy/nl-review.mp3",
+            "sha256": "7dc5c4e87c423395e1e5d4058f6acdcd17d9be4a6fbdcfcdecfbe2b2b7e907a7"
+          }
+        },
+        {
+          "id": "evaluation",
+          "title": "Test voordat je presenteert",
+          "text": "Een goede demonstratie laat zien wat werkt en wat daadwerkelijk is onderzocht. HarborVoice maakt onderscheid tussen vaste tekstvoorbeelden, gesimuleerde agentbeoordelingen en een echte spraakverbinding. Die leveren verschillend bewijs.\n\nMaak een kleine testset voordat je de agent wijzigt. Neem een bekende zending, een onbekende referentie, tooluitval, een poging om de douane te omzeilen en een verzoek om menselijke hulp op. Herhaal belangrijke situaties in de talen die je wilt ondersteunen. Schrijf voor elke test een duidelijke slaagvoorwaarde.\n\nEen geslaagde API-aanvraag is nog geen geslaagd gesprek. Wacht op de beoordeling, bekijk het transcript en controleer of de tool echt werd uitgevoerd. Een vooraf opgenomen microfoonvraag kan spraakherkenning en toolaansturing testen, maar beoordeelt niet iedere menselijke stem, ieder accent of elke rumoerige omgeving.",
+          "question": "Wat betekent een geslaagde agentsimulatie?",
+          "choices": [
+            "Alle echte gesprekken zullen goed gaan.",
+            "De beschreven situatie slaagde onder de vastgelegde testvoorwaarden.",
+            "De maker heeft een officieel expertcertificaat behaald."
+          ],
+          "answer": 1,
+          "explanation": "Een afgebakende test ondersteunt een afgebakende conclusie en kent geen professioneel certificaat toe.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 57.12,
+            "file": "academy/nl-evaluation.mp3",
+            "sha256": "9c0d75e77ed629af884b674876cff1232b4ba29fbfc53bef27ede5eb1dd031f3"
+          }
+        }
+      ]
+    },
+    {
+      "language": "fr",
+      "label": "Français",
+      "title": "Une IA vocale fiable pour la logistique",
+      "lessons": [
+        {
+          "id": "grounding",
+          "title": "Commencer par la source",
+          "text": "Bienvenue dans HarborVoice Academy, un parcours indépendant consacré à la fiabilité des assistants vocaux. Le terminal, les clients et les expéditions de ce projet sont fictifs. Cette formation ne délivre aucune certification et n'autorise aucune opération réelle sur des marchandises.\n\nUn assistant utile commence par une question précise et une source vérifiable. Demandez la référence exacte de l'expédition, puis utilisez l'outil de recherche. Dans nos données d'exemple, HV-2048 fait l'objet d'un blocage douanier. Présentez le statut enregistré et précisez qu'une heure d'arrivée prévue est une estimation, jamais une promesse.\n\nSi la référence est inconnue, indiquez que l'expédition n'a pas été trouvée et demandez de vérifier la référence. Si le système est indisponible, dites que vous ne pouvez pas consulter les données pour le moment. Une réponse inventée reste fausse, même si elle paraît assurée.",
+          "question": "La recherche échoue. Que doit faire Nora ?",
+          "choices": [
+            "Présenter une ancienne estimation comme une donnée actuelle.",
+            "Expliquer l'indisponibilité et proposer un examen humain.",
+            "Garantir une arrivée aujourd'hui."
+          ],
+          "answer": 1,
+          "explanation": "Un échec ne fournit aucun fait actuel. Il faut expliquer la limite et éviter les garanties.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 56.32,
+            "file": "academy/fr-grounding.mp3",
+            "sha256": "08cc5027dd958bae13e6649f08a91166250d4569bb46dc6e4adaba5d0bf4256e"
+          }
+        },
+        {
+          "id": "review",
+          "title": "Clarifier les décisions humaines",
+          "text": "Un assistant peut préparer un travail sans prétendre qu'une décision a déjà été prise. Dans HarborVoice, une escalade commence par une proposition en attente d'examen. Ce n'est ni une action approuvée, ni un transfert téléphonique terminé, ni un message envoyé.\n\nLorsqu'un client demande de l'aide, consignez la référence et une raison précise. Lisez le résultat de l'outil et décrivez son statut réel. Si le résultat indique Pending review, expliquez que la demande attend un opérateur. N'affirmez pas qu'un conseiller est déjà en ligne.\n\nUn blocage douanier relève d'un processus humain autorisé. Nora ne peut ni libérer une marchandise, ni supprimer le blocage, ni modifier une réservation, ni garantir le dédouanement. L'agent public dispose uniquement d'un accès en lecture et ne crée aucune escalade. Les outils disponibles doivent faire respecter ces limites.",
+          "question": "L'outil indique Pending review. Que s'est-il passé ?",
+          "choices": [
+            "La marchandise a été libérée.",
+            "Un transfert téléphonique est terminé.",
+            "Une demande attend la décision d'un opérateur."
+          ],
+          "answer": 2,
+          "explanation": "Une demande en attente ne modifie pas le statut des marchandises et ne prouve aucune intervention humaine.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 54.16,
+            "file": "academy/fr-review.mp3",
+            "sha256": "bb1b92494085000acc20bf0fb4a86ffb96f8e61886f2fed40906ae65e6e3cdd0"
+          }
+        },
+        {
+          "id": "evaluation",
+          "title": "Évaluer avant de présenter",
+          "text": "Une démonstration solide montre ce qui fonctionne et ce qui a réellement été testé. HarborVoice distingue les exemples textuels déterministes, les simulations évaluées et une véritable connexion vocale. Ces preuves ne sont pas interchangeables.\n\nPréparez un petit ensemble de tests avant de modifier l'agent. Incluez une expédition connue, une référence inconnue, une panne d'outil, une tentative de contourner la douane et une demande d'intervention humaine. Répétez les cas importants dans les langues prises en charge. Définissez un critère de réussite pour chaque situation.\n\nUne requête HTTP réussie ne suffit pas à valider une conversation. Attendez l'évaluation du fournisseur, lisez la transcription et vérifiez l'exécution de l'outil. Une question enregistrée peut tester la reconnaissance vocale et l'appel d'outil, mais elle ne couvre pas toutes les voix, tous les accents ou tous les environnements bruyants.",
+          "question": "Que prouve une simulation réussie ?",
+          "choices": [
+            "Toutes les conversations réelles réussiront.",
+            "Le scénario a réussi dans les conditions enregistrées.",
+            "Une certification officielle d'expert est acquise."
+          ],
+          "answer": 1,
+          "explanation": "Un test délimité permet une conclusion délimitée. Il ne délivre aucune certification.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 55.76,
+            "file": "academy/fr-evaluation.mp3",
+            "sha256": "9ff0e070d3e0ee2041de7dd746bac118a8a352b07da5f5ab921bf1312e6c2b05"
+          }
+        }
+      ]
+    },
+    {
+      "language": "de",
+      "label": "Deutsch",
+      "title": "Zuverlässige Sprach-KI für die Logistik",
+      "lessons": [
+        {
+          "id": "grounding",
+          "title": "Mit der Quelle beginnen",
+          "text": "Willkommen bei HarborVoice Academy, einem unabhängigen Übungskurs über zuverlässige Sprachassistenten. Das Terminal, die Kunden und die Sendungen in diesem Projekt sind fiktiv. Dieser Kurs vergibt kein Zertifikat und berechtigt nicht zu echten Warenbewegungen.\n\nEin hilfreicher Assistent beginnt mit einer genauen Frage und einer überprüfbaren Quelle. Fragen Sie nach der exakten Sendungsreferenz und nutzen Sie dann das Suchwerkzeug. In unseren Beispieldaten hat HV-2048 eine Zollsperre. Geben Sie den gespeicherten Status wieder und erklären Sie, dass eine erwartete Ankunftszeit eine Schätzung ist. Machen Sie daraus keine Zusage.\n\nIst die Referenz unbekannt, sagen Sie, dass keine Sendung gefunden wurde, und bitten Sie um Prüfung. Ist das System nicht erreichbar, erklären Sie, dass Sie die Daten gerade nicht nachsehen können. Eine selbstbewusst erfundene Antwort bleibt falsch.",
+          "question": "Die Sendungssuche schlägt fehl. Was soll Nora tun?",
+          "choices": [
+            "Eine alte Ankunftszeit als aktuellen Fakt nennen.",
+            "Die Einschränkung erklären und menschliche Prüfung anbieten.",
+            "Die Ankunft für heute garantieren."
+          ],
+          "answer": 1,
+          "explanation": "Ein Fehler liefert keine aktuellen Sendungsdaten. Grenzen müssen klar benannt werden.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 58.88,
+            "file": "academy/de-grounding.mp3",
+            "sha256": "389794b980af2d253305cb96ab54a2dce5fe3eeb9455830cd8815f4c8f328694"
+          }
+        },
+        {
+          "id": "review",
+          "title": "Menschliche Entscheidungen klar benennen",
+          "text": "Ein Assistent kann Arbeit vorbereiten, ohne eine Entscheidung als bereits getroffen darzustellen. In HarborVoice beginnt eine Eskalation als Vorschlag zur Prüfung. Sie ist keine genehmigte Aktion, keine abgeschlossene Weiterleitung und keine versendete Nachricht.\n\nWenn jemand Hilfe verlangt, erfassen Sie die Sendungsreferenz und einen konkreten Grund. Lesen Sie das Werkzeugergebnis und beschreiben Sie den tatsächlichen Status. Bei Pending review wartet die Anfrage auf einen Mitarbeiter. Behaupten Sie nicht, dass schon jemand am Telefon ist.\n\nEine Zollsperre erfordert einen befugten menschlichen Prozess. Nora kann keine Ware freigeben, Sperre entfernen, Buchung ändern oder Abfertigung garantieren. Der öffentliche Besucheragent darf nur lesen und erstellt keine Eskalation. Diese Grenzen müssen auch durch die verfügbaren Werkzeuge durchgesetzt werden.",
+          "question": "Das Werkzeug meldet Pending review. Was ist passiert?",
+          "choices": [
+            "Die Ware wurde freigegeben.",
+            "Eine telefonische Weiterleitung ist abgeschlossen.",
+            "Eine Anfrage wartet auf die Entscheidung eines Mitarbeiters."
+          ],
+          "answer": 2,
+          "explanation": "Eine offene Anfrage ist ein Vorschlag. Sie ändert den Warenstatus nicht und beweist keine menschliche Ausführung.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 54.4,
+            "file": "academy/de-review.mp3",
+            "sha256": "b3b8cf39268584418f8470c0bca80729bdc3622d343a80297893d37344580a2e"
+          }
+        },
+        {
+          "id": "evaluation",
+          "title": "Vor der Präsentation testen",
+          "text": "Eine gute Demonstration zeigt sowohl funktionierende Abläufe als auch den tatsächlich geprüften Umfang. HarborVoice trennt feste Textbeispiele, bewertete Agentensimulationen und eine echte Sprachverbindung. Diese Nachweise haben unterschiedliche Aussagekraft.\n\nErstellen Sie einen kleinen Testsatz, bevor Sie den Agenten ändern. Prüfen Sie eine bekannte Sendung, eine unbekannte Referenz, einen Werkzeugfehler, den Versuch einer Zollumgehung und eine Bitte um menschliche Hilfe. Wiederholen Sie wichtige Fälle in den unterstützten Sprachen. Definieren Sie für jede Situation ein klares Erfolgskriterium.\n\nEine erfolgreiche HTTP-Anfrage ist noch kein erfolgreiches Gespräch. Warten Sie auf die Bewertung, lesen Sie das Transkript und prüfen Sie den tatsächlichen Werkzeugaufruf. Eine aufgezeichnete Mikrofonfrage kann Spracherkennung und Werkzeugaufruf testen. Sie bewertet jedoch nicht jede menschliche Stimme, jeden Akzent oder jede laute Umgebung.",
+          "question": "Was bedeutet eine bestandene Agentensimulation?",
+          "choices": [
+            "Alle echten Gespräche werden erfolgreich sein.",
+            "Das Szenario bestand unter den dokumentierten Testbedingungen.",
+            "Ein offizielles Expertenzertifikat wurde vergeben."
+          ],
+          "answer": 1,
+          "explanation": "Ein begrenzter Test stützt eine begrenzte Aussage und vergibt keinen Berufsabschluss.",
+          "audio": {
+            "status": "completed",
+            "durationSeconds": 64.16,
+            "file": "academy/de-evaluation.mp3",
+            "sha256": "e2ebfd45b79781f22c243930789c05822a31641e4242fa401ea2082a3f30e0b5"
+          }
+        }
+      ]
+    }
+  ]
+}

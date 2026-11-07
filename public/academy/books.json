@@ -1,0 +1,40 @@
+{
+  "books": [
+    {
+      "language": "en",
+      "title": "Reliable voice AI for logistics",
+      "file": "academy/course-en.mp3",
+      "bookFile": "academy/course-en.m4b",
+      "chapters": 3,
+      "durationSeconds": 162.64,
+      "scope": "Locally packaged from the completed individual Eleven v4 lessons; this is separate from the native Audiobooks UI export."
+    },
+    {
+      "language": "nl",
+      "title": "Betrouwbare spraak-AI voor logistiek",
+      "file": "academy/course-nl.mp3",
+      "bookFile": "academy/course-nl.m4b",
+      "chapters": 3,
+      "durationSeconds": 168.96,
+      "scope": "Locally packaged from the completed individual Eleven v4 lessons; this is separate from the native Audiobooks UI export."
+    },
+    {
+      "language": "fr",
+      "title": "Une IA vocale fiable pour la logistique",
+      "file": "academy/course-fr.mp3",
+      "bookFile": "academy/course-fr.m4b",
+      "chapters": 3,
+      "durationSeconds": 166.24,
+      "scope": "Locally packaged from the completed individual Eleven v4 lessons; this is separate from the native Audiobooks UI export."
+    },
+    {
+      "language": "de",
+      "title": "Zuverlässige Sprach-KI für die Logistik",
+      "file": "academy/course-de.mp3",
+      "bookFile": "academy/course-de.m4b",
+      "chapters": 3,
+      "durationSeconds": 177.44,
+      "scope": "Locally packaged from the completed individual Eleven v4 lessons; this is separate from the native Audiobooks UI export."
+    }
+  ]
+}

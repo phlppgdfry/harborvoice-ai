@@ -1,0 +1,7 @@
+Test voordat je presenteert
+
+Een goede demonstratie laat zien wat werkt en wat daadwerkelijk is onderzocht. HarborVoice maakt onderscheid tussen vaste tekstvoorbeelden, gesimuleerde agentbeoordelingen en een echte spraakverbinding. Die leveren verschillend bewijs.
+
+Maak een kleine testset voordat je de agent wijzigt. Neem een bekende zending, een onbekende referentie, tooluitval, een poging om de douane te omzeilen en een verzoek om menselijke hulp op. Herhaal belangrijke situaties in de talen die je wilt ondersteunen. Schrijf voor elke test een duidelijke slaagvoorwaarde.
+
+Een geslaagde API-aanvraag is nog geen geslaagd gesprek. Wacht op de beoordeling, bekijk het transcript en controleer of de tool echt werd uitgevoerd. Een vooraf opgenomen microfoonvraag kan spraakherkenning en toolaansturing testen, maar beoordeelt niet iedere menselijke stem, ieder accent of elke rumoerige omgeving.

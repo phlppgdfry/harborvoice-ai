@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-11-07T20:03:43.053Z",
+  "flowUrl": "https://elevenlabs.io/app/flows/DOwVWkHNl1M8XZpmGo1C",
+  "brandKitCreated": true,
+  "assets": [
+    {
+      "model": "gpt-image-2",
+      "file": "academy/cover-1.png",
+      "credits": 184.58298382112065,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "model": "gpt-image-2",
+      "file": "academy/cover-2.png",
+      "credits": 184.58298382112065,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "model": "gpt-image-2",
+      "file": "academy/cover-3.png",
+      "credits": 184.58298382112065,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "model": "gpt-image-2",
+      "file": "academy/cover-4.png",
+      "credits": 184.58298382112065,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "model": "ltx-v2-fast",
+      "file": "academy/harbor-opening.mp4",
+      "credits": 1454.25456,
+      "width": 1920,
+      "height": 1080,
+      "durationSeconds": 6.12
+    }
+  ],
+  "voiceDesign": {
+    "previewCount": 3,
+    "description": "Warme, duidelijke Nederlandstalige vrouwenstem.",
+    "text": "Welkom bij HarborVoice. We oefenen met fictieve zendingen, betrouwbare informatie en duidelijke menselijke controle. Zo helpen we klanten zorgvuldig verder.",
+    "savedToVoiceLibrary": false
+  },
+  "scope": "Completed native ElevenCreative generations and requested fictional voice previews. The video is synthetic illustrative footage. No voice cloning or external person was used.",
+  "uploadedTrainingAssets": [
+    {
+      "name": "English course",
+      "storedOnFlow": true
+    },
+    {
+      "name": "Dutch course",
+      "storedOnFlow": true
+    },
+    {
+      "name": "French course",
+      "storedOnFlow": true
+    },
+    {
+      "name": "German course",
+      "storedOnFlow": true
+    },
+    {
+      "name": "Native Audiobooks export",
+      "storedOnFlow": true
+    },
+    {
+      "name": "Two-speaker dialogue",
+      "storedOnFlow": true
+    }
+  ]
+}

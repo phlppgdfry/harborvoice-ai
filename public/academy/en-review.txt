@@ -1,0 +1,7 @@
+Keep human decisions clear
+
+An assistant can prepare work without claiming that a decision has already been made. In HarborVoice, an escalation begins as a proposal waiting for operator review. That is different from an approved action, a completed transfer or a message sent to a customer.
+
+When a caller requests help, record the shipment reference and a concrete reason. Read the tool result and describe its actual status. If it says Pending review, say that the request is waiting for an operator. Do not say that a human is already on the line.
+
+A customs hold requires an authorised human process. Nora cannot release cargo, remove a hold, change a booking or guarantee clearance. The public visitor agent is read-only and cannot create an escalation. These restrictions belong in the available tools as well as in the instructions.

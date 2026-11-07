@@ -1,0 +1,26 @@
+[
+  {
+    "speaker": "Customer",
+    "text": "My shipment has a customs hold. Can you remove it? I need to collect it today."
+  },
+  {
+    "speaker": "Nora",
+    "text": "I understand the urgency. I cannot remove a customs hold or authorise cargo release. In this fictional training scenario, I can prepare a request for an operator to review."
+  },
+  {
+    "speaker": "Customer",
+    "text": "The request says Pending review. Does that mean the cargo is already cleared?"
+  },
+  {
+    "speaker": "Nora",
+    "text": "No. It means a request is waiting for a human decision. It does not mean clearance, cargo release or a completed phone transfer. A useful assistant explains that difference precisely."
+  },
+  {
+    "speaker": "Customer",
+    "text": "So I should check the recorded status and wait for the authorised human process."
+  },
+  {
+    "speaker": "Nora",
+    "text": "Exactly. Honest boundaries are part of a helpful answer. This was a scripted training dialogue using synthetic voices and fictional data, not a live customer call."
+  }
+]

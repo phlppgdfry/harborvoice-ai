@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 const ConnectionSettings = React.lazy(() => import("./ConnectionSettings"));
 const PortfolioEvidence = React.lazy(() => import("./PortfolioEvidence"));
 const ExperienceLab = React.lazy(() => import("./ExperienceLab"));
+const Academy = React.lazy(() => import("./Academy"));
 import { LIVE_APP_URL } from "./deployment";
 const AudioStudio = React.lazy(() => import("./AudioStudio"));
 const VoiceAgent = React.lazy(() => import("./VoiceAgent"));
@@ -53,6 +54,7 @@ import "./styles.css";
 const tabs = [
   ["Overview", LayoutDashboard],
   ["Experience lab", Play],
+  ["Academy", BookOpen],
   ["Voice agents", Mic],
   ["Audio studio", AudioLines],
   ["Knowledge base", BookOpen],
@@ -572,6 +574,11 @@ function App() {
           )}
           {page === "Evaluations" && <Evaluations fail={fail} />}
           {page === "Conversations" && <Conversations state={state} />}
+          {page === "Academy" && (
+            <React.Suspense fallback={<p>Loading the training course…</p>}>
+              <Academy />
+            </React.Suspense>
+          )}
           {page === "Experience lab" && (
             <React.Suspense fallback={<p>Loading audio examples…</p>}>
               <ExperienceLab />
@@ -603,6 +610,7 @@ function App() {
   );
 }
 const descriptions: Record<string, string> = {
+  Academy: "Learn with real audio, transcripts and self-guided practice.",
   "Experience lab": "Listen, compare and try the public voice experience.",
   "Voice agents":
     "Talk to Nora, inspect the transcript, and turn questions into reviewed actions.",

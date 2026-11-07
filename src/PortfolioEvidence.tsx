@@ -44,10 +44,10 @@ export default function PortfolioEvidence() {
           statement is separate from an exam certificate.
         </p>
         <p>
-          Account check on 7 November 2026: ElevenLabs displayed “Keep using
-          ElevenLabs to qualify for a capability statement”; Connect was
-          disabled. No public ElevenLabs usage threshold or guaranteed Top User
-          route has been established.
+          Latest account check on 7 November 2026: the qualifying-activity
+          message has disappeared and Connect is available. The owner will
+          complete the LinkedIn sign-in and connection. No Top User award or
+          public ElevenLabs usage threshold has been verified.
         </p>
         <a
           className="button primary"
@@ -65,6 +65,15 @@ export default function PortfolioEvidence() {
             rel="noreferrer"
           >
             LinkedIn's official explanation
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://github.com/phlppgdfry/harborvoice-ai/blob/main/docs/recognition-research.md"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Read the recognition research and practical contribution plan
           </a>
         </p>
         <h3>Ambassador and Power User</h3>

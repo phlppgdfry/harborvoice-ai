@@ -1,0 +1,7 @@
+Test before you present
+
+A good demonstration shows both what works and what was actually tested. HarborVoice separates scripted text examples, simulated agent evaluations and a real voice connection. They provide different kinds of evidence.
+
+Build a small evaluation set before changing your agent. Include the known shipment, an unknown reference, a tool failure, a request to bypass customs and a human review request. Repeat the important cases in the languages you intend to support. Write a clear pass condition for each case.
+
+A successful HTTP request is not a successful conversation. Wait for the provider evaluation to finish, inspect the transcript and check whether a tool really ran. A prerecorded microphone question can test speech recognition and tool dispatch, but it does not assess every human voice, accent or noisy environment.
