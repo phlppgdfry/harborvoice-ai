@@ -387,44 +387,36 @@ export function createApp(store: Store) {
         return;
       }
       if (err instanceof z.ZodError) {
-        res
-          .status(400)
-          .json({
-            error: err.issues
-              .map((i) => `${i.path.join(".")}: ${i.message}`)
-              .join("; "),
-          });
+        res.status(400).json({
+          error: err.issues
+            .map((i) => `${i.path.join(".")}: ${i.message}`)
+            .join("; "),
+        });
         return;
       }
       if (err instanceof multer.MulterError) {
-        res
-          .status(400)
-          .json({
-            error:
-              err.code === "LIMIT_FILE_SIZE"
-                ? "Maximum upload size is 20 MB."
-                : err.message,
-          });
+        res.status(400).json({
+          error:
+            err.code === "LIMIT_FILE_SIZE"
+              ? "Maximum upload size is 20 MB."
+              : err.message,
+        });
         return;
       }
       const e = err as { statusCode?: number; message?: string };
       if (e.statusCode) {
-        res
-          .status(502)
-          .json({
-            error: `ElevenLabs request failed (${e.statusCode}). Check your account permissions, credits and agent configuration.`,
-          });
+        res.status(502).json({
+          error: `ElevenLabs request failed (${e.statusCode}). Check your account permissions, credits and agent configuration.`,
+        });
         return;
       }
-      res
-        .status(400)
-        .json({
-          error:
-            e.message?.replaceAll(
-              process.env.ELEVENLABS_API_KEY || "__no_key__",
-              "[redacted]",
-            ) || "Request failed.",
-        });
+      res.status(400).json({
+        error:
+          e.message?.replaceAll(
+            process.env.ELEVENLABS_API_KEY || "__no_key__",
+            "[redacted]",
+          ) || "Request failed.",
+      });
     },
   );
   return app;

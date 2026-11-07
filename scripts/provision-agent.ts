@@ -85,6 +85,7 @@ const conversationConfig = {
     language: "en",
     prompt: {
       prompt,
+      rag: { enabled: true },
       toolIds: manifest.tools.map((t) => t.id),
       knowledgeBase: manifest.documents.map((d) => ({
         ...d,
