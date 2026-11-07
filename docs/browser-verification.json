@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-07T04:21:30.391Z",
+  "url": "http://127.0.0.1:5173",
+  "checks": [
+    "Terminal map selection and shipment search",
+    "Grounded shipment conversation",
+    "Dutch conversation",
+    "Escalation proposal, operator review and unchanged shipment",
+    "Evaluation suite and JSON evidence export",
+    "Persisted session transcript",
+    "All workspace pages render",
+    "Mobile layout has no page-level horizontal overflow",
+    "No browser runtime errors"
+  ],
+  "errors": [],
+  "liveElevenLabsTested": false
+}

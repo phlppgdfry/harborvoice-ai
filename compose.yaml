@@ -1,0 +1,14 @@
+services:
+  harborvoice:
+    build: .
+    ports:
+      - "127.0.0.1:3100:3100"
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      OPERATOR_TOKEN: ${OPERATOR_TOKEN:?Set OPERATOR_TOKEN in .env before starting Docker}
+    volumes:
+      - harborvoice-data:/app/var
+    restart: unless-stopped
+volumes:
+  harborvoice-data:
