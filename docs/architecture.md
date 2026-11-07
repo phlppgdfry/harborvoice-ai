@@ -48,23 +48,23 @@ Eight operations are exposed: TTS, STT, effects, isolation, dubbing, music, voic
 
 ## API surface
 
-| Endpoint | Purpose |
-| --- | --- |
-| `GET /api/status` | Non-secret configuration availability |
-| `GET /api/state` | Workspace snapshot |
-| `POST /api/demo/chat` | Deterministic demo response + persistence |
-| `POST /api/tools/lookup` | Exact synthetic shipment lookup |
-| `POST /api/escalations` | Deduplicated pending proposal |
-| `POST /api/escalations/review` | Operator approval/rejection |
-| `POST /api/sessions` | Client-reported live transcript |
-| `POST /api/agent/session` | Signed voice-session URL |
-| `GET /api/voices` | Available ElevenLabs voices |
-| `POST /api/knowledge` | Create text document and attach to live agent |
-| `POST /api/agent/simulate` | Create and run a simulation test |
-| `GET /api/agent/test-runs/:id` | Refresh provider invocation results |
-| `POST /api/audio/:tool` | One of the eight bounded audio operations |
-| `GET /api/dubbing/:id` | Dubbing job status |
-| `POST /api/webhooks/elevenlabs` | Signed, deduplicated event intake |
+| Endpoint                        | Purpose                                       |
+| ------------------------------- | --------------------------------------------- |
+| `GET /api/status`               | Non-secret configuration availability         |
+| `GET /api/state`                | Workspace snapshot                            |
+| `POST /api/demo/chat`           | Deterministic demo response + persistence     |
+| `POST /api/tools/lookup`        | Exact synthetic shipment lookup               |
+| `POST /api/escalations`         | Deduplicated pending proposal                 |
+| `POST /api/escalations/review`  | Operator approval/rejection                   |
+| `POST /api/sessions`            | Client-reported live transcript               |
+| `POST /api/agent/session`       | Signed voice-session URL                      |
+| `GET /api/voices`               | Available ElevenLabs voices                   |
+| `POST /api/knowledge`           | Create text document and attach to live agent |
+| `POST /api/agent/simulate`      | Create and run a simulation test              |
+| `GET /api/agent/test-runs/:id`  | Refresh provider invocation results           |
+| `POST /api/audio/:tool`         | One of the eight bounded audio operations     |
+| `GET /api/dubbing/:id`          | Dubbing job status                            |
+| `POST /api/webhooks/elevenlabs` | Signed, deduplicated event intake             |
 
 All API routes except status and signed webhook intake require the configured operator token. Origin checks reject mismatched origins; unauthenticated loopback access also rejects unexpected Host headers. Ordinary routes permit 90 requests/minute per IP; credit-consuming endpoints additionally permit 8/minute. These are local process limits, not distributed spend controls. The server does not trust proxy headers by default.
 
