@@ -1,8 +1,9 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ConversationProvider, useConversation } from "@elevenlabs/react";
 import {
   AudioLines,
   Mic,
+  MicOff,
   Globe,
   Ship,
   BookOpen,
@@ -59,6 +60,21 @@ function VoiceAgentInner({
   const sessionId = useRef(crypto.randomUUID());
   const transcript = useRef<Message[]>([]);
   const liveStart = useRef("");
+  const liveSessionId = useRef(crypto.randomUUID());
+  const liveLanguage = useRef("en");
+  const persistLive = () => {
+    if (!transcript.current.length || !liveStart.current) return;
+    const snapshot = {
+      id: liveSessionId.current,
+      mode: "live" as const,
+      startedAt: liveStart.current,
+      messages: [...transcript.current],
+      language: liveLanguage.current,
+    };
+    transcript.current = [];
+    void saveLive(snapshot).then(refresh).catch(fail);
+  };
+  useEffect(() => () => persistLive(), []);
   const conversation = useConversation({
     onMessage: (message) => {
       const m: Message = {
@@ -68,26 +84,28 @@ function VoiceAgentInner({
       transcript.current.push(m);
       setMessages([...transcript.current]);
     },
-    onError: (message) => fail(message),
+    onConnect: () => {
+      setLive(true);
+      setBusy(false);
+      setMuted(false);
+      notify("Live voice session connected. Microphone is active.");
+    },
+    onError: (message) => {
+      setLive(false);
+      setBusy(false);
+      fail(message);
+    },
     onDisconnect: () => {
       setLive(false);
-      if (transcript.current.length) {
-        saveLive({
-          id: sessionId.current,
-          mode: "live",
-          startedAt: liveStart.current,
-          messages: transcript.current,
-          language,
-        })
-          .then(refresh)
-          .catch(fail);
-      }
+      setBusy(false);
+      persistLive();
       sessionId.current = crypto.randomUUID();
     },
   });
   const connected = conversation.status === "connected";
+  const connecting = conversation.status === "connecting";
   const send = async (text = input) => {
-    if (!text.trim() || busy) return;
+    if (!text.trim() || busy || connecting) return;
     setBusy(true);
     setInput("");
     try {
@@ -121,7 +139,8 @@ function VoiceAgentInner({
       transcript.current = [];
       setMessages([]);
       setTranscriptMode("live");
-      sessionId.current = crypto.randomUUID();
+      liveSessionId.current = crypto.randomUUID();
+      liveLanguage.current = language;
       liveStart.current = new Date().toISOString();
       await conversation.startSession({
         signedUrl,
@@ -143,8 +162,6 @@ function VoiceAgentInner({
           },
         },
       });
-      setLive(true);
-      notify("Live voice session connected. Microphone is active.");
     } catch (e) {
       fail(e);
     } finally {
@@ -170,7 +187,7 @@ function VoiceAgentInner({
           <select
             aria-label="Conversation language"
             value={language}
-            disabled={connected}
+            disabled={connected || busy || connecting}
             onChange={(e) => setLanguage(e.target.value)}
           >
             {languages.map(([v, l]) => (
@@ -203,7 +220,7 @@ function VoiceAgentInner({
           <div className="voice-controls">
             <button
               className="button primary"
-              disabled={busy}
+              disabled={busy || connecting}
               onClick={connected ? () => conversation.endSession() : start}
             >
               {busy ? (
@@ -213,8 +230,26 @@ function VoiceAgentInner({
               ) : (
                 <Mic size={16} />
               )}{" "}
-              {connected ? "End voice session" : "Start live voice"}
+              {connected
+                ? "End voice session"
+                : connecting
+                  ? "Connecting…"
+                  : "Start live voice"}
             </button>
+            {connected && (
+              <button
+                className="button"
+                aria-pressed={conversation.isMuted}
+                onClick={() => conversation.setMuted(!conversation.isMuted)}
+              >
+                {conversation.isMuted ? (
+                  <MicOff size={16} />
+                ) : (
+                  <Mic size={16} />
+                )}{" "}
+                {conversation.isMuted ? "Unmute microphone" : "Mute microphone"}
+              </button>
+            )}
             {connected && (
               <button
                 className="button"
@@ -235,7 +270,11 @@ function VoiceAgentInner({
             "What are the gate opening hours?",
             `Escalate ${shipment.id} to an operator`,
           ].map((p) => (
-            <button key={p} disabled={busy} onClick={() => send(p)}>
+            <button
+              key={p}
+              disabled={busy || connecting}
+              onClick={() => send(p)}
+            >
               {p}
               <ArrowUpRight size={13} />
             </button>
@@ -280,7 +319,10 @@ function VoiceAgentInner({
             maxLength={2000}
             onChange={(e) => setInput(e.target.value)}
           />
-          <button aria-label="Send message" disabled={busy || !input.trim()}>
+          <button
+            aria-label="Send message"
+            disabled={busy || connecting || !input.trim()}
+          >
             <Send size={18} />
           </button>
         </form>

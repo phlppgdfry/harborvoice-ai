@@ -172,3 +172,16 @@ test("webhook without valid signature is rejected", async () => {
     401,
   );
 });
+
+test("malformed JSON returns a client error rather than a provider error", async () => {
+  const r = await fetch(url + "/tools/lookup", {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer test-operator",
+      "Content-Type": "application/json",
+    },
+    body: '{"broken"',
+  });
+  assert.equal(r.status, 400);
+  assert.match((await r.json()).error, /Invalid JSON/);
+});

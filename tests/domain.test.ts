@@ -60,3 +60,22 @@ test("demo evaluation suite passes and identifies its scope", () => {
   assert.ok(results.every((r) => r.passed));
   assert.ok(results.every((r) => r.scope.includes("not an LLM evaluation")));
 });
+
+test("persisted workspace validation rejects malformed nested data without crashing", async () => {
+  const { restoreWorkspace } = await import("../src/state-schema.js");
+  assert.ok(restoreWorkspace(JSON.stringify(initialState)));
+  assert.equal(restoreWorkspace("{broken"), null);
+  assert.equal(
+    restoreWorkspace(JSON.stringify({ ...initialState, shipments: [] })),
+    null,
+  );
+  assert.equal(
+    restoreWorkspace(
+      JSON.stringify({ ...initialState, sessions: [{ messages: null }] }),
+    ),
+    null,
+  );
+  const state = structuredClone(initialState);
+  state.shipments[0].status = "Fake released" as never;
+  assert.equal(restoreWorkspace(JSON.stringify(state)), null);
+});

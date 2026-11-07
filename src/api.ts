@@ -1,3 +1,4 @@
+import { restoreWorkspace } from "./state-schema";
 import {
   initialState,
   demoReply,
@@ -23,14 +24,8 @@ let memory: State = structuredClone(initialState);
 try {
   const raw = localStorage.getItem("harborvoice-state-v1");
   if (raw) {
-    const parsed = JSON.parse(raw);
-    if (
-      Array.isArray(parsed.shipments) &&
-      Array.isArray(parsed.sessions) &&
-      Array.isArray(parsed.tickets) &&
-      Array.isArray(parsed.audit)
-    )
-      memory = parsed;
+    const parsed = restoreWorkspace(raw);
+    if (parsed) memory = parsed;
   }
 } catch {
   /* Private browser storage may be unavailable. */
@@ -58,7 +53,11 @@ export async function request<T = any>(
           ? body
           : JSON.stringify(body),
   });
-  const data = await response.json();
+  const data = await response.json().catch(() => {
+    throw new Error(
+      `The server returned an unreadable response (${response.status}). Check the backend connection.`,
+    );
+  });
   if (!response.ok)
     throw new Error(data.error || `Request failed (${response.status})`);
   return data;

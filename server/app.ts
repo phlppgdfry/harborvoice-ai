@@ -21,7 +21,7 @@ const text = z.string().trim().min(1).max(2000);
 const reference = z.string().trim().min(1).max(50);
 const lang = z.enum(["en", "nl", "fr", "de"]);
 const id = z.string().min(1).max(100);
-export function createApp(store: Store) {
+export function createApp(store: Store, sdkFactory: typeof client = client) {
   const app = express();
   app.disable("x-powered-by");
   app.use(helmet({ contentSecurityPolicy: false }));
@@ -195,15 +195,25 @@ export function createApp(store: Store) {
   });
   app.post("/api/agent/session", paid, async (_req, res) =>
     res.json(
-      await client().conversationalAi.conversations.getSignedUrl({
+      await sdkFactory().conversationalAi.conversations.getSignedUrl({
         agentId: agentId(),
       }),
     ),
   );
   app.get("/api/voices", async (_req, res) => {
-    const voices = await client().voices.getAll();
+    const voices = await sdkFactory().voices.getAll();
     res.json({
       voices: voices.voices.map((v) => ({ voiceId: v.voiceId, name: v.name })),
+    });
+  });
+  app.post("/api/connection/check", async (_req, res) => {
+    const voices = await sdkFactory().voices.getAll();
+    res.json({
+      verified: true,
+      voiceCount: voices.voices.length,
+      checkedAt: new Date().toISOString(),
+      scope:
+        "Voice library access verified. Agent calls and paid audio features have not been tested.",
     });
   });
   app.post("/api/knowledge", paid, async (req, res) => {
@@ -213,10 +223,11 @@ export function createApp(store: Store) {
         text: z.string().trim().min(1).max(40000),
       })
       .parse(req.body);
-    res.json(await attachKnowledge(v.name, v.text));
+    res.json(await attachKnowledge(v.name, v.text, sdkFactory()));
   });
   app.post("/api/agent/simulate", paid, async (_req, res) => {
-    const sdk = client();
+    const sdk = sdkFactory();
+    const configuredAgentId = agentId();
     const test = await sdk.conversationalAi.tests.create({
       type: "simulation",
       name: "HarborVoice customs boundary",
@@ -229,7 +240,7 @@ export function createApp(store: Store) {
       ],
     });
     res.json(
-      await sdk.conversationalAi.agents.runTests(agentId(), {
+      await sdk.conversationalAi.agents.runTests(configuredAgentId, {
         name: "HarborVoice customs boundary",
         tests: [{ testId: test.id }],
       }),
@@ -237,7 +248,7 @@ export function createApp(store: Store) {
   });
   app.get("/api/agent/test-runs/:id", async (req, res) =>
     res.json(
-      await client().conversationalAi.tests.invocations.get(
+      await sdkFactory().conversationalAi.tests.invocations.get(
         id.parse(req.params.id),
       ),
     ),
@@ -284,7 +295,7 @@ export function createApp(store: Store) {
       .parse(req.body);
     await audio(
       res,
-      await client().textToSpeech.convert(v.voiceId, {
+      await sdkFactory().textToSpeech.convert(v.voiceId, {
         text: v.text,
         modelId: "eleven_multilingual_v2",
         outputFormat: "mp3_44100_128",
@@ -295,7 +306,7 @@ export function createApp(store: Store) {
     const v = z.object({ text }).parse(req.body);
     await audio(
       res,
-      await client().textToSoundEffects.convert({
+      await sdkFactory().textToSoundEffects.convert({
         text: v.text,
         durationSeconds: 5,
       }),
@@ -305,7 +316,7 @@ export function createApp(store: Store) {
     const v = z.object({ text }).parse(req.body);
     await audio(
       res,
-      await client().music.compose({
+      await sdkFactory().music.compose({
         prompt: v.text,
         musicLengthMs: 10000,
         forceInstrumental: true,
@@ -318,7 +329,7 @@ export function createApp(store: Store) {
     paid,
     upload.single("file"),
     async (req, res) => {
-      const sdk = client();
+      const sdk = sdkFactory();
       if (!req.file) {
         res.status(400).json({ error: "Upload an audio file." });
         return;
@@ -368,8 +379,22 @@ export function createApp(store: Store) {
     },
   );
   app.get("/api/dubbing/:id", async (req, res) =>
-    res.json(await client().dubbing.get(id.parse(req.params.id))),
+    res.json(await sdkFactory().dubbing.get(id.parse(req.params.id))),
   );
+  app.get("/api/dubbing/:id/audio/:language", paid, async (req, res) => {
+    const sdk = sdkFactory();
+    const dubbingId = id.parse(req.params.id);
+    const language = lang.parse(req.params.language);
+    const job = await sdk.dubbing.get(dubbingId);
+    if (job.status !== "dubbed") {
+      res.status(409).json({
+        error:
+          "Dubbing is not complete. Refresh the job status before downloading.",
+      });
+      return;
+    }
+    await audio(res, await sdk.dubbing.audio.get(dubbingId, language));
+  });
   app.use("/api", (_req, res) =>
     res.status(404).json({ error: "API route not found." }),
   );
@@ -404,6 +429,14 @@ export function createApp(store: Store) {
         return;
       }
       const e = err as { statusCode?: number; message?: string };
+      if ((err as { type?: string }).type === "entity.parse.failed") {
+        res.status(400).json({ error: "Invalid JSON request body." });
+        return;
+      }
+      if ((err as { type?: string }).type === "entity.too.large") {
+        res.status(413).json({ error: "Request body is too large." });
+        return;
+      }
       if (e.statusCode) {
         res.status(502).json({
           error: `ElevenLabs request failed (${e.statusCode}). Check your account permissions, credits and agent configuration.`,

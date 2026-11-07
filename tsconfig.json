@@ -11,7 +11,8 @@
     "noEmit": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": ["node"]
+    "types": ["node"],
+    "noUnusedLocals": true
   },
   "include": ["src", "server", "scripts", "tests", "vite.config.ts"]
 }

@@ -42,7 +42,7 @@ The application registers two client tools. A tool call passes through the same 
 
 ## Audio pipeline
 
-The server validates text, enums, file count, MIME category and a 20 MB upload limit. Uploads stay in memory and are passed as File objects to the official SDK. MIME checks are not full media-content inspection. Generated audio is streamed to the browser; browser object URLs are revoked after replacement/unmount. Dubbing creates an asynchronous job and exposes its status; final dub rendering/download is outside this version.
+The server validates text, enums, file count, MIME category and a 20 MB upload limit. Uploads stay in memory and are passed as File objects to the official SDK. MIME checks are not full media-content inspection. Generated audio is streamed to the browser; browser object URLs are revoked after replacement/unmount. Dubbing creates an asynchronous job, exposes its status, and streams the original automatic audio dub only after the provider reports `dubbed`. Edited Studio renders remain outside this version.
 
 Eight operations are exposed: TTS, STT, effects, isolation, dubbing, music, voice changing and forced alignment. A feature can still fail due to account permissions, credits, plan restrictions, voice access or model availability. None of these live operations has been validated against an authenticated account in this delivery.
 
@@ -67,6 +67,21 @@ Eight operations are exposed: TTS, STT, effects, isolation, dubbing, music, voic
 | `POST /api/webhooks/elevenlabs` | Signed, deduplicated event intake             |
 
 All API routes except status and signed webhook intake require the configured operator token. Origin checks reject mismatched origins; unauthenticated loopback access also rejects unexpected Host headers. Ordinary routes permit 90 requests/minute per IP; credit-consuming endpoints additionally permit 8/minute. These are local process limits, not distributed spend controls. The server does not trust proxy headers by default.
+
+## Version 1.1 verification and lifecycle
+
+`tests/elevenlabs-contract.test.ts` injects a real ElevenLabs SDK instance with a custom fetch transport. The transport returns synthetic provider responses and records paths, JSON, multipart fields and query parameters. No real account or billable generation is involved. Coverage includes all eight audio operations, signed sessions, dubbing download gating, read-only connection checks, concurrent knowledge uploads and the current create/run/poll test lifecycle.
+
+The browser walkthrough additionally mocks API responses for all eight studio forms. This proves form submission/result rendering and download availability, not the quality or playability of provider-generated audio. Actual microphone sessions, provider billing and end-to-end account behavior remain unverified.
+
+Knowledge read/append/update operations are queued by agent ID inside one server process. This avoids lost attachments from simultaneous app uploads; it is not a distributed lock for independent processes or external agent editors.
+
+The voice UI follows `onConnect`/`onDisconnect` instead of treating the SDK's void-returning `startSession` wrapper as an awaited successful connection. Microphone mute uses the SDK's `setMuted`; speaker volume is controlled separately. Nonempty live transcripts are submitted when the voice view unmounts. Browser navigation and application shutdown can still interrupt network delivery; authoritative history should come from provider reconciliation.
+
+| Additional endpoint                    | Purpose                                                      |
+| -------------------------------------- | ------------------------------------------------------------ |
+| `POST /api/connection/check`           | Explicit read-only voice-library access check                |
+| `GET /api/dubbing/:id/audio/:language` | Gate on completed status, then stream original automatic dub |
 
 ## Production work remaining
 

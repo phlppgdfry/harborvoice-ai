@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
+const AudioStudio = React.lazy(() => import("./AudioStudio"));
 const VoiceAgent = React.lazy(() => import("./VoiceAgent"));
 import {
   Anchor,
@@ -14,16 +15,11 @@ import {
   ArrowRight,
   Play,
   Search,
-  Globe,
   ChevronRight,
   Ship,
-  Clock,
   Check,
   Download,
   Headphones,
-  Radio,
-  FileAudio,
-  Volume2,
   ShieldCheck,
   AlertTriangle,
   X,
@@ -39,7 +35,6 @@ import {
   escalation,
   review,
   request,
-  operatorHeaders,
   exportJson,
 } from "./api";
 import {
@@ -60,20 +55,33 @@ const tabs = [
   ["Conversations", Headphones],
   ["Settings", Settings],
 ] as const;
-const languages = [
-  ["en", "English"],
-  ["nl", "Nederlands"],
-  ["fr", "Français"],
-  ["de", "Deutsch"],
-];
+
+function pageFromHash() {
+  return (
+    tabs.find(
+      ([title]) =>
+        `#${title.toLowerCase().replaceAll(" ", "-")}` === window.location.hash,
+    )?.[0] || "Overview"
+  );
+}
 function App() {
-  const [page, setPage] = useState("Overview"),
-    [state, setState] = useState<State>(structuredClone(initialState)),
+  const [page, setPageState] = useState<string>(pageFromHash),
+    [state, setState] = useState<State>(() => structuredClone(initialState)),
     [ready, setReady] = useState(false),
     [error, setError] = useState(""),
     [notice, setNotice] = useState(""),
     [selected, setSelected] = useState("HV-2048"),
     [search, setSearch] = useState("");
+  const setPage = (title: string) => {
+    setPageState(title);
+    window.location.hash = title.toLowerCase().replaceAll(" ", "-");
+    window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+    const change = () => setPageState(pageFromHash());
+    window.addEventListener("hashchange", change);
+    return () => window.removeEventListener("hashchange", change);
+  }, []);
   const refresh = async () => {
     try {
       setState(await getState());
@@ -103,6 +111,9 @@ function App() {
   ).length;
   return (
     <div className="app">
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
       <aside className="sidebar">
         <a
           href="#"
@@ -132,11 +143,14 @@ function App() {
           {tabs.map(([title, Icon]) => (
             <button
               key={title}
+              aria-label={title}
+              title={title}
+              aria-current={page === title ? "page" : undefined}
               className={page === title ? "nav active" : "nav"}
               onClick={() => setPage(title)}
             >
               <Icon size={18} />
-              {title}
+              <span className="nav-name">{title}</span>
               {title === "Workflows" && pending > 0 && (
                 <span className="count">{pending}</span>
               )}
@@ -168,7 +182,7 @@ function App() {
           </div>
         </div>
       </aside>
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <header className="topbar">
           <div className="breadcrumb">
             Workspace <ChevronRight size={13} />
@@ -490,7 +504,18 @@ function App() {
               />
             </React.Suspense>
           )}
-          {page === "Audio studio" && <AudioStudio fail={fail} />}
+          {page === "Audio studio" && (
+            <React.Suspense
+              fallback={
+                <div className="panel empty">Loading audio studio…</div>
+              }
+            >
+              <AudioStudio
+                fail={fail}
+                onConfigure={() => setPage("Settings")}
+              />
+            </React.Suspense>
+          )}
           {page === "Knowledge base" && (
             <Knowledge fail={fail} notify={notify} />
           )}
@@ -687,284 +712,6 @@ function TerminalMap({
           )}
         </button>
       ))}
-    </div>
-  );
-}
-function AudioStudio({ fail }: { fail: (e: unknown) => void }) {
-  const [tool, setTool] = useState("speech"),
-    [text, setText] = useState(
-      "Welcome to North Sea Terminal. Your shipment is ready for collection at Gate A.",
-    ),
-    [voices, setVoices] = useState<{ voiceId: string; name: string }[]>([]),
-    [voice, setVoice] = useState(""),
-    [file, setFile] = useState<File | null>(null),
-    [target, setTarget] = useState("nl"),
-    [busy, setBusy] = useState(false),
-    [audio, setAudio] = useState(""),
-    [result, setResult] = useState("");
-  const previous = useRef("");
-  useEffect(
-    () => () => {
-      if (previous.current) URL.revokeObjectURL(previous.current);
-    },
-    [],
-  );
-  useEffect(() => {
-    if (config.configured)
-      request("/voices")
-        .then((d) => {
-          setVoices(d.voices);
-          setVoice(d.voices[0]?.voiceId || "");
-        })
-        .catch(fail);
-  }, []);
-  const tools = [
-    ["speech", "Text to speech", Volume2],
-    ["transcribe", "Speech to text", FileAudio],
-    ["effects", "Sound effects", Radio],
-    ["isolate", "Voice isolation", Headphones],
-    ["dubbing", "Dubbing", Globe],
-    ["music", "Music", Radio],
-    ["change", "Voice changer", Mic],
-    ["align", "Forced alignment", Clock],
-  ] as const;
-  const execute = async () => {
-    setBusy(true);
-    setResult("");
-    try {
-      if (!config.configured)
-        throw new Error(
-          "Audio studio needs ELEVENLABS_API_KEY on the server. No credits are spent in demo mode.",
-        );
-      let body: FormData | object;
-      if (
-        ["transcribe", "isolate", "dubbing", "change", "align"].includes(tool)
-      ) {
-        if (!file) throw new Error("Choose an audio file first.");
-        const form = new FormData();
-        form.append("file", file);
-        form.append("targetLanguage", target);
-        form.append("voiceId", voice);
-        form.append("text", text);
-        body = form;
-      } else body = { text, voiceId: voice };
-      const response = await fetch(`/api/audio/${tool}`, {
-        method: "POST",
-        headers: {
-          ...operatorHeaders(),
-          ...(body instanceof FormData
-            ? {}
-            : { "Content-Type": "application/json" }),
-        },
-        body: body instanceof FormData ? body : JSON.stringify(body),
-      });
-      if (!response.ok) {
-        const e = await response.json();
-        throw new Error(e.error || "Audio request failed.");
-      }
-      if (response.headers.get("content-type")?.includes("application/json")) {
-        setResult(JSON.stringify(await response.json(), null, 2));
-      } else {
-        if (previous.current) URL.revokeObjectURL(previous.current);
-        previous.current = URL.createObjectURL(await response.blob());
-        setAudio(previous.current);
-      }
-    } catch (e) {
-      fail(e);
-    } finally {
-      setBusy(false);
-    }
-  };
-  return (
-    <div className="two-column">
-      <section className="panel padded">
-        <div className="tool-tabs">
-          {tools.map(([id, title, Icon]) => (
-            <button
-              key={id}
-              className={tool === id ? "selected" : ""}
-              onClick={() => {
-                setTool(id);
-                setResult("");
-                setAudio("");
-              }}
-            >
-              <Icon size={17} />
-              {title}
-            </button>
-          ))}
-        </div>
-        <h2>{tools.find((t) => t[0] === tool)?.[1]}</h2>
-        <p>
-          {
-            (
-              {
-                speech:
-                  "Turn a terminal update into natural, multilingual speech.",
-                transcribe:
-                  "Transcribe an uploaded recording using Scribe with speaker diarization.",
-                effects: "Describe a sound to generate a short audio effect.",
-                isolate:
-                  "Separate speech from background noise in a recording.",
-                dubbing:
-                  "Create a translated dubbing job. Poll its progress with the job ID.",
-                music:
-                  "Describe a 10-second instrumental cue for a terminal announcement or demonstration.",
-                change:
-                  "Transform an authorised recording using a voice from your ElevenLabs library.",
-                align:
-                  "Align the supplied transcript with an audio recording to get word-level timestamps.",
-              } as Record<string, string>
-            )[tool]
-          }
-        </p>
-        {["speech", "effects", "music"].includes(tool) ? (
-          <label className="field">
-            {tool === "effects" || tool === "music"
-              ? "Describe the sound"
-              : "Your script"}
-            <textarea
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              maxLength={2000}
-              rows={7}
-            />
-            <small>{text.length} / 2,000 characters</small>
-          </label>
-        ) : (
-          <label className="upload">
-            <FileAudio size={30} />
-            <strong>{file?.name || "Choose an audio recording"}</strong>
-            <span>MP3, WAV, M4A or WebM · up to 20 MB</span>
-            <input
-              type="file"
-              accept="audio/*"
-              onChange={(e) => setFile(e.target.files?.[0] || null)}
-            />
-          </label>
-        )}
-        {tool === "align" && (
-          <label className="field">
-            Exact transcript
-            <textarea
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              maxLength={2000}
-              rows={4}
-            />
-          </label>
-        )}
-        {["speech", "change"].includes(tool) && (
-          <label className="field">
-            Voice
-            <select value={voice} onChange={(e) => setVoice(e.target.value)}>
-              <option value="">
-                {config.configured
-                  ? "Select a voice"
-                  : "Connect ElevenLabs to load voices"}
-              </option>
-              {voices.map((v) => (
-                <option key={v.voiceId} value={v.voiceId}>
-                  {v.name}
-                </option>
-              ))}
-            </select>
-          </label>
-        )}
-        {tool === "dubbing" && (
-          <label className="field">
-            Target language
-            <select value={target} onChange={(e) => setTarget(e.target.value)}>
-              {languages.map(([id, name]) => (
-                <option key={id} value={id}>
-                  {name}
-                </option>
-              ))}
-            </select>
-          </label>
-        )}
-        <button
-          disabled={
-            busy ||
-            (["speech", "effects", "music"].includes(tool) && !text.trim())
-          }
-          className="button primary"
-          onClick={execute}
-        >
-          {busy ? (
-            <LoaderCircle size={16} className="spin" />
-          ) : (
-            <Play size={16} />
-          )}{" "}
-          {busy ? "Processing…" : "Generate with ElevenLabs"}
-        </button>
-        {audio && (
-          <div className="audio-output">
-            <audio controls src={audio} />
-            <a className="button" href={audio} download="harborvoice.mp3">
-              <Download size={16} />
-              Download
-            </a>
-          </div>
-        )}
-        {result && <pre className="result">{result}</pre>}
-        {tool === "dubbing" && <DubbingStatus fail={fail} />}
-      </section>
-      <div className="stack">
-        <section className="panel padded">
-          <h2>One platform, many voices.</h2>
-          <p>
-            Eight audio workflows, wired to the official ElevenLabs server SDK.
-            Outputs can be previewed and downloaded here.
-          </p>
-          <div className="studio-illustration">
-            <AudioLines size={78} strokeWidth={1} />
-          </div>
-          <div className="info-line">
-            <ShieldCheck size={17} />
-            API keys stay on the server
-          </div>
-          <div className="info-line">
-            <Clock size={17} />
-            Live requests may consume credits
-          </div>
-        </section>
-        <section className="panel padded">
-          <h2>Responsible voice use</h2>
-          <p>
-            Use recordings and voices you have permission to use. Voice cloning
-            and outbound calling are deliberately outside this demo.
-          </p>
-        </section>
-      </div>
-    </div>
-  );
-}
-function DubbingStatus({ fail }: { fail: (e: unknown) => void }) {
-  const [id, setId] = useState(""),
-    [result, setResult] = useState("");
-  return (
-    <div className="dubbing-status">
-      <label className="field">
-        Dubbing job ID
-        <input
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-          placeholder="Paste the dubbingId returned above"
-        />
-      </label>
-      <button
-        className="button"
-        disabled={!id}
-        onClick={() =>
-          request(`/dubbing/${encodeURIComponent(id)}`)
-            .then((r) => setResult(JSON.stringify(r, null, 2)))
-            .catch(fail)
-        }
-      >
-        Check job status
-      </button>
-      {result && <pre className="result">{result}</pre>}
     </div>
   );
 }
@@ -1435,6 +1182,8 @@ function Conversations({ state }: { state: State }) {
   );
 }
 function SettingsPage({ notify }: { notify: (s: string) => void }) {
+  const [checking, setChecking] = useState(false),
+    [connectionResult, setConnectionResult] = useState("");
   const [token, setToken] = useState(
     sessionStorage.getItem("hv-operator-token") || "",
   );
@@ -1464,6 +1213,32 @@ function SettingsPage({ notify }: { notify: (s: string) => void }) {
             <span>{v}</span>
           </div>
         ))}
+        <button
+          className="button"
+          style={{ marginTop: 20 }}
+          disabled={!config.configured || checking}
+          onClick={async () => {
+            setChecking(true);
+            try {
+              const r = await request("/connection/check", {});
+              setConnectionResult(
+                `${r.voiceCount} voices available. ${r.scope}`,
+              );
+            } catch (e) {
+              setConnectionResult((e as Error).message);
+            } finally {
+              setChecking(false);
+            }
+          }}
+        >
+          {checking ? (
+            <LoaderCircle size={16} className="spin" />
+          ) : (
+            <ShieldCheck size={16} />
+          )}
+          Verify ElevenLabs connection
+        </button>
+        {connectionResult && <p role="status">{connectionResult}</p>}
         <label className="field">
           Operator access token
           <input

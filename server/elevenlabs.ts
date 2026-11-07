@@ -16,32 +16,47 @@ export function agentId() {
     throw new Error("Configure ELEVENLABS_AGENT_ID on the server first.");
   return id;
 }
-export async function attachKnowledge(name: string, text: string) {
-  const sdk = client();
+// Serialize read/append/update per agent so concurrent uploads cannot discard attachments.
+const attachments = new Map<string, Promise<void>>();
+export async function attachKnowledge(
+  name: string,
+  text: string,
+  sdk = client(),
+) {
   const id = agentId();
   const document =
     await sdk.conversationalAi.knowledgeBase.documents.createFromText({
       name,
       text,
     });
-  try {
-    const agent = await sdk.conversationalAi.agents.get(id);
-    await sdk.conversationalAi.agents.update(id, {
-      conversationConfig: {
-        agent: {
-          prompt: {
-            knowledgeBase: [
-              ...(agent.conversationConfig.agent?.prompt?.knowledgeBase || []),
-              { type: "text", name, id: document.id, usageMode: "auto" },
-            ],
+  const previous = attachments.get(id) || Promise.resolve();
+  const update = previous
+    .catch(() => {})
+    .then(async () => {
+      const agent = await sdk.conversationalAi.agents.get(id);
+      await sdk.conversationalAi.agents.update(id, {
+        conversationConfig: {
+          agent: {
+            prompt: {
+              knowledgeBase: [
+                ...(agent.conversationConfig.agent?.prompt?.knowledgeBase ||
+                  []),
+                { type: "text", name, id: document.id, usageMode: "auto" },
+              ],
+            },
           },
         },
-      },
+      });
     });
+  attachments.set(id, update);
+  try {
+    await update;
   } catch {
     throw new Error(
       `Document ${document.id} was created but could not be attached. Attach it manually in ElevenLabs; do not upload it again.`,
     );
+  } finally {
+    if (attachments.get(id) === update) attachments.delete(id);
   }
   return document;
 }

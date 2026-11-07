@@ -1,8 +1,10 @@
 import { DatabaseSync } from "node:sqlite";
 import { mkdirSync } from "node:fs";
+import { dirname } from "node:path";
 import { initialState, type State } from "../src/domain.js";
 export function createStore(filename = "var/harborvoice.sqlite") {
-  if (filename !== ":memory:") mkdirSync("var", { recursive: true });
+  if (filename !== ":memory:")
+    mkdirSync(dirname(filename), { recursive: true });
   const db = new DatabaseSync(filename);
   db.exec(
     "PRAGMA journal_mode=WAL; CREATE TABLE IF NOT EXISTS workspace(id INTEGER PRIMARY KEY CHECK(id=1), data TEXT NOT NULL); CREATE TABLE IF NOT EXISTS webhook_events(id TEXT PRIMARY KEY, received_at TEXT NOT NULL, payload TEXT NOT NULL);",

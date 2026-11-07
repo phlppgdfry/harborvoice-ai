@@ -38,7 +38,7 @@ Open **http://127.0.0.1:5173**. No credentials are needed for the demo. The API 
 - **Shipment integration** — exact-reference lookup against a synthetic TMS adapter; unknown-reference abstention; source-grounded demo answers.
 - **Knowledge** — four versioned operating playbooks; text document creation and attachment to the configured live agent.
 - **Human-reviewed workflows** — idempotent pending escalations, approve/reject decisions and a persisted activity trail. No external business-system writes.
-- **Audio studio** — text to speech, speech to text with diarization, sound effects, voice isolation, dubbing jobs, instrumental music, voice changing and forced alignment. Audio outputs can be played/downloaded; JSON outputs are inspectable. Dubbing exposes job submission and status; final rendered-dub download is not included.
+- **Audio studio** — text to speech, speech to text with diarization, sound effects, voice isolation, dubbing jobs with completed automatic-dub download, instrumental music, voice changing and forced alignment. Audio outputs can be played/downloaded; JSON outputs are inspectable. Dubbing exposes job submission, status and the original automatic audio dub. Edited Studio renders are outside this version.
 - **Evaluation** — six executable demo checks; a live ElevenLabs simulation test with invocation polling and evidence export. Demo checks and live results are explicitly separate.
 - **Conversation analytics** — actual saved session/message counts, separated demo/live sessions and downloadable transcripts. Browser-reported live transcripts are not independently verified provider records.
 - **Webhook intake** — HMAC verification over the raw body, five-minute timestamp tolerance, deduplication and separate event storage. Webhook events do not drive shipment changes or automatically populate conversation analytics.
@@ -85,12 +85,12 @@ Expose `POST /api/webhooks/elevenlabs` over HTTPS using your deployment infrastr
 ## Verification
 
 ```bash
-npm run check                 # TypeScript + production build + 17 tests
+npm run check                 # TypeScript + production build + 35 tests
 npm run dev                   # In another terminal
 npm run test:browser          # Installed Google Chrome, or BROWSER_CHANNEL=chromium
 ```
 
-The API tests use temporary in-memory SQLite and an ephemeral local HTTP server. They never call ElevenLabs and never spend credits. The browser script performs a real demo conversation, Dutch reply, escalation approval, evidence export, history inspection, all-page navigation and a 390px mobile overflow check. It writes screenshots and a verification report to `docs/` and changes the local demo workspace while testing.
+The API tests use temporary in-memory SQLite and an ephemeral local HTTP server. Contract tests run the real official SDK with a custom HTTP transport returning provider fixtures: they inspect the serialized requests for all eight audio tools, signed sessions, dubbing downloads, connection checks, concurrent knowledge attachments and test invocations. They never call ElevenLabs and never spend credits. The browser script performs a real demo conversation, Dutch reply, escalation approval, evidence export, history inspection, all-page navigation and a 390px mobile overflow check. It also checks contextual studio defaults, keyboard tabs, deep links, visible mobile navigation labels and all eight audio forms against explicitly mocked provider responses. It writes screenshots and a verification report to `docs/` and changes the local demo workspace while testing.
 
 For CI, install the browser first with `npx playwright install --with-deps chromium`, then use `BROWSER_CHANNEL=chromium npm run test:browser` while the dev server is running.
 
@@ -126,6 +126,16 @@ scripts/     Resumable agent bootstrap and browser walkthrough
 tests/      Domain and API integration tests
 docs/       Feature matrix, architecture, screenshots and verification evidence
 ```
+
+## Version 1.1 improvements
+
+- Dedicated, lazily loaded audio studio with per-tool forms, meaningful examples, upload checks, JSON exports, elapsed processing time and request cancellation on tool switch. Cancelling the browser wait does not promise to cancel provider work or charges.
+- Complete automatic-dubbing flow: submit → inspect status → load and download the completed original dub.
+- Voice connection state follows SDK callbacks; microphone mute is separate from speaker volume; navigation saves a nonempty live transcript.
+- Accessible mobile navigation labels, keyboard audio tabs, skip link and hash-based deep links that survive refresh/back navigation.
+- Nested browser-storage validation prevents malformed saved workspaces from crashing the interface. Latest-tag dependencies are pinned to the installed versions, and TypeScript rejects unused local declarations.
+- Knowledge attachments are serialised per agent inside the server process; concurrent application uploads retain both documents. Independent external writers still need coordination.
+- Settings can explicitly verify voice-library access through a read-only provider request. This does not certify agent calls or paid audio features.
 
 ## References
 
