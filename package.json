@@ -1,6 +1,6 @@
 {
   "name": "harborvoice-ai",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
   "description": "A logistics voice operations workbench powered by ElevenLabs",
@@ -36,7 +36,11 @@
     "elite:remediate": "node --import tsx scripts/elite/remediate.ts",
     "budget:report": "node --import tsx scripts/elite/budget.ts report",
     "test:elite": "node --import tsx scripts/elite/browser-check.ts",
-    "knowledge:sync": "node --import tsx scripts/elite/knowledge-sync.ts"
+    "knowledge:sync": "node --import tsx scripts/elite/knowledge-sync.ts",
+    "recognition:budget": "node --import tsx scripts/recognition/budget.ts",
+    "recognition:validate": "node --import tsx scripts/recognition/validate-showcase.ts && node --test examples/reliable-agent-workshop/starter.test.mjs",
+    "recognition:experiments": "node --import tsx scripts/recognition/experiments.ts",
+    "test:community": "node --import tsx scripts/recognition/browser.ts"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "2.77.0",

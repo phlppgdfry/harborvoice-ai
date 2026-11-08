@@ -18,7 +18,7 @@ const operator = existsSync("var/hosted-operator.json")
 for (const path of files) {
   if (path.startsWith(".env") && path !== ".env.example")
     problems.push(path + ": env file");
-  if (!/\.(ts|tsx|js|mjs|json|md|ya?ml|html|css|txt)$/.test(path)) continue;
+  if (!/\.(ts|tsx|js|mjs|json|md|mdx|ya?ml|html|css|txt)$/.test(path)) continue;
   const text = readFileSync(path, "utf8");
   if (operator && text.includes(operator))
     problems.push(path + ": operator secret");

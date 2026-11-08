@@ -1,0 +1,47 @@
+{
+  "method": "Measured gain to\u221214.5 LUFS with oversampled conservative peak limiting, then full decode after MP3 encode. No extra provider generation.",
+  "tracks": [
+    {
+      "id": "future-systems",
+      "durationSeconds": 60.024,
+      "integratedLufs": -14.92,
+      "truePeakDbtp": -3.34,
+      "sha256": "902ea396a2b3f65a76a3dd3d3b6aa0a7cfa04a290813de439e7459ffbb1b5883",
+      "checks": [
+        "Full decode",
+        "Duration",
+        "Measured loudness and true peak",
+        "Original preserved privately"
+      ],
+      "limitations": "Automated technical checks do not establish subjective composition quality, transition quality, rights clearance or native-speaker review."
+    },
+    {
+      "id": "northern-lights",
+      "durationSeconds": 60.024,
+      "integratedLufs": -15.16,
+      "truePeakDbtp": -3.31,
+      "sha256": "a886d59360ff80aaa8bf396ac01a997193f5af5b2947828385a073b6c0613d55",
+      "checks": [
+        "Full decode",
+        "Duration",
+        "Measured loudness and true peak",
+        "Original preserved privately"
+      ],
+      "limitations": "Automated technical checks do not establish subjective composition quality, transition quality, rights clearance or native-speaker review."
+    },
+    {
+      "id": "human-intelligence",
+      "durationSeconds": 60.024,
+      "integratedLufs": -14.85,
+      "truePeakDbtp": -2.99,
+      "sha256": "32baa4705eb1df575b1eb7ca97e84b46d3f58cc63272229fb518ddfe63f1ad11",
+      "checks": [
+        "Full decode",
+        "Duration",
+        "Measured loudness and true peak",
+        "Original preserved privately"
+      ],
+      "limitations": "Automated technical checks do not establish subjective composition quality, transition quality, rights clearance or native-speaker review."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-08T13:19:28.401Z",
-  "url": "http://127.0.0.1:5173",
+  "checkedAt": "2026-11-08T19:02:29.467Z",
+  "url": "http://127.0.0.1:5175",
   "environment": "Playwright; Browser plugin not available",
   "viewports": ["1440x1000", "390x844"],
   "checks": [

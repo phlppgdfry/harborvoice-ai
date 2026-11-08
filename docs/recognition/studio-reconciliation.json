@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-08T18:53:44.249328+00:00",
+  "status": "CREATED \u2014 NATIVE SOURCE REPLACEMENT VERIFIED BY AGENT READBACK",
+  "projectId": "7IXHA48pFJqsSPSWtRtM",
+  "projectUrl": "https://elevenlabs.io/app/studio/7IXHA48pFJqsSPSWtRtM",
+  "sourceFile": "public/elite/commercial-en.mp4",
+  "directUploadName": "harborvoice-final-master.mp4",
+  "pinnedVersionOrAssetIdReportedByStudio": "hO18ngHbeNz2vHdkBJqq",
+  "durationSeconds": 36,
+  "timelineStartSeconds": 0,
+  "timelineEndSeconds": 36,
+  "embeddedAudioPreserved": true,
+  "captionsPreserved": true,
+  "captionCount": null,
+  "captionSyncReview": "PENDING \u2014 retained from previous source; not regenerated or claimed re-timed",
+  "initialAttempt": "Flow master fkVENpdWsVYaWqzFp0Q3 was visible but had no ready Studio version; swap rejected and old timeline preserved.",
+  "successfulMethod": "Upload the same final local file with a unique name through the native media picker, add to project library, then substitute only the storyline source with the ready direct-upload version.",
+  "agentUiCredits": {
+    "previousCumulative": 541,
+    "afterFirstAttempt": 1197,
+    "afterSuccessfulAttempt": 1619,
+    "sprintDelta": 1078
+  },
+  "scope": "Actual native UI import and Studio Agent source substitution with readback. No media generation, library deletion, share or public export. API allowlisting remains unchanged.",
+  "sourceSha256": "d063dd9aa4966e22569a1bee8d4f3dd94f213929884737778d27f888d32dc97e"
+}

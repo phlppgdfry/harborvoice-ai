@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "scope": "Project-owned generated and recorded media. Safe copies; no signed URLs. Original source assets remain native. Full render specs and provenance live in docs/elite.",
   "files": [
     {
@@ -391,6 +391,51 @@
       "path": "public/experience/music-api.mp3",
       "bytes": 96592,
       "sha256": "83ac1bd87789859d44121cfbc436f51fe35622b172895735b902f01643c229f6"
+    },
+    {
+      "path": "public/recognition/book-cover.png",
+      "bytes": 154216,
+      "sha256": "54a40ae4391c4f66eacc6f6ba19b09069bde0740ca5e893e6918162ce3e4c17b"
+    },
+    {
+      "path": "public/recognition/future-systems.mp3",
+      "bytes": 1441772,
+      "sha256": "902ea396a2b3f65a76a3dd3d3b6aa0a7cfa04a290813de439e7459ffbb1b5883"
+    },
+    {
+      "path": "public/recognition/future-systems.png",
+      "bytes": 92890,
+      "sha256": "8d776fb1d7e48c0df70caffb3ea10a6e595d860a0ea8e8f46771f62becf84773"
+    },
+    {
+      "path": "public/recognition/human-intelligence.mp3",
+      "bytes": 1441772,
+      "sha256": "32baa4705eb1df575b1eb7ca97e84b46d3f58cc63272229fb518ddfe63f1ad11"
+    },
+    {
+      "path": "public/recognition/human-intelligence.png",
+      "bytes": 91627,
+      "sha256": "7fb23d786b9a8861ac4176308b8d42fac3b4363b7dab3ea548e07b85d3768c35"
+    },
+    {
+      "path": "public/recognition/learning-example.mp3",
+      "bytes": 852669,
+      "sha256": "1209bdc3235f47789e43c955c1dfe19c5b3c0a0c85bbe1237b6cebadd37eaf12"
+    },
+    {
+      "path": "public/recognition/northern-lights.mp3",
+      "bytes": 1441772,
+      "sha256": "a886d59360ff80aaa8bf396ac01a997193f5af5b2947828385a073b6c0613d55"
+    },
+    {
+      "path": "public/recognition/northern-lights.png",
+      "bytes": 92805,
+      "sha256": "c378bf9e0c4e84096a97a70bd40f4c6f7c2839897a88ebd57e0fb35fcfe0e813"
+    },
+    {
+      "path": "public/recognition/reliable-enterprise-voice-ai.epub",
+      "bytes": 27398,
+      "sha256": "d21cf6f538092e332b6166f1f3fc9286e21a6be8b9bdc0601cb0ec8fd0aae365"
     }
   ]
 }

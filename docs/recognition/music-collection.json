@@ -1,0 +1,75 @@
+{
+  "collection": "Cinematic Technology Soundtracks",
+  "publication": "READY FOR OWNER REVIEW; NOT SUBMITTED",
+  "tracks": [
+    {
+      "id": "future-systems",
+      "title": "Future Systems",
+      "description": "Precise cinematic electronics for product launches: measured momentum, spacious narration bed and a resolved ending.",
+      "file": "recognition/future-systems.mp3",
+      "durationSeconds": 60.024,
+      "sha256": "902ea396a2b3f65a76a3dd3d3b6aa0a7cfa04a290813de439e7459ffbb1b5883",
+      "model": "music_v2_5",
+      "method": "Three explicit 20-second composed sections; original instrumental, no external audio reference.",
+      "status": "TESTED \u2014 READY FOR HUMAN LISTENING REVIEW",
+      "marketplace": "NOT SUBMITTED",
+      "tags": [
+        "cinematic",
+        "technology",
+        "instrumental",
+        "104 BPM",
+        "warm analog bass",
+        "muted arpeggios",
+        "restrained percussion"
+      ],
+      "checkedAt": "2026-11-08T18:18:13.369Z",
+      "originalGenerationSha256": "fcd4f25159e39dc6f5ca4e47eaeb9376b5b1d57874a09fec88c4502823d5aebb"
+    },
+    {
+      "id": "northern-lights",
+      "title": "Northern Lights",
+      "description": "Atmospheric premium corporate score: airy textures, delicate piano and a calm luminous resolution.",
+      "file": "recognition/northern-lights.mp3",
+      "durationSeconds": 60.024,
+      "sha256": "a886d59360ff80aaa8bf396ac01a997193f5af5b2947828385a073b6c0613d55",
+      "model": "music_v2_5",
+      "method": "Three explicit 20-second composed sections; original instrumental, no external audio reference.",
+      "status": "TESTED \u2014 READY FOR HUMAN LISTENING REVIEW",
+      "marketplace": "NOT SUBMITTED",
+      "tags": [
+        "cinematic",
+        "technology",
+        "instrumental",
+        "76 BPM",
+        "felt piano",
+        "shimmering pads",
+        "soft bowed textures"
+      ],
+      "checkedAt": "2026-11-08T18:18:19.915Z",
+      "originalGenerationSha256": "198e35158ee0e4adeaaef240128ce3746c3af920d3fd7ffa78cde0fdd1fc68b1"
+    },
+    {
+      "id": "human-intelligence",
+      "title": "Human Intelligence",
+      "description": "Uplifting human-centred technology score: tactile acoustic motion, warm strings and an optimistic finish.",
+      "file": "recognition/human-intelligence.mp3",
+      "durationSeconds": 60.024,
+      "sha256": "32baa4705eb1df575b1eb7ca97e84b46d3f58cc63272229fb518ddfe63f1ad11",
+      "model": "music_v2_5",
+      "method": "Three explicit 20-second composed sections; original instrumental, no external audio reference.",
+      "status": "TESTED \u2014 READY FOR HUMAN LISTENING REVIEW",
+      "marketplace": "NOT SUBMITTED",
+      "tags": [
+        "cinematic",
+        "technology",
+        "instrumental",
+        "92 BPM",
+        "organic acoustic plucks",
+        "warm chamber strings",
+        "gentle hand percussion"
+      ],
+      "checkedAt": "2026-11-08T18:18:27.398Z",
+      "originalGenerationSha256": "afc48bb528041a4f8781c2e42d9d1788d3c0580988ab34f37039a06574478143"
+    }
+  ]
+}

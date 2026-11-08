@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-08T19:04:22.582Z",
+  "scope": "Read-only probes establish these specific operations only. No key permission changes or scope expansion.",
+  "results": [
+    {
+      "capability": "voices",
+      "status": "VERIFIED LIVE"
+    },
+    {
+      "capability": "models",
+      "status": "VERIFIED LIVE"
+    },
+    {
+      "capability": "subscription",
+      "status": "VERIFIED LIVE"
+    },
+    {
+      "capability": "studio",
+      "status": "PLAN RESTRICTED",
+      "httpStatus": 403
+    }
+  ]
+}
