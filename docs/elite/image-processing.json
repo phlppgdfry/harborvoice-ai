@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-08T13:03:19.090Z",
+  "scope": "Native background removal and2x upscale of the existing project-owned illustration. No new artwork or person was generated.",
+  "assets": [
+    {
+      "file": "elite/academy-transparent.png",
+      "model": "birefnet-v2-bg-removal",
+      "width": 1280,
+      "height": 720,
+      "credits": 30.296969999999998
+    },
+    {
+      "file": "elite/academy-print.png",
+      "model": "topaz-image-upscale-v2",
+      "width": 2560,
+      "height": 1440,
+      "credits": 484.75151999999997
+    }
+  ]
+}

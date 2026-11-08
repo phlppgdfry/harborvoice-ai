@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-08T12:58:29.979166+00:00",
+  "scope": "Actual FFmpeg full decode and EBU loudness measurements. Target around-14LUFS and true peak at or below-1.5dBTP; subjective mix and native-speaker review are separate.",
+  "films": [
+    {
+      "file": "elite/commercial-nl.mp4",
+      "integratedLufs": -14.67,
+      "truePeakDbtp": -2.06,
+      "loudnessRangeLu": 4.4,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "elite/commercial-en.mp4",
+      "integratedLufs": -14.84,
+      "truePeakDbtp": -1.9,
+      "loudnessRangeLu": 2.7,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "elite/enterprise-explainer.mp4",
+      "integratedLufs": -14.85,
+      "truePeakDbtp": -2.13,
+      "loudnessRangeLu": 1.6,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "elite/commercial-fr.mp4",
+      "integratedLufs": -14.7,
+      "truePeakDbtp": -2.65,
+      "loudnessRangeLu": 3.7,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "elite/commercial-en-portrait.mp4",
+      "integratedLufs": -14.84,
+      "truePeakDbtp": -1.9,
+      "loudnessRangeLu": 2.7,
+      "fullDecodePassed": true
+    }
+  ]
+}

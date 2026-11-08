@@ -1,0 +1,224 @@
+{
+  "checkedAt": "2026-11-08T13:17:16.161773+00:00",
+  "scope": "ffprobe decoding metadata and SHA256 integrity, not subjective audio or language review. Local films use actual deterministic-demo footage and native ElevenLabs source generations.",
+  "files": [
+    {
+      "file": "elite/commercial-nl.mp3",
+      "durationSeconds": 27.68,
+      "sizeBytes": 443915,
+      "sha256": "a06494e46dce2c47098ac505b727bdc44df542d9cf9814dfbcd9a1f19660e199",
+      "streams": [
+        {
+          "codec": "mp3"
+        }
+      ]
+    },
+    {
+      "file": "elite/commercial-nl.mp4",
+      "durationSeconds": 36.0,
+      "sizeBytes": 2588520,
+      "sha256": "2f8df2be86219bc8fb8747b8f5e76dea826238876e6c4dd3cb34193f260a862c",
+      "streams": [
+        {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec": "aac"
+        }
+      ]
+    },
+    {
+      "file": "elite/original-score.mp3",
+      "durationSeconds": 90.024,
+      "sizeBytes": 2160620,
+      "sha256": "dd73317016f4a30d5289cb424e048fac4188cddd9701f0f6f5e101bfeebbeefb",
+      "streams": [
+        {
+          "codec": "mp3"
+        }
+      ]
+    },
+    {
+      "file": "elite/commercial-en.mp3",
+      "durationSeconds": 26.48,
+      "sizeBytes": 424689,
+      "sha256": "735901f03cba844a69b13bdb7efff8778f80469981f8f5f4173c6256580a27aa",
+      "streams": [
+        {
+          "codec": "mp3"
+        }
+      ]
+    },
+    {
+      "file": "elite/commercial-en.mp4",
+      "durationSeconds": 36.0,
+      "sizeBytes": 2568110,
+      "sha256": "d063dd9aa4966e22569a1bee8d4f3dd94f213929884737778d27f888d32dc97e",
+      "streams": [
+        {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec": "aac"
+        }
+      ]
+    },
+    {
+      "file": "elite/enterprise-explainer.mp4",
+      "durationSeconds": 78.0,
+      "sizeBytes": 4130050,
+      "sha256": "16515653a5691e7c27cdd6decfa654d83faecc714bd75582d48c4905da47ccb5",
+      "streams": [
+        {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec": "aac"
+        }
+      ]
+    },
+    {
+      "file": "elite/native-dub-fr.mp3",
+      "durationSeconds": 26.48,
+      "sizeBytes": 441874,
+      "sha256": "70dc8a5eb354ee557146d39955a4ff11331193dc5a9d47b2e516881872153798",
+      "streams": [
+        {
+          "codec": "mp3"
+        }
+      ]
+    },
+    {
+      "file": "elite/commercial-fr.mp4",
+      "durationSeconds": 36.0,
+      "sizeBytes": 2592903,
+      "sha256": "abc8522933a1dc555da58859c7c85475ee70d03ebea7c7200eea810ebd2efd10",
+      "streams": [
+        {
+          "codec": "h264",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec": "aac"
+        }
+      ]
+    },
+    {
+      "file": "elite/commercial-fr.mp3",
+      "durationSeconds": 26.0,
+      "sizeBytes": 417166,
+      "sha256": "ab28d9ab6e5f3ff8eabca508b65926962e034f3ca6074a16b8d1581a1768f0ae",
+      "streams": [
+        {
+          "codec": "mp3"
+        }
+      ]
+    },
+    {
+      "file": "elite/native-learning.mp3",
+      "durationSeconds": 22.08,
+      "sizeBytes": 371598,
+      "sha256": "674dddc5af1f854b9d80509dd10add610381607063a928a0d737db714c1ac1e8",
+      "streams": [
+        {
+          "codec": "mp3"
+        }
+      ]
+    },
+    {
+      "file": "elite/briefing-en.mp3",
+      "durationSeconds": 39.28,
+      "sizeBytes": 629489,
+      "sha256": "581fb40de6821b3b5ed1e9156d3da8130cd73cf9e1917b738a34a8660cdbc764",
+      "streams": [
+        {
+          "codec": "mp3"
+        }
+      ]
+    },
+    {
+      "file": "elite/explainer-en.mp3",
+      "durationSeconds": 72.0,
+      "sizeBytes": 1153192,
+      "sha256": "edeccaa00cdfcdcfc893a3e4f4ad5cf5c011549e9c32dd4570242a279e1b42b3",
+      "streams": [
+        {
+          "codec": "mp3"
+        }
+      ]
+    },
+    {
+      "file": "elite/commercial-en-portrait.mp4",
+      "durationSeconds": 36.0,
+      "sizeBytes": 2365181,
+      "sha256": "11e2e9d0c03d83478613d3661abdf88397c623feeedc3877fcbd50e2a005f681",
+      "streams": [
+        {
+          "codec": "h264",
+          "width": 720,
+          "height": 1280
+        },
+        {
+          "codec": "aac"
+        }
+      ]
+    },
+    {
+      "file": "elite/cinematic-1.mp4",
+      "durationSeconds": 8.04,
+      "sizeBytes": 7433415,
+      "sha256": "9c344521d5f305fe025cb56332c114bef55e760da873b7420bae9a830515ede9",
+      "streams": [
+        {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    },
+    {
+      "file": "elite/streaming-speech.mp3",
+      "durationSeconds": 4.5975,
+      "sizeBytes": 73604,
+      "sha256": "3e4ebcfca20425e5e59ba588b436f76aa17671ecdec17697996dbafeed4748eb",
+      "streams": [
+        {
+          "codec": "mp3"
+        }
+      ]
+    },
+    {
+      "file": "elite/cinematic-2.mp4",
+      "durationSeconds": 8.04,
+      "sizeBytes": 3788131,
+      "sha256": "0c944029324429d0cd37845e8edf022bc0f012f14e06a1ca9c55e1a6b1f104e1",
+      "streams": [
+        {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    },
+    {
+      "file": "elite/cinematic-3.mp4",
+      "durationSeconds": 8.04,
+      "sizeBytes": 2643727,
+      "sha256": "0880405b219991a38c6473959bb6c6a3c3d8154a36cc750aefef9e599d8b841d",
+      "streams": [
+        {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    }
+  ]
+}

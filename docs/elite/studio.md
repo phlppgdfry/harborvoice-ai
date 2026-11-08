@@ -1,0 +1,11 @@
+# Native Studio and API access
+
+The SDK returned HTTP 403 for Studio project access during this execution. Official Studio API access requires explicit account allowlisting. Neither an existing CLI command nor an OAuth session bypasses this restriction. No subscription upgrade, support message or allowlisting application was submitted.
+
+The normal Studio UI accepted the already completed `commercial-en.mp4` into a native project, ID `7IXHA48pFJqsSPSWtRtM`: https://elevenlabs.io/app/studio/7IXHA48pFJqsSPSWtRtM. Its native timeline showed a 36-second uploaded clip in one visual storyline, with its existing embedded audio. The Studio Agent actually inspected the project, reported its tracks and provided caption QA guidance. It could not rename the project through its current script tools. Editable English captions were generated, the HarborVoice brand spelling was corrected manually, grouping was verified at six words, the project was renamed through its title control and the native SRT export was downloaded and validated. The Studio Agent UI reported 541 credits. See [native Studio evidence](studio-evidence.json).
+
+The original cinematic generation and first complete edit remain distinct: sources were generated in ElevenCreative, and `produce-films.py` performed local composition. Importing that result is genuine native Studio usage but does not turn the original edit into native multi-track production. The separate native Audiobooks project remains successfully rendered as documented in the earlier evidence.
+
+Native changes are not overwritten by repository synchronization. Keep the project editable; record a completed native export separately from the local product film. Never claim that a blank project, an accepted request or an API schema proves a successful render.
+
+The final mastered films and soundtrack were additionally uploaded and finalized on the native commercial Flow, with SHA256 mapping in [native-production.json](native-production.json). The Studio caption project preserves its earlier cut. A later source-replacement attempt was stopped before any new agent request because the native browser tab was discarded/changed during repeated UI checks. No paid retry was made; this native timeline revision remains a manual reconciliation step.

@@ -4,6 +4,8 @@ const ConnectionSettings = React.lazy(() => import("./ConnectionSettings"));
 const PortfolioEvidence = React.lazy(() => import("./PortfolioEvidence"));
 const ExperienceLab = React.lazy(() => import("./ExperienceLab"));
 const Academy = React.lazy(() => import("./Academy"));
+const MasteryLab = React.lazy(() => import("./MasteryLab"));
+const EliteStudio = React.lazy(() => import("./EliteStudio"));
 import { LIVE_APP_URL } from "./deployment";
 const AudioStudio = React.lazy(() => import("./AudioStudio"));
 const VoiceAgent = React.lazy(() => import("./VoiceAgent"));
@@ -55,7 +57,9 @@ import "./styles.css";
 const tabs = [
   ["Overview", LayoutDashboard],
   ["Experience lab", Play],
+  ["Elite studio", Workflow],
   ["Academy", BookOpen],
+  ["Mastery lab", FlaskConical],
   ["Voice agents", Mic],
   ["Audio studio", AudioLines],
   ["Knowledge base", BookOpen],
@@ -604,6 +608,16 @@ function App() {
               <Academy />
             </React.Suspense>
           )}
+          {page === "Elite studio" && (
+            <React.Suspense fallback={<p>Loading productions…</p>}>
+              <EliteStudio />
+            </React.Suspense>
+          )}
+          {page === "Mastery lab" && (
+            <React.Suspense fallback={<p>Loading the Mastery lab…</p>}>
+              <MasteryLab />
+            </React.Suspense>
+          )}
           {page === "Experience lab" && (
             <React.Suspense fallback={<p>Loading audio examples…</p>}>
               <ExperienceLab />
@@ -635,6 +649,10 @@ function App() {
   );
 }
 const descriptions: Record<string, string> = {
+  "Elite studio":
+    "Explore the productions, reusable workflows and engineering evidence.",
+  "Mastery lab":
+    "Explore the architecture. Practice the decisions. Inspect the evidence.",
   Academy: "Learn with real audio, transcripts and self-guided practice.",
   "Experience lab": "Listen, compare and try the public voice experience.",
   "Voice agents":

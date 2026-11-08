@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-11-08T12:42:01.697Z",
+  "mainAgentId": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
+  "mainVersion": "agtvrsn_9601m6xjw36beketcgn7tzzze8zb",
+  "mainBranchId": "agtbrch_8201m6t6k4wnfcjvpzh2v3j6r2pd",
+  "enterpriseBranchId": "agtbrch_8401m6w7fx43e40vxgq7gs253chg",
+  "managedSourceMatches": true,
+  "knowledgeDocuments": 4,
+  "toolCount": 2,
+  "attachedTests": 58,
+  "cliPulledAfterMerge": true,
+  "cliDryRun": true,
+  "cliRealPush": "No-change push omitted after reviewing identical source; supported sync applies only changed managed fields.",
+  "scope": "No-conflict native branch merge and read-back verification, preserving original agent identity and existing resources. Full baseline50/52 and corrected10/10 remain separate evidence."
+}

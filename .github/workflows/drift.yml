@@ -1,0 +1,30 @@
+name: Read-only resource drift
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * 1"
+permissions:
+  contents: read
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    env:
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_READONLY_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        if: env.ELEVENLABS_API_KEY != ''
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+        if: env.ELEVENLABS_API_KEY != ''
+      - run: node --import tsx scripts/elite/drift-ci.ts
+        if: env.ELEVENLABS_API_KEY != ''
+      - run: echo 'Live drift skipped; no dedicated read-only secret configured.'
+        if: env.ELEVENLABS_API_KEY == ''
+      - uses: actions/upload-artifact@v4
+        if: always() && env.ELEVENLABS_API_KEY != ''
+        with:
+          name: readonly-drift
+          path: var/elite/drift-ci.json

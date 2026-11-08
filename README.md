@@ -7,17 +7,28 @@
 > The previously published static demo/live gateway below is not evidence that this new
 > persistent release has been deployed. Historical verification is preserved.
 
-# HarborVoice AI
+# HarborVoice AI · ElevenLabs Elite Edition
 
-**A voice operations workbench for a fictional North Sea logistics terminal.**
+**Voice intelligence with evidence and human control.** A working logistics voice-AI portfolio, creative production studio and practical learning environment.
 
-Meet **Nora**: a multilingual terminal assistant that looks up shipments, explains terminal procedures and prepares escalations for operator review. Explore an interactive terminal map, eight ElevenLabs audio workflows, knowledge management, conversation history and reproducible evaluations.
+[Live application](https://harborvoice-ai.vercel.app) · [Watch the product film](public/elite/commercial-en.mp4) · [Mastery Lab](https://harborvoice-ai.vercel.app/#mastery-lab) · [Capability matrix](docs/elite/capability-matrix.md) · [Release evidence](docs/elite/release-report.md)
 
-[Open the live workspace](https://harborvoice-ai.vercel.app) · [Static portfolio preview](https://phlppgdfry.github.io/harborvoice-ai/) · [Feature coverage](docs/feature-coverage.md) · [Architecture](docs/architecture.md) · [Browser evidence](docs/browser-verification.json) · [Live setup evidence](docs/live-verification.json)
+[![HarborVoice product film](public/elite/film-poster.jpg)](public/elite/commercial-en.mp4)
 
-![HarborVoice operations dashboard](docs/screenshots/overview.png)
+Nora looks up synthetic shipments, explains source-grounded procedures and prepares human-review requests. The surrounding platform makes the engineering inspectable: versioned tests, native ElevenLabs resources, a Credit Governor, drift previews and reproducible production media.
 
-> Independent portfolio project by Philippe Godfroy. The company, shipments and operating procedures are fictional. Demo conversations are deterministic scripts, not AI responses. Live account access, the provisioned agent, four indexed knowledge sources, two tools and signed-session issuance have now been verified. Short real text-to-speech requests succeeded through official onboarding and the hosted browser/API; the browser decoded the hosted audio successfully. Six real multilingual ElevenLabs LLM simulations passed; their business-tool responses are synthetic fixtures, and they do not exercise microphone audio. A real visitor WebSocket conversation also passed using a synthetic recorded microphone question: ASR, shipment tool and incoming speech audio were observed. Real speech-to-text, sound effects v3, music v2.5, voice changing, noise isolation and alignment outputs are published. Dutch dubbing succeeded through official CLI OAuth; the project API key still needs dubbing_write for new website dubs. A human microphone and subjective audio quality were not assessed. No certification, LinkedIn badge, partnership or platform endorsement is claimed.
+| Experience          | What is real                                                                                                                                            |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enterprise voice    | Existing ElevenAgents deployment, four indexed knowledge documents, two controlled client tools and four languages                                      |
+| Creative production | Three cinematic native shots, original Music v2.5 score, English/Dutch/French films, portrait cut and a 78-second explainer                             |
+| Native workflows    | Four editable factories, a genuine French dub, native narration and native Scribe transcript                                                            |
+| Studio and voices   | Native Studio timeline, Studio Agent, corrected caption export and three saved fictional Voice Design voices                                            |
+| Learning            | Twelve audio lessons in four languages, native audiobook and fifteen interactive advanced modules                                                       |
+| Engineering         | 52 executed provider scenarios: 50 initial passes, followed by 10/10 targeted corrective passes; locked budget ledger and managed-resource drift checks |
+
+> Independent project by Philippe Godfroy, built with AI-assisted development. The terminal, customers and business records are fictional. Recorded app interactions use deterministic demo responses; real provider outputs are labeled separately. The final prompt did not receive another complete 52-case run. No official certification, partnership, Ambassador membership or Top User designation is claimed.
+
+[Architecture](docs/elite/architecture.md) · [Setup and CLI](docs/elite/cli.md) · [Synchronization](docs/elite/synchronization.md) · [Security](SECURITY.md) · [Media provenance](docs/elite/creative-production.md)
 
 ## Live workspace
 
@@ -187,6 +198,6 @@ The **Academy** page adds twelve genuine Eleven v4 audio lessons in English, Dut
 
 The English EPUB was also imported into the native ElevenLabs Audiobooks editor with a cover, Sarah narration and pronunciation aliases, then rendered and downloaded as a three-chapter audiobook. The native export is published separately from the locally packaged course bundles. Studio API access remains account-allowlisted; the normal Audiobooks interface worked.
 
-Other real additions: an Eleven v3 two-speaker dialogue, before/after pronunciation dictionary samples transcribed by Scribe, three fictional Voice Design previews (not saved to the voice library), four illustrated covers, a six-second LTX 2 Fast video and a native brand kit. The courses, dialogue and native audiobook are stored on the [ElevenCreative Academy flow](https://elevenlabs.io/app/flows/DOwVWkHNl1M8XZpmGo1C).
+Other real additions: an Eleven v3 two-speaker dialogue, before/after pronunciation dictionary samples transcribed by Scribe, three fictional Voice Design voices now saved privately (see Elite evidence), four illustrated covers, a six-second LTX 2 Fast video and a native brand kit. The courses, dialogue and native audiobook are stored on the [ElevenCreative Academy flow](https://elevenlabs.io/app/flows/DOwVWkHNl1M8XZpmGo1C).
 
 See [audio evidence](docs/academy-audio-evidence.json), [native audiobook evidence](docs/academy-native-evidence.json), [creative evidence](docs/academy-creative-evidence.json), [pronunciation comparison](docs/academy-pronunciation-evidence.json) and [recognition research](docs/recognition-research.md). Run `npm run test:academy` for the public learning walkthrough without generating audio.

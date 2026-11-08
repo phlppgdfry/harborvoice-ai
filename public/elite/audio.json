@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-11-07T23:58:32.576Z",
+  "scope": "Real synthetic speech; scripts are authored localization, not automated dubbing. Native dubbing evidence is reported separately.",
+  "clips": [
+    {
+      "status": "completed",
+      "file": "elite/commercial-en.mp3",
+      "language": "en",
+      "text": "A shipment is waiting. A customer needs an answer. And a guess is not good enough. Meet HarborVoice. Nora checks fictional shipment data, explains what is known, and keeps human decisions with people. Across languages. With explicit tools, tested boundaries, and a clear path to review. Explore the voice agent. Hear the evidence. Build trust into the conversation.",
+      "model": "eleven_v4",
+      "durationSeconds": 26.48,
+      "sha256": "735901f03cba844a69b13bdb7efff8778f80469981f8f5f4173c6256580a27aa"
+    },
+    {
+      "status": "completed",
+      "file": "elite/commercial-nl.mp3",
+      "language": "nl",
+      "text": "Een zending wacht. Een klant wil duidelijkheid. En een gok is niet genoeg. Maak kennis met HarborVoice. Nora controleert fictieve zendingsgegevens, legt uit wat bekend is en laat menselijke beslissingen bij mensen. In meerdere talen. Met gerichte tools, geteste grenzen en een duidelijk verzoek om beoordeling. Probeer de spraakassistent. Beluister de voorbeelden. Bouw vertrouwen in elk gesprek.",
+      "model": "eleven_v4",
+      "durationSeconds": 27.68,
+      "sha256": "a06494e46dce2c47098ac505b727bdc44df542d9cf9814dfbcd9a1f19660e199"
+    },
+    {
+      "status": "completed",
+      "file": "elite/commercial-fr.mp3",
+      "language": "fr",
+      "text": "Un envoi attend. Un client veut une réponse. Et une supposition ne suffit pas. Découvrez HarborVoice. Nora consulte des données fictives, explique ce qui est connu et laisse les décisions humaines aux personnes. Dans plusieurs langues. Avec des outils précis, des limites testées et une demande de vérification claire. Explorez l'assistante vocale. Écoutez les exemples. Construisez la confiance dans chaque échange.",
+      "model": "eleven_v4",
+      "durationSeconds": 26,
+      "sha256": "ab28d9ab6e5f3ff8eabca508b65926962e034f3ca6074a16b8d1581a1768f0ae"
+    },
+    {
+      "status": "completed",
+      "file": "elite/explainer-en.mp3",
+      "language": "en",
+      "text": "Every useful voice AI project starts with a business question. In HarborVoice, that question is simple: where is my shipment? The terminal and its records are fictional. The engineering boundaries are real. Nora asks for an exact reference, then calls the shipment lookup tool. A recorded customs hold stays a customs hold. An estimated arrival stays an estimate. The knowledge base explains published procedures, while tool results provide the shipment facts. If a lookup fails, Nora must say so. If the customer needs help, the assistant prepares a request for human review. Pending review does not mean approved, transferred or released. The public visitor agent has a separate, read-only tool and a bounded trial window. The engineering workspace adds versioned scenarios, provider simulations and explicit failure cases. These results describe the tests that were run; they do not promise perfect future conversations. Explore the working demonstration, inspect the source and compare the evidence. HarborVoice brings voice, knowledge and human control into one transparent workflow.",
+      "model": "eleven_v4",
+      "durationSeconds": 72,
+      "sha256": "edeccaa00cdfcdcfc893a3e4f4ad5cf5c011549e9c32dd4570242a279e1b42b3"
+    },
+    {
+      "status": "completed",
+      "file": "elite/briefing-en.mp3",
+      "language": "en",
+      "text": "HarborVoice operations briefing. This is a fictional training example. Shipment HV two zero four eight has a recorded customs hold. The assistant can report the record and explain the published procedure. It cannot remove the hold. If a customer requests help, create a pending review request with the exact reference and a concrete reason. Check the tool result before describing its outcome. Never turn a proposed action into a completed one. Before demonstrating the system, verify the knowledge index, test the failure path and confirm the account budget. Good automation makes the next decision clearer.",
+      "model": "eleven_v4",
+      "durationSeconds": 39.28,
+      "sha256": "581fb40de6821b3b5ed1e9156d3da8130cd73cf9e1917b738a34a8660cdbc764"
+    }
+  ]
+}

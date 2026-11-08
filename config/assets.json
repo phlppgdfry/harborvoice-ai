@@ -1,0 +1,396 @@
+{
+  "version": "2.0.0",
+  "scope": "Project-owned generated and recorded media. Safe copies; no signed URLs. Original source assets remain native. Full render specs and provenance live in docs/elite.",
+  "files": [
+    {
+      "path": "public/academy/course-de.m4b",
+      "bytes": 2982535,
+      "sha256": "33e6e65d354463514272cbbbd6f0b0684d07d5c185f7c7c4d299187d1222296b"
+    },
+    {
+      "path": "public/academy/course-de.mp3",
+      "bytes": 2840075,
+      "sha256": "2300d700732fd624590c732900037068eecfcd522a17e74bfd6b9e1d4007e2a3"
+    },
+    {
+      "path": "public/academy/course-en.m4b",
+      "bytes": 2729995,
+      "sha256": "3fa6533f51fe3c6a8c2008149de8e90817e8a79da237a3a6007eaad401639a43"
+    },
+    {
+      "path": "public/academy/course-en.mp3",
+      "bytes": 2603510,
+      "sha256": "27074db282daa9c15c28207f512a372d1326aa1a979d144fd6dbd1407e9695d8"
+    },
+    {
+      "path": "public/academy/course-fr.m4b",
+      "bytes": 2765283,
+      "sha256": "5e570f22d95ac19a6d5bf3f76b1240ef1f55c0830f7a44b2e7d7aa394bbbdc84"
+    },
+    {
+      "path": "public/academy/course-fr.mp3",
+      "bytes": 2660771,
+      "sha256": "63bc42d12d9675ab995fcf5185bab4756a6b5002bf40e897fd4295934ba52747"
+    },
+    {
+      "path": "public/academy/course-nl.m4b",
+      "bytes": 2836393,
+      "sha256": "65dd35ff876c1cd169244619176a0b55bfbe75d0f55e32a4dc56d17c71ca8f62"
+    },
+    {
+      "path": "public/academy/course-nl.mp3",
+      "bytes": 2704238,
+      "sha256": "66ac329e02094eca13883e4c9ff93925ac1a7261ca1f22dd86b1b1b7f1550947"
+    },
+    {
+      "path": "public/academy/cover-1.png",
+      "bytes": 1407094,
+      "sha256": "a69b78c6996991a88759a33f9c0ed7f3e67227e144b3e644b9e36b42b0d4f388"
+    },
+    {
+      "path": "public/academy/cover-2.png",
+      "bytes": 1570822,
+      "sha256": "f82f3efbe9082a479d73e9d22d3f13d9267b2c44bb7416e894d9a747e5fd0290"
+    },
+    {
+      "path": "public/academy/cover-3.png",
+      "bytes": 1555682,
+      "sha256": "de5365471ce2110b72d27cc5ce01953966f8378d1a94244b0dee988e26321aac"
+    },
+    {
+      "path": "public/academy/cover-4.png",
+      "bytes": 1556311,
+      "sha256": "6a2364ca2ac71dafe0ccf939ddf4d2e2fe12b3bf70a54a8ee19534b55461f7ff"
+    },
+    {
+      "path": "public/academy/de-evaluation.mp3",
+      "bytes": 1027804,
+      "sha256": "e2ebfd45b79781f22c243930789c05822a31641e4242fa401ea2082a3f30e0b5"
+    },
+    {
+      "path": "public/academy/de-grounding.mp3",
+      "bytes": 942958,
+      "sha256": "389794b980af2d253305cb96ab54a2dce5fe3eeb9455830cd8815f4c8f328694"
+    },
+    {
+      "path": "public/academy/de-review.mp3",
+      "bytes": 871487,
+      "sha256": "b3b8cf39268584418f8470c0bca80729bdc3622d343a80297893d37344580a2e"
+    },
+    {
+      "path": "public/academy/en-evaluation.mp3",
+      "bytes": 903670,
+      "sha256": "de44412444b3a2639e93a57eb50f28084db64de7f2ebacc9538fe709a68c45b8"
+    },
+    {
+      "path": "public/academy/en-grounding.mp3",
+      "bytes": 858531,
+      "sha256": "36b2823f301bf4747b43106c33bbbfee762bc1e003df30c4f2bba9987a18c319"
+    },
+    {
+      "path": "public/academy/en-review.mp3",
+      "bytes": 843484,
+      "sha256": "b029ea019b26e737faa9dc89920429c17e11fe091512d050d0bf27af354cb636"
+    },
+    {
+      "path": "public/academy/fr-evaluation.mp3",
+      "bytes": 893221,
+      "sha256": "9ff0e070d3e0ee2041de7dd746bac118a8a352b07da5f5ab921bf1312e6c2b05"
+    },
+    {
+      "path": "public/academy/fr-grounding.mp3",
+      "bytes": 901998,
+      "sha256": "08cc5027dd958bae13e6649f08a91166250d4569bb46dc6e4adaba5d0bf4256e"
+    },
+    {
+      "path": "public/academy/fr-review.mp3",
+      "bytes": 867726,
+      "sha256": "bb1b92494085000acc20bf0fb4a86ffb96f8e61886f2fed40906ae65e6e3cdd0"
+    },
+    {
+      "path": "public/academy/harbor-opening.mp4",
+      "bytes": 4600055,
+      "sha256": "6f4eca5da7743a4cc68c7b9d97b65ec09a67b6efb90b250971b260a68f17c30d"
+    },
+    {
+      "path": "public/academy/harborvoice-training-en.epub",
+      "bytes": 5370,
+      "sha256": "e46dcdb7cb74b7b726e7b3cece0cb08679e71881c1870cd3635f0f747e1b6e8c"
+    },
+    {
+      "path": "public/academy/native-audiobook-en.mp3",
+      "bytes": 4658584,
+      "sha256": "0aebb51d03d18ec0f4896ea6521eee59cb495947ba8007d6254646785486232c"
+    },
+    {
+      "path": "public/academy/nl-evaluation.mp3",
+      "bytes": 914955,
+      "sha256": "9c0d75e77ed629af884b674876cff1232b4ba29fbfc53bef27ede5eb1dd031f3"
+    },
+    {
+      "path": "public/academy/nl-grounding.mp3",
+      "bytes": 922478,
+      "sha256": "8dcfd60a2bda834a22adb077478896e0d9f1404d2bdb7ce3f9e221fdfeb60c73"
+    },
+    {
+      "path": "public/academy/nl-review.mp3",
+      "bytes": 868980,
+      "sha256": "7dc5c4e87c423395e1e5d4058f6acdcd17d9be4a6fbdcfcdecfbe2b2b7e907a7"
+    },
+    {
+      "path": "public/academy/pronunciation-aliases.mp3",
+      "bytes": 280493,
+      "sha256": "6160b26e0c275913cdb6ab108e35bcea7933f146b0cbc3d7cd90fe122933054c"
+    },
+    {
+      "path": "public/academy/pronunciation-original.mp3",
+      "bytes": 211948,
+      "sha256": "4b28e6d50844eb9eec7f1da4f0ac296c0ceaf6d17b50be1b3ae6bae1972f3a9a"
+    },
+    {
+      "path": "public/academy/review-dialogue.mp3",
+      "bytes": 820078,
+      "sha256": "edb514b014bf7800aeb9278305f4de5eb714a57cbf2c3657d2ba8ac450f85451"
+    },
+    {
+      "path": "public/academy/voice-preview-1.mp3",
+      "bytes": 275270,
+      "sha256": "f82a7c4160378e98a20ae667ee92dd87d5a2359126c2e1c04fbdfbb871b0a095"
+    },
+    {
+      "path": "public/academy/voice-preview-2.mp3",
+      "bytes": 273389,
+      "sha256": "5bc712665d79dbdc3164659359eaed2fef6097217bd5219d78c40feecc628dbb"
+    },
+    {
+      "path": "public/academy/voice-preview-3.mp3",
+      "bytes": 287182,
+      "sha256": "9ac7ad2d50f317dd5fba1e66e0da839556612f487f56c1a652a09b07087d17f6"
+    },
+    {
+      "path": "public/elite/academy-print.png",
+      "bytes": 3671342,
+      "sha256": "93cc88c24bb610ac1f5255c8decf76d0026b9c07ff5df731b84f84d228b38b19"
+    },
+    {
+      "path": "public/elite/academy-transparent.png",
+      "bytes": 1935297,
+      "sha256": "df667afaa9a770ba3244cb2652aaa934138362ac7ce9e968f8c01839dbc88d07"
+    },
+    {
+      "path": "public/elite/briefing-en.mp3",
+      "bytes": 629489,
+      "sha256": "581fb40de6821b3b5ed1e9156d3da8130cd73cf9e1917b738a34a8660cdbc764"
+    },
+    {
+      "path": "public/elite/briefing-en.vtt",
+      "bytes": 1796,
+      "sha256": "374c2f4fe39107221d6018e8b28c0e23e3264a544fe897fbf0aa3dc3a6aac8db"
+    },
+    {
+      "path": "public/elite/cinematic-1.mp4",
+      "bytes": 7433415,
+      "sha256": "9c344521d5f305fe025cb56332c114bef55e760da873b7420bae9a830515ede9"
+    },
+    {
+      "path": "public/elite/cinematic-2.mp4",
+      "bytes": 3788131,
+      "sha256": "0c944029324429d0cd37845e8edf022bc0f012f14e06a1ca9c55e1a6b1f104e1"
+    },
+    {
+      "path": "public/elite/cinematic-3.mp4",
+      "bytes": 2643727,
+      "sha256": "0880405b219991a38c6473959bb6c6a3c3d8154a36cc750aefef9e599d8b841d"
+    },
+    {
+      "path": "public/elite/commercial-en-portrait.mp4",
+      "bytes": 2365181,
+      "sha256": "11e2e9d0c03d83478613d3661abdf88397c623feeedc3877fcbd50e2a005f681"
+    },
+    {
+      "path": "public/elite/commercial-en.mp3",
+      "bytes": 424689,
+      "sha256": "735901f03cba844a69b13bdb7efff8778f80469981f8f5f4173c6256580a27aa"
+    },
+    {
+      "path": "public/elite/commercial-en.mp4",
+      "bytes": 2568110,
+      "sha256": "d063dd9aa4966e22569a1bee8d4f3dd94f213929884737778d27f888d32dc97e"
+    },
+    {
+      "path": "public/elite/commercial-en.vtt",
+      "bytes": 1107,
+      "sha256": "de5bdecec87abeb0ff05897391afdbee287730f6b8820d391e4a7b7fb5e63a4c"
+    },
+    {
+      "path": "public/elite/commercial-fr.mp3",
+      "bytes": 417166,
+      "sha256": "ab28d9ab6e5f3ff8eabca508b65926962e034f3ca6074a16b8d1581a1768f0ae"
+    },
+    {
+      "path": "public/elite/commercial-fr.mp4",
+      "bytes": 2592903,
+      "sha256": "abc8522933a1dc555da58859c7c85475ee70d03ebea7c7200eea810ebd2efd10"
+    },
+    {
+      "path": "public/elite/commercial-fr.vtt",
+      "bytes": 1204,
+      "sha256": "41141a3b44f54be75fd203a759d86c15a8b720771307972a6b88d651744593f8"
+    },
+    {
+      "path": "public/elite/commercial-nl.mp3",
+      "bytes": 443915,
+      "sha256": "a06494e46dce2c47098ac505b727bdc44df542d9cf9814dfbcd9a1f19660e199"
+    },
+    {
+      "path": "public/elite/commercial-nl.mp4",
+      "bytes": 2588520,
+      "sha256": "2f8df2be86219bc8fb8747b8f5e76dea826238876e6c4dd3cb34193f260a862c"
+    },
+    {
+      "path": "public/elite/commercial-nl.vtt",
+      "bytes": 1105,
+      "sha256": "8a773e069d656bf956a23ab2dbfac784dfb201ad296b13f67256c98b4806f6fe"
+    },
+    {
+      "path": "public/elite/enterprise-explainer.mp4",
+      "bytes": 4130050,
+      "sha256": "16515653a5691e7c27cdd6decfa654d83faecc714bd75582d48c4905da47ccb5"
+    },
+    {
+      "path": "public/elite/enterprise-explainer.vtt",
+      "bytes": 3127,
+      "sha256": "ec58c5d77f647b3ba538fc7e39be2b11247546a3c086e1d871a3740a5f5787d9"
+    },
+    {
+      "path": "public/elite/explainer-en.mp3",
+      "bytes": 1153192,
+      "sha256": "edeccaa00cdfcdcfc893a3e4f4ad5cf5c011549e9c32dd4570242a279e1b42b3"
+    },
+    {
+      "path": "public/elite/explainer-en.vtt",
+      "bytes": 3127,
+      "sha256": "af90c945523719867ca4ccc8edff90f385760368c38dccc141453313c81bc4c4"
+    },
+    {
+      "path": "public/elite/film-poster.jpg",
+      "bytes": 41125,
+      "sha256": "a5f82b886d27e300ffafe7a70892f9230ead0646d09cea1a7b52d031d3a428d8"
+    },
+    {
+      "path": "public/elite/native-dub-fr.mp3",
+      "bytes": 441874,
+      "sha256": "70dc8a5eb354ee557146d39955a4ff11331193dc5a9d47b2e516881872153798"
+    },
+    {
+      "path": "public/elite/native-learning.mp3",
+      "bytes": 371598,
+      "sha256": "674dddc5af1f854b9d80509dd10add610381607063a928a0d737db714c1ac1e8"
+    },
+    {
+      "path": "public/elite/native-studio-captions.srt",
+      "bytes": 561,
+      "sha256": "20685c61ccb35c01ed7ab2c213c4540177a8c9529b5e807b0f085fa5180cd14e"
+    },
+    {
+      "path": "public/elite/original-score.mp3",
+      "bytes": 2160620,
+      "sha256": "dd73317016f4a30d5289cb424e048fac4188cddd9701f0f6f5e101bfeebbeefb"
+    },
+    {
+      "path": "public/elite/portrait-poster.jpg",
+      "bytes": 84090,
+      "sha256": "eb0c18ea37880a1805dd0e99595287ad4d00ce4a3038745ab1ae04d1eec6abd5"
+    },
+    {
+      "path": "public/elite/streaming-speech.mp3",
+      "bytes": 73604,
+      "sha256": "3e4ebcfca20425e5e59ba588b436f76aa17671ecdec17697996dbafeed4748eb"
+    },
+    {
+      "path": "public/experience/change.mp3",
+      "bytes": 238279,
+      "sha256": "b458559a9f377df7180f2e30027b02a108ad110528fdea2f20565dc33601e38e"
+    },
+    {
+      "path": "public/experience/dubbing.mp3",
+      "bytes": 237861,
+      "sha256": "230a1c893051e2a04a7c735ffce38d742f7bd5fa7748f46df961ff5c632a9673"
+    },
+    {
+      "path": "public/experience/effects-v3.mp3",
+      "bytes": 33061,
+      "sha256": "f2f797b5618603fc6a150db2af81dc78197f4a45c20f8f5d49fa78a532d9bbc7"
+    },
+    {
+      "path": "public/experience/eleven_music_v2_5-1.mp3",
+      "bytes": 306322,
+      "sha256": "476978d8dc9fb95b523e7597a6fe878eb038692951778cd8988eb66f2bc27e98"
+    },
+    {
+      "path": "public/experience/eleven_music_v2_5-2.mp3",
+      "bytes": 306322,
+      "sha256": "e8e111379d8bfa9e488b44a8399f23d49944fb37af178df28812400a5437b0fb"
+    },
+    {
+      "path": "public/experience/eleven_music_v2_5-3.mp3",
+      "bytes": 306322,
+      "sha256": "25f74f142bb7145741e4c267119e305f7c744afdb30276237ed59912ae6a4cb2"
+    },
+    {
+      "path": "public/experience/eleven_music_v2_5-4.mp3",
+      "bytes": 306322,
+      "sha256": "35c723d11650671cce7eab92969c1ad3950316ae47be09454e7044b4a20e385a"
+    },
+    {
+      "path": "public/experience/eleven_text_to_sound_v2-1.mp3",
+      "bytes": 50187,
+      "sha256": "2a966decd2a3892cdb2729df42d4ddd6b6b8fae9a1e8cf9688b9b61ad12f862b"
+    },
+    {
+      "path": "public/experience/eleven_text_to_sound_v2-2.mp3",
+      "bytes": 50187,
+      "sha256": "3841e7a0e491ce2e32bf89cac6f5dff75fc48006d389ea122e71b66d3772ae73"
+    },
+    {
+      "path": "public/experience/eleven_text_to_sound_v2-3.mp3",
+      "bytes": 50187,
+      "sha256": "ce99264632939ae7f2d200bc10852dcbe6eea3e11d924475a263f51a080121cf"
+    },
+    {
+      "path": "public/experience/eleven_text_to_sound_v2-4.mp3",
+      "bytes": 50187,
+      "sha256": "cf9cbe5ee52c9eeb42f022642789b2898b841010cccd74858735e8e3dcaa0437"
+    },
+    {
+      "path": "public/experience/eleven_v4-1.mp3",
+      "bytes": 254987,
+      "sha256": "7169d0faf3b9185156509e241cf44db8caa94370b5b7f5f241574129ff6b40f0"
+    },
+    {
+      "path": "public/experience/eleven_v4-2.mp3",
+      "bytes": 256241,
+      "sha256": "edf64558ea159bcc6d1df0ff5cdde4789af3a7df193845a7778bfc18b99a627e"
+    },
+    {
+      "path": "public/experience/guest-question.mp3",
+      "bytes": 73185,
+      "sha256": "2e89ca2aed48f9b63967a481bedd0ecab8f5807471bbdb1e4a3da6d7c7d211d2"
+    },
+    {
+      "path": "public/experience/isolate-before.mp3",
+      "bytes": 118926,
+      "sha256": "3596b4d424af004832e6941c9aad8d85627f5cdc30093a79b807009f248a1a02"
+    },
+    {
+      "path": "public/experience/isolate.mp3",
+      "bytes": 594590,
+      "sha256": "fd0b570918637f55659ad79dedd9b3f784dc1fc2c62050b0e6ea21603abcc1ad"
+    },
+    {
+      "path": "public/experience/music-api.mp3",
+      "bytes": 96592,
+      "sha256": "83ac1bd87789859d44121cfbc436f51fe35622b172895735b902f01643c229f6"
+    }
+  ]
+}

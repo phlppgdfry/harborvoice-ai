@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-07T20:52:28.748Z",
+  "savedVoices": [
+    {
+      "preview": 1,
+      "name": "HarborVoice · Dutch Training 1",
+      "url": "https://elevenlabs.io/app/voice-lab?voiceId=ZUpnQ45ABkkc2OcDuVHI",
+      "voiceId": "ZUpnQ45ABkkc2OcDuVHI"
+    },
+    {
+      "preview": 2,
+      "name": "HarborVoice · Dutch Training 2",
+      "url": "https://elevenlabs.io/app/voice-lab?voiceId=GXnX5R1mzyXfGGG0fF4s",
+      "voiceId": "GXnX5R1mzyXfGGG0fF4s"
+    },
+    {
+      "preview": 3,
+      "name": "HarborVoice · Dutch Training 3",
+      "url": "https://elevenlabs.io/app/voice-lab?voiceId=pFO8yqt1betwfwbKm2y1",
+      "voiceId": "pFO8yqt1betwfwbKm2y1"
+    }
+  ],
+  "scope": "Existing fictional Voice Design previews saved privately with owner authorization. No real voice cloning, public Voice Library publication or production-agent voice replacement."
+}

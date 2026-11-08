@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-11-08T13:19:28.401Z",
+  "url": "http://127.0.0.1:5173",
+  "environment": "Playwright; Browser plugin not available",
+  "viewports": ["1440x1000", "390x844"],
+  "checks": [
+    "Three localized films decode at 30–45 seconds; four native flow references and scoped engineering evidence render",
+    "All fifteen modules render; search/category filter, exercise notes, self-review persistence and guide download work",
+    "390px mobile views have no horizontal overflow"
+  ],
+  "errors": [],
+  "liveGeneration": false
+}

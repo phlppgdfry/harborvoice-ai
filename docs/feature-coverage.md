@@ -1,3 +1,5 @@
+For the v2.0.0 expansion, consult the [119-capability matrix](elite/capability-matrix.md), [native production evidence](elite/native-production.json) and [release report](elite/release-report.md). The earlier table below records the original workspace scope.
+
 # Feature coverage
 
 Verified 7 November 2026. Synthetic logistics data; no external terminal is connected.

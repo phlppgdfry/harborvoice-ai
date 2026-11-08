@@ -21,6 +21,7 @@
     "tests",
     "vite.config.ts",
     "api",
-    "agent"
+    "agent",
+    "lib"
   ]
 }

@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-11-08T13:09:00.758203+00:00",
+  "flows": [
+    {
+      "name": "Product Commercial Factory",
+      "id": "04Y2ZUoBsV1BQj9uMv9k",
+      "url": "https://elevenlabs.io/app/flows/04Y2ZUoBsV1BQj9uMv9k"
+    },
+    {
+      "name": "Multilingual Localization Factory",
+      "id": "autfYixTUdY8eSnjlDOb",
+      "url": "https://elevenlabs.io/app/flows/autfYixTUdY8eSnjlDOb"
+    },
+    {
+      "name": "Learning Content Factory",
+      "id": "GznQuf5YZTpRrJQBpQSg",
+      "url": "https://elevenlabs.io/app/flows/GznQuf5YZTpRrJQBpQSg"
+    },
+    {
+      "name": "Enterprise Audio Factory",
+      "id": "E2fQbenOCnV06r0CVwQ0",
+      "url": "https://elevenlabs.io/app/flows/E2fQbenOCnV06r0CVwQ0"
+    }
+  ],
+  "finalDeliveryAssets": [
+    {
+      "file": "public/elite/commercial-en.mp4",
+      "assetId": "fkVENpdWsVYaWqzFp0Q3",
+      "nodeId": "tW89eaB3VEmksgkNLxh9",
+      "sha256": "d063dd9aa4966e22569a1bee8d4f3dd94f213929884737778d27f888d32dc97e",
+      "storedOnFlow": "https://elevenlabs.io/app/flows/04Y2ZUoBsV1BQj9uMv9k"
+    },
+    {
+      "file": "public/elite/commercial-nl.mp4",
+      "assetId": "1Sd9SAK81rz5VHiDFPcy",
+      "nodeId": "9FL4OlCfCBxgm3thRQ1x",
+      "sha256": "2f8df2be86219bc8fb8747b8f5e76dea826238876e6c4dd3cb34193f260a862c",
+      "storedOnFlow": "https://elevenlabs.io/app/flows/04Y2ZUoBsV1BQj9uMv9k"
+    },
+    {
+      "file": "public/elite/commercial-fr.mp4",
+      "assetId": "mna700S8MVfc1WWVkSwt",
+      "nodeId": "ndds9yi2p7BtVg6qlJe1",
+      "sha256": "abc8522933a1dc555da58859c7c85475ee70d03ebea7c7200eea810ebd2efd10",
+      "storedOnFlow": "https://elevenlabs.io/app/flows/04Y2ZUoBsV1BQj9uMv9k"
+    },
+    {
+      "file": "public/elite/commercial-en-portrait.mp4",
+      "assetId": "L6GUCBQRaR3MwmMvI2Pa",
+      "nodeId": "1K4mxFUntuROy2cshMf2",
+      "sha256": "11e2e9d0c03d83478613d3661abdf88397c623feeedc3877fcbd50e2a005f681",
+      "storedOnFlow": "https://elevenlabs.io/app/flows/04Y2ZUoBsV1BQj9uMv9k"
+    },
+    {
+      "file": "public/elite/enterprise-explainer.mp4",
+      "assetId": "sSpAMSBjamMMUOREuyXg",
+      "nodeId": "MXxhajQGn2Bjt1R5kpcI",
+      "sha256": "16515653a5691e7c27cdd6decfa654d83faecc714bd75582d48c4905da47ccb5",
+      "storedOnFlow": "https://elevenlabs.io/app/flows/04Y2ZUoBsV1BQj9uMv9k"
+    },
+    {
+      "file": "public/elite/original-score.mp3",
+      "assetId": "DGhzvPfNbynqu3MaI98o",
+      "nodeId": "34VmXO1J0SvdKdgWId9i",
+      "sha256": "dd73317016f4a30d5289cb424e048fac4188cddd9701f0f6f5e101bfeebbeefb",
+      "storedOnFlow": "https://elevenlabs.io/app/flows/04Y2ZUoBsV1BQj9uMv9k"
+    }
+  ],
+  "scope": "Completed local delivery masters uploaded and finalized on the native commercial Flow. Native Studio caption project is an editable earlier revision and is preserved for manual reconciliation; no overwrite or duplicate paid render was attempted."
+}

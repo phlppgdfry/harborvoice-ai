@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-08T07:40:44.187182+00:00",
+  "status": "VERIFIED LIVE",
+  "projectId": "7IXHA48pFJqsSPSWtRtM",
+  "projectUrl": "https://elevenlabs.io/app/studio/7IXHA48pFJqsSPSWtRtM",
+  "name": "HarborVoice Elite - Product Commercial",
+  "durationSeconds": 36,
+  "importedVideo": "elite/commercial-en.mp4",
+  "visualTracks": 1,
+  "audio": "Original soundtrack embedded in imported completed film, not separate native voice/music tracks.",
+  "studioAgentUsed": true,
+  "agentUiReportedCredits": 541,
+  "captions": {
+    "generated": true,
+    "language": "en",
+    "configuredMaxWords": 6,
+    "brandSpellingCorrected": true,
+    "export": "elite/native-studio-captions.srt",
+    "sha256": "20685c61ccb35c01ed7ab2c213c4540177a8c9529b5e807b0f085fa5180cd14e"
+  },
+  "scope": "Actual native Studio import, timeline inspection, Studio Agent guidance, editable native captions, manual title and transcript revision, and completed SRT export. Original film composition was local. Studio API remains account-allowlisted; no bypass.",
+  "importedSourceSha256": "12081761c6974d4d94b7e3d5a8b3d39be8865e8c07628e27a5e6f5699a249ee7",
+  "importRevision": "Initial completed local cut. Later local audio mastering is documented independently; native caption project remains editable."
+}
