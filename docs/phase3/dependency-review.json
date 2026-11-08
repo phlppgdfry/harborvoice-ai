@@ -1,0 +1,7 @@
+{
+  "checkedOn":"2026-11-08",
+  "command":"npm audit --omit=dev --json",
+  "scope":"Existing root lockfile production dependencies; no dependency upgrade or root manifest edit",
+  "reportedVulnerabilities":{"info":0,"low":0,"moderate":0,"high":0,"critical":0,"total":0},
+  "limitations":["Known-advisory lookup at one point in time, not source-code security proof","Development/build dependency advisories not included","Package runtime uses Node built-ins; SDK appears only as integration-test devDependency"]
+}

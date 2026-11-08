@@ -1,38 +1,157 @@
-import './style.css';
-type Result={scenario:{id:string;category:string;language:string;input:string;expected:{outcome:string;tools:string[]}};passed:boolean;observation:{outcome:string;tools:string[];transcript:string[]}};
-type Evidence={sourceCommit:string;configVersion:string;generatedAt:string;results:Result[];limitations:string[]};
-const app=document.querySelector<HTMLDivElement>('#app')!;
-const esc=(s:string)=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
-let baseline:Evidence,candidate:Evidence,active='baseline',query='',category='all',status='all',selected='tool-error-01',view='Evidence';
-const nav=['Evidence','Configuration','Methodology','Pilot feedback'];
-const read=async(path:string)=>{const response=await fetch(import.meta.env.BASE_URL+path);if(!response.ok)throw Error('Evidence could not be loaded.');return response.json();};
-const data=()=>active==='baseline'?baseline:candidate;
-function render(){
- const evidence=data(),rows=evidence.results.filter(r=>(category==='all'||r.scenario.category===category)&&(status==='all'||(status==='failed'?!r.passed:r.passed))&&`${r.scenario.id} ${r.scenario.input}`.toLowerCase().includes(query.toLowerCase()));
- const chosen=evidence.results.find(r=>r.scenario.id===selected)!;
- const failed=evidence.results.filter(r=>!r.passed).length;
- app.innerHTML=`<aside><a class="brand" href="#">◧ <span>AgentProof</span></a><p class="brand-sub">Voice AI reliability</p><nav aria-label="Primary">${nav.map((n,i)=>`<button data-view="${n}" aria-current="${view===n?'page':'false'}"><span aria-hidden="true">${['◉','⊞','≡','↗'][i]}</span>${n}</button>`).join('')}</nav><div class="workspace"><span class="orb"></span><div>HarborVoice lab<small>Independent research workspace</small></div></div><div class="aside-bottom">Pilot v0.1.0<br>Built for evidence, not impressions.<a href="https://github.com/phlppgdfry/harborvoice-ai/tree/feat/elevenlabs-ecosystem-phase3">Source & documentation</a></div></aside>
- <div class="shell"><header><span>Workspace <span class="muted">/</span> ${esc(view)}</span><span class="mode">Local demonstration · no credentials</span></header><main id="main"><div class="title-row"><div><h1>${view==='Evidence'?'Know where your agent breaks.':esc(view)}</h1><p>${view==='Evidence'?'Trace a failure. Compare the fix. Keep the evidence.':'A clear boundary between what is measured and what is proposed.'}</p></div><button class="primary" id="download">Export evidence ↓</button></div>
+import "./style.css";
+type Result = {
+  scenario: {
+    id: string;
+    category: string;
+    language: string;
+    input: string;
+    expected: { outcome: string; tools: string[] };
+  };
+  passed: boolean;
+  observation: { outcome: string; tools: string[]; transcript: string[] };
+};
+type Evidence = {
+  sourceCommit: string;
+  configVersion: string;
+  generatedAt: string;
+  results: Result[];
+  limitations: string[];
+};
+const app = document.querySelector<HTMLDivElement>("#app")!;
+const esc = (s: string) =>
+  s.replace(
+    /[&<>"']/g,
+    (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
+        c
+      ]!,
+  );
+let baseline: Evidence,
+  candidate: Evidence,
+  active = "baseline",
+  query = "",
+  category = "all",
+  status = "all",
+  selected = "tool-error-01",
+  view = "Evidence";
+const nav = ["Evidence", "Configuration", "Methodology", "Pilot feedback"];
+const read = async (path: string) => {
+  const response = await fetch(import.meta.env.BASE_URL + path);
+  if (!response.ok) throw Error("Evidence could not be loaded.");
+  return response.json();
+};
+const data = () => (active === "baseline" ? baseline : candidate);
+function render() {
+  const evidence = data(),
+    rows = evidence.results.filter(
+      (r) =>
+        (category === "all" || r.scenario.category === category) &&
+        (status === "all" || (status === "failed" ? !r.passed : r.passed)) &&
+        `${r.scenario.id} ${r.scenario.input}`
+          .toLowerCase()
+          .includes(query.toLowerCase()),
+    );
+  const chosen = evidence.results.find((r) => r.scenario.id === selected)!;
+  const failed = evidence.results.filter((r) => !r.passed).length;
+  app.innerHTML = `<aside><a class="brand" href="#">◧ <span>AgentProof</span></a><p class="brand-sub">Voice AI reliability</p><nav aria-label="Primary">${nav.map((n, i) => `<button data-view="${n}" aria-current="${view === n ? "page" : "false"}"><span aria-hidden="true">${["◉", "⊞", "≡", "↗"][i]}</span>${n}</button>`).join("")}</nav><div class="workspace"><span class="orb"></span><div>HarborVoice lab<small>Independent research workspace</small></div></div><div class="aside-bottom">Pilot v0.1.0<br>Built for evidence, not impressions.<a href="https://github.com/phlppgdfry/harborvoice-ai/tree/feat/elevenlabs-ecosystem-phase3">Source & documentation</a></div></aside>
+ <div class="shell"><header><span>Workspace <span class="muted">/</span> ${esc(view)}</span><span class="mode">Local demonstration · no credentials</span></header><main id="main"><div class="title-row"><div><h1>${view === "Evidence" ? "Know where your agent breaks." : esc(view)}</h1><p>${view === "Evidence" ? "Trace a failure. Compare the fix. Keep the evidence." : "A clear boundary between what is measured and what is proposed."}</p></div><button class="primary" id="download">Export evidence ↓</button></div>
  <div class="notice"><span aria-hidden="true">◈</span><div><strong>Deterministic fixture study</strong> · 110 synthetic scenarios. These results test scripted contracts; they do not measure ElevenLabs agent reliability. <button data-view="Methodology">Read the methodology</button></div></div>
- ${view==='Evidence'?`<section class="runbar" aria-label="Run selector"><div><label for="run">Evaluation run</label><select id="run"><option value="baseline" ${active==='baseline'?'selected':''}>Unsafe baseline fixture</option><option value="candidate" ${active==='candidate'?'selected':''}>Corrected policy fixture</option></select></div><div><span class="muted">Dataset</span><strong>Enterprise boundaries / v1</strong></div><div><span class="muted">Provider calls</span><strong>0 in Phase 3</strong></div><div class="run-state"><span class="dot"></span> Local run complete</div></section>
- <section class="metrics" aria-label="Contract check counts"><div><span>Contract checks passed</span><strong>${110-failed}<small> / 110</small></strong><p>${active==='baseline'?'30 intentionally exposed contract failures':'Expected contract policy applied'}</p></div><div><span>Failures to investigate</span><strong class="failure">${failed}</strong><p>Exact outcome and tool-set assertions</p></div><div><span>Historical provider evidence</span><strong>6<small> text cases</small></strong><p>Phase 2 import · separate evidence</p></div><div><span>New provider spend</span><strong>0<small> credits</small></strong><p>Live testing blocked by shared-account policy</p></div></section>
- <div class="evidence-layout"><section class="results-panel"><div class="section-title"><h2>Scenario explorer</h2><span id="count" aria-live="polite">${rows.length} scenarios</span></div><div class="filters"><label class="search"><span class="sr-only">Search scenarios</span><input id="search" type="search" placeholder="Search ID or request…" value="${esc(query)}"></label><label><span class="sr-only">Category</span><select id="category" aria-label="Category"><option value="all">All categories</option>${[...new Set(evidence.results.map(r=>r.scenario.category))].map(c=>`<option ${c===category?'selected':''}>${c}</option>`).join('')}</select></label><label><span class="sr-only">Status</span><select id="status" aria-label="Status"><option value="all">All statuses</option><option value="failed" ${status==='failed'?'selected':''}>Failed</option><option value="passed" ${status==='passed'?'selected':''}>Passed</option></select></label></div><div class="table-scroll"><table><thead><tr><th>Scenario / category</th><th>Language</th><th>Contract</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.scenario.id===selected?'selected':''}"><td><button data-scenario="${r.scenario.id}">${esc(r.scenario.id)}</button><small>${esc(r.scenario.input)}</small></td><td>${r.scenario.language.toUpperCase()}</td><td><span class="status ${r.passed?'pass':'fail'}">${r.passed?'Passed':'Failed'}</span></td></tr>`).join('')}</tbody></table>${!rows.length?'<p class="empty">No matching scenarios. Clear the search or choose another filter.</p>':''}</div></section>
- <section class="inspector" aria-label="Selected scenario"><div class="section-title"><h2>Failure anatomy</h2><span class="status ${chosen.passed?'pass':'fail'}">${chosen.passed?'Passed':'Failed'}</span></div><h3>${esc(chosen.scenario.id)}</h3><p>${esc(chosen.scenario.input)}</p><div class="comparison"><div><span>Expected</span><strong>${chosen.scenario.expected.outcome}</strong></div><div><span>Observed fixture</span><strong>${chosen.observation.outcome}</strong></div></div><h4>Tool trace</h4><ol class="trace"><li>User request received<small>Synthetic text input · ${chosen.scenario.language}</small></li>${chosen.observation.tools.map(t=>`<li><code>${esc(t)}()</code><small>Fixture only · no external endpoint</small></li>`).join('')}<li>Contract assertion<small>${chosen.passed?'Outcome and tool set match':'Outcome differs from required boundary'}</small></li></ol><h4>Transcript</h4>${chosen.observation.transcript.map(t=>`<p class="utterance">${esc(t)}</p>`).join('')}<div class="recommendation"><strong>Engineering action</strong><p>${chosen.passed?'Keep this contract in the regression suite. Validate it separately against a real agent.':'Reject unverifiable tool data and recover or escalate. Compare the corrected fixture, then verify the behavior with a bounded provider test.'}</p></div><button class="secondary" id="compare">${active==='baseline'?'Compare corrected policy':'Return to baseline'}</button></section></div>
- <section class="historical"><div><h2>Keep the evidence types separate.</h2><p>The earlier six-case ElevenLabs study reported 6/6 successful text simulations and 1,946 credits. It was not rerun here. No microphone performance or speech latency was measured.</p></div><a href="./historical.json" download>Download historical receipt ↓</a></section>`:''}
- ${view==='Configuration'?`<section class="document"><h2>Review the boundary before deployment</h2><p>This demo compares local teaching policies. It does not read or change Nora or any provider resource.</p><table><thead><tr><th>Boundary</th><th>Baseline fixture</th><th>Corrected fixture</th></tr></thead><tbody><tr><td>Tool failure</td><td>Accept as grounded</td><td>Recover</td></tr><tr><td>Invalid response schema</td><td>Accept as grounded</td><td>Escalate</td></tr><tr><td>Conflicting sources</td><td>Accept as grounded</td><td>Escalate</td></tr></tbody></table><h3>Reproduce the inspection</h3><pre>agentops inspect config.json
+ ${
+   view === "Evidence"
+     ? `<section class="runbar" aria-label="Run selector"><div><label for="run">Evaluation run</label><select id="run"><option value="baseline" ${active === "baseline" ? "selected" : ""}>Unsafe baseline fixture</option><option value="candidate" ${active === "candidate" ? "selected" : ""}>Corrected policy fixture</option></select></div><div><span class="muted">Dataset</span><strong>Enterprise boundaries / v1</strong></div><div><span class="muted">Provider calls</span><strong>0 in Phase 3</strong></div><div class="run-state"><span class="dot"></span> Local run complete</div></section>
+ <section class="metrics" aria-label="Contract check counts"><div><span>Contract checks passed</span><strong>${110 - failed}<small> / 110</small></strong><p>${active === "baseline" ? "30 intentionally exposed contract failures" : "Expected contract policy applied"}</p></div><div><span>Failures to investigate</span><strong class="failure">${failed}</strong><p>Exact outcome and tool-set assertions</p></div><div><span>Historical provider evidence</span><strong>6<small> text cases</small></strong><p>Phase 2 import · separate evidence</p></div><div><span>New provider spend</span><strong>0<small> credits</small></strong><p>Live testing blocked by shared-account policy</p></div></section>
+ <div class="evidence-layout"><section class="results-panel"><div class="section-title"><h2>Scenario explorer</h2><span id="count" aria-live="polite">${rows.length} scenarios</span></div><div class="filters"><label class="search"><span class="sr-only">Search scenarios</span><input id="search" type="search" placeholder="Search ID or request…" value="${esc(query)}"></label><label><span class="sr-only">Category</span><select id="category" aria-label="Category"><option value="all">All categories</option>${[...new Set(evidence.results.map((r) => r.scenario.category))].map((c) => `<option ${c === category ? "selected" : ""}>${c}</option>`).join("")}</select></label><label><span class="sr-only">Status</span><select id="status" aria-label="Status"><option value="all">All statuses</option><option value="failed" ${status === "failed" ? "selected" : ""}>Failed</option><option value="passed" ${status === "passed" ? "selected" : ""}>Passed</option></select></label></div><div class="table-scroll"><table><thead><tr><th>Scenario / category</th><th>Language</th><th>Contract</th></tr></thead><tbody>${rows.map((r) => `<tr class="${r.scenario.id === selected ? "selected" : ""}"><td><button data-scenario="${r.scenario.id}">${esc(r.scenario.id)}</button><small>${esc(r.scenario.input)}</small></td><td>${r.scenario.language.toUpperCase()}</td><td><span class="status ${r.passed ? "pass" : "fail"}">${r.passed ? "Passed" : "Failed"}</span></td></tr>`).join("")}</tbody></table>${!rows.length ? '<p class="empty">No matching scenarios. Clear the search or choose another filter.</p>' : ""}</div></section>
+ <section class="inspector" aria-label="Selected scenario"><div class="section-title"><h2>Failure anatomy</h2><span class="status ${chosen.passed ? "pass" : "fail"}">${chosen.passed ? "Passed" : "Failed"}</span></div><h3>${esc(chosen.scenario.id)}</h3><p>${esc(chosen.scenario.input)}</p><div class="comparison"><div><span>Expected</span><strong>${chosen.scenario.expected.outcome}</strong></div><div><span>Observed fixture</span><strong>${chosen.observation.outcome}</strong></div></div><h4>Tool trace</h4><ol class="trace"><li>User request received<small>Synthetic text input · ${chosen.scenario.language}</small></li>${chosen.observation.tools.map((t) => `<li><code>${esc(t)}()</code><small>Fixture only · no external endpoint</small></li>`).join("")}<li>Contract assertion<small>${chosen.passed ? "Outcome and tool set match" : "Outcome differs from required boundary"}</small></li></ol><h4>Transcript</h4>${chosen.observation.transcript.map((t) => `<p class="utterance">${esc(t)}</p>`).join("")}<div class="recommendation"><strong>Engineering action</strong><p>${chosen.passed ? "Keep this contract in the regression suite. Validate it separately against a real agent." : "Reject unverifiable tool data and recover or escalate. Compare the corrected fixture, then verify the behavior with a bounded provider test."}</p></div><button class="secondary" id="compare">${active === "baseline" ? "Compare corrected policy" : "Return to baseline"}</button></section></div>
+ <section class="historical"><div><h2>Keep the evidence types separate.</h2><p>The earlier six-case ElevenLabs study reported 6/6 successful text simulations and 1,946 credits. It was not rerun here. No microphone performance or speech latency was measured.</p></div><a href="./historical.json" download>Download historical receipt ↓</a></section>`
+     : ""
+ }
+ ${
+   view === "Configuration"
+     ? `<section class="document"><h2>Review the boundary before deployment</h2><p>This demo compares local teaching policies. It does not read or change Nora or any provider resource.</p><table><thead><tr><th>Boundary</th><th>Baseline fixture</th><th>Corrected fixture</th></tr></thead><tbody><tr><td>Tool failure</td><td>Accept as grounded</td><td>Recover</td></tr><tr><td>Invalid response schema</td><td>Accept as grounded</td><td>Escalate</td></tr><tr><td>Conflicting sources</td><td>Accept as grounded</td><td>Escalate</td></tr></tbody></table><h3>Reproduce the inspection</h3><pre>agentops inspect config.json
 agentops diff before.json after.json
-agentops validate config.json</pre><p>The toolkit flags explicit disabled authentication and insecure URLs. Heuristics do not certify security. Manually verify tool authorization, validation, public endpoints, failure handling and escalation.</p><p>Configuration fingerprint: <code>${evidence.configVersion}</code></p></section>`:''}
- ${view==='Methodology'?`<section class="document"><h2>What this study can tell you</h2><p>Eleven categories × ten synthetic requests = 110 scenarios. The local baseline intentionally violates three category contracts. The corrected fixture selects the expected policy from category metadata. The difference demonstrates reporting and regression mechanics; it is not an independent experiment on a language model.</p><h3>Measurement boundaries</h3><table><thead><tr><th>Dimension</th><th>Available evidence</th></tr></thead><tbody><tr><td>Reliability / tool selection / grounding / escalation</td><td>Deterministic outcome and tool-set contracts only</td></tr><tr><td>Language quality</td><td>NL / FR requests included; fluency not evaluated</td></tr><tr><td>Latency and audio</td><td>Not measured</td></tr><tr><td>Cost</td><td>Zero new provider calls; historical subset 1,946 credits</td></tr><tr><td>Confidence intervals</td><td>Not appropriate for scripted fixture outcomes. Historical 6/6 Wilson interval ≈ 61–100%, illustrative only; cases are not random independent samples.</td></tr></tbody></table><h3>Next controlled experiment</h3><p>Pre-register twelve scenarios, two configurations and two repeats: 48 text tests maximum. Start with two sentinel tests; stop on unexpected cost or permissions. Confirm fresh balance, account-wide reservations, no conflicting paid jobs and a 25,000-credit preservation floor. Live audio and human review remain separate studies.</p><h3>Provenance</h3><p>Source commit <code>${evidence.sourceCommit}</code>. Generated ${esc(evidence.generatedAt)}. Run <code>node --import tsx scripts/phase3/benchmark.ts</code> from the repository root.</p><h3>Limits</h3><ul>${evidence.limitations.map(l=>`<li>${esc(l)}</li>`).join('')}</ul></section>`:''}
- ${view==='Pilot feedback'?`<section class="document"><h2>Help make the evidence useful</h2><p>No pilot participants have been recruited. This is a local preview for owner review. Try the tasks below without an account.</p><ol><li>Find a failed tool-error scenario.</li><li>Explain the expected behavior.</li><li>Compare the corrected fixture.</li><li>Export the report and identify one limitation.</li></ol><label for="feedback">What was unclear? Avoid names, customer data or secrets.</label><textarea id="feedback" rows="5" maxlength="4000" placeholder="The step I found confusing was…"></textarea><button class="secondary" id="feedback-download">Download my feedback</button><p class="privacy">Feedback stays in this tab until you download it. It is not submitted anywhere. No analytics, cookies, recording or live provider connection. Do not include personal or confidential information in an issue. Local downloads can be deleted on your device.</p><a href="https://github.com/phlppgdfry/harborvoice-ai/issues">Open the project issue tracker</a></section>`:''}
+agentops validate config.json</pre><p>The toolkit flags explicit disabled authentication and insecure URLs. Heuristics do not certify security. Manually verify tool authorization, validation, public endpoints, failure handling and escalation.</p><p>Configuration fingerprint: <code>${evidence.configVersion}</code></p></section>`
+     : ""
+ }
+ ${view === "Methodology" ? `<section class="document"><h2>What this study can tell you</h2><p>Eleven categories × ten synthetic requests = 110 scenarios. The local baseline intentionally violates three category contracts. The corrected fixture selects the expected policy from category metadata. The difference demonstrates reporting and regression mechanics; it is not an independent experiment on a language model.</p><h3>Measurement boundaries</h3><table><thead><tr><th>Dimension</th><th>Available evidence</th></tr></thead><tbody><tr><td>Reliability / tool selection / grounding / escalation</td><td>Deterministic outcome and tool-set contracts only</td></tr><tr><td>Language quality</td><td>NL / FR requests included; fluency not evaluated</td></tr><tr><td>Latency and audio</td><td>Not measured</td></tr><tr><td>Cost</td><td>Zero new provider calls; historical subset 1,946 credits</td></tr><tr><td>Confidence intervals</td><td>Not appropriate for scripted fixture outcomes. Historical 6/6 Wilson interval ≈ 61–100%, illustrative only; cases are not random independent samples.</td></tr></tbody></table><h3>Next controlled experiment</h3><p>Pre-register twelve scenarios, two configurations and two repeats: 48 text tests maximum. Start with two sentinel tests; stop on unexpected cost or permissions. Confirm fresh balance, account-wide reservations, no conflicting paid jobs and a 25,000-credit preservation floor. Live audio and human review remain separate studies.</p><h3>Provenance</h3><p>Source commit <code>${evidence.sourceCommit}</code>. Generated ${esc(evidence.generatedAt)}. Run <code>node --import tsx scripts/phase3/benchmark.ts</code> from the repository root.</p><h3>Limits</h3><ul>${evidence.limitations.map((l) => `<li>${esc(l)}</li>`).join("")}</ul></section>` : ""}
+ ${view === "Pilot feedback" ? `<section class="document"><h2>Help make the evidence useful</h2><p>No pilot participants have been recruited. This is a local preview for owner review. Try the tasks below without an account.</p><ol><li>Find a failed tool-error scenario.</li><li>Explain the expected behavior.</li><li>Compare the corrected fixture.</li><li>Export the report and identify one limitation.</li></ol><label for="feedback">What was unclear? Avoid names, customer data or secrets.</label><textarea id="feedback" rows="5" maxlength="4000" placeholder="The step I found confusing was…"></textarea><button class="secondary" id="feedback-download">Download my feedback</button><p class="privacy">Feedback stays in this tab until you download it. It is not submitted anywhere. No analytics, cookies, recording or live provider connection. Do not include personal or confidential information in an issue. Local downloads can be deleted on your device.</p><a href="https://github.com/phlppgdfry/harborvoice-ai/issues">Open the project issue tracker</a></section>` : ""}
  <footer>Independent tooling. No ElevenLabs endorsement. <span>Prepared pilot · no external user validation yet.</span></footer></main></div>`;
- document.querySelectorAll<HTMLButtonElement>('[data-view]').forEach(b=>b.onclick=()=>{view=b.dataset.view!;render();document.querySelector('h1')?.scrollIntoView();});
- document.querySelectorAll<HTMLButtonElement>('[data-scenario]').forEach(b=>b.onclick=()=>{selected=b.dataset.scenario!;render();});
- document.querySelector<HTMLSelectElement>('#run')?.addEventListener('change',e=>{active=(e.target as HTMLSelectElement).value;render();});
- document.querySelector<HTMLInputElement>('#search')?.addEventListener('input',e=>{const input=e.target as HTMLInputElement;const pos=input.selectionStart;query=input.value;render();const next=document.querySelector<HTMLInputElement>('#search')!;next.focus();next.setSelectionRange(pos,pos);});
- for(const id of ['category','status'])document.querySelector<HTMLSelectElement>('#'+id)?.addEventListener('change',e=>{if(id==='category')category=(e.target as HTMLSelectElement).value;else status=(e.target as HTMLSelectElement).value;render();});
- document.querySelector<HTMLButtonElement>('#compare')?.addEventListener('click',()=>{active=active==='baseline'?'candidate':'baseline';render();});
- document.querySelector<HTMLButtonElement>('#download')!.onclick=()=>download('agentproof-evidence.json',JSON.stringify(evidence,null,2),'application/json');
- document.querySelector<HTMLButtonElement>('#feedback-download')?.addEventListener('click',()=>download('agentproof-feedback.txt',document.querySelector<HTMLTextAreaElement>('#feedback')!.value,'text/plain'));
+  document.querySelectorAll<HTMLButtonElement>("[data-view]").forEach(
+    (b) =>
+      (b.onclick = () => {
+        view = b.dataset.view!;
+        render();
+        document.querySelector("h1")?.scrollIntoView();
+      }),
+  );
+  document.querySelectorAll<HTMLButtonElement>("[data-scenario]").forEach(
+    (b) =>
+      (b.onclick = () => {
+        selected = b.dataset.scenario!;
+        render();
+      }),
+  );
+  document
+    .querySelector<HTMLSelectElement>("#run")
+    ?.addEventListener("change", (e) => {
+      active = (e.target as HTMLSelectElement).value;
+      render();
+    });
+  document
+    .querySelector<HTMLInputElement>("#search")
+    ?.addEventListener("input", (e) => {
+      const input = e.target as HTMLInputElement;
+      const pos = input.selectionStart;
+      query = input.value;
+      render();
+      const next = document.querySelector<HTMLInputElement>("#search")!;
+      next.focus();
+      next.setSelectionRange(pos, pos);
+    });
+  for (const id of ["category", "status"])
+    document
+      .querySelector<HTMLSelectElement>("#" + id)
+      ?.addEventListener("change", (e) => {
+        if (id === "category") category = (e.target as HTMLSelectElement).value;
+        else status = (e.target as HTMLSelectElement).value;
+        render();
+      });
+  document
+    .querySelector<HTMLButtonElement>("#compare")
+    ?.addEventListener("click", () => {
+      active = active === "baseline" ? "candidate" : "baseline";
+      render();
+    });
+  document.querySelector<HTMLButtonElement>("#download")!.onclick = () =>
+    download(
+      "agentproof-evidence.json",
+      JSON.stringify(evidence, null, 2),
+      "application/json",
+    );
+  document
+    .querySelector<HTMLButtonElement>("#feedback-download")
+    ?.addEventListener("click", () =>
+      download(
+        "agentproof-feedback.txt",
+        document.querySelector<HTMLTextAreaElement>("#feedback")!.value,
+        "text/plain",
+      ),
+    );
 }
-function download(name:string,body:string,type:string){const url=URL.createObjectURL(new Blob([body],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-Promise.all([read('baseline.json'),read('candidate.json')]).then(([a,b])=>{baseline=a;candidate=b;render();}).catch(()=>{app.innerHTML='<main><h1>Evidence could not be loaded</h1><p>Run the benchmark generator and reload this page. No provider request was attempted.</p></main>';});
+function download(name: string, body: string, type: string) {
+  const url = URL.createObjectURL(new Blob([body], { type }));
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = name;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+Promise.all([read("baseline.json"), read("candidate.json")])
+  .then(([a, b]) => {
+    baseline = a;
+    candidate = b;
+    render();
+  })
+  .catch(() => {
+    app.innerHTML =
+      "<main><h1>Evidence could not be loaded</h1><p>Run the benchmark generator and reload this page. No provider request was attempted.</p></main>";
+  });
