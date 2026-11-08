@@ -168,7 +168,8 @@ export function createApp(
         productionMode() || process.env.ELEVENLABS_API_KEY ? "live" : "demo",
       production: productionMode(),
       demoEnabled: !productionMode(),
-      deployment: workspaceStorage === "browser" ? "hosted" : "local",
+      deployment:
+        options.hosted || workspaceStorage === "browser" ? "hosted" : "local",
       workspaceStorage,
       uploadLimitBytes: options.maxUploadBytes || 20 * 1024 * 1024,
       operatorRequired: !!process.env.OPERATOR_TOKEN,

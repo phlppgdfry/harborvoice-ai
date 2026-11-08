@@ -78,6 +78,7 @@ test(
     };
     const app = createApp(store, (() => sdk) as unknown as typeof client, {
       workspaceStorage: "postgres",
+      hosted: true,
     });
     const server = app.listen(0, "127.0.0.1");
     await new Promise<void>((r) => server.on("listening", r));
@@ -99,6 +100,7 @@ test(
       ).json();
       assert.equal(status.demoEnabled, false);
       assert.equal(status.workspaceStorage, "postgres");
+      assert.equal(status.deployment, "hosted");
       assert.equal(
         (
           await fetch(base + "/api/demo/chat", {
