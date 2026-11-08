@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-08T23:15:45.101Z",
+  "checkedAt": "2026-11-08T23:34:51.176Z",
   "checks": [
     "production build loads",
     "failure inspector defaults to meaningful failure",

@@ -437,3 +437,10 @@ export function receipt(
     ),
   };
 }
+export {
+  submitNativeSuite,
+  readNativeSuite,
+  type NativeTestsClient,
+  type AccountWideGuard,
+  type NativeInvocation,
+} from "./elevenlabs.js";

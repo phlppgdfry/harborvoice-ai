@@ -4,7 +4,7 @@ Review performed by the implementing agent; not an independent third-party audit
 
 | Area | Evidence | Material limitation |
 |---|---|---|
-| Engineering | Strict TS builds, contract tests, typed SDK read adapter, declaration output | Live native evaluation adapter, durable package reservation backend and distributed fencing not shipped |
+| Engineering | Strict TS builds, contract tests, typed SDK read adapter, declaration output | Native SDK submit/read adapter tested with mocks only; durable package reservation backend, distributed guard and automatic native-result mapping not shipped |
 | Product | Working filters, scenario inspector, comparison, downloads and local feedback | Synthetic policy demo; no genuine pilot participants or validated demand |
 | Developer experience | No-key quickstart, package CLI and narrow runtime footprint | Package unpublished; documentation assumes repository root installation unless standalone dependencies installed |
 | Research | 110 versioned contracts, explicit fixtures, separate historical provider receipt | Category-conditioned stubs cannot establish model reliability, fluency, grounding or latency |
