@@ -1,6 +1,6 @@
 {
-  "createdAt": "2026-11-08T23:38:29.980Z",
-  "sourceCommit": "3cb24a1dcc6627b5e52f8cd17ccee1e2292110b4",
+  "createdAt": "2026-11-08T23:39:42.655Z",
+  "sourceCommit": "fec914e83fe5a0d8263b1f29bc238b2047e86447",
   "published": false,
   "location": "var/phase3/releases (local ignored outputs)",
   "files": [
@@ -11,8 +11,8 @@
     },
     {
       "file": "harborvoice-agentops-kit-0.1.0.tgz",
-      "bytes": 9675,
-      "sha256": "3b7138419e68cb1bc58e45e90e3f7bb66fb1db19a758f2a77248baf6cb380d1b"
+      "bytes": 9751,
+      "sha256": "b02b4b1ac738a21a7e8bb1ca4bfcf613cbad8bf475f47025faead2f1db053559"
     }
   ],
   "packageSmoke": {

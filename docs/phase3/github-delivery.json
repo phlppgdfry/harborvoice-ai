@@ -1,0 +1,15 @@
+{
+  "branch": "feat/elevenlabs-ecosystem-phase3",
+  "url": "https://github.com/phlppgdfry/harborvoice-ai/tree/feat/elevenlabs-ecosystem-phase3",
+  "initialPushConfirmed": true,
+  "initialPushedCommit": "3cb24a1",
+  "implementationSourceCommit": "fec914e83fe5a0d8263b1f29bc238b2047e86447",
+  "base": "a5b7c20",
+  "mainModified": false,
+  "merged": false,
+  "deployed": false,
+  "npmPublished": false,
+  "externalPullRequestSubmitted": false,
+  "applicationsSubmitted": false,
+  "note": "Final receipt/artifact metadata is committed separately; final local/remote HEAD equality is checked after push. Existing shared CI only auto-verifies main/PRs, so no Phase 3 CI pass is claimed."
+}
