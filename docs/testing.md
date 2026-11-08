@@ -39,3 +39,18 @@ CI uses pinned Actions, least-privilege contents access, dependency audit, real 
 tests and browser checks without provider credentials. Hosted success is only reported
 after observing the actual run at the candidate commit. No workflow deploys this branch
 to production or injects provider secrets into pull-request code.
+
+## Deployed candidate checks
+
+`HOSTED_URL=https://exact-origin npm run verify:production` uses a privately configured
+`OPERATOR_TOKEN` and optional project-scoped `VERCEL_OIDC_TOKEN` for protected preview
+access. The latter is attached only to the selected deployment origin. Secrets can be
+loaded from ignored `.env.smoke.local` (`HARBORVOICE_SMOKE_ENV` overrides the path).
+This default checks real database/provider readiness and login/logout without a call.
+
+`npm run verify:production -- --live` requires explicit authorization to use existing
+included credits. It checks the included balance, uses one prerecorded synthetic question,
+closes the browser within 30 seconds, and writes an attempt marker before starting.
+It refuses an automatic repeat. Results/screenshots are private under `var/` until reviewed;
+never publish operator codes, signed URLs or private conversations. The test covers real
+ASR/agent/incoming audio, not a physical microphone or subjective audio quality.
