@@ -1,0 +1,31 @@
+# Recognition evidence portfolio
+
+Checked 8–9 November 2026. Prepared portfolio, not official recognition. Public project: [HarborVoice](https://github.com/phlppgdfry/harborvoice-ai), existing [v2.1.0 release](https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.1.0). Phase 3 deliverables are feature-branch candidates until the GitHub delivery receipt confirms their push; no live AgentProof publication implied.
+
+| Opportunity | Verified classification | Evidence / next action |
+|---|---|---|
+| [LinkedIn Connected Apps / Top User](https://news.linkedin.com/2026/visibility-builds-credibility---the-tools-you-use-every-day--now) | Partner-provided usage statement and engagement signal; no public guaranteed ElevenLabs credit threshold verified | Owner controls connection/profile. This portfolio does not establish eligibility or award status |
+| Power User | Current public criteria/application path not verified in this audit | Earlier Phase 2 material describes invitation-based recognition; treat that as historical context, not a newly verified program rule. Do not spend to chase an assumed threshold |
+| [Ambassador](https://elevenlabs.io/ambassador) | Application program with Community Builder and Content Creator tracks | Workshop/application draft prepared; owner identity/eligibility and current form review required |
+| Community Builder | Ambassador track for community activity | Proposed Ghent/Bruges 90-minute workshop, no-key starter, instructor notes and pilot plan; no event held |
+| Content Creator | Ambassador content track | Five technical article drafts and video outlines; unpublished, no audience metrics claimed |
+| [GitHub Showcase](https://github.com/elevenlabs/showcase) | Reviewed public project submission | Phase 2 already has a prepared fork package; no duplicate PR. Acceptance unverified |
+| [Official examples](https://github.com/elevenlabs/examples) | Open-source contribution route | New tested local boundary-regression example proposal and draft PR text; not submitted or merged |
+| [Worldwide hackathon](https://hackathon.elevenlabs.io/) | Event registration, not recognition certificate | Site lists Ghent and 11 December, but current year/venue/eligibility not established from that page. Do not register or claim attendance |
+| [ElevenHacks](https://hacks.elevenlabs.io/) | Challenge events with published rules | Page contains date/counter content that needs current round confirmation; no active eligibility assumed |
+| [Startup Grants](https://elevenlabs.io/startup-grants) | Application for qualifying long-term startup products | AgentProof is only a pilot candidate. Genuine business case, company details and eligibility still needed; no grant application submitted |
+| [Impact](https://elevenlabs.io/impact) | Purpose/eligibility-based access, not developer status | Relevant to real qualifying education/accessibility/nonprofit work; no eligibility or impact beneficiaries claimed here |
+
+## Dated evidence inventory
+
+- Existing HarborVoice release: production case study, 52-case historical suite plus separately scoped regressions and six-case Phase 2 provider observations. Use exact original artifacts; do not sum disparate suites.
+- AgentOps Kit: source, strict build, mock SDK adapter, test receipts, MIT licensing, safe quickstart and CLI. v0.1.0 candidate, not npm-published.
+- AgentProof: local production build, interactive scenario/failure explorer, exports and separate historical receipt. Browser evidence and screenshots in this folder; no real pilot users.
+- Research: 110 synthetic contracts with baseline/corrected fixture execution; methodology and prospective live design. No Phase 3 live audio or provider benchmark executed.
+- Community: complete proposed 90-minute teaching package with HTML presentation and eight local starter tests. No bookings, partners or participants.
+- Advocacy: five substantial editorial drafts, LinkedIn summaries and technical video outlines. No posts sent or scheduled.
+- Contribution: five local tests for a useful upstream example proposal. Not an accepted contribution or upstream-tested patch.
+
+## Strongest next steps
+
+Owner reviews branch and remaining limitations; recruit a small consent-based pilot after approval; use actual feedback to improve product; agree upstream example scope and authorize a PR; finalize workshop venue/date and application fields. Publish substantive tutorials after review. Recognition may follow useful work, but it is controlled by the relevant program, not by an internal score or a spend target.

@@ -1,0 +1,17 @@
+# Testing Voice AI Agents Beyond the Happy Path
+
+A lookup tool being called does not establish that the conversation was successful. The source may have timed out, returned a record for the wrong shipment or included an instruction that should never be treated as authority. If a report counts all these cases as successful because the tool name appeared, it rewards the wrong behavior.
+
+The smallest useful test starts with a business contract. What should happen when a reference is missing? Clarify. When no verified record exists? Abstain. When the tool is unavailable? Recover honestly. When two trusted sources disagree? Escalate according to the domain policy. These are decisions to specify before tuning the agent, not labels to assign afterward to make a dashboard look good.
+
+The [Phase 3 corpus](../../../benchmarks/voice-ai/scenarios/corpus.json) contains 110 synthetic requests in eleven categories: ordinary requests, ambiguity, unknown facts, tool errors, malformed responses, source conflicts, multilingual requests, incorrect assumptions, injection attempts, escalation and recovery. Ten distinct triggers in each category make the expected boundary inspectable. This is still a purposive teaching set. Most categories are English; it cannot support a balanced multilingual performance claim.
+
+The local runner compares an intentionally unsafe fixture with a corrected category policy. The unsafe policy accepts unverified information in three categories and fails thirty contracts. The corrected fixture matches all expected category policies by construction. This is useful for testing the reporting path, locating failures and demonstrating a regression comparison. It measures no language understanding. Returning expected behavior from category metadata is precisely why its 110/110 result must not become an agent reliability headline.
+
+To reproduce it, run `node --import tsx scripts/phase3/benchmark.ts`, then inspect the baseline JSON. Find `tool-error-01`: expected `recover`, observed fixture `grounded`, tool list `lookup`. The failure is an outcome violation despite a correct tool name. In AgentProof, the trace, transcript label and engineering action appear together. [The runner](../../../scripts/phase3/benchmark.ts) documents the intentionally scripted policies.
+
+A live experiment needs additional controls. Freeze the corpus before tuning. Separate the configurations. Record repeat number, model, language, tool fixtures, evaluator and cost. Keep a held-out set for any later quality claim. A provider-based judge may share the model's blind spots, so record that method and have qualified humans spot-check uncertain outcomes. Never silently upgrade a subjective judgment into objective accuracy.
+
+Statistics also have a boundary. A Wilson interval can describe uncertainty for suitably sampled binary observations, but a scripted 110/110 fixture is not a population sample. The historical six-case success result is small and purposively chosen; an illustrative interval does not turn it into a deployment guarantee. Repeats of the same prompt are clustered observations, not independent new tasks.
+
+The [methodology](../../../benchmarks/voice-ai/methodology.md) therefore leaves speech latency, human microphone performance and fluency unmeasured. A useful report can say “we do not know yet.” That statement keeps the next experiment focused and makes the existing evidence easier to trust.
