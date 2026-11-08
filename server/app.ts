@@ -5,7 +5,8 @@ import multer from "multer";
 import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
 import { resolve } from "node:path";
-import { createHash } from "node:crypto";
+import { createHash, randomUUID } from "node:crypto";
+import { productionMode, validateRuntime } from "./runtime.js";
 import { z } from "zod";
 import {
   demoReply,
@@ -23,6 +24,14 @@ import {
   guestDailyLimit,
 } from "./guest-policy.js";
 import type { Store } from "./store.js";
+function operatorCookie(cookie?: string) {
+  return (
+    cookie
+      ?.split(";")
+      .map((s) => s.trim())
+      .find((s) => s.startsWith("hv_operator=")) || ""
+  );
+}
 const text = z.string().trim().min(1).max(2000);
 const reference = z.string().trim().min(1).max(50);
 const lang = z.enum(["en", "nl", "fr", "de"]);
@@ -31,15 +40,18 @@ export function createApp(
   store: Store,
   sdkFactory: typeof client = client,
   options: {
-    workspaceStorage?: "sqlite" | "browser";
+    workspaceStorage?: "sqlite" | "browser" | "postgres";
     serveFrontend?: boolean;
     maxUploadBytes?: number;
+    hosted?: boolean;
   } = {},
 ) {
+  validateRuntime(options.workspaceStorage === "postgres");
   const app = express();
   app.disable("x-powered-by");
   const workspaceStorage = options.workspaceStorage || "sqlite";
-  if (workspaceStorage === "browser") app.set("trust proxy", 1);
+  if (workspaceStorage === "browser" || options.hosted)
+    app.set("trust proxy", 1);
   app.use("/api", (req, res, next) => {
     res.setHeader("Cache-Control", "no-store");
     if (
@@ -61,11 +73,72 @@ export function createApp(
     }
     next();
   });
-  app.use(helmet({ contentSecurityPolicy: false }));
+  app.use((req, res, next) => {
+    const requestId = randomUUID();
+    const started = Date.now();
+    res.setHeader("X-Request-ID", requestId);
+    res.on("finish", () => {
+      if (process.env.NODE_ENV !== "test")
+        console.info(
+          JSON.stringify({
+            event: "http",
+            requestId,
+            method: req.method,
+            route: req.route?.path || "unmatched",
+            status: res.statusCode,
+            durationMs: Date.now() - started,
+          }),
+        );
+    });
+    next();
+  });
+  app.use(
+    helmet({
+      contentSecurityPolicy: productionMode()
+        ? {
+            directives: {
+              defaultSrc: ["'self'"],
+              scriptSrc: ["'self'", "'wasm-unsafe-eval'"],
+              styleSrc: [
+                "'self'",
+                "'unsafe-inline'",
+                "https://fonts.googleapis.com",
+              ],
+              fontSrc: ["'self'", "https://fonts.gstatic.com", "data:"],
+              connectSrc: [
+                "'self'",
+                "https://*.elevenlabs.io",
+                "wss://*.elevenlabs.io",
+                "https://*.elevenlabs.net",
+                "wss://*.elevenlabs.net",
+              ],
+              mediaSrc: ["'self'", "blob:", "https:"],
+              imgSrc: ["'self'", "data:", "blob:", "https:"],
+              workerSrc: ["'self'", "blob:"],
+              frameAncestors: ["'none'"],
+            },
+          }
+        : false,
+    }),
+  );
+  app.get("/api/health", async (_req, res) => {
+    if (workspaceStorage === "browser") {
+      res.status(503).json({ status: "degraded", database: "not_configured" });
+      return;
+    }
+    try {
+      await store.ready?.();
+      await store.health?.();
+      if (!store.health) await store.read();
+      res.json({ status: "ok", database: "reachable" });
+    } catch {
+      res.status(503).json({ status: "unavailable", database: "unavailable" });
+    }
+  });
   app.post(
     "/api/webhooks/elevenlabs",
     express.raw({ type: "application/json", limit: "1mb" }),
-    (req, res) => {
+    async (req, res) => {
       const secret = process.env.ELEVENLABS_WEBHOOK_SECRET;
       if (!secret) {
         res.status(503).json({ error: "Webhook secret is not configured." });
@@ -85,23 +158,32 @@ export function createApp(
         return;
       }
       const hash = createHash("sha256").update(raw).digest("hex");
-      const inserted = store.webhook(hash, raw.toString());
+      const inserted = await store.webhook(hash, raw.toString());
       res.json({ received: true, duplicate: !inserted });
     },
   );
-  app.get("/api/status", (req, res) =>
+  app.get("/api/status", async (req, res) =>
     res.json({
-      mode: process.env.ELEVENLABS_API_KEY ? "live" : "demo",
+      mode:
+        productionMode() || process.env.ELEVENLABS_API_KEY ? "live" : "demo",
+      production: productionMode(),
+      demoEnabled: !productionMode(),
       deployment: workspaceStorage === "browser" ? "hosted" : "local",
       workspaceStorage,
       uploadLimitBytes: options.maxUploadBytes || 20 * 1024 * 1024,
       operatorRequired: !!process.env.OPERATOR_TOKEN,
-      operatorAuthenticated: isOperator(
-        req.headers,
-        process.env.OPERATOR_TOKEN,
-      ),
+      operatorAuthenticated:
+        isOperator(req.headers, process.env.OPERATOR_TOKEN) &&
+        !(
+          store.sessionRevoked &&
+          operatorCookie(req.headers.cookie) &&
+          (await store.sessionRevoked(operatorCookie(req.headers.cookie)))
+        ),
       configured: !!process.env.ELEVENLABS_API_KEY,
-      guestVoice: guestPolicy(),
+      guestVoice: {
+        ...guestPolicy(),
+        enabled: !productionMode() && guestPolicy().enabled,
+      },
       agentReady:
         !!process.env.ELEVENLABS_API_KEY && !!process.env.ELEVENLABS_AGENT_ID,
     }),
@@ -110,6 +192,8 @@ export function createApp(
     const origin = req.get("origin");
     if (origin) {
       try {
+        if (productionMode() && origin !== process.env.PUBLIC_ORIGIN)
+          throw new Error("Origin mismatch");
         if (new URL(origin).host !== req.get("host")) {
           res
             .status(403)
@@ -157,7 +241,7 @@ export function createApp(
         issueOperatorSession(token, Date.now(), parsed.data.remember),
         {
           httpOnly: true,
-          secure: workspaceStorage === "browser",
+          secure: productionMode() || workspaceStorage === "browser",
           sameSite: "strict",
           maxAge: (parsed.data.remember ? 30 * 24 : 8) * 60 * 60 * 1000,
           path: "/",
@@ -166,10 +250,21 @@ export function createApp(
       res.json({ authenticated: true });
     },
   );
-  app.delete("/api/auth/session", (_req, res) => {
+  app.delete("/api/auth/session", async (req, res) => {
+    if (
+      productionMode() &&
+      req.get("origin") &&
+      req.get("origin") !== process.env.PUBLIC_ORIGIN
+    ) {
+      res.status(403).json({ error: "Invalid origin." });
+      return;
+    }
+    const cookie = operatorCookie(req.headers.cookie);
+    if (cookie && isOperator(req.headers, process.env.OPERATOR_TOKEN))
+      await store.revokeSession?.(cookie);
     res.clearCookie("hv_operator", {
       httpOnly: true,
-      secure: workspaceStorage === "browser",
+      secure: productionMode() || workspaceStorage === "browser",
       sameSite: "strict",
       path: "/",
     });
@@ -183,7 +278,7 @@ export function createApp(
         .json({ error: "Cross-origin visitor access is not allowed." });
       return;
     }
-    if (!guestPolicy().enabled) {
+    if (productionMode() || !guestPolicy().enabled) {
       res.status(410).json({
         error:
           "The limited live visitor trial has ended. Public audio examples and the text demo remain available.",
@@ -232,25 +327,29 @@ export function createApp(
       next(error);
     }
   });
-  app.post("/api/guest/lookup", express.json({ limit: "4kb" }), (req, res) => {
-    const parsed = z.object({ reference }).safeParse(req.body);
-    if (!parsed.success) {
-      res
-        .status(400)
-        .json({ error: "An exact synthetic shipment reference is required." });
-      return;
-    }
-    const shipment = findShipment(store.read(), parsed.data.reference);
-    res.json(
-      shipment
-        ? { found: true, shipment }
-        : {
-            found: false,
-            message: "Shipment not found. Verify the reference.",
-          },
-    );
-  });
-  app.use("/api", (req, res, next) => {
+  app.post(
+    "/api/guest/lookup",
+    express.json({ limit: "4kb" }),
+    async (req, res) => {
+      const parsed = z.object({ reference }).safeParse(req.body);
+      if (!parsed.success) {
+        res.status(400).json({
+          error: "An exact synthetic shipment reference is required.",
+        });
+        return;
+      }
+      const shipment = findShipment(await store.read(), parsed.data.reference);
+      res.json(
+        shipment
+          ? { found: true, shipment }
+          : {
+              found: false,
+              message: "Shipment not found. Verify the reference.",
+            },
+      );
+    },
+  );
+  app.use("/api", async (req, res, next) => {
     if (
       !process.env.OPERATOR_TOKEN &&
       !["127.0.0.1", "localhost", "[::1]"].includes(
@@ -263,6 +362,8 @@ export function createApp(
     const origin = req.get("origin");
     if (origin) {
       try {
+        if (productionMode() && origin !== process.env.PUBLIC_ORIGIN)
+          throw new Error("Origin mismatch");
         const u = new URL(origin);
         const host = req.get("host")?.split(":")[0];
         if (u.hostname !== host) {
@@ -277,7 +378,13 @@ export function createApp(
       }
     }
     const token = process.env.OPERATOR_TOKEN;
-    if (token && !isOperator(req.headers, token)) {
+    if (
+      token &&
+      (!isOperator(req.headers, token) ||
+        (store.sessionRevoked &&
+          operatorCookie(req.headers.cookie) &&
+          (await store.sessionRevoked(operatorCookie(req.headers.cookie)))))
+    ) {
       res.status(401).json({
         error:
           "Sign in with your operator access code in Settings to use live ElevenLabs features.",
@@ -303,12 +410,97 @@ export function createApp(
     legacyHeaders: false,
     message: { error: "Live request limit reached. Try again in a minute." },
   });
-  app.get("/api/state", (_req, res) => res.json(store.read()));
-  app.post("/api/demo/chat", (req, res) => {
+  app.get("/api/state", async (_req, res) => res.json(await store.read()));
+  app.get("/api/readiness", async (_req, res) => {
+    if (workspaceStorage === "browser") {
+      res
+        .status(503)
+        .json({ ready: false, database: { status: "not_configured" } });
+      return;
+    }
+    const database = { status: "unavailable" };
+    try {
+      await store.health?.();
+      await store.read();
+      database.status = "reachable";
+    } catch {
+      res.status(503).json({ ready: false, database });
+      return;
+    }
+    try {
+      const agent = await sdkFactory().conversationalAi.agents.get(agentId());
+      const ready =
+        database.status === "reachable" &&
+        !!agent.platformSettings?.auth?.enableAuth;
+      res.status(ready ? 200 : 503).json({
+        ready,
+        database,
+        provider: { status: "authenticated" },
+        agent: {
+          status: ready ? "available" : "authentication_required",
+          name: agent.name,
+        },
+        checkedAt: new Date().toISOString(),
+        scope:
+          "Configuration and provider read only; no voice session established.",
+      });
+    } catch {
+      res.status(503).json({
+        ready: false,
+        database,
+        provider: { status: "unavailable" },
+        agent: { status: "unverified" },
+      });
+    }
+  });
+  app.get("/api/agents", async (_req, res) => {
+    const agent = await sdkFactory().conversationalAi.agents.get(agentId());
+    res.json({
+      agents: [{ id: agentId(), name: agent.name }],
+      scope: "Only the server-configured agent is selectable.",
+    });
+  });
+  app.get("/api/conversations", async (_req, res) =>
+    res.json({
+      conversations: (await store.read()).sessions.map(
+        ({ messages, ...s }) => ({
+          ...s,
+          messageCount: messages.length,
+          source: "client-reported",
+        }),
+      ),
+    }),
+  );
+  app.get("/api/conversations/:id", async (req, res) => {
+    const session = (await store.read()).sessions.find(
+      (s) => s.id === z.uuid().parse(req.params.id),
+    );
+    if (!session) {
+      res.status(404).json({ error: "Conversation not found." });
+      return;
+    }
+    res.json(session);
+  });
+  app.delete("/api/conversations/:id", async (req, res) => {
+    const sessionId = z.uuid().parse(req.params.id);
+    await store.mutate((s) => {
+      s.sessions = s.sessions.filter((v) => v.id !== sessionId);
+      record(s, "Local conversation deleted");
+    });
+    res.status(204).end();
+  });
+  app.post("/api/demo/chat", async (req, res) => {
+    if (productionMode()) {
+      res.status(409).json({
+        error:
+          "Demo provider is disabled in production. Start a live voice session.",
+      });
+      return;
+    }
     const v = z
       .object({ text, language: lang, sessionId: z.uuid() })
       .parse(req.body);
-    const reply = store.mutate((s) => {
+    const reply = await store.mutate((s) => {
       const response = demoReply(s, v.text, v.language);
       let session = s.sessions.find((t) => t.id === v.sessionId);
       if (!session) {
@@ -329,9 +521,9 @@ export function createApp(
     });
     res.json({ reply });
   });
-  app.post("/api/tools/lookup", (req, res) => {
+  app.post("/api/tools/lookup", async (req, res) => {
     const v = z.object({ reference }).parse(req.body);
-    const shipment = findShipment(store.read(), v.reference);
+    const shipment = findShipment(await store.read(), v.reference);
     res.json(
       shipment
         ? { found: true, shipment }
@@ -342,27 +534,90 @@ export function createApp(
           },
     );
   });
-  app.post("/api/escalations", (req, res) => {
+  app.post("/api/escalations", async (req, res) => {
     const v = z
       .object({
         shipmentId: reference,
         reason: z.string().trim().min(8).max(1000),
       })
       .parse(req.body);
-    res.json(store.mutate((s) => proposeEscalation(s, v.shipmentId, v.reason)));
+    res.json(
+      await store.mutate((s) => proposeEscalation(s, v.shipmentId, v.reason)),
+    );
   });
-  app.post("/api/escalations/review", (req, res) => {
+  app.post("/api/escalations/review", async (req, res) => {
     const v = z
       .object({ id, decision: z.enum(["Approved", "Rejected"]) })
       .parse(req.body);
-    res.json(store.mutate((s) => decideTicket(s, v.id, v.decision)));
+    res.json(await store.mutate((s) => decideTicket(s, v.id, v.decision)));
   });
-  app.post("/api/sessions", (req, res) => {
+  app.post("/api/import/conversations", async (req, res) => {
+    const imported = z
+      .object({
+        sessions: z
+          .array(
+            z.object({
+              id: z.uuid(),
+              mode: z.enum(["demo", "live"]),
+              startedAt: z.iso.datetime(),
+              language: lang,
+              messages: z
+                .array(
+                  z.object({
+                    role: z.enum(["user", "agent"]),
+                    text: z.string().max(10000),
+                    source: z.string().max(1000).optional(),
+                  }),
+                )
+                .max(500),
+            }),
+          )
+          .max(100),
+      })
+      .parse(req.body);
+    const count = await store.mutate((s) => {
+      const unique = [
+        ...new Map(imported.sessions.map((x) => [x.id, x])).values(),
+      ].filter((x) => !s.sessions.some((v) => v.id === x.id));
+      if (s.sessions.length + unique.length > 100)
+        throw new Error(
+          "Conversation capacity exceeded. Export and delete records before importing.",
+        );
+      s.sessions.push(...unique);
+      record(
+        s,
+        "Imported client-reported conversation history (source retained)",
+      );
+      return unique.length;
+    });
+    res.json({
+      imported: count,
+      sourceRetained: true,
+      scope:
+        "Client-reported conversation records only; no shipment or approval state imported.",
+    });
+  });
+  app.post("/api/maintenance/retention", async (_req, res) => {
+    await store.mutate(() => undefined);
+    res.json({
+      completed: true,
+      policy:
+        "30-day local transcript retention; provider retention is configured separately.",
+    });
+  });
+  app.post("/api/sessions", async (req, res) => {
     const v = z
       .object({
         id: z.uuid(),
         mode: z.literal("live"),
         startedAt: z.iso.datetime(),
+        endedAt: z.iso.datetime().optional(),
+        durationSeconds: z.number().int().min(0).max(86400).optional(),
+        providerConversationId: z
+          .string()
+          .regex(/^[A-Za-z0-9_-]+$/)
+          .max(150)
+          .optional(),
         language: lang,
         messages: z
           .array(
@@ -374,20 +629,42 @@ export function createApp(
           .max(500),
       })
       .parse(req.body);
-    store.mutate((s) => {
-      if (!s.sessions.some((t) => t.id === v.id)) s.sessions.unshift(v);
+    await store.mutate((s) => {
+      const existing = s.sessions.find((t) => t.id === v.id);
+      if (existing) {
+        if (v.messages.length >= existing.messages.length)
+          Object.assign(existing, v);
+      } else {
+        if (s.sessions.length >= 100)
+          throw new Error(
+            "Conversation capacity exceeded. Export and delete records before saving.",
+          );
+        s.sessions.unshift(v);
+      }
       s.sessions = s.sessions.slice(0, 100);
       record(s, "Live transcript saved (client reported)");
     });
     res.json({ saved: true });
   });
-  app.post("/api/agent/session", paid, async (_req, res) =>
+  app.post("/api/agent/session", paid, async (_req, res) => {
+    const sdk = sdkFactory();
+    const selected = agentId();
+    if (productionMode()) {
+      const agent = await sdk.conversationalAi.agents.get(selected);
+      if (!agent.platformSettings?.auth?.enableAuth) {
+        res.status(503).json({
+          error:
+            "The configured agent must require authenticated sessions before production use.",
+        });
+        return;
+      }
+    }
     res.json(
-      await sdkFactory().conversationalAi.conversations.getSignedUrl({
-        agentId: agentId(),
+      await sdk.conversationalAi.conversations.getSignedUrl({
+        agentId: selected,
       }),
-    ),
-  );
+    );
+  });
   app.get("/api/voices", async (_req, res) => {
     const voices = await sdkFactory().voices.getAll();
     res.json({
@@ -672,6 +949,26 @@ export function createApp(
       if (e.statusCode) {
         res.status(502).json({
           error: `ElevenLabs request failed (${e.statusCode}). Check your account permissions, credits and agent configuration.`,
+        });
+        return;
+      }
+      if (e.message === "This escalation has already been reviewed.") {
+        res.status(400).json({ error: e.message });
+        return;
+      }
+      if (
+        [
+          "Conversation capacity exceeded. Export and delete records before importing.",
+          "Conversation capacity exceeded. Export and delete records before saving.",
+        ].includes(e.message || "")
+      ) {
+        res.status(409).json({ error: e.message });
+        return;
+      }
+      if (productionMode()) {
+        res.status(500).json({
+          error:
+            "Request failed. Use the request ID when contacting the operator.",
         });
         return;
       }

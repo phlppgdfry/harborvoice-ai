@@ -1,3 +1,12 @@
+> **Production delivery branch:** this branch adds durable PostgreSQL, strict production
+> configuration, fail-closed UI behavior, operator logout revocation and real database/
+> fixture-voice lifecycle tests. The dedicated free Neon database and its TLS migration are verified;
+> deployed voice smoke testing and production acceptance remain unverified.
+> See [deployment](docs/deployment.md), [security](docs/security.md),
+> [ElevenLabs integration](docs/elevenlabs-integration.md) and [tests](docs/testing.md).
+> The previously published static demo/live gateway below is not evidence that this new
+> persistent release has been deployed. Historical verification is preserved.
+
 # HarborVoice AI
 
 **A voice operations workbench for a fictional North Sea logistics terminal.**

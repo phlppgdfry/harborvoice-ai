@@ -23,7 +23,12 @@
     "academy:build": "tsx scripts/build-academy.ts",
     "academy:package": "tsx scripts/package-academy.ts",
     "academy:native": "tsx scripts/academy-native.ts",
-    "test:academy": "node --import tsx scripts/verify-academy.ts"
+    "test:academy": "node --import tsx scripts/verify-academy.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "prettier --check src server scripts tests agent api docs/*.md README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml vercel.json",
+    "test:postgres": "node --import tsx scripts/test-postgres.ts",
+    "test:production-browser": "node --import tsx scripts/production-browser-check.ts",
+    "db:migrate": "node --import tsx scripts/migrate.ts"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "2.77.0",
@@ -34,6 +39,7 @@
     "helmet": "^8.0.0",
     "lucide-react": "1.70.0",
     "multer": "^2.0.2",
+    "pg": "8.23.1",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "zod": "^4.0.0"
@@ -43,6 +49,7 @@
     "@types/express": "^5.0.0",
     "@types/multer": "^2.0.0",
     "@types/node": "^22.0.0",
+    "@types/pg": "8.23.1",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.2.1",

@@ -58,24 +58,52 @@ function VoiceAgentInner({
     [live, setLive] = useState(false),
     [muted, setMuted] = useState(false),
     [transcriptMode, setTranscriptMode] = useState<"demo" | "live">("demo");
+  const [agents, setAgents] = useState<{ id: string; name: string }[]>([]);
+  useEffect(() => {
+    if (config.production && config.operatorAuthenticated)
+      void request<{ agents: { id: string; name: string }[] }>("/agents")
+        .then((r) => setAgents(r.agents))
+        .catch(fail);
+  }, []);
+  const cancelled = useRef(false);
   const sessionId = useRef(crypto.randomUUID());
   const transcript = useRef<Message[]>([]);
   const liveStart = useRef("");
+  const providerConversationId = useRef<string | undefined>(undefined);
   const liveSessionId = useRef(crypto.randomUUID());
   const liveLanguage = useRef("en");
-  const persistLive = () => {
-    if (!transcript.current.length || !liveStart.current) return;
+  const persistLive = async () => {
+    if (!liveStart.current) return;
     const snapshot = {
       id: liveSessionId.current,
       mode: "live" as const,
       startedAt: liveStart.current,
+      endedAt: new Date().toISOString(),
+      durationSeconds: Math.max(
+        0,
+        Math.floor((Date.now() - Date.parse(liveStart.current)) / 1000),
+      ),
+      providerConversationId: providerConversationId.current,
       messages: [...transcript.current],
       language: liveLanguage.current,
     };
-    transcript.current = [];
-    void saveLive(snapshot).then(refresh).catch(fail);
+    await saveLive(snapshot);
+    if (
+      liveSessionId.current === snapshot.id &&
+      transcript.current.length === snapshot.messages.length
+    ) {
+      transcript.current = [];
+      liveStart.current = "";
+    }
+    await refresh();
   };
-  useEffect(() => () => persistLive(), []);
+  useEffect(
+    () => () => {
+      cancelled.current = true;
+      void persistLive().catch(fail);
+    },
+    [],
+  );
   const conversation = useConversation({
     onMessage: (message) => {
       const m: Message = {
@@ -85,7 +113,13 @@ function VoiceAgentInner({
       transcript.current.push(m);
       setMessages([...transcript.current]);
     },
-    onConnect: () => {
+    onConnect: ({ conversationId }) => {
+      if (cancelled.current) {
+        void conversation.endSession();
+        return;
+      }
+      liveStart.current = new Date().toISOString();
+      providerConversationId.current = conversationId;
       setLive(true);
       setBusy(false);
       setMuted(false);
@@ -99,7 +133,7 @@ function VoiceAgentInner({
     onDisconnect: () => {
       setLive(false);
       setBusy(false);
-      persistLive();
+      void persistLive().catch(fail);
       sessionId.current = crypto.randomUUID();
     },
   });
@@ -130,7 +164,9 @@ function VoiceAgentInner({
   const guestSession = useRef(false);
   const start = async (visitor = false) => {
     setBusy(true);
+    cancelled.current = false;
     try {
+      await persistLive();
       await init();
       if (!config.agentReady)
         throw new Error(
@@ -146,19 +182,26 @@ function VoiceAgentInner({
         throw new Error(
           "Sign in with your operator access code in Settings to start live voice.",
         );
+      if (!navigator.mediaDevices?.getUserMedia)
+        throw new Error(
+          "Microphone access requires HTTPS or localhost and a supported browser.",
+        );
       const media = await navigator.mediaDevices.getUserMedia({ audio: true });
       media.getTracks().forEach((t) => t.stop());
+      if (cancelled.current) return;
       const { signedUrl } = await request(
         visitor ? "/guest/session" : "/agent/session",
         {},
       );
+      if (cancelled.current) return;
       guestSession.current = visitor;
       transcript.current = [];
       setMessages([]);
       setTranscriptMode("live");
       liveSessionId.current = crypto.randomUUID();
       liveLanguage.current = language;
-      liveStart.current = new Date().toISOString();
+      liveStart.current = "";
+      providerConversationId.current = undefined;
       await conversation.startSession({
         signedUrl,
         connectionType: "websocket",
@@ -208,9 +251,30 @@ function VoiceAgentInner({
                 ? "Live ElevenLabs session"
                 : transcriptMode === "live"
                   ? "Ended ElevenLabs session · saved transcript"
-                  : "Scripted text demo · no AI or audio generated"}
+                  : config.production
+                    ? "Live voice · start a session to talk to Nora"
+                    : "Scripted text demo · no AI or audio generated"}
             </p>
           </div>
+          {config.production && (
+            <label className="field">
+              Server-approved agent
+              <select
+                aria-label="Voice agent"
+                disabled={connected || busy || !agents.length}
+              >
+                {agents.length ? (
+                  agents.map((a) => (
+                    <option key={a.id} value={a.id}>
+                      {a.name}
+                    </option>
+                  ))
+                ) : (
+                  <option>Loading configured agent…</option>
+                )}
+              </select>
+            </label>
+          )}
           <select
             aria-label="Conversation language"
             value={language}
@@ -286,6 +350,11 @@ function VoiceAgentInner({
               </a>
             </div>
           )}
+        <p className="voice-access">
+          Starting live voice sends microphone audio to ElevenLabs. Transcripts
+          are stored in this private workspace; do not share sensitive
+          information. You can stop or mute at any time.
+        </p>
         <div className={"conversation-orb " + (connected ? "connected" : "")}>
           <div className="voice-orb">
             <div className="orb-core">
@@ -318,7 +387,12 @@ function VoiceAgentInner({
                   !config.operatorAuthenticated)
               }
               onClick={
-                connected ? () => conversation.endSession() : () => start()
+                connected
+                  ? () => {
+                      cancelled.current = true;
+                      void conversation.endSession();
+                    }
+                  : () => start()
               }
             >
               {busy ? (
@@ -399,6 +473,24 @@ function VoiceAgentInner({
             ))
           )}
         </div>
+        {(busy || connecting) && (
+          <button
+            className="button"
+            onClick={() => {
+              cancelled.current = true;
+              try {
+                conversation.endSession();
+              } catch (error) {
+                fail(error);
+              }
+              notify(
+                "Connection cancelled. Close any pending browser microphone prompt.",
+              );
+            }}
+          >
+            Cancel connection
+          </button>
+        )}
         <form
           className="chat-form"
           onSubmit={(e) => {
@@ -411,7 +503,9 @@ function VoiceAgentInner({
             placeholder={
               connected
                 ? "Send a message to the live agent…"
-                : "Try the scripted text demo…"
+                : config.production
+                  ? "Start live voice before sending a message"
+                  : "Try the scripted text demo…"
             }
             value={input}
             maxLength={2000}
@@ -419,7 +513,12 @@ function VoiceAgentInner({
           />
           <button
             aria-label="Send message"
-            disabled={busy || connecting || !input.trim()}
+            disabled={
+              busy ||
+              connecting ||
+              !input.trim() ||
+              (!!config.production && !connected)
+            }
           >
             <Send size={18} />
           </button>

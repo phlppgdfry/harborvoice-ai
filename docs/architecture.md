@@ -1,3 +1,22 @@
+# Production branch architecture
+
+The original reference architecture below is retained as historical context. This review
+branch adds a private persistent runtime: React → same-origin Express gateway → PostgreSQL
+for workspace/transcripts, while the server authenticates to ElevenLabs and grants signed
+session URLs. Browser audio streams directly through the official SDK. Human review
+remains authoritative; the synthetic TMS adapter is not a real logistics integration.
+
+The local durable-file deployment can retain SQLite. The Vercel production profile must
+use PostgreSQL and rejects browser persistence. An explicit static/demo build remains
+available separately and is not a production fallback. Agent selection is constrained to
+the configured private agent; no public administrative CRUD was added.
+
+See [deployment and recovery](deployment.md), [voice integration](elevenlabs-integration.md),
+[security](security.md) and [tests](testing.md). Production cloud/voice acceptance is pending
+external gates; this diagram does not assert a successful deployment.
+
+---
+
 # Architecture and operating boundaries
 
 ```mermaid

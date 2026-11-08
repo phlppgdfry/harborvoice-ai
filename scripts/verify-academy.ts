@@ -128,9 +128,9 @@ try {
   checks.push(
     "Native audiobook, dialogue, three voice previews, terminology comparison and video decode; playback is exclusive",
   );
-  mkdirSync("docs/screenshots", { recursive: true });
+  mkdirSync("var/browser-evidence", { recursive: true });
   await page.screenshot({
-    path: "docs/screenshots/academy-desktop.png",
+    path: "var/browser-evidence/academy-desktop.png",
     fullPage: true,
   });
   await page.setViewportSize({ width: 390, height: 844 });
@@ -141,7 +141,7 @@ try {
     "Mobile horizontal overflow",
   );
   await page.screenshot({
-    path: "docs/screenshots/academy-mobile.png",
+    path: "var/browser-evidence/academy-mobile.png",
     fullPage: true,
   });
   await page.evaluate(() =>
@@ -154,7 +154,7 @@ try {
   );
   assert.deepEqual(errors, []);
   writeFileSync(
-    "docs/academy-browser-verification.json",
+    "var/browser-evidence/academy-browser-verification.json",
     JSON.stringify(
       {
         at: new Date().toISOString(),
