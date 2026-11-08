@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-11-08T19:06:37.528Z",
+  "execution": "HarborVoice v2.1 Recognition Sprint",
+  "maximumAdditional": 25000,
+  "billingBuffer": 3000,
+  "minimumBalance": 49484,
+  "startingBalance": 74484,
+  "actualBalance": 65322,
+  "observedUsage": 9162,
+  "estimatedCommitted": 21756,
+  "providerReportedUsage": 3024,
+  "pendingReservations": 0,
+  "failedReservations": 5000,
+  "conservativeLiability": 21756,
+  "budgetRemaining": 244,
+  "completed": 9,
+  "pending": 0,
+  "failed": 2,
+  "previousBudget": {
+    "maximumAdditional": 50000,
+    "observedUsage": 35716,
+    "conservativeLiability": 44850.04,
+    "retainedUnbilledExposure": 9134.04,
+    "buffer": 5000
+  },
+  "operations": [
+    {
+      "key": "music-future-systems",
+      "workstream": "music-collection",
+      "estimate": 2500,
+      "status": "failed",
+      "reservedAt": "2026-11-08T18:16:01.351Z",
+      "updatedAt": "2026-11-08T19:01:39.135Z",
+      "note": "422 force_instrumental not allowed with composition_plan. No generation accepted; full reservation retained, no claim of zero billed cost.",
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "music-v2-future-systems",
+      "workstream": "music-collection",
+      "estimate": 2500,
+      "status": "failed",
+      "reservedAt": "2026-11-08T18:16:44.441Z",
+      "updatedAt": "2026-11-08T19:01:39.138Z",
+      "note": "422 MusicPrompt.sections is not the Music v2.5 chunks schema. Full reservation retained; corrected request used a distinct operation key.",
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "music-chunks-future-systems",
+      "workstream": "music-collection",
+      "estimate": 2500,
+      "status": "completed",
+      "reservedAt": "2026-11-08T18:18:07.176Z",
+      "updatedAt": "2026-11-08T18:18:13.368Z",
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "music-chunks-northern-lights",
+      "workstream": "music-collection",
+      "estimate": 2500,
+      "status": "completed",
+      "reservedAt": "2026-11-08T18:18:14.648Z",
+      "updatedAt": "2026-11-08T18:18:19.914Z",
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "music-chunks-human-intelligence",
+      "workstream": "music-collection",
+      "estimate": 2500,
+      "status": "completed",
+      "reservedAt": "2026-11-08T18:18:21.353Z",
+      "updatedAt": "2026-11-08T18:18:27.397Z",
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "learning-template-qa",
+      "workstream": "templates",
+      "estimate": 1800,
+      "status": "completed",
+      "reservedAt": "2026-11-08T18:19:02.489Z",
+      "updatedAt": "2026-11-08T18:31:17.765Z",
+      "note": "Component QA corrected truncated LLM output; original short audio retained as failure evidence, not final lesson.",
+      "providerReferenceCount": 9
+    },
+    {
+      "key": "learning-template-native-preview",
+      "workstream": "templates",
+      "estimate": 3600,
+      "status": "completed",
+      "reservedAt": "2026-11-08T18:25:44.230Z",
+      "updatedAt": "2026-11-08T18:31:17.767Z",
+      "note": "Native template preview completed; one selected example; UI confirms private published template. Final UI quote approximately3314 credits; exact bill not itemized.",
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "agent-context-experiments",
+      "workstream": "agents",
+      "estimate": 2200,
+      "status": "completed",
+      "reservedAt": "2026-11-08T18:37:50.417Z",
+      "updatedAt": "2026-11-08T18:40:27.133Z",
+      "reportedCredits": 1946,
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "studio-source-reconciliation",
+      "workstream": "studio",
+      "estimate": 600,
+      "status": "completed",
+      "reservedAt": "2026-11-08T18:40:29.732Z",
+      "updatedAt": "2026-11-08T18:46:16.651Z",
+      "reportedCredits": 656,
+      "note": "Native agent could not pin Flow asset: no ready version in Studio library; old timeline preserved. UI cumulative1197 minus prior541 =656.",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "studio-direct-file-reconciliation",
+      "workstream": "studio",
+      "estimate": 900,
+      "status": "completed",
+      "reservedAt": "2026-11-08T18:46:18.088Z",
+      "updatedAt": "2026-11-08T18:53:44.158Z",
+      "reportedCredits": 422,
+      "note": "Native Studio Agent confirms direct upload harborvoice-final-master.mp4 is pinned to the0–36s storyline; embedded audio and captions preserved. Cumulative UI1619 minus1197 =422. Caption sync still requires human review.",
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "learning-accessibility-transcript",
+      "workstream": "accessibility",
+      "estimate": 100,
+      "status": "completed",
+      "reservedAt": "2026-11-08T18:57:17.891Z",
+      "updatedAt": "2026-11-08T18:57:19.255Z",
+      "providerReferenceCount": 0
+    }
+  ],
+  "scope": "Separate sprint budget. Prior ledger and failed holds preserved in a private immutable snapshot. Account-wide observed changes include any concurrent or delayed billing, not exact per-job invoices."
+}

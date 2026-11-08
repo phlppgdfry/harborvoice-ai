@@ -5,6 +5,7 @@ const PortfolioEvidence = React.lazy(() => import("./PortfolioEvidence"));
 const ExperienceLab = React.lazy(() => import("./ExperienceLab"));
 const Academy = React.lazy(() => import("./Academy"));
 const MasteryLab = React.lazy(() => import("./MasteryLab"));
+const CommunityStudio = React.lazy(() => import("./CommunityStudio"));
 const EliteStudio = React.lazy(() => import("./EliteStudio"));
 import { LIVE_APP_URL } from "./deployment";
 const AudioStudio = React.lazy(() => import("./AudioStudio"));
@@ -60,6 +61,7 @@ const tabs = [
   ["Elite studio", Workflow],
   ["Academy", BookOpen],
   ["Mastery lab", FlaskConical],
+  ["Community studio", BookOpen],
   ["Voice agents", Mic],
   ["Audio studio", AudioLines],
   ["Knowledge base", BookOpen],
@@ -611,6 +613,11 @@ function App() {
           {page === "Elite studio" && (
             <React.Suspense fallback={<p>Loading productions…</p>}>
               <EliteStudio />
+            </React.Suspense>
+          )}
+          {page === "Community studio" && (
+            <React.Suspense fallback={<p>Loading contribution materials…</p>}>
+              <CommunityStudio />
             </React.Suspense>
           )}
           {page === "Mastery lab" && (

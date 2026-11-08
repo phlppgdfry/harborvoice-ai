@@ -44,3 +44,12 @@ Current read-only verification found Nora, four indexed knowledge sources, two c
 tools, authenticated sessions and signed-session issuance. These checks are narrower than
 'voice operational in production'. The other eight audio workflows retain their existing
 implementation and fixture coverage; permissions/plan/credits can differ by product.
+
+## Production content security policy
+
+The SDK's default blob/data AudioWorklets are blocked by the strict script policy. The
+application imports matching processors from the pinned SDK and its pinned resampler
+as separate same-origin Vite assets (`?url&no-inline`) and sets `workletPaths` and
+`libsampleratePath`. This avoids allowing arbitrary blob/data scripts or loading the
+resampler from a CDN. Vendor license notices ship under `public/vendor`. CI repeats the
+SDK fixture journey against the actual built Express app with production CSP headers.

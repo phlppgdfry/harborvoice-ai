@@ -177,9 +177,15 @@ try {
       .filter({ hasText: /customs.*hold|held.*customs/i })
       .first()
       .waitFor({ timeout: 8000 });
+    const saved = page.waitForResponse(
+      (r) =>
+        new URL(r.url()).pathname === "/api/sessions" &&
+        r.request().method() === "POST",
+    );
     await page
       .getByRole("button", { name: "End voice session", exact: true })
       .click();
+    assert.equal((await saved).status(), 200);
     clearTimeout(timer);
     await page
       .getByRole("button", { name: "Start live voice", exact: true })

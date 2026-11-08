@@ -1,6 +1,6 @@
 {
-  "version": "2.0.0",
-  "verifiedAt": "2026-11-08T00:27:46.106Z",
+  "version": "2.1.0",
+  "verifiedAt": "2026-11-08T18:24:58.653Z",
   "resources": [
     {
       "type": "agent-branch",
@@ -11,7 +11,7 @@
       "environment": "evaluation",
       "currentVersion": "agtvrsn_0301m6w8c2dvessrk4p8tgd6j695",
       "contentHash": "be48707bb1bab4ae09c1bc175fe18d82f79e47ae4af33ff0d753c25fb4d47862",
-      "lastVerifiedSynchronization": "2026-11-08T00:27:46.106Z",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "local-to-remote",
       "syncStatus": "IN SYNC"
     },
@@ -24,7 +24,7 @@
       "environment": "shared",
       "currentVersion": "2.0.0",
       "contentHash": "a7ab6a7783e67803489d9a3f354b16ae9b9eacc6bb77c9665d38c7f085f934d1",
-      "lastVerifiedSynchronization": "2026-11-08T00:27:46.106Z",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "local-to-remote",
       "syncStatus": "IN SYNC"
     },
@@ -37,7 +37,7 @@
       "environment": "shared",
       "currentVersion": "2.0.0",
       "contentHash": "bc63a87459d86a23c84bdf55c20ef433dfe03a694b301721f2d4fcd76de4f008",
-      "lastVerifiedSynchronization": "2026-11-08T00:27:46.106Z",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "local-to-remote",
       "syncStatus": "IN SYNC"
     },
@@ -50,7 +50,7 @@
       "environment": "shared",
       "currentVersion": "2.0.0",
       "contentHash": "f807d1ccebb3659eb8f1828ff99dba39363e87639be79bea1766e5dad57eb2e1",
-      "lastVerifiedSynchronization": "2026-11-08T00:27:46.106Z",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "local-to-remote",
       "syncStatus": "IN SYNC"
     },
@@ -63,7 +63,7 @@
       "environment": "shared",
       "currentVersion": "2.0.0",
       "contentHash": "4a1daa6cea0e8fc3f5e8c4bd2818b7d319daa7b3542ef8dcea1c3c18ed078c0e",
-      "lastVerifiedSynchronization": "2026-11-08T00:27:46.106Z",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "local-to-remote",
       "syncStatus": "IN SYNC"
     },
@@ -75,7 +75,7 @@
       "remoteObjectReference": "https://elevenlabs.io/app/flows/04Y2ZUoBsV1BQj9uMv9k",
       "environment": "workspace",
       "currentVersion": "native editable",
-      "lastVerifiedSynchronization": "2026-11-08T13:09:00.758203+00:00",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "manual-native-to-registry",
       "syncStatus": "MANUAL ACTION REQUIRED"
     },
@@ -87,7 +87,7 @@
       "remoteObjectReference": "https://elevenlabs.io/app/flows/autfYixTUdY8eSnjlDOb",
       "environment": "workspace",
       "currentVersion": "native editable",
-      "lastVerifiedSynchronization": "2026-11-08T13:09:00.758203+00:00",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "manual-native-to-registry",
       "syncStatus": "MANUAL ACTION REQUIRED"
     },
@@ -99,7 +99,7 @@
       "remoteObjectReference": "https://elevenlabs.io/app/flows/GznQuf5YZTpRrJQBpQSg",
       "environment": "workspace",
       "currentVersion": "native editable",
-      "lastVerifiedSynchronization": "2026-11-08T13:09:00.758203+00:00",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "manual-native-to-registry",
       "syncStatus": "MANUAL ACTION REQUIRED"
     },
@@ -111,7 +111,7 @@
       "remoteObjectReference": "https://elevenlabs.io/app/flows/E2fQbenOCnV06r0CVwQ0",
       "environment": "workspace",
       "currentVersion": "native editable",
-      "lastVerifiedSynchronization": "2026-11-08T13:09:00.758203+00:00",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "manual-native-to-registry",
       "syncStatus": "MANUAL ACTION REQUIRED"
     },
@@ -123,7 +123,7 @@
       "remoteObjectReference": "https://elevenlabs.io/app/voice-lab?voiceId=ZUpnQ45ABkkc2OcDuVHI",
       "environment": "private workspace",
       "currentVersion": "saved Voice Design",
-      "lastVerifiedSynchronization": "2026-11-08T00:27:46.106Z",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "remote-to-registry",
       "syncStatus": "IN SYNC"
     },
@@ -135,7 +135,7 @@
       "remoteObjectReference": "https://elevenlabs.io/app/voice-lab?voiceId=GXnX5R1mzyXfGGG0fF4s",
       "environment": "private workspace",
       "currentVersion": "saved Voice Design",
-      "lastVerifiedSynchronization": "2026-11-08T00:27:46.106Z",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "remote-to-registry",
       "syncStatus": "IN SYNC"
     },
@@ -147,33 +147,48 @@
       "remoteObjectReference": "https://elevenlabs.io/app/voice-lab?voiceId=pFO8yqt1betwfwbKm2y1",
       "environment": "private workspace",
       "currentVersion": "saved Voice Design",
-      "lastVerifiedSynchronization": "2026-11-08T00:27:46.106Z",
+      "lastVerifiedSynchronization": "2026-11-08T18:24:58.653Z",
       "syncDirection": "remote-to-registry",
       "syncStatus": "IN SYNC"
     },
     {
-      "type": "agent",
-      "identifier": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
-      "displayName": "Nora Enterprise v2 - Main",
-      "localSourcePath": "agent/enterprise-settings.ts",
-      "remoteObjectReference": "https://elevenlabs.io/app/agents/agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
-      "environment": "production",
-      "currentVersion": "agtvrsn_9601m6xjw36beketcgn7tzzze8zb",
-      "lastVerifiedSynchronization": "2026-11-08T12:42:01.697Z",
-      "syncDirection": "local-to-remote",
-      "syncStatus": "IN SYNC"
+      "type": "creative-template",
+      "identifier": "DkSzGeLnRPG557cTaRSf",
+      "displayName": "AI Learning Content Creator",
+      "localSourcePath": "docs/recognition/templates.md",
+      "remoteObjectReference": "https://elevenlabs.io/app/templates/DkSzGeLnRPG557cTaRSf",
+      "environment": "private-template",
+      "currentVersion": "2.1.0",
+      "contentHash": "ffe04f7982ee6c067e7ed494025ea6a51d075261161913e247273d5948355d00",
+      "lastVerifiedSynchronization": "2026-11-08T18:58:53.065895+00:00",
+      "syncDirection": "inventory-only",
+      "syncStatus": "MANUAL ACTION REQUIRED"
     },
     {
-      "type": "studio",
-      "identifier": "7IXHA48pFJqsSPSWtRtM",
-      "displayName": "HarborVoice Elite - Product Commercial",
-      "localSourcePath": "docs/elite/studio-evidence.json",
-      "remoteObjectReference": "https://elevenlabs.io/app/studio/7IXHA48pFJqsSPSWtRtM",
-      "environment": "workspace",
-      "currentVersion": "Native caption revision",
-      "lastVerifiedSynchronization": "2026-11-08T07:40:44.187182+00:00",
-      "syncDirection": "manual-native-to-registry",
+      "type": "flow",
+      "identifier": "fRthJyA26LAFJ6NqNi6g",
+      "displayName": "Cinematic Technology Soundtracks \u00b7 Review",
+      "localSourcePath": "docs/recognition/music-native.json",
+      "remoteObjectReference": "https://elevenlabs.io/app/flows/fRthJyA26LAFJ6NqNi6g",
+      "environment": "private-review",
+      "currentVersion": "2.1.0",
+      "contentHash": "3ce73eb8910b390a261aa54c1768e933ce5641a3a097409bd257e47d4426f004",
+      "lastVerifiedSynchronization": "2026-11-08T18:58:53.065895+00:00",
+      "syncDirection": "inventory-only",
       "syncStatus": "MANUAL ACTION REQUIRED"
+    },
+    {
+      "type": "agent-branch",
+      "identifier": "agtbrch_3001m6y70js1eejrt38cmgekye3j",
+      "displayName": "Recognition context experiments",
+      "localSourcePath": "docs/recognition/experiment-scenarios.json",
+      "remoteObjectReference": "https://elevenlabs.io/app/agents/agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
+      "environment": "evaluation",
+      "currentVersion": "2.1.0",
+      "contentHash": "65a6f5db3e21236fbb89dee1483d2cec2affa255880d9d92868b494a3bbb0bc4",
+      "lastVerifiedSynchronization": "2026-11-08T18:58:53.065895+00:00",
+      "syncDirection": "inventory-only",
+      "syncStatus": "IN SYNC"
     }
   ]
 }

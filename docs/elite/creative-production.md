@@ -9,3 +9,7 @@ Forced Alignment supplied word timings for all five narration scripts. Accessibl
 [Media integrity](media-integrity.json) records duration, dimensions, codecs, byte size and SHA256. Browser checks decode the three localized films and inspect desktop/mobile layouts. Visual frames were reviewed for hook, product and ending; subjective language and pronunciation quality still require native-speaker review. Do not claim testimonials, commercial adoption or real terminal integration.
 
 Plan observed: active Creator. No stock-person endorsement, cloned real person, personal voice recording or unlicensed external music was used. Native generated sources remain in their original Flows, and project-owned delivery copies are retained in Git. Changes made in native Studio are tracked separately in [Studio evidence](studio.md).
+
+## Reproduce the local delivery edit
+
+Install Node24 dependencies with `npm ci`, provide ffmpeg/ffprobe on PATH, and install the pinned Pillow dependency from `scripts/elite/requirements.txt` in an isolated Python environment. The Inter font and OFL license are bundled. Start the demo, run `node --import tsx scripts/elite/capture.ts`, then `python3 scripts/elite/produce-films.py` and `python3 scripts/elite/master-audio.py`. These local capture/edit commands make no paid generation request. Reproducing upstream synthesis is a separate explicit operation guarded by the credit ledger; do not regenerate the existing source media just to run the editor.

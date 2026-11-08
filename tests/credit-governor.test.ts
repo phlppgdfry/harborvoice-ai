@@ -108,3 +108,49 @@ test("a configuration cannot expand the owner-authorized maximum", async () => {
     f.close();
   }
 });
+
+test("a separate authorized sprint keeps the legacy policy and ledger intact", async () => {
+  const f = fixture();
+  try {
+    await f.g.initialize("legacy");
+    await f.g.reserve("old-failure", "studio", 500);
+    await f.g.update("old-failure", { status: "failed" });
+    const before = readFileSync(f.g.path, "utf8");
+    const sprint = new CreditGovernor(f.g.path + ".sprint", f.g.readSnapshot, {
+      minimumBillingBuffer: 3000,
+      minimumBalanceFloor: 0,
+    });
+    await sprint.initialize("recognition", 25000, 3000);
+    await sprint.reserve("music", "music", 22000);
+    await assert.rejects(sprint.reserve("extra", "music", 1), /hard stop/);
+    assert.equal(readFileSync(f.g.path, "utf8"), before);
+    const r = await sprint.report();
+    assert.equal(r.budgetRemaining, 0);
+    const strict = new CreditGovernor(sprint.path, f.g.readSnapshot);
+    await assert.rejects(strict.report(), /execution policy/);
+  } finally {
+    f.close();
+  }
+});
+
+test("execution-specific allowance cannot be expanded by changing initialization arguments", async () => {
+  const f = fixture();
+  try {
+    const sprint = new CreditGovernor(f.g.path + ".limited", f.g.readSnapshot, {
+      minimumBillingBuffer: 3000,
+      minimumBalanceFloor: 0,
+      maximumAdditional: 25000,
+    });
+    await assert.rejects(
+      sprint.initialize("sprint", 25001, 3000),
+      /authorized budget/,
+    );
+    await sprint.initialize("sprint", 25000, 3000);
+    const ledger = JSON.parse(readFileSync(sprint.path, "utf8"));
+    ledger.maximumAdditional = 30000;
+    writeFileSync(sprint.path, JSON.stringify(ledger));
+    await assert.rejects(sprint.report(), /execution policy/);
+  } finally {
+    f.close();
+  }
+});

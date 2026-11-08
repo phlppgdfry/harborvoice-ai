@@ -1,0 +1,14 @@
+{
+  "file": "public/recognition/reliable-enterprise-voice-ai.epub",
+  "wordsBeforeReferences": 6184,
+  "chaptersAndFrontmatter": 15,
+  "checks": [
+    "EPUB mimetype first and uncompressed",
+    "ZIP CRC integrity",
+    "All XML/XHTML well formed",
+    "Manifest and spine include every chapter",
+    "Text-only book; cover delivered separately"
+  ],
+  "sha256": "d21cf6f538092e332b6166f1f3fc9286e21a6be8b9bdc0601cb0ec8fd0aae365",
+  "scope": "Structural local validation, not an EPUBCheck or ElevenReader acceptance result. External publication pending owner approval."
+}

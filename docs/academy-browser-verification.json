@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-08T13:19:29.187Z",
-  "url": "http://127.0.0.1:5173/#academy",
+  "at": "2026-11-08T19:02:28.046Z",
+  "url": "http://127.0.0.1:5175/#academy",
   "browserPlugin": "Browser plugin not available; Playwright Chrome used",
   "checks": [
     "All twelve real lesson audio files decode in four languages",

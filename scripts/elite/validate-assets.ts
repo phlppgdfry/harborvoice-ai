@@ -1,6 +1,11 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
-const paths = ["public/academy", "public/elite", "public/experience"];
+const paths = [
+  "public/academy",
+  "public/elite",
+  "public/experience",
+  "public/recognition",
+];
 const files = paths
   .flatMap((dir) => readdirSync(dir).map((name) => dir + "/" + name))
   .filter((path) => /\.(mp3|mp4|m4b|epub|vtt|srt|jpg|png)$/.test(path));
@@ -18,7 +23,7 @@ if (process.argv.includes("--record")) {
     manifest,
     JSON.stringify(
       {
-        version: "2.0.0",
+        version: "2.1.0",
         scope:
           "Project-owned generated and recorded media. Safe copies; no signed URLs. Original source assets remain native. Full render specs and provenance live in docs/elite.",
         files: entries,

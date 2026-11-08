@@ -92,8 +92,8 @@ const ledgerSchema = z
     starting: snapshotSchema,
     latest: snapshotSchema,
     maximumAdditional: z.number().finite().positive().max(50_000),
-    minimumBalance: z.number().finite().min(55_000),
-    billingBuffer: z.number().finite().min(5_000),
+    minimumBalance: z.number().finite().nonnegative(),
+    billingBuffer: z.number().finite().min(3_000),
     operations: z.record(
       z.string(),
       z.object({
@@ -123,7 +123,27 @@ export class CreditGovernor {
   constructor(
     readonly path: string,
     readonly readSnapshot: () => Promise<CreditSnapshot>,
-  ) {}
+    readonly policy: {
+      minimumBillingBuffer: number;
+      minimumBalanceFloor: number;
+      maximumAdditional?: number;
+    } = {
+      minimumBillingBuffer: 5000,
+      minimumBalanceFloor: 55000,
+      maximumAdditional: 50000,
+    },
+  ) {
+    if (
+      !Number.isFinite(policy.minimumBillingBuffer) ||
+      policy.minimumBillingBuffer < 3000 ||
+      !Number.isFinite(policy.minimumBalanceFloor) ||
+      policy.minimumBalanceFloor < 0 ||
+      !Number.isFinite(policy.maximumAdditional ?? 50000) ||
+      (policy.maximumAdditional ?? 50000) > 50000 ||
+      (policy.maximumAdditional ?? 50000) <= 0
+    )
+      throw Error("Invalid execution policy.");
+  }
   private async locked<T>(run: () => Promise<T>) {
     mkdirSync(dirname(this.path), { recursive: true, mode: 0o700 });
     const lock = this.path + ".lock";
@@ -146,6 +166,14 @@ export class CreditGovernor {
     );
     if (!parsed.success)
       throw Error("Credit ledger failed validation; generation stopped.");
+    if (
+      parsed.data.billingBuffer < this.policy.minimumBillingBuffer ||
+      parsed.data.minimumBalance < this.policy.minimumBalanceFloor ||
+      parsed.data.maximumAdditional > (this.policy.maximumAdditional ?? 50000)
+    )
+      throw Error(
+        "Credit ledger violates execution policy; generation stopped.",
+      );
     return parsed.data;
   }
   private save(value: CreditLedger) {
@@ -163,9 +191,9 @@ export class CreditGovernor {
       if (
         !Number.isFinite(maximumAdditional) ||
         maximumAdditional <= 0 ||
-        maximumAdditional > 50_000 ||
+        maximumAdditional > (this.policy.maximumAdditional ?? 50_000) ||
         !Number.isFinite(billingBuffer) ||
-        billingBuffer < 5_000
+        billingBuffer < this.policy.minimumBillingBuffer
       )
         throw Error("Invalid authorized budget envelope.");
       const s = await this.readSnapshot();
@@ -179,7 +207,10 @@ export class CreditGovernor {
         starting: s,
         latest: s,
         maximumAdditional,
-        minimumBalance: Math.max(55_000, startingBalance - maximumAdditional),
+        minimumBalance: Math.max(
+          this.policy.minimumBalanceFloor,
+          startingBalance - maximumAdditional,
+        ),
         billingBuffer,
         operations: {},
       };

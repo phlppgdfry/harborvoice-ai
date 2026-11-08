@@ -48,6 +48,12 @@ if (apply) {
     await governor.reserve(key, "knowledge", 1000);
     await governor.update(key, { status: "pending", providerIds: [change.id] });
     try {
+      const fresh =
+        await sdk.conversationalAi.knowledgeBase.documents.getContent(
+          change.id,
+        );
+      if (contentHash(fresh.trim()) !== change.remoteHash)
+        throw Error("Knowledge changed after preview; update refused.");
       await sdk.conversationalAi.knowledgeBase.documents.update(change.id, {
         content: source.text,
       });
@@ -77,6 +83,19 @@ if (apply) {
           : "Content verified; inspect index before any paid retry.",
       });
       change.status = indexed ? "IN SYNC" : "MANUAL ACTION REQUIRED";
+      if (indexed) {
+        const resource = registry.resources.find(
+          (r: { identifier: string }) => r.identifier === change.id,
+        );
+        resource.contentHash = change.localHash;
+        resource.currentVersion = change.localHash;
+        resource.lastVerifiedSynchronization = new Date().toISOString();
+        resource.syncStatus = "IN SYNC";
+        writeFileSync(
+          "config/resources.json",
+          JSON.stringify(registry, null, 2) + "\n",
+        );
+      }
     } catch (e) {
       await governor.update(key, {
         status: "failed",

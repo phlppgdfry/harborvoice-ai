@@ -1,3 +1,6 @@
+import libsampleratePath from "@alexanderolsen/libsamplerate-js/dist/libsamplerate.worklet.js?url&no-inline";
+import rawAudioProcessor from "@elevenlabs/client/worklets/rawAudioProcessor.js?url&no-inline";
+import audioConcatProcessor from "@elevenlabs/client/worklets/audioConcatProcessor.js?url&no-inline";
 import { useState, useRef, useEffect } from "react";
 import { ConversationProvider, useConversation } from "@elevenlabs/react";
 import {
@@ -205,6 +208,8 @@ function VoiceAgentInner({
       await conversation.startSession({
         signedUrl,
         connectionType: "websocket",
+        workletPaths: { rawAudioProcessor, audioConcatProcessor },
+        libsampleratePath,
         overrides: { agent: { language: language as "en" } },
         clientTools: {
           lookup_shipment: async ({ reference }: { reference: string }) =>
@@ -249,8 +254,8 @@ function VoiceAgentInner({
             <p>
               {live
                 ? "Live ElevenLabs session"
-                : transcriptMode === "live"
-                  ? "Ended ElevenLabs session · saved transcript"
+                : transcriptMode === "live" && messages.length > 0
+                  ? "Live transcript · check Conversations for saved history"
                   : config.production
                     ? "Live voice · start a session to talk to Nora"
                     : "Scripted text demo · no AI or audio generated"}
