@@ -6,7 +6,7 @@
 
 [![HarborVoice product film](public/elite/film-poster.jpg)](public/elite/commercial-en.mp4)
 
-**v2.1 Recognition & Community Sprint:** [Community Studio](https://harborvoice-ai.vercel.app/#community-studio) adds a multilingual rehearsal, three original review tracks, a complete6,000+word technical book/EPUB and two isolated native agent experiments (**6/6** synthetic cases). The learning template is privately published; Showcase, Marketplace, Reader and program submissions remain unsubmitted. [Review the exact states and gaps](docs/recognition/final-report.md).
+**v2.1 Recognition & Community Sprint:** [Community Studio](https://harborvoice-ai.vercel.app/#community-studio) adds a multilingual rehearsal, three original review tracks, a complete technical book of more than 6,000 words and an EPUB and two isolated native agent experiments (**6/6** synthetic cases). The learning template is privately published; Showcase, Marketplace, Reader and program submissions remain unsubmitted. [Review the exact states and gaps](docs/recognition/final-report.md).
 
 Nora looks up synthetic shipments, explains source-grounded procedures and prepares human-review requests. The surrounding platform makes the engineering inspectable: versioned tests, native ElevenLabs resources, a Credit Governor, drift previews and reproducible production media.
 

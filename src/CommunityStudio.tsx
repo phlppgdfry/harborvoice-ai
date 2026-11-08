@@ -170,7 +170,7 @@ export default function CommunityStudio() {
         </div>
         <p className="muted">
           Real voice requires authorized access and provider availability. The
-          public trial has a fixed expiry. A Ghent event on11 December2026 has
+          public trial has a fixed expiry. A Ghent event on 11 December 2026 has
           not been confirmed.
         </p>
       </section>
@@ -187,7 +187,7 @@ export default function CommunityStudio() {
             <h2>Engineering you can explain.</h2>
             <p>
               Ten chapters on facts, tools, human review, language, evaluation
-              and cost. More than6,000 words before the references. Text-only
+              and cost. More than 6,000 words before the references. Text-only
               EPUB with practical exercises.
             </p>
             <a
@@ -234,10 +234,10 @@ export default function CommunityStudio() {
           <span className="eyebrow">RECORDED NATIVE TEMPLATE OUTPUT</span>
           <h2>A complete lesson, with inspectable words.</h2>
           <p>
-            This52-second example comes from the tested private Learning Content
-            Creator template. A real Scribe pass produced the accompanying
-            transcript. It is an educational review sample, not an official
-            qualification.
+            This 52-second example comes from the tested private Learning
+            Content Creator template. A real Scribe pass produced the
+            accompanying transcript. It is an educational review sample, not an
+            official qualification.
           </p>
           <audio
             controls

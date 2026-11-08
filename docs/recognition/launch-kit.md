@@ -10,7 +10,7 @@ HarborVoice makes voice-agent boundaries visible: exact-reference tools, grounde
 
 I built HarborVoice to explore a practical question: how can a multilingual voice assistant help with a business process without inventing authority?
 
-Nora checks fictional shipment records, explains documented procedures and prepares human-review proposals. The project includes real ElevenAgents evaluations, ElevenCreative workflows and speech integrations. The original expanded suite passed50/52; after corrections,10 focused regressions passed. A separate new six-case study examines language-switch handoffs and hostile tool content.
+Nora checks fictional shipment records, explains documented procedures and prepares human-review proposals. The project includes real ElevenAgents evaluations, ElevenCreative workflows and speech integrations. The original expanded suite passed 50/52; after corrections,10 focused regressions passed. A separate new six-case study examines language-switch handoffs and hostile tool content.
 
 The source, recorded demos, workshop starter and complete technical manuscript are available for review. This is an independent portfolio project, with synthetic business data and explicit limitations—not a connected terminal system or official ElevenLabs credential.
 
@@ -25,7 +25,7 @@ Source: https://github.com/phlppgdfry/harborvoice-ai
 
 ## Repository walkthrough, five minutes
 
-Start with the36-second commercial. Open the synthetic data and validated tools. Trace a negative case through a fixture and native report. Inspect the resource registry and reviewed-hash guard. Show the private template's actual inputs and the complete book package. End with the concrete limitations and contribution guide. Do not scroll through credentials, private reports or signed download links.
+Start with the 36-second commercial. Open the synthetic data and validated tools. Trace a negative case through a fixture and native report. Inspect the resource registry and reviewed-hash guard. Show the private template's actual inputs and the complete book package. End with the concrete limitations and contribution guide. Do not scroll through credentials, private reports or signed download links.
 
 ## Template announcement drafts
 
@@ -35,19 +35,19 @@ Start with the36-second commercial. Open the synthetic data and validated tools.
 
 ## Music collection introduction
 
-Cinematic Technology Soundtracks is a three-track original instrumental review collection: precise electronic momentum, atmospheric piano textures and warm human-centred uplift. Each60-second composition uses three deliberate Music v2.5 sections. Original artwork and provenance accompany the review files. Human listening and Marketplace rights/metadata review remain pending. Do not claim Marketplace availability, purchases or earnings.
+Cinematic Technology Soundtracks is a three-track original instrumental review collection: precise electronic momentum, atmospheric piano textures and warm human-centred uplift. Each 60-second composition uses three deliberate Music v2.5 sections. Original artwork and provenance accompany the review files. Human listening and Marketplace rights/metadata review remain pending. Do not claim Marketplace availability, purchases or earnings.
 
 ## Short demonstration
 
-Reuse the existing English commercial and78-second explainer, with Dutch/French variants for localization discussion. The Community Studio adds the new book, recorded tracks and deterministic VoiceBridge rehearsal. The film composition is local using genuine ElevenLabs outputs. No new expensive launch video was generated merely for activity.
+Reuse the existing English commercial and 78-second explainer, with Dutch/French variants for localization discussion. The Community Studio adds the new book, recorded tracks and deterministic VoiceBridge rehearsal. The film composition is local using genuine ElevenLabs outputs. No new expensive launch video was generated merely for activity.
 
 ## Four-week content calendar
 
-| Week       | Useful contribution                                        | Evidence and review gate                                                                                   |
-| ---------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Nov9–15    | Showcase review and tool-fixture tutorial                  | Approve the prepared submission; test the reader's reproduction steps. No PR before approval.              |
-| Nov16–22   | Grounding and multilingual-handoff breakdown               | Publish exact scenario scope and failures, not a universal benchmark.                                      |
-| Nov23–29   | Small workshop rehearsal and learning-template walkthrough | Workshop is proposed; recruit only after owner approval. Collect consent before any real-user observation. |
-| Nov30–Dec6 | Book excerpt and VoiceBridge three-minute rehearsal        | Approve author package; verify any2026 Ghent event independently before naming an attendance date.         |
+| Week         | Useful contribution                                        | Evidence and review gate                                                                                   |
+| ------------ | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Nov 9–15     | Showcase review and tool-fixture tutorial                  | Approve the prepared submission; test the reader's reproduction steps. No PR before approval.              |
+| Nov 16–22    | Grounding and multilingual-handoff breakdown               | Publish exact scenario scope and failures, not a universal benchmark.                                      |
+| Nov 23–29    | Small workshop rehearsal and learning-template walkthrough | Workshop is proposed; recruit only after owner approval. Collect consent before any real-user observation. |
+| Nov 30–Dec 6 | Book excerpt and VoiceBridge three-minute rehearsal        | Approve author package; verify any 2026 Ghent event independently before naming an attendance date.        |
 
 Success measures should be authentic feedback, a reproduced example, a useful bug report or an accepted contribution. Record metrics only after they occur. No engagement automation, artificial downloads or usage farming.

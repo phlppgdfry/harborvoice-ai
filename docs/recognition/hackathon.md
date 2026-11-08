@@ -4,7 +4,7 @@
 
 ## Date verification
 
-Checked 8 November 2026: [the official site](https://hackathon.elevenlabs.io/) names an evening on **11 December**, lists **Ghent**, says spaces are reviewed rather than first-come and registration does not guarantee acceptance. It does **not identify a year** in its readable event information. Historical listings refer to2025. An edition on **11 December2026 is not confirmed** by this evidence. Do not book travel or announce attendance on that assumption.
+Checked 8 November 2026: [the official site](https://hackathon.elevenlabs.io/) names an evening on **11 December**, lists **Ghent**, says spaces are reviewed rather than first-come and registration does not guarantee acceptance. It does **not identify a year** in its readable event information. Historical listings refer to 2025. An edition on **11 December 2026 is not confirmed** by this evidence. Do not book travel or announce attendance on that assumption.
 
 A current venue, registration deadline, team-size rule, judging rubric, permitted pre-existing work and official submission deadline were not established. The event page's registration/location controls require authenticated/interactive review. Before approval to register, the owner should verify the year's active event, Ghent host, accessibility, timing, team rules, reuse policy, licensing, submission format and data restrictions. Do not claim the existing project qualifies as a newly built hackathon entry.
 
@@ -33,4 +33,4 @@ Freeze source commit, agent version, tools, fixtures and scenario wording. Repor
 
 ## Current features researched
 
-The [2 November2026 changelog](https://elevenlabs.io/docs/changelog) says **Eleven Realtime is available to every workspace**; Mini and Max are complete voice-agent model choices. This is distinct from **Realtime Translation**, which remains Enterprise alpha. No Enterprise bypass is needed to investigate the former, and no live use of either model is claimed in this sprint. Existing Nora remains unchanged while trust-boundary experiments run on an isolated branch. New-model adoption requires a separately measured regression, not an untested production switch.
+The [2 November 2026 changelog](https://elevenlabs.io/docs/changelog) says **Eleven Realtime is available to every workspace**; Mini and Max are complete voice-agent model choices. This is distinct from **Realtime Translation**, which remains Enterprise alpha. No Enterprise bypass is needed to investigate the former, and no live use of either model is claimed in this sprint. Existing Nora remains unchanged while trust-boundary experiments run on an isolated branch. New-model adoption requires a separately measured regression, not an untested production switch.
