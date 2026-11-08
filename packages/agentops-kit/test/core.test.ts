@@ -229,3 +229,14 @@ test("inspector supports SDK-normalized and raw configuration fields", () => {
     "fr",
   );
 });
+test("JSON-imported string numbers and missing budget fields fail closed", () => {
+  assert.throws(() =>
+    budget({ ...p, reservations: "-10000" } as unknown as BudgetPolicy),
+  );
+  const missing = { ...p } as Partial<BudgetPolicy>;
+  delete missing.currentBalance;
+  assert.throws(() => budget(missing as BudgetPolicy));
+  assert.throws(() =>
+    budget({ ...p, coordinated: "true" } as unknown as BudgetPolicy),
+  );
+});

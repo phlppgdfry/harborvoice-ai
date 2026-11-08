@@ -12,10 +12,10 @@ See [versioned methodology](../../benchmarks/voice-ai/methodology.md). Eleven ca
 
 ## Actual new execution
 
-| Configuration | Passed contracts | Failed contracts | Evidence | New provider credits |
-|---|---:|---:|---|---:|
-| Unsafe baseline fixture | 80 / 110 | 30 / 110 | Local deterministic | 0 |
-| Corrected policy fixture | 110 / 110 | 0 / 110 | Local deterministic | 0 |
+| Configuration            | Passed contracts | Failed contracts | Evidence            | New provider credits |
+| ------------------------ | ---------------: | ---------------: | ------------------- | -------------------: |
+| Unsafe baseline fixture  |         80 / 110 |         30 / 110 | Local deterministic |                    0 |
+| Corrected policy fixture |        110 / 110 |          0 / 110 | Local deterministic |                    0 |
 
 ![Fixture-only failure counts by category](fixture-failures.svg)
 

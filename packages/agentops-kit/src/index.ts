@@ -266,9 +266,23 @@ export type BudgetPolicy = {
   snapshotAgeMs: number;
 };
 export function budget(p: BudgetPolicy) {
-  for (const [k, v] of Object.entries(p))
-    if (typeof v === "number" && (!Number.isFinite(v) || v < 0))
-      throw Error("Invalid budget field: " + k);
+  for (const key of [
+    "ceiling",
+    "buffer",
+    "floor",
+    "startingBalance",
+    "currentBalance",
+    "otherCommitments",
+    "reservations",
+    "providerReceipts",
+    "snapshotAgeMs",
+  ] as const) {
+    const value = p[key];
+    if (typeof value !== "number" || !Number.isFinite(value) || value < 0)
+      throw Error("Invalid budget field: " + key);
+  }
+  if (typeof p.coordinated !== "boolean")
+    throw Error("Explicit coordination state required.");
   if (p.currentBalance > p.startingBalance)
     throw Error(
       "Account counter or quota changed; reconcile before continuing.",
