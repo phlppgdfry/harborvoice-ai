@@ -21,12 +21,23 @@ assert.ok(
 );
 assert.ok(source.includes("50 of 52") && source.includes("10 targeted"));
 assert.ok(!/oobCode=|X-Goog-Signature=|sk_[a-zA-Z0-9]{20}/.test(source));
-for (const c of [
-  ...front.matchAll(
-    /^  - (agents|text-to-speech|speech-to-text|music|voices)$/gm,
-  ),
-])
-  assert.ok(c[1]);
+const categoryBlock = front.match(/^categories:\n((?:  - .+\n)+)/m)?.[1];
+assert.ok(categoryBlock, "Category block required");
+const allowed = new Set([
+  "agents",
+  "text-to-speech",
+  "speech-to-text",
+  "music",
+  "voices",
+]);
+const categories = categoryBlock!
+  .trim()
+  .split("\n")
+  .map((line) => line.trim().replace(/^- /, ""));
+assert.ok(
+  categories.length > 0 && categories.every((c) => allowed.has(c)),
+  "Unknown Showcase category",
+);
 const report = {
   checkedAt: new Date().toISOString(),
   upstreamCommit: "870ee29c311eaccd33425f326e72e14a120c69e2",

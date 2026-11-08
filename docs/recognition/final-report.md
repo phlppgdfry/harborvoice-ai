@@ -52,7 +52,7 @@ The commercial source clip cost-only preview returned **5,817.02 credits**, alre
 
 The exact release target, successful GitHub Verify/Pages runs and post-deployment browser/API receipts are recorded in the [v2.1.0 release](https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.1.0). Publication uses the existing exact-commit CI gate; final external verification is attached after the deployment completes.
 
-Implementation branch: `feat/recognition-v2.1`. Implementation source commit: `IMPLEMENTATION_COMMIT`. The release target additionally includes this delivery report. No force-push or history replacement.
+Implementation branch: `feat/recognition-v2.1`. Implementation source commit: `000ce86d2d6f9803c6c8948922a2680c561d12a5`. The release target additionally includes this delivery report. No force-push or history replacement.
 
 Live [Community Studio](https://harborvoice-ai.vercel.app/#community-studio) · [repository](https://github.com/phlppgdfry/harborvoice-ai).
 
