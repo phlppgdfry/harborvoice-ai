@@ -44,7 +44,8 @@
     "previewCount": 3,
     "description": "Warme, duidelijke Nederlandstalige vrouwenstem.",
     "text": "Welkom bij HarborVoice. We oefenen met fictieve zendingen, betrouwbare informatie en duidelijke menselijke controle. Zo helpen we klanten zorgvuldig verder.",
-    "savedToVoiceLibrary": false
+    "savedToVoiceLibrary": true,
+    "savedEvidence": "docs/elite/voice-engineering.json"
   },
   "scope": "Completed native ElevenCreative generations and requested fictional voice previews. The video is synthetic illustrative footage. No voice cloning or external person was used.",
   "uploadedTrainingAssets": [

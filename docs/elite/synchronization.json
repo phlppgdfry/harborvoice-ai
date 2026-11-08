@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-08T00:27:46.106Z",
+  "command": "accept-baseline",
+  "agent": {
+    "id": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
+    "branchId": "agtbrch_8401m6w7fx43e40vxgq7gs253chg",
+    "status": "IN SYNC",
+    "localHash": "be48707bb1bab4ae09c1bc175fe18d82f79e47ae4af33ff0d753c25fb4d47862",
+    "remoteHash": "be48707bb1bab4ae09c1bc175fe18d82f79e47ae4af33ff0d753c25fb4d47862",
+    "source": "agent/enterprise-settings.ts"
+  },
+  "knowledge": [
+    {
+      "name": "Gate & collection procedures",
+      "id": "0cWKuMvzyVrMJrwsZGIh",
+      "sourceHash": "a7ab6a7783e67803489d9a3f354b16ae9b9eacc6bb77c9665d38c7f085f934d1",
+      "remoteHash": "a7ab6a7783e67803489d9a3f354b16ae9b9eacc6bb77c9665d38c7f085f934d1",
+      "status": "IN SYNC"
+    },
+    {
+      "name": "Customs & exception playbook",
+      "id": "lqeVB5zAbP3PX07ycuTj",
+      "sourceHash": "bc63a87459d86a23c84bdf55c20ef433dfe03a694b301721f2d4fcd76de4f008",
+      "remoteHash": "bc63a87459d86a23c84bdf55c20ef433dfe03a694b301721f2d4fcd76de4f008",
+      "status": "IN SYNC"
+    },
+    {
+      "name": "Multilingual service guide",
+      "id": "upJ1H8u8g9Y5DcYmmuAA",
+      "sourceHash": "f807d1ccebb3659eb8f1828ff99dba39363e87639be79bea1766e5dad57eb2e1",
+      "remoteHash": "f807d1ccebb3659eb8f1828ff99dba39363e87639be79bea1766e5dad57eb2e1",
+      "status": "IN SYNC"
+    },
+    {
+      "name": "Disruption response",
+      "id": "BQTtheyqkToDdsLG8xmZ",
+      "sourceHash": "4a1daa6cea0e8fc3f5e8c4bd2818b7d319daa7b3542ef8dcea1c3c18ed078c0e",
+      "remoteHash": "4a1daa6cea0e8fc3f5e8c4bd2818b7d319daa7b3542ef8dcea1c3c18ed078c0e",
+      "status": "IN SYNC"
+    }
+  ],
+  "creative": {
+    "status": "MANUAL ACTION REQUIRED",
+    "registry": "config/elite-flows.json",
+    "reason": "Native Flow/Studio edits are preserved. No supported bidirectional project serializer or Creator-tier Templates API."
+  },
+  "scope": "Read-only by default. Apply changes only managed agent fields and requires a reviewed exact remote hash. Knowledge drift is detected from actual content; replacement/indexing is an explicit separate operation. No media generation."
+}

@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-11-08T00:24:36.129Z",
+  "status": "VERIFIED LIVE",
+  "input": "First six seconds of the synthetic English product narration",
+  "scope": "Real Scribe v2 realtime session with recorded PCM streamed at real-time pace, not a human microphone or agent voice conversation.",
+  "events": [
+    {
+      "type": "session_started",
+      "elapsedMs": 216
+    },
+    {
+      "type": "partial_transcript",
+      "elapsedMs": 1411,
+      "text": "A shipment is-"
+    },
+    {
+      "type": "partial_transcript",
+      "elapsedMs": 1429,
+      "text": "A shipment is waiting."
+    },
+    {
+      "type": "partial_transcript",
+      "elapsedMs": 2407,
+      "text": "A shipment is waiting. A customer needs an"
+    },
+    {
+      "type": "partial_transcript",
+      "elapsedMs": 3406,
+      "text": "A shipment is waiting. A customer needs an answer."
+    },
+    {
+      "type": "partial_transcript",
+      "elapsedMs": 4431,
+      "text": "A shipment is waiting, a customer needs an answer, and a guest-"
+    },
+    {
+      "type": "partial_transcript",
+      "elapsedMs": 5412,
+      "text": "A shipment is waiting. A customer needs an answer, and a guess is not good"
+    },
+    {
+      "type": "committed_transcript",
+      "elapsedMs": 6376,
+      "text": "A shipment is waiting. A customer needs an answer, and a guess is not good enough."
+    }
+  ]
+}

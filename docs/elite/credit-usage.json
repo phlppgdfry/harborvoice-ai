@@ -1,0 +1,239 @@
+{
+  "checkedAt": "2026-11-08T13:09:03.197Z",
+  "execution": "HarborVoice v2.0.0 Elite",
+  "maximumAdditional": 50000,
+  "minimumBalance": 60200,
+  "billingBuffer": 5000,
+  "startingBalance": 110200,
+  "actualBalance": 74484,
+  "observedUsage": 35716,
+  "estimatedCommitted": 44850.04,
+  "providerReportedUsage": 32948.47963,
+  "pendingReservations": 0,
+  "failedReservations": 500,
+  "conservativeLiability": 44850.04,
+  "budgetRemaining": 149.95999999999913,
+  "completed": 22,
+  "pending": 0,
+  "failed": 1,
+  "operations": [
+    {
+      "key": "cinematic-shots",
+      "workstream": "creative",
+      "estimate": 6200,
+      "status": "completed",
+      "reservedAt": "2026-11-07T20:54:04.487Z",
+      "updatedAt": "2026-11-07T23:59:57.203Z",
+      "reportedCredits": 5817.018240000001,
+      "providerReferenceCount": 3
+    },
+    {
+      "key": "audio-commercial-en",
+      "workstream": "voice",
+      "estimate": 502,
+      "status": "completed",
+      "reservedAt": "2026-11-07T23:57:48.845Z",
+      "updatedAt": "2026-11-07T23:57:54.182Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "audio-commercial-nl",
+      "workstream": "voice",
+      "estimate": 536,
+      "status": "completed",
+      "reservedAt": "2026-11-07T23:57:55.615Z",
+      "updatedAt": "2026-11-07T23:58:02.801Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "audio-commercial-fr",
+      "workstream": "voice",
+      "estimate": 558,
+      "status": "completed",
+      "reservedAt": "2026-11-07T23:58:04.129Z",
+      "updatedAt": "2026-11-07T23:58:09.342Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "audio-explainer-en",
+      "workstream": "voice",
+      "estimate": 1297,
+      "status": "completed",
+      "reservedAt": "2026-11-07T23:58:10.596Z",
+      "updatedAt": "2026-11-07T23:58:23.623Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "audio-briefing-en",
+      "workstream": "voice",
+      "estimate": 769,
+      "status": "completed",
+      "reservedAt": "2026-11-07T23:58:24.882Z",
+      "updatedAt": "2026-11-07T23:58:32.575Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "original-score",
+      "workstream": "music",
+      "estimate": 3000,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:00:51.637Z",
+      "updatedAt": "2026-11-08T00:00:59.585Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "align-commercial-en",
+      "workstream": "captions",
+      "estimate": 150,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:01:49.689Z",
+      "updatedAt": "2026-11-08T00:01:50.200Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "align-commercial-nl",
+      "workstream": "captions",
+      "estimate": 150,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:01:51.586Z",
+      "updatedAt": "2026-11-08T00:01:52.219Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "align-commercial-fr",
+      "workstream": "captions",
+      "estimate": 150,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:01:53.449Z",
+      "updatedAt": "2026-11-08T00:01:53.927Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "align-explainer-en",
+      "workstream": "captions",
+      "estimate": 150,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:01:55.177Z",
+      "updatedAt": "2026-11-08T00:01:56.111Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "align-briefing-en",
+      "workstream": "captions",
+      "estimate": 150,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:01:57.452Z",
+      "updatedAt": "2026-11-08T00:01:58.334Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "enterprise-suite",
+      "workstream": "agents",
+      "estimate": 16000,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:08:34.180Z",
+      "updatedAt": "2026-11-08T00:12:06.173Z",
+      "reportedCredits": 16622,
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "native-localization",
+      "workstream": "localization",
+      "estimate": 6300,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:16:09.287Z",
+      "updatedAt": "2026-11-08T00:22:29.447Z",
+      "reportedCredits": 5957.404200000001,
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "enterprise-remediation",
+      "workstream": "agents",
+      "estimate": 3500,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:19:19.218Z",
+      "updatedAt": "2026-11-08T00:22:32.403Z",
+      "reportedCredits": 2967,
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "native-learning",
+      "workstream": "flows",
+      "estimate": 500,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:19:21.079Z",
+      "updatedAt": "2026-11-08T00:23:43.124Z",
+      "reportedCredits": 312.9687,
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "native-briefing",
+      "workstream": "flows",
+      "estimate": 40,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:19:25.755Z",
+      "updatedAt": "2026-11-08T00:23:43.720Z",
+      "reportedCredits": 216.04,
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "realtime-scribe",
+      "workstream": "transcription",
+      "estimate": 300,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:24:29.751Z",
+      "updatedAt": "2026-11-08T00:24:36.129Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "studio-session",
+      "workstream": "studio",
+      "estimate": 2000,
+      "status": "completed",
+      "reservedAt": "2026-11-08T00:27:48.688Z",
+      "updatedAt": "2026-11-08T07:40:46.176Z",
+      "reportedCredits": 541,
+      "note": "Studio UI reported 541 agent credits; caption transcription is not independently itemized.",
+      "providerReferenceCount": 1
+    },
+    {
+      "key": "streaming-speech",
+      "workstream": "voice",
+      "estimate": 200,
+      "status": "completed",
+      "reservedAt": "2026-11-08T12:44:47.271Z",
+      "updatedAt": "2026-11-08T12:44:47.735Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "dialogue-diarization",
+      "workstream": "transcription",
+      "estimate": 500,
+      "status": "completed",
+      "reservedAt": "2026-11-08T12:44:48.981Z",
+      "updatedAt": "2026-11-08T12:44:50.297Z",
+      "providerReferenceCount": 0
+    },
+    {
+      "key": "illustration-processing",
+      "workstream": "creative",
+      "estimate": 600,
+      "status": "completed",
+      "reservedAt": "2026-11-08T13:00:24.526Z",
+      "updatedAt": "2026-11-08T13:03:19.082Z",
+      "reportedCredits": 515.04849,
+      "providerReferenceCount": 2
+    },
+    {
+      "key": "studio-final-revision",
+      "workstream": "studio",
+      "estimate": 500,
+      "status": "failed",
+      "reservedAt": "2026-11-08T13:04:42.156Z",
+      "updatedAt": "2026-11-08T13:09:00.668Z",
+      "note": "No new Studio Agent request was submitted: native browser tab was discarded/changed during repeated UI checks. Final masters are synchronized as native Flow assets; editable caption project retains its earlier cut. Conservative reservation retained.",
+      "providerReferenceCount": 1
+    }
+  ],
+  "scope": "Account-wide observed delta. Estimates remain reserved after completion or failure to cover delayed billing. No attribution of concurrent external usage. Provider IDs and credentials stay private. Ledger uses exclusive filesystem locking and atomic replacement; hosted serverless requests must not use this local ledger."
+}

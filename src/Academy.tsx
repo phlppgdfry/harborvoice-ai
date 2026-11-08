@@ -414,8 +414,9 @@ export default function Academy() {
           <span className="soft-tag">Voice Design previews</span>
         </div>
         <p>
-          {creative.voiceDesign.description} These are three previews of an
-          original fictional voice. Existing production voices remain in use.
+          {creative.voiceDesign.description} These samples belong to three
+          original fictional training voices, now saved in the private
+          workspace. Existing production voices remain in use.
         </p>
         <blockquote className="heard-transcript" lang="nl">
           {creative.voiceDesign.text}

@@ -1,0 +1,4 @@
+{
+  "text": "Harbor Voice Operations briefing. This is a fictional training example. Shipment HV2048 has a recorded customs hold. The assistant can report the record and explain the published procedure. It cannot remove the hold. If a customer requests help, create a pending review request with the exact reference and a concrete reason. Check the tool result before describing its outcome. Never turn a proposed action into a completed one. Before demonstrating the system, verify the knowledge index, test the failure path, and confirm the account budget. Good automation makes the next decision clearer.",
+  "scope": "Real native Scribe transcription of synthetic briefing, not a human transcript review."
+}

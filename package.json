@@ -1,6 +1,6 @@
 {
   "name": "harborvoice-ai",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "description": "A logistics voice operations workbench powered by ElevenLabs",
@@ -12,10 +12,10 @@
     "check": "npm run build && npm test",
     "agent:provision": "tsx scripts/provision-agent.ts",
     "test:browser": "node --import tsx scripts/browser-check.ts",
-    "format": "prettier --write src server scripts tests agent api docs/*.md README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml vercel.json",
-    "format:check": "prettier --check src server scripts tests agent api docs/*.md README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml vercel.json",
+    "format": "prettier --write src server scripts tests agent api lib config docs README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml vercel.json",
+    "format:check": "prettier --check src server scripts tests agent api lib config docs README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml vercel.json",
     "verify:live": "tsx scripts/verify-live.ts",
-    "agent:sync": "tsx scripts/sync-agent.ts",
+    "agent:sync": "node --import tsx scripts/elite/resources.ts dry-run",
     "agent:evaluate": "tsx scripts/evaluate-agent.ts",
     "verify:hosted": "tsx scripts/verify-hosted.ts",
     "guest:provision": "tsx scripts/provision-guest.ts",
@@ -23,7 +23,20 @@
     "academy:build": "tsx scripts/build-academy.ts",
     "academy:package": "tsx scripts/package-academy.ts",
     "academy:native": "tsx scripts/academy-native.ts",
-    "test:academy": "node --import tsx scripts/verify-academy.ts"
+    "test:academy": "node --import tsx scripts/verify-academy.ts",
+    "elite:budget": "node --import tsx scripts/elite/budget.ts",
+    "elite:voices": "node --import tsx scripts/elite/save-voices.ts",
+    "resources:inventory": "node --import tsx scripts/elite/resources.ts inventory",
+    "sync:dry-run": "node --import tsx scripts/elite/resources.ts dry-run",
+    "sync:apply": "node --import tsx scripts/elite/resources.ts apply",
+    "sync:drift": "node --import tsx scripts/elite/resources.ts drift",
+    "assets:verify": "node --import tsx scripts/elite/validate-assets.ts",
+    "elite:validate": "node --import tsx scripts/elite/validate-publication.ts && npm run assets:verify",
+    "elite:evaluate": "node --import tsx scripts/elite/evaluate.ts",
+    "elite:remediate": "node --import tsx scripts/elite/remediate.ts",
+    "budget:report": "node --import tsx scripts/elite/budget.ts report",
+    "test:elite": "node --import tsx scripts/elite/browser-check.ts",
+    "knowledge:sync": "node --import tsx scripts/elite/knowledge-sync.ts"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "2.77.0",
@@ -50,7 +63,8 @@
     "prettier": "^3.9.10",
     "tsx": "^4.0.0",
     "typescript": "^5.9.0",
-    "vite": "8.3.6"
+    "vite": "8.3.6",
+    "ws": "8.22.1"
   },
   "engines": {
     "node": "24.x"

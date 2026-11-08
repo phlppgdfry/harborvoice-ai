@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-11-08T13:12:31.807Z",
+  "mode": "dry-run",
+  "planHash": "0ab0b571401447090c142de9cd2c3f81228148bc760983675b877163b820a244",
+  "scope": "Compare actual source/remote text, preserve native IDs and refuse remote edits. Unchanged content triggers no writes or indexing. Changed-source application requires reviewed plan hash and credit reservation. Current execution verified the unchanged path; changed-content update is implemented but not live-exercised.",
+  "documents": [
+    {
+      "id": "0cWKuMvzyVrMJrwsZGIh",
+      "name": "Gate & collection procedures",
+      "localHash": "a7ab6a7783e67803489d9a3f354b16ae9b9eacc6bb77c9665d38c7f085f934d1",
+      "remoteHash": "a7ab6a7783e67803489d9a3f354b16ae9b9eacc6bb77c9665d38c7f085f934d1",
+      "status": "IN SYNC"
+    },
+    {
+      "id": "lqeVB5zAbP3PX07ycuTj",
+      "name": "Customs & exception playbook",
+      "localHash": "bc63a87459d86a23c84bdf55c20ef433dfe03a694b301721f2d4fcd76de4f008",
+      "remoteHash": "bc63a87459d86a23c84bdf55c20ef433dfe03a694b301721f2d4fcd76de4f008",
+      "status": "IN SYNC"
+    },
+    {
+      "id": "upJ1H8u8g9Y5DcYmmuAA",
+      "name": "Multilingual service guide",
+      "localHash": "f807d1ccebb3659eb8f1828ff99dba39363e87639be79bea1766e5dad57eb2e1",
+      "remoteHash": "f807d1ccebb3659eb8f1828ff99dba39363e87639be79bea1766e5dad57eb2e1",
+      "status": "IN SYNC"
+    },
+    {
+      "id": "BQTtheyqkToDdsLG8xmZ",
+      "name": "Disruption response",
+      "localHash": "4a1daa6cea0e8fc3f5e8c4bd2818b7d319daa7b3542ef8dcea1c3c18ed078c0e",
+      "remoteHash": "4a1daa6cea0e8fc3f5e8c4bd2818b7d319daa7b3542ef8dcea1c3c18ed078c0e",
+      "status": "IN SYNC"
+    }
+  ]
+}

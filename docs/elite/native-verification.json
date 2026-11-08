@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-07T20:53:30.220Z",
+  "agent": {
+    "name": "HarborVoice · Nora",
+    "id": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
+    "knowledgeDocuments": 4,
+    "clientTools": 2,
+    "ragEnabled": true
+  },
+  "studio": {
+    "status": "PLAN RESTRICTED",
+    "httpStatus": 403,
+    "message": "Studio API requires explicit account allowlisting; native UI remains separate."
+  },
+  "cliPull": {
+    "status": "VERIFIED LIVE",
+    "isolated": true
+  }
+}

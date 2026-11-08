@@ -96,3 +96,5 @@ Enterprise identity and tenant isolation; caller authorisation; service-side too
 ## Credential loading
 
 The server entry point and provisioning/read-only verification scripts import `server/environment.ts`, which loads ignored `.env.local` first and `.env` second, without overriding inherited process credentials. Official onboarding owns `.env.local`; the real agent ID is stored in ignored `.env`. No API key is placed in client bundles or MCP configuration files. The static GitHub Pages demo has no access to these local files.
+
+For the v2 resource ownership, budget governor, live scope and deployment gate, see [Elite architecture](elite/architecture.md) and [release report](elite/release-report.md). Historical incomplete-coverage statements above are superseded by the dated evidence in `docs/elite`.

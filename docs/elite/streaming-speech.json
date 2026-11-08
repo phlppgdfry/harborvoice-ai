@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-11-08T12:44:47.734Z",
+  "status": "VERIFIED LIVE",
+  "model": "eleven_flash_v2_5",
+  "firstByteMs": 315.26516600000014,
+  "totalRequestMs": 461.9961659999999,
+  "durationSeconds": 4.5975,
+  "file": "elite/streaming-speech.mp3",
+  "sampleCount": 1,
+  "scope": "One real HTTP streaming TTS request. First byte includes network/setup overhead; not voice-agent turn latency or a percentile benchmark."
+}

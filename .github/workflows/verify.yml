@@ -17,6 +17,7 @@ jobs:
       - run: npm ci
       - run: npm run format:check
       - run: npm run check
+      - run: npm run elite:validate
       - run: npx playwright install --with-deps chromium
       - name: Browser walkthrough
         env:
@@ -29,6 +30,7 @@ jobs:
           done
           npm run test:browser
           npm run test:academy
+          npm run test:elite
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -37,4 +39,6 @@ jobs:
             docs/screenshots/
             docs/browser-verification.json
             docs/academy-browser-verification.json
+            docs/elite/browser-verification.json
+            docs/elite/screenshots/
             var/browser-failure.png

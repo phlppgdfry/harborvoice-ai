@@ -1,0 +1,14 @@
+# Reusable native factories
+
+All four native resources are listed in [elite-flows.json](../../config/elite-flows.json). Keep the originals editable and duplicate deliberately when a new product needs a separate history. Existing node generations must be inspected before rerunning; opening a flow is not a generation.
+
+| Native flow                       | Input contract                                                           | Real execution                                  | Output and boundary                                                                                                            |
+| --------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Product Commercial Factory        | Product facts, fictional setting, brand palette, individual shot prompts | Three distinct 8-second LTX 2 Fast takes        | Native footage feeds the reproducible **local** film edit. There is no claim of a fully automated native composition template. |
+| Multilingual Localization Factory | Owned English narration and target language                              | French Dubbing v2 of the product narration      | Native French audio for human comparison. Dutch node exists but was not run for this source.                                   |
+| Learning Content Factory          | Versioned short lesson script, language and voice                        | Connected script-to-Eleven v4 narration         | Native training audio; quiz metadata and Academy publishing remain in Git.                                                     |
+| Enterprise Audio Factory          | Synthetic executive briefing recording                                   | Connected source-to-native Scribe transcription | Inspectable transcript; human review before publication.                                                                       |
+
+Reuse: change the input/script or source asset, preserve domain restrictions, estimate the selected downstream nodes, reserve the complete allowance, run only changed nodes, record session IDs and poll their status. Keep human language/caption review and export as explicit stages. An accepted generation is not proof of a finished output.
+
+Templates API and Ads Engine require Pro or higher in the official documentation, while this execution observed Creator. Template publishing and public parameterized execution were therefore not claimed. The MCP integration also exposed no additional supported composition-operation/template helpers when queried. Local editing is documented as local editing, not native Studio generation.

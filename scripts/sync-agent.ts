@@ -5,6 +5,10 @@ import { client, agentId } from "../server/elevenlabs.js";
 import { agentSettings } from "../agent/settings.js";
 import { scenarios } from "../agent/scenarios.js";
 import { initialState } from "../src/domain.js";
+if (!process.argv.includes("--legacy-v1"))
+  throw new Error(
+    "Legacy v1 publisher disabled. Use npm run sync:dry-run and the reviewed sync:apply command for Enterprise v2.",
+  );
 const sdk = client(),
   id = agentId();
 const bootstrap = JSON.parse(

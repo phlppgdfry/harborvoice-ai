@@ -1,10 +1,35 @@
 import { ArrowUpRight, Download } from "lucide-react";
 import evaluation from "../docs/agent-evaluation.json";
+import enterprise from "../docs/elite/evaluation.json";
+import regression from "../docs/elite/remediation.json";
 import { exportJson } from "./api";
 
 export default function PortfolioEvidence() {
   return (
     <div className="two-column">
+      <section className="panel padded">
+        <h2>Nora Enterprise v2</h2>
+        <p>
+          The initial suite passed {enterprise.passed} /{" "}
+          {enterprise.scenarioCount} provider text simulations. After correcting
+          the two observed problems, {regression.passed} / {regression.total}{" "}
+          targeted regression cases passed.
+        </p>
+        <p>
+          The final prompt did not receive another complete 52-case run.
+          Business tool responses are synthetic fixtures; these are not
+          microphone tests or a certification.
+        </p>
+        <a
+          className="button"
+          href="https://github.com/phlppgdfry/harborvoice-ai/blob/main/docs/elite/evaluations.md"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Inspect the complete evaluation conditions
+          <ArrowUpRight size={15} />
+        </a>
+      </section>
       <section className="panel padded">
         <div className="studio-title">
           <h2>Real agent evaluation</h2>

@@ -1,0 +1,166 @@
+WEBVTT
+
+00:00:01.100 --> 00:00:02.320
+Every   useful   voice  
+
+00:00:02.320 --> 00:00:03.680
+AI   project   starts  
+
+00:00:03.680 --> 00:00:04.320
+with   a   business  
+
+00:00:04.320 --> 00:00:06.400
+question.   In   HarborVoice,  
+
+00:00:06.400 --> 00:00:07.260
+that   question   is  
+
+00:00:07.260 --> 00:00:08.640
+simple:   where   is  
+
+00:00:08.640 --> 00:00:10.080
+my   shipment?   The  
+
+00:00:10.080 --> 00:00:10.880
+terminal   and   its  
+
+00:00:10.880 --> 00:00:11.981
+records   are   fictional.  
+
+00:00:12.540 --> 00:00:13.840
+The   engineering   boundaries  
+
+00:00:13.840 --> 00:00:15.520
+are   real.   Nora  
+
+00:00:15.520 --> 00:00:16.079
+asks   for   an  
+
+00:00:16.079 --> 00:00:17.680
+exact   reference,   then  
+
+00:00:17.680 --> 00:00:18.500
+calls   the   shipment  
+
+00:00:18.500 --> 00:00:19.900
+lookup   tool.   A  
+
+00:00:19.900 --> 00:00:21.420
+recorded   customs   hold  
+
+00:00:21.420 --> 00:00:22.360
+stays   a   customs  
+
+00:00:22.360 --> 00:00:23.880
+hold.   An   estimated  
+
+00:00:23.880 --> 00:00:25.040
+arrival   stays   an  
+
+00:00:25.040 --> 00:00:26.580
+estimate.   The   knowledge  
+
+00:00:26.580 --> 00:00:27.920
+base   explains   published  
+
+00:00:27.920 --> 00:00:29.360
+procedures,   while   tool  
+
+00:00:29.360 --> 00:00:30.400
+results   provide   the  
+
+00:00:30.400 --> 00:00:31.980
+shipment   facts.   If  
+
+00:00:31.980 --> 00:00:33.200
+a   lookup   fails,  
+
+00:00:33.200 --> 00:00:34.180
+Nora   must   say  
+
+00:00:34.180 --> 00:00:35.260
+so.   If   the  
+
+00:00:35.260 --> 00:00:36.540
+customer   needs   help,  
+
+00:00:36.540 --> 00:00:37.560
+the   assistant   prepares  
+
+00:00:37.560 --> 00:00:38.300
+a   request   for  
+
+00:00:38.300 --> 00:00:40.080
+human   review.   Pending  
+
+00:00:40.080 --> 00:00:41.000
+review   does   not  
+
+00:00:41.000 --> 00:00:42.720
+mean   approved,   transferred  
+
+00:00:42.720 --> 00:00:44.160
+or   released.   The  
+
+00:00:44.160 --> 00:00:45.360
+public   visitor   agent  
+
+00:00:45.360 --> 00:00:46.280
+has   a   separate,  
+
+00:00:46.280 --> 00:00:47.520
+read-only   tool   and  
+
+00:00:47.520 --> 00:00:48.420
+a   bounded   trial  
+
+00:00:48.420 --> 00:00:50.160
+window.   The   engineering  
+
+00:00:50.160 --> 00:00:51.680
+workspace   adds   versioned  
+
+00:00:51.680 --> 00:00:54.020
+scenarios,   provider   simulations  
+
+00:00:54.020 --> 00:00:55.160
+and   explicit   failure  
+
+00:00:55.160 --> 00:00:57.020
+cases.   These   results  
+
+00:00:57.020 --> 00:00:58.120
+describe   the   tests  
+
+00:00:58.120 --> 00:00:58.701
+that   were   run;  
+
+00:00:59.180 --> 00:00:59.720
+they   do   not  
+
+00:00:59.720 --> 00:01:00.980
+promise   perfect   future  
+
+00:01:00.980 --> 00:01:03.080
+conversations.   Explore   the  
+
+00:01:03.080 --> 00:01:05.019
+working   demonstration,   inspect  
+
+00:01:05.019 --> 00:01:05.879
+the   source   and  
+
+00:01:05.879 --> 00:01:06.921
+compare   the   evidence.  
+
+00:01:07.600 --> 00:01:09.260
+HarborVoice   brings   voice,  
+
+00:01:09.260 --> 00:01:10.300
+knowledge   and   human  
+
+00:01:10.300 --> 00:01:11.580
+control   into   one  
+
+00:01:11.580 --> 00:01:12.860
+transparent   workflow.
