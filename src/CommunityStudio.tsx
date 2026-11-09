@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowUpRight, BookOpen, Headphones, ShieldCheck } from "lucide-react";
 import music from "../docs/recognition/music-collection.json";
-import lesson from "../public/recognition/learning-transcript.json";
+import lesson from "../public/recognition/learning-revised-transcript.json";
 import experiments from "../docs/recognition/agent-experiments.json";
 import { initialState } from "./domain";
 import "./community.css";
@@ -234,8 +234,8 @@ export default function CommunityStudio() {
           <span className="eyebrow">RECORDED NATIVE TEMPLATE OUTPUT</span>
           <h2>A complete lesson, with inspectable words.</h2>
           <p>
-            This 52-second example comes from the tested private Learning
-            Content Creator template. A real Scribe pass produced the
+            This revised 61-second example comes from the tested private
+            Learning Content Creator template. A real Scribe pass produced the
             accompanying transcript. It is an educational review sample, not an
             official qualification.
           </p>
@@ -243,12 +243,15 @@ export default function CommunityStudio() {
             controls
             preload="none"
             aria-label="Native learning example"
-            src={base + "learning-example.mp3"}
+            src={base + "learning-revised.mp3"}
           />
           <details>
             <summary>Read the lesson transcript</summary>
             <p>{lesson.text}</p>
           </details>
+          <a href={base + "learning-revised-quiz.txt"} download>
+            Download the reviewed quiz and answers
+          </a>
           <a
             href="https://elevenlabs.io/app/templates/DkSzGeLnRPG557cTaRSf"
             target="_blank"

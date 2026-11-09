@@ -1,3 +1,5 @@
+> Updated authority: the owner later authorized 10,000 credits and confirmed other paid sessions paused. The native learning preview, Scribe QA and Studio repair/export are separately reserved in paid-closeout.json. The optional agent experiment below was not executed; its old zero-budget wording is historical and does not replace the new ledger.
+
 # Optional provider validation proposal — not authorized
 
 Phase 4 authorized and actual generation spend: zero. Current verified balance: 38,644 credits; overage disabled. Retained liabilities and other clients are not fully reconciled, so no dispatch is safe merely from this balance.

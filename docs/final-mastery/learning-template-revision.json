@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-11-09T13:06:00Z",
+  "templateId": "DkSzGeLnRPG557cTaRSf",
+  "url": "https://elevenlabs.io/app/templates/DkSzGeLnRPG557cTaRSf",
+  "status": "PUBLISHED PRIVATE",
+  "nativeUiConfirmation": [
+    "Template published",
+    "Template is private and only visible to you."
+  ],
+  "inputs": ["Narration brief", "Quiz brief"],
+  "outputs": ["Narrated lesson", "Quiz and marking guide", "Narration script"],
+  "removedFromOutputContract": [
+    "Teaching illustration",
+    "Learning visual direction"
+  ],
+  "thumbnail": "public/recognition/learning-boundaries.png",
+  "thumbnailProvenance": "Exact authored Pillow diagram, source scripts/final-mastery/learning-cover.py; no image-model generation.",
+  "previewDisplayTitle": "Verified facts and human review · English lesson",
+  "previewDurationSeconds": 61.36,
+  "previewWords": 148,
+  "generationEstimateDisplayedCredits": 3042,
+  "reservedCredits": 3600,
+  "observedAccountDeltaAfterPreview": 3007,
+  "audio": "public/recognition/learning-revised.mp3",
+  "transcript": "public/recognition/learning-revised-transcript.txt",
+  "quiz": "public/recognition/learning-revised-quiz.txt",
+  "qa": {
+    "fullAudioDecode": "PASS",
+    "realScribeTextMatchesNativeScript": true,
+    "reviewedQuizAnswers": ["B", "A", "A"],
+    "knownLimitation": "148-word output exceeds requested 110–130 word target. No truncation. Human classroom and subjective listening review remain; separate transcript is downloadable but not a native selected template output."
+  },
+  "budgetAuthority": "Owner explicitly authorized new Phase 4 budget of 10000 credits and confirmed other paid sessions/automations paused before dispatch.",
+  "scope": "One fresh native template preview and one successful Scribe transcription. Initial MCP local-path validation failure retained a separate 100-credit hold; no provider job was returned for that failure. No Explore submission or public native-template share.",
+  "nativeVersionId": null,
+  "versionIdLimitation": "Native UI did not expose a version ID; template API remains 402. No ID invented. Old visual nodes remain in the editable factory as historical artifacts, excluded from the published selected outputs."
+}

@@ -52,6 +52,33 @@ try {
   );
   assert.equal(response.status(), 200);
   assert.equal((await response.body()).subarray(0, 2).toString(), "PK");
+  await page
+    .getByLabel("Native learning example")
+    .evaluate(async (el: HTMLAudioElement) => {
+      el.load();
+      await new Promise<void>((resolve, reject) => {
+        el.addEventListener("loadedmetadata", () => resolve(), { once: true });
+        el.addEventListener(
+          "error",
+          () => reject(Error("Revised lesson failed to decode")),
+          { once: true },
+        );
+      });
+      if (!(el.duration > 60 && el.duration < 63))
+        throw Error("Revised lesson duration invalid");
+    });
+  const quiz = await page
+    .getByRole("link", { name: "Download the reviewed quiz and answers" })
+    .getAttribute("href");
+  assert.ok(quiz);
+  const quizResponse = await page.request.get(
+    new URL(quiz!, page.url()).toString(),
+  );
+  assert.equal(quizResponse.status(), 200);
+  assert.equal(
+    (await quizResponse.text()).match(/Correct Answer:/g)?.length,
+    3,
+  );
   mkdirSync("var/recognition/screenshots", { recursive: true });
   await page.screenshot({
     path: "var/recognition/screenshots/community-desktop.png",
@@ -78,6 +105,7 @@ try {
       "Known pickup record does not become a customs hold",
       "All three recorded tracks decode at60 seconds",
       "EPUB downloads as ZIP/EPUB payload",
+      "Revised native lesson decodes at 61 seconds; reviewed three-question quiz downloads",
       "390px layout has no horizontal overflow",
     ],
     errors,

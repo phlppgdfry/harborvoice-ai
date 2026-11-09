@@ -30,7 +30,8 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "public/elite/audio.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established.",
+        "phase4Evidence": "docs/final-mastery/learning-template-revision.json"
       },
       "nativeResourceId": null,
       "localCodeReference": "public/elite/audio.json",
@@ -38,7 +39,7 @@
       "creditRequirement": "0 to reuse; new narration reserved by script length",
       "remainingWork": "Reuse real outputs; add production narration",
       "blockingConditions": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established.",
-      "finalVerificationStatus": "EXISTING AND VERIFIED",
+      "finalVerificationStatus": "VERIFIED LIVE",
       "officialDocumentation": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech",
       "documentationHttpStatus": 200
     },
@@ -54,7 +55,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../academy-audio-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../academy-audio-evidence.json",
@@ -78,7 +79,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "public/elite/audio.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "public/elite/audio.json",
@@ -102,7 +103,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/streaming-speech.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/streaming-speech.json",
@@ -126,7 +127,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Agent WebSocket does not prove standalone TTS WebSocket",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Agent WebSocket does not prove standalone TTS WebSocket",
@@ -150,7 +151,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../academy-dialogue-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../academy-dialogue-evidence.json",
@@ -174,7 +175,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No standalone dialogue WebSocket receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No standalone dialogue WebSocket receipt",
@@ -198,7 +199,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../academy-audio-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../academy-audio-evidence.json",
@@ -222,7 +223,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../../src/AudioStudio.tsx",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../../src/AudioStudio.tsx",
@@ -246,7 +247,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No filter/environment execution receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No filter/environment execution receipt",
@@ -270,7 +271,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../live-verification.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../live-verification.json",
@@ -294,7 +295,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../academy-creative-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../academy-creative-evidence.json",
@@ -318,7 +319,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/voice-engineering.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/voice-engineering.json",
@@ -342,7 +343,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No remix receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No remix receipt",
@@ -366,7 +367,7 @@
         "historicalStatus": "REQUIRES OWNER CONSENT",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Owner has not provided recordings or cloning consent",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Owner has not provided recordings or cloning consent",
@@ -390,7 +391,7 @@
         "historicalStatus": "REQUIRES OWNER CONSENT",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No approved owner recordings or verification",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No approved owner recordings or verification",
@@ -414,7 +415,7 @@
         "historicalStatus": "NOT SUPPORTED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Designed voices are synthetic",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Designed voices are synthetic",
@@ -438,7 +439,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../academy-pronunciation-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../academy-pronunciation-evidence.json",
@@ -462,7 +463,8 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../audio-live-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established.",
+        "phase4Evidence": "docs/final-mastery/learning-template-revision.json"
       },
       "nativeResourceId": null,
       "localCodeReference": "../audio-live-evidence.json",
@@ -470,7 +472,7 @@
       "creditRequirement": "Reserve per audio duration",
       "remainingWork": "Transcribe finished production outputs for captions",
       "blockingConditions": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established.",
-      "finalVerificationStatus": "EXISTING AND VERIFIED",
+      "finalVerificationStatus": "VERIFIED LIVE",
       "officialDocumentation": "https://elevenlabs.io/docs/overview/capabilities/speech-to-text",
       "documentationHttpStatus": 200
     },
@@ -486,7 +488,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/realtime-scribe.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/realtime-scribe.json",
@@ -510,7 +512,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/diarization.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/diarization.json",
@@ -534,7 +536,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/diarization.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/diarization.json",
@@ -558,7 +560,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/studio-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/studio-evidence.json",
@@ -582,7 +584,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No separate-channel receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No separate-channel receipt",
@@ -606,7 +608,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../audio-live-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../audio-live-evidence.json",
@@ -630,7 +632,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../audio-live-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../audio-live-evidence.json",
@@ -654,7 +656,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../audio-live-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../audio-live-evidence.json",
@@ -678,7 +680,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../audio-live-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../audio-live-evidence.json",
@@ -702,7 +704,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/media-integrity.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/media-integrity.json",
@@ -726,7 +728,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No inpainting receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No inpainting receipt",
@@ -750,7 +752,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Existing tracks are short fixed-length generations",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Existing tracks are short fixed-length generations",
@@ -774,7 +776,7 @@
         "historicalStatus": "NOT APPLICABLE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No eligible original musical dataset supplied",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No eligible original musical dataset supplied",
@@ -798,7 +800,7 @@
         "historicalStatus": "REQUIRES OWNER CONSENT",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No publishing or licensing transaction authorized",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No publishing or licensing transaction authorized",
@@ -846,7 +848,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../academy-creative-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../academy-creative-evidence.json",
@@ -870,7 +872,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../academy-creative-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../academy-creative-evidence.json",
@@ -894,7 +896,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/media-integrity.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/media-integrity.json",
@@ -918,7 +920,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "MCP-generated canvas does not prove native Flows Agent usage",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "MCP-generated canvas does not prove native Flows Agent usage",
@@ -942,7 +944,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No native image edit receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No native image edit receipt",
@@ -966,7 +968,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/image-processing.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/image-processing.json",
@@ -990,7 +992,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/image-processing.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/image-processing.json",
@@ -1014,7 +1016,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/studio-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/studio-evidence.json",
@@ -1038,7 +1040,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No lip-sync receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No lip-sync receipt",
@@ -1062,7 +1064,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No native avatar resource",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No native avatar resource",
@@ -1086,7 +1088,7 @@
         "historicalStatus": "IMPLEMENTED, NOT LIVE-VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/creative-production.md",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/creative-production.md",
@@ -1107,17 +1109,15 @@
       "supportedInterfaces": "Native UI",
       "existingImplementation": "Not executed in this release. Prioritized bounded agent, media, educational and synchronization work within the reserved50k allowance; documentation alone is not live proof.",
       "actualUsageEvidence": {
-        "historicalStatus": "PLANNED",
-        "source": "docs/elite/capability-research.json",
-        "evidenceLocation": "Existing flows are not published templates",
-        "scope": "Historical private learning-template publication only; A/B generic templates unfinished. Draft visual defect and published snapshot remain pending native UI QA (CUA timeoutMs)."
+        "source": "docs/final-mastery/learning-template-revision.json",
+        "scope": "Two inputs, three selected outputs, misleading illustration excluded, authored thumbnail, fresh 61.36s preview; native UI confirms private publication."
       },
       "nativeResourceId": "DkSzGeLnRPG557cTaRSf",
       "localCodeReference": "Existing flows are not published templates",
       "publicDemonstrationReference": null,
       "creditRequirement": "Quote or conservative Governor reservation required before generation",
       "remainingWork": "Define inputs/outputs and keep template private or workspace-scoped",
-      "blockingConditions": "Historical private learning-template publication only; A/B generic templates unfinished. Draft visual defect and published snapshot remain pending native UI QA (CUA timeoutMs).",
+      "blockingConditions": "Current private learning revision verified in native UI after approved preview; A/B generic templates and public Explore review remain unfinished.",
       "finalVerificationStatus": "PUBLISHED PRIVATE",
       "officialDocumentation": "https://elevenlabs.io/docs/eleven-creative/products/templates",
       "documentationHttpStatus": 200
@@ -1158,7 +1158,7 @@
         "historicalStatus": "PLAN RESTRICTED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Creator tier verified 7 November 2026",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Creator tier verified 7 November 2026",
@@ -1182,7 +1182,7 @@
         "historicalStatus": "PLAN RESTRICTED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Creator tier; no authorized ad-account connection",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Creator tier; no authorized ad-account connection",
@@ -1206,7 +1206,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/flows.md",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/flows.md",
@@ -1230,7 +1230,7 @@
         "historicalStatus": "PERMISSION BLOCKED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../audio-live-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../audio-live-evidence.json",
@@ -1254,7 +1254,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Automatic dub download does not prove edited Studio rendering",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Automatic dub download does not prove edited Studio rendering",
@@ -1278,7 +1278,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/studio-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": "7IXHA48pFJqsSPSWtRtM",
       "localCodeReference": "docs/elite/studio-evidence.json",
@@ -1302,7 +1302,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/studio-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/studio-evidence.json",
@@ -1326,7 +1326,7 @@
         "historicalStatus": "PLAN RESTRICTED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/native-verification.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/native-verification.json",
@@ -1350,7 +1350,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../academy-native-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../academy-native-evidence.json",
@@ -1374,7 +1374,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../academy-dialogue-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../academy-dialogue-evidence.json",
@@ -1398,7 +1398,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No GenFM resource or export receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No GenFM resource or export receipt",
@@ -1422,7 +1422,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Native HTML audio controls are not Audio Native",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Native HTML audio controls are not Audio Native",
@@ -1446,7 +1446,7 @@
         "historicalStatus": "REQUIRES OWNER CONSENT",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No book publication authorized outside existing project",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No book publication authorized outside existing project",
@@ -1470,7 +1470,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/agent-deployment.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
       "localCodeReference": "docs/elite/agent-deployment.json",
@@ -1494,7 +1494,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/remediation.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
       "localCodeReference": "docs/elite/remediation.json",
@@ -1518,7 +1518,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/synchronization.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
       "localCodeReference": "docs/elite/synchronization.json",
@@ -1542,7 +1542,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/native-verification.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
       "localCodeReference": "docs/elite/native-verification.json",
@@ -1566,7 +1566,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../visitor-voice-verification.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../visitor-voice-verification.json",
@@ -1590,7 +1590,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../live-verification.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../live-verification.json",
@@ -1614,7 +1614,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../visitor-voice-verification.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../visitor-voice-verification.json",
@@ -1638,7 +1638,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../visitor-voice-verification.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../visitor-voice-verification.json",
@@ -1662,7 +1662,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/evaluation.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
       "localCodeReference": "docs/elite/evaluation.json",
@@ -1686,7 +1686,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Prompt routing is not a native workflow graph",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Prompt routing is not a native workflow graph",
@@ -1710,7 +1710,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No supported workflow-as-code export yet",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No supported workflow-as-code export yet",
@@ -1734,7 +1734,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "agent/enterprise-settings.ts",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "agent/enterprise-settings.ts",
@@ -1758,7 +1758,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Existing business tools are client tools",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Existing business tools are client tools",
@@ -1782,7 +1782,7 @@
         "historicalStatus": "PLAN RESTRICTED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Creator tier verified",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Creator tier verified",
@@ -1806,7 +1806,7 @@
         "historicalStatus": "REQUIRES OWNER CONSENT",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Assistant hosted MCP connection does not attach third-party MCP to Nora",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Assistant hosted MCP connection does not attach third-party MCP to Nora",
@@ -1830,7 +1830,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/evaluation.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/evaluation.json",
@@ -1854,7 +1854,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Human review ticket is not provider agent transfer",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Human review ticket is not provider agent transfer",
@@ -1878,7 +1878,7 @@
         "historicalStatus": "REQUIRES OWNER CONSENT",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No paid telephone infrastructure authorized",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No paid telephone infrastructure authorized",
@@ -1902,7 +1902,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "React voice UI is separate from hosted widget",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "React voice UI is separate from hosted widget",
@@ -1926,7 +1926,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Hosted Nora is not bring-your-own-LLM Speech Engine",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Hosted Nora is not bring-your-own-LLM Speech Engine",
@@ -1950,7 +1950,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No account rollout check",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No account rollout check",
@@ -1974,7 +1974,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/agent-deployment.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/agent-deployment.json",
@@ -1998,7 +1998,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/agent-deployment.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/agent-deployment.json",
@@ -2022,7 +2022,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Existing six tests are multi-turn simulations",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Existing six tests are multi-turn simulations",
@@ -2046,7 +2046,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Local tool assertions are not native tool-call test runs",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Local tool assertions are not native tool-call test runs",
@@ -2070,7 +2070,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/native-verification.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/native-verification.json",
@@ -2094,7 +2094,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No current workspace analytics export",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No current workspace analytics export",
@@ -2118,7 +2118,7 @@
         "historicalStatus": "NOT APPLICABLE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No adequate legitimate production sample",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No adequate legitimate production sample",
@@ -2142,7 +2142,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/credit-usage.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/credit-usage.json",
@@ -2166,7 +2166,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Current config must be freshly inspected",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Current config must be freshly inspected",
@@ -2190,7 +2190,7 @@
         "historicalStatus": "PLAN RESTRICTED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Creator tier verified",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Creator tier verified",
@@ -2214,7 +2214,7 @@
         "historicalStatus": "PLAN RESTRICTED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Creator tier verified",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Creator tier verified",
@@ -2238,7 +2238,7 @@
         "historicalStatus": "IMPLEMENTED, NOT LIVE-VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../../tests/api.test.ts",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../../tests/api.test.ts",
@@ -2262,7 +2262,7 @@
         "historicalStatus": "REQUIRES OWNER CONSENT",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No paid telephone infrastructure authorization",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No paid telephone infrastructure authorization",
@@ -2286,7 +2286,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/agent-deployment.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/agent-deployment.json",
@@ -2310,7 +2310,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/cli.md",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/cli.md",
@@ -2334,7 +2334,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/agent-deployment.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/agent-deployment.json",
@@ -2358,7 +2358,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/cli.md",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/cli.md",
@@ -2382,7 +2382,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../../package.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../../package.json",
@@ -2406,7 +2406,7 @@
         "historicalStatus": "NOT APPLICABLE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Project is TypeScript; no Python runtime need identified",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Project is TypeScript; no Python runtime need identified",
@@ -2430,7 +2430,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../academy-creative-evidence.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../academy-creative-evidence.json",
@@ -2454,7 +2454,7 @@
         "historicalStatus": "EXISTING AND VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../live-verification.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../live-verification.json",
@@ -2502,7 +2502,7 @@
         "historicalStatus": "IMPLEMENTED, NOT LIVE-VERIFIED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "../../server/webhooks.ts",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "../../server/webhooks.ts",
@@ -2526,7 +2526,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "docs/elite/synchronization.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "docs/elite/synchronization.json",
@@ -2550,7 +2550,7 @@
         "historicalStatus": "VERIFIED LIVE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "config/assets.json",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "config/assets.json",
@@ -2574,7 +2574,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No current execution receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No current execution receipt",
@@ -2598,7 +2598,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No current execution receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No current execution receipt",
@@ -2622,7 +2622,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No current execution receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No current execution receipt",
@@ -2646,7 +2646,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No current execution receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No current execution receipt",
@@ -2670,7 +2670,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No current execution receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No current execution receipt",
@@ -2694,7 +2694,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No current execution receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No current execution receipt",
@@ -2718,7 +2718,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No current execution receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No current execution receipt",
@@ -2742,7 +2742,7 @@
         "historicalStatus": "PLANNED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No current execution receipt",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No current execution receipt",
@@ -2766,7 +2766,7 @@
         "historicalStatus": "PLAN RESTRICTED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Creator tier verified",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Creator tier verified",
@@ -2790,7 +2790,7 @@
         "historicalStatus": "NOT APPLICABLE",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Separate receptionist product, outside fictional logistics workbench",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Separate receptionist product, outside fictional logistics workbench",
@@ -2814,7 +2814,7 @@
         "historicalStatus": "REQUIRES OWNER CONSENT",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No external messaging connection authorized",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No external messaging connection authorized",
@@ -2838,7 +2838,7 @@
         "historicalStatus": "PLAN RESTRICTED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "Creator personal project; no multi-seat setup verified",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "Creator personal project; no multi-seat setup verified",
@@ -2862,7 +2862,7 @@
         "historicalStatus": "PLAN RESTRICTED",
         "source": "docs/elite/capability-research.json",
         "evidenceLocation": "No enterprise identity provider configured",
-        "scope": "Historical evidence retained; no Phase 4 paid execution. Documentation URL reachability checked, full behavior/plan coverage not newly established."
+        "scope": "Historical evidence retained; no new paid re-execution of this specific row claimed unless linked to the approved learning/Scribe QA. Documentation URL reachability checked, full behavior/plan coverage not newly established."
       },
       "nativeResourceId": null,
       "localCodeReference": "No enterprise identity provider configured",

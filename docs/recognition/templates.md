@@ -1,3 +1,5 @@
+> Current Phase 4 amendment: the learning template was repaired and privately updated on 9 November 2026 after a new 10,000-credit owner budget. It now exposes two briefs and lesson/script/quiz outputs, excludes the misleading visual, uses an authored diagram thumbnail, and has a fresh 61.36-second validated preview. [Current receipt](../final-mastery/learning-template-revision.json). The detailed Phase 2 review below remains historical and is superseded for C. A/B generic templates remain unfinished; no Explore submission.
+
 # Native template review status
 
 ## C — AI Learning Content Creator
