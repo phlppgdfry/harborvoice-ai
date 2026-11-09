@@ -194,3 +194,9 @@ The English EPUB was also imported into the native ElevenLabs Audiobooks editor 
 Other real additions: an Eleven v3 two-speaker dialogue, before/after pronunciation dictionary samples transcribed by Scribe, three fictional Voice Design voices now saved privately (see Elite evidence), four illustrated covers, a six-second LTX 2 Fast video and a native brand kit. The courses, dialogue and native audiobook are stored on the [ElevenCreative Academy flow](https://elevenlabs.io/app/flows/DOwVWkHNl1M8XZpmGo1C).
 
 See [audio evidence](docs/academy-audio-evidence.json), [native audiobook evidence](docs/academy-native-evidence.json), [creative evidence](docs/academy-creative-evidence.json), [pronunciation comparison](docs/academy-pronunciation-evidence.json) and [recognition research](docs/recognition-research.md). Run `npm run test:academy` for the public learning walkthrough without generating audio.
+
+## Phase 3 developer tools
+
+[AgentOps Kit](packages/agentops-kit/README.md), [AgentProof](apps/agentproof/README.md), the [110-scenario fixture corpus](benchmarks/voice-ai/README.md), [workshop](community/elevenlabs-belgium/README.md) and [article drafts](docs/phase3/articles/) are included as source candidates. Run `npm run phase3:verify` and `npm run format:phase3:check`; start the AgentProof preview, then run `npm run phase3:browser`. `AGENTPROOF_URL` can select another local preview port. Offline CI runs without provider secrets. AgentProof has no public deployment in this integration; no npm or editorial publication is included.
+
+See the [pre-Phase 4 audit](docs/final-mastery/pre-phase4-audit.md) for verified scope, account reconciliation, production acceptance blockers and owner decisions.

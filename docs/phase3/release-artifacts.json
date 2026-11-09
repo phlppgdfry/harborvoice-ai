@@ -1,0 +1,22 @@
+{
+  "createdAt": "2026-11-08T23:39:42.655Z",
+  "sourceCommit": "fec914e83fe5a0d8263b1f29bc238b2047e86447",
+  "published": false,
+  "location": "var/phase3/releases (local ignored outputs)",
+  "files": [
+    {
+      "file": "agentproof-pilot-0.1.0.zip",
+      "bytes": 221172,
+      "sha256": "61d790bab1cc8cc028538d7e9af799c14537b29a96de352d55523c4b2ca7d68f"
+    },
+    {
+      "file": "harborvoice-agentops-kit-0.1.0.tgz",
+      "bytes": 9751,
+      "sha256": "b02b4b1ac738a21a7e8bb1ca4bfcf613cbad8bf475f47025faead2f1db053559"
+    }
+  ],
+  "packageSmoke": {
+    "passed": true,
+    "scope": "Unpacked CLI executes with Node only, no installed dependencies or provider request."
+  }
+}

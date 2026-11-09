@@ -1,0 +1,29 @@
+# Candidate only; copy into .github/workflows after reviewed integration.
+name: Phase 3 offline verification
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      [
+        "packages/agentops-kit/**",
+        "apps/agentproof/**",
+        "benchmarks/voice-ai/**",
+        "scripts/phase3/**",
+      ]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: bash scripts/phase3/verify.sh
+      - run: npx playwright install --with-deps chromium
+      - run: npm run preview --prefix apps/agentproof > /tmp/agentproof.log 2>&1 &
+      - run: curl --retry 10 --retry-connrefused --retry-delay 1 --fail http://127.0.0.1:4313/
+      - run: node --import tsx scripts/phase3/browser-check.ts

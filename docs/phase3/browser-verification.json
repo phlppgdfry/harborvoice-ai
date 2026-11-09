@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-09T00:03:25.515Z",
+  "checks": [
+    "production build loads",
+    "failure inspector defaults to meaningful failure",
+    "failed filter returns 30 baseline failures",
+    "search narrows failures",
+    "empty state",
+    "corrected policy has no fixture failures",
+    "evidence export",
+    "methodology navigation",
+    "configuration comparison",
+    "feedback exports locally",
+    "semantic heading, navigation, input labels and keyboard navigation",
+    "390px layout without horizontal document overflow",
+    "no page errors or external network requests"
+  ],
+  "errors": [],
+  "requests": 6,
+  "accessibilityScope": "DOM landmarks, label associations, keyboard action and responsive overflow only; no screen reader or full WCAG audit."
+}
