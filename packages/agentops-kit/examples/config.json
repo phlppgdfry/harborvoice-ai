@@ -1,0 +1,16 @@
+{
+  "agent_id": "agent_example",
+  "name": "Fictional workshop agent",
+  "conversation_config": {
+    "agent": {
+      "language": "en",
+      "prompt": {
+        "prompt": "Use synthetic records. Ask for missing references. Escalate conflicts.",
+        "llm": "provider-configured",
+        "tools": []
+      }
+    },
+    "tts": { "voice_id": "fictional-voice" }
+  },
+  "platform_settings": { "auth": { "requires_auth": true } }
+}

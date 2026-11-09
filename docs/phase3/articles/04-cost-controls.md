@@ -1,0 +1,17 @@
+# How to Control ElevenLabs API Costs Safely
+
+A budget check that reads the balance immediately before a request is useful, but insufficient when two processes can spend from the same account. Both can see enough credit, both can start a generation and together exceed the intended allowance. Separate Git branches do not isolate the provider bill.
+
+HarborVoice already has a [persisted Credit Governor](../../../lib/credit-governor.ts). It records reservations before operations, retains pending and failed holds, checks fresh quota snapshots and uses a filesystem mutex around its ledger. Phase 3 does not replace or reset that ledger. The critical limitation is its scope: different paths, worktrees or machines can still have different locks. A local mutex becomes an account-wide protection only if every spender reliably participates in the same coordination mechanism.
+
+The additional Phase 3 authorization is 20,000 credits, including a 3,000 internal buffer. The requested account preservation floor is 25,000 unless the starting balance is already lower. A fresh observation showed 65,322 available credits with overage disabled. Earlier work still had conservative unbilled exposure and failed holds. None of those facts proved the other session was finished spending, so this phase performed no credit-consuming calls.
+
+A reusable budget model needs several numbers that are often incorrectly collapsed: the phase ceiling, current account balance, other projects' commitments, phase reservations, provider receipts and unattributed account consumption. The account counter can include delayed billing from another project. Treating every observed credit as this phase's exact invoice would be wrong; treating all missing receipts as zero would be worse.
+
+The package's [budget functions](../../../packages/agentops-kit/src/index.ts) return zero eligibility if coordination is unverified or a snapshot is older than sixty seconds. Immutable reservation proposals reject duplicate operation IDs. A partial receipt below an estimate retains the estimate until final reconciliation; a larger receipt raises liability. Failed operations keep their conservative hold. These functions do not persist or lock anything. An application must atomically persist the reservation before dispatch under a verified shared mechanism.
+
+A safer lifecycle is: fresh account read; validate floor and all commitments; create unique reservation; persist atomically; dispatch once; retain provider request ID; record pending status; fetch final receipts; reconcile. On an ambiguous timeout, stop and inspect the provider request rather than automatically sending it again. A failed HTTP response is not billing evidence. Neither is a job disappearing from a local process list.
+
+The tests cover stale balances, missing coordination, duplicate IDs, failed holds and receipts above/below estimates. They do not prove a distributed transaction with the provider. A future dispatcher needs crash recovery, idempotency where supported and a way to fence competing dispatchers. Paid tests should require an explicit bounded workflow, never run automatically for every pull request.
+
+The [budget report](../budget-report.md) records the resulting decision: zero new provider spend, live work deferred. Spending less is not itself the achievement. The achievement is preserving a reviewable boundary between authorization, commitments and actual evidence of cost.

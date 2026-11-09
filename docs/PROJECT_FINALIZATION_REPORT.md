@@ -51,20 +51,21 @@ See [architecture](architecture.md), [deployment](deployment.md),
 
 ## 4. Tests actually executed
 
-| Check                                                                       | Result and boundary                                                                                                                       |
-| --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run check`                                                             | PASS: TypeScript + Vite build; 63 tests, 62 passed, 0 failed, 1 explicit PostgreSQL skip                                                  |
-| `npm run test:postgres`                                                     | PASS separately: 2 passed, 0 skipped; real Docker PostgreSQL migration/concurrency/rollback/restart/auth checks, then actual dump/restore |
-| `npm run format:check`, `npm run typecheck`                                 | PASS; lint script is Prettier, not an ESLint/security audit                                                                               |
-| `npm audit --audit-level=high`                                              | PASS; zero reported vulnerabilities at execution                                                                                          |
-| Demo/Academy/Elite/Community browser suites                                 | PASS in hosted CI; existing functionality retained, paid API transport fixtures clearly identified                                        |
-| `npm run test:production-browser`                                           | PASS with SDK/WebSocket/API fixtures, synthetic microphone, muting, persistence contract, failure UI and mobile checks                    |
-| Same SDK fixture on built Express + production CSP                          | PASS after fixing a real worklet-loading failure; also executed in hosted CI                                                              |
-| `npm run elite:validate`, `npm run recognition:validate`                    | PASS; publication contract and asset integrity; not proof of new live deployment of native resources                                      |
-| Gitleaks staged diff and Git history                                        | PASS at scan time; no leaks found; no secret scan guarantees complete absence                                                             |
-| Public HTTPS/API + operator readiness/logout                                | PASS against the actual production deployment                                                                                             |
-| One real voice smoke                                                        | PASS: actual ASR, shipment lookup, response audio, persisted callback transcript and refresh                                              |
-| Human microphone/device quality; all paid audio products on this deployment | NOT EXECUTED as a full acceptance suite                                                                                                   |
+| Check                                                                       | Result and boundary                                                                                                                          |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run check`                                                             | PASS: TypeScript + Vite build; 63 tests, 62 passed, 0 failed, 1 explicit PostgreSQL skip                                                     |
+| `npm run test:postgres`                                                     | PASS separately: 2 passed, 0 skipped; real Docker PostgreSQL migration/concurrency/rollback/restart/auth checks, then actual dump/restore    |
+| `npm run format:check`, `npm run typecheck`                                 | PASS; lint script is Prettier, not an ESLint/security audit                                                                                  |
+| `npm audit --audit-level=high`                                              | PASS; zero reported vulnerabilities at execution                                                                                             |
+| Demo/Academy/Elite/Community browser suites                                 | PASS in hosted CI; existing functionality retained, paid API transport fixtures clearly identified                                           |
+| `npm run test:production-browser`                                           | PASS with SDK/WebSocket/API fixtures, synthetic microphone, muting, persistence contract, failure UI and mobile checks                       |
+| Same SDK fixture on built Express + production CSP                          | PASS after fixing a real worklet-loading failure; also executed in hosted CI                                                                 |
+| `npm run elite:validate`, `npm run recognition:validate`                    | PASS; publication contract and asset integrity; not proof of new live deployment of native resources                                         |
+| Gitleaks staged diff and Git history                                        | PASS at scan time; no leaks found; no secret scan guarantees complete absence                                                                |
+| Public HTTPS/API + operator readiness/logout                                | PASS against the actual production deployment                                                                                                |
+| One real voice smoke                                                        | PASS: actual ASR, shipment lookup, response audio, persisted callback transcript and refresh                                                 |
+| Inherited Phase 3 offline checks                                            | PASS: 33 AgentOps tests, 13 workshop/contribution tests, 110 deterministic fixture scenarios and AgentProof build; not live model evaluation |
+| Human microphone/device quality; all paid audio products on this deployment | NOT EXECUTED as a full acceptance suite                                                                                                      |
 
 Hosted implementation gates: [push run](https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42535880806),
 [PR run](https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42535885472).
@@ -123,7 +124,7 @@ and private audio remain outside Git; only synthetic, reviewed evidence is publi
   aliased to https://harborvoice-ai.vercel.app.
 - Existing production operator/provider credentials were preserved. Preview uses a separate
   operator secret. Free databases were explicitly selected in Frankfurt, with no upgrades.
-- Main advanced independently during this task; changes through `a5b7c20` were preserved
+- Main advanced independently during this task; changes through `b129328` were preserved
   in the candidate. This task did not push directly to main or merge the draft PR.
 
 ## 8. Remaining acceptance items
@@ -152,7 +153,10 @@ No account permissions or paid plan were expanded by this delivery.
 only approved product scopes in the provider secret manager, or restrict unavailable products.
 Do not purchase or expand permissions without owner authorization.
 
-**Owner decision:** review/merge PR #1 separately if desired. No merge is implied by deployment.
+**Owner decision:** review/authorize merging PR #1. No merge is implied by deployment.
+Until main contains the persistent runtime, a future main-branch production deployment
+could replace it with the older browser-storage backend. This source/deployment alignment
+is a release-management acceptance item; no automatic merge is authorized.
 No additional voice calls, purchases, cloud deployments or broad feature work are required to
 inspect this delivery. The existing browser data remains intact; see the import procedure.
 

@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-11-09T00:00:30.860Z",
+  "subscription": {
+    "used": 89939,
+    "limit": 128715,
+    "remaining": 38776,
+    "extension": false,
+    "overage": {
+      "amount": "0",
+      "currency": "usd"
+    },
+    "openInvoices": false
+  },
+  "requests": [
+    {
+      "name": "subscription",
+      "status": "success"
+    },
+    {
+      "name": "usageByProduct",
+      "status": "success"
+    },
+    {
+      "name": "speechHistory",
+      "status": "success"
+    }
+  ],
+  "hourlyNonzeroUsage": [
+    {
+      "hourUtc": "2026-11-08T00:00:00+00:00",
+      "creditsByProduct": {
+        "Conversational AI": 4960,
+        "Conversational AI - LLM": 14629,
+        "Dubbing": 5957,
+        "Music": 1238,
+        "STT": 284,
+        "TTS": 473
+      }
+    },
+    {
+      "hourUtc": "2026-11-08T07:00:00+00:00",
+      "creditsByProduct": {
+        "Projects": 541
+      }
+    },
+    {
+      "hourUtc": "2026-11-08T12:00:00+00:00",
+      "creditsByProduct": {
+        "STT": 17,
+        "TTS": 20
+      }
+    },
+    {
+      "hourUtc": "2026-11-08T13:00:00+00:00",
+      "creditsByProduct": {
+        "Image Generation": 515
+      }
+    },
+    {
+      "hourUtc": "2026-11-08T18:00:00+00:00",
+      "creditsByProduct": {
+        "Conversational AI": 480,
+        "Conversational AI - LLM": 1466,
+        "Flows": 78,
+        "Image Generation": 502,
+        "Music": 2475,
+        "Projects": 1042,
+        "STT": 18,
+        "TTS": 3101
+      }
+    },
+    {
+      "hourUtc": "2026-11-08T19:00:00+00:00",
+      "creditsByProduct": {
+        "Flows": 3084,
+        "Image Generation": 2740,
+        "TTS": 499,
+        "Video Generation": 20223
+      }
+    }
+  ],
+  "speechHistory": {
+    "hasMore": false,
+    "items": [
+      {
+        "dateUnix": 1794166706,
+        "source": "Flows",
+        "from": 63944,
+        "to": 64443,
+        "delta": 499
+      }
+    ]
+  },
+  "scope": "Read-only SDK 2.77.0; legacy usage endpoint, workspace-wide hourly aggregates. Speech history excludes music/SFX and is not an exhaustive bill. No paid calls. No per-job attribution established."
+}

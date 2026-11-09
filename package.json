@@ -46,7 +46,10 @@
     "test:production-browser": "node --import tsx scripts/production-browser-check.ts",
     "db:migrate": "node --import tsx scripts/migrate.ts",
     "lint": "prettier --check src server scripts tests agent api lib config docs README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml vercel.json",
-    "verify:production": "node --import tsx scripts/verify-production-hosted.ts"
+    "verify:production": "node --import tsx scripts/verify-production-hosted.ts",
+    "phase3:verify": "bash scripts/phase3/verify.sh",
+    "phase3:browser": "node --import tsx scripts/phase3/browser-check.ts",
+    "format:phase3:check": "prettier --check packages/agentops-kit apps/agentproof/src apps/agentproof/*.json apps/agentproof/*.ts apps/agentproof/index.html community/elevenlabs-belgium benchmarks/voice-ai/*.md benchmarks/voice-ai/scenarios scripts/phase3 docs/phase3"
   },
   "dependencies": {
     "@alexanderolsen/libsamplerate-js": "2.1.2",
