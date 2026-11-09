@@ -1,0 +1,5 @@
+
+> harborvoice-ai@2.2.0-rc.1 phase3:browser
+> node --import tsx scripts/phase3/browser-check.ts
+
+14 browser checks passed.

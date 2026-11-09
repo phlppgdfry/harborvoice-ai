@@ -5,8 +5,8 @@ Evidence types must be interpreted separately.
 ```json
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T00:03:45.257Z",
-  "sourceCommit": "f8a2a40d5475e6a44938ecae1d9959b05d5d4264",
+  "generatedAt": "2026-11-09T13:28:19.000Z",
+  "sourceCommit": "3cee65658c699bfd6ca92048e6485e2b98003633",
   "configVersion": "7f4c15621015cc8386d3449092c57e2312cf6086e900ab27a667a6f264f4f96a",
   "results": [
     {

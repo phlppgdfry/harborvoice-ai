@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-09T12:18:59.414Z",
+  "scope": "Official source metadata. Search and scrape were read-only; no forms submitted. Cached source times retained.",
+  "sources": [
+    {
+      "url": "https://elevenlabs.io/ambassador",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/ambassador",
+      "cacheState": "hit",
+      "cachedAt": "2026-11-08T12:46:55.032Z"
+    },
+    {
+      "url": "https://elevenlabs.io/cpp",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/cpp",
+      "cacheState": "hit",
+      "cachedAt": "2026-11-09T08:43:52.338Z"
+    },
+    {
+      "url": "https://elevenlabs.io/startup-grants",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/startup-grants",
+      "cacheState": "hit",
+      "cachedAt": "2026-11-09T06:28:21.822Z"
+    },
+    {
+      "url": "https://elevenlabs.io/impact-program",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/impact",
+      "cacheState": "hit",
+      "cachedAt": "2026-11-08T21:25:55.210Z"
+    },
+    {
+      "url": "https://elevenreader.io/content-guidelines",
+      "status": 200,
+      "finalUrl": "https://elevenreader.io/content-guidelines",
+      "cacheState": "hit",
+      "cachedAt": "2026-11-07T14:10:16.594Z"
+    }
+  ]
+}

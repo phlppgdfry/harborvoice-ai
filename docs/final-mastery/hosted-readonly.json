@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-11-09T12:36:21.957Z",
+  "origin": "https://harborvoice-ai.vercel.app",
+  "checks": [
+    {
+      "path": "/api/status",
+      "status": 200,
+      "expected": 200,
+      "cacheControl": "no-store",
+      "runtime": {
+        "production": true,
+        "workspaceStorage": "postgres",
+        "operatorRequired": true,
+        "operatorAuthenticated": false,
+        "guestEnabled": false
+      }
+    },
+    {
+      "path": "/api/state",
+      "status": 401,
+      "expected": 401,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/conversations",
+      "status": 401,
+      "expected": 401,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/agents",
+      "status": 401,
+      "expected": 401,
+      "cacheControl": "no-store"
+    }
+  ],
+  "passed": true,
+  "scope": "Anonymous GET requests only. No signed session, authentication mutation, microphone, paid endpoint, migration or provider generation. Exact deployed Git SHA not independently established by these checks."
+}

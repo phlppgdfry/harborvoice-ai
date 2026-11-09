@@ -1,0 +1,22 @@
+# Internal final quality scorecard
+
+These are project self-assessments, not official ElevenLabs scores, certification or an independent audit. Scores weight unresolved acceptance and evidence quality; they do not count feature labels as success.
+
+| Area                         | /10 | Evidence and remaining improvement                                                                                                                                                                       |
+| ---------------------------- | --: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Technical architecture       | 7.5 | Clear server/tool/human boundaries and separate static evaluation app; main and deployed persistent runtime still diverge.                                                                               |
+| ElevenLabs platform coverage | 6.5 | Extensive historical media/agent evidence and 119 reconciled rows; many capabilities are planned/restricted, and native templates remain incomplete.                                                     |
+| Voice-agent reliability      |   6 | Historical 50/52 and targeted 10/10 plus separate 6/6 studies; no final full rerun, independent holdout or real-user reliability estimate.                                                               |
+| Creative production          | 7.5 | Existing films/music decode; private learning visual repaired and preview/transcript tested; duplicate Studio overlay found and reversibly disabled. Subjective acceptance and generic templates remain. |
+| Product usability            | 7.5 | Desktop/mobile browser flows pass; no external-user pilot or screen-reader acceptance.                                                                                                                   |
+| Security                     |   7 | Auth tests, anonymous hosted denial, scoped secret scan and no public paid dispatch; no penetration audit, distributed spending coordination or tenant isolation.                                        |
+| Code quality                 |   8 | Strict TypeScript, narrow offline importer and bounded failures; some local budget contracts still need an operational service.                                                                          |
+| Testing                      |   8 | Root 61, AgentOps 40, six browser suites, explicit PostgreSQL 2/2 and restore; provider/live-human evidence remains smaller and separate.                                                                |
+| Documentation                |   8 | Current capability provenance, publication states, owner gates and receipts; full provider execution and editorial sign-off cannot be documented as complete.                                            |
+| Reproducibility              |   8 | Node 24 build, independent contract observations, source commit/timestamp receipts and packaged CLI; native snapshot/template round-trip is incomplete.                                                  |
+| Community usefulness         | 6.5 | Runnable no-key workshop, educational book and contribution proposal; usefulness to actual participants remains unmeasured.                                                                              |
+| Public presentation          | 7.5 | Unified portfolio links and static AgentProof bundle; native defect and production-source divergence limit an unqualified showcase claim.                                                                |
+| Recognition readiness        |   7 | Honest submission assets and official program review; no accepted submission, award or proof of adoption.                                                                                                |
+| Production maturity          | 5.5 | Existing protected PostgreSQL deployment, disposable migration/restore tests and one historical synthetic-mic call; live backups, retention, real-device acceptance and operator ownership remain open.  |
+
+Highest-value next steps: review the repaired private learning template; accept the corrected Studio export; finish A/B reusable input/output mapping; reconcile account-wide liabilities; approve a real-device acceptance with a bounded quote; adopt and test actual backup/retention procedures; recruit a small consent-based pilot after contact/privacy setup. Wider paid feature coverage has lower priority than these gaps.

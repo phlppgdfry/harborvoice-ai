@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-11-09T13:22:32.157634+00:00",
+  "sourceSha256": "d063dd9aa4966e22569a1bee8d4f3dd94f213929884737778d27f888d32dc97e",
+  "nativeExportSha256": "f0f55d43c29100700a19ff06e76a0e885577b0dbfbcc69cfc4812466c94e8114",
+  "nativeExportBytes": 25992901,
+  "source": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000"
+      }
+    ],
+    "format": {
+      "duration": "36.000000"
+    }
+  },
+  "nativeExport": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100"
+      }
+    ],
+    "format": {
+      "duration": "36.000000"
+    }
+  },
+  "fullDecodePassed": true,
+  "audioComparison": {
+    "sampleRate": 16000,
+    "lagSamples": 0,
+    "lagMilliseconds": 0.0,
+    "normalizedCorrelation": 0.999120451755386,
+    "scope": "Aligned mono PCM waveform comparison; lossy native export is not expected to have identical bytes."
+  },
+  "captionComparison": {
+    "wordSequenceMatchesFinalVtt": true,
+    "cueCount": 6,
+    "firstStartSeconds": 2.04,
+    "lastEndSeconds": 28.26,
+    "scope": "Fresh native SRT export; complete wording matches final source VTT, cue order/times valid. Interior word-level timing and human readability remain scoped separately."
+  },
+  "privateExportPath": "/Users/philippegodfroy/Downloads/ElevenLabs_HarborVoice_Elite_-_Product_Commercial (1).mp4",
+  "scope": "Supported native entire-timeline High Quality MP4 and SRT export; no Studio Agent, model generation, API allowlist bypass or public share. Full native MP4 retained outside Git.",
+  "captionRendering": {
+    "enabled": false,
+    "editableCueTextRetainedInNativeUi": true,
+    "sourceBurnedInCaptionsPreserved": true,
+    "agentUiCumulativeCreditsBefore": 1619,
+    "agentUiCumulativeCreditsAfter": 2077,
+    "agentUiDeltaCredits": 458,
+    "autoGenerationThresholdCredits": 1
+  },
+  "visualQa": {
+    "sampledFrames": "4.5, 13.5, 22.5, 31.5 seconds; 2x2 contact sheet",
+    "duplicateOverlayRemoved": true,
+    "meaningfulScenesMatchApprovedSource": true,
+    "evidence": "screenshots/studio-after-overlay-fix.png",
+    "scope": "Sampled visual inspection plus complete file decode; no claim of frame-by-frame human review."
+  },
+  "videoComparison": {
+    "method": "FFmpeg SSIM after scaling both streams to640x360 with timestamp normalization",
+    "all": 0.971703,
+    "scope": "Lossy native render; no byte-identical or full round-trip editing sync claim."
+  },
+  "status": "IMPLEMENTED AND TESTED"
+}

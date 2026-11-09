@@ -1,0 +1,427 @@
+{
+  "checkedAt": "2026-11-09T12:18:59.297Z",
+  "scope": "Read-only metadata of eight known project Flows. No pending/running node states observed. This is not exhaustive account-wide job discovery or published template-snapshot verification.",
+  "flows": [
+    {
+      "flowId": "DkSzGeLnRPG557cTaRSf",
+      "url": "https://elevenlabs.io/app/flows/DkSzGeLnRPG557cTaRSf",
+      "nodes": [
+        {
+          "id": "99SIsBDSxxWVKWD6YiE7",
+          "label": "Learning brief",
+          "type": "text",
+          "status": "static_asset"
+        },
+        {
+          "id": "Cv6iYROsWsbhqc3PPhWD",
+          "label": "Narration script",
+          "type": "llm",
+          "status": "completed"
+        },
+        {
+          "id": "cGVD3YMCnRGlSZOdyMnB",
+          "label": "Quiz and marking guide",
+          "type": "llm",
+          "status": "completed"
+        },
+        {
+          "id": "0dVsKJa2qnj958WQcoen",
+          "label": "Learning visual direction",
+          "type": "llm",
+          "status": "completed"
+        },
+        {
+          "id": "R3ZBEsE1ZSI3SyTLpWff",
+          "label": "Narrated lesson",
+          "type": "tts",
+          "status": "completed"
+        },
+        {
+          "id": "zLeOgetjBUYGPRXumyBo",
+          "label": "Accessible transcript",
+          "type": "speech-to-text",
+          "status": "completed"
+        },
+        {
+          "id": "wzWdxdQywXlgyi9tOFN7",
+          "label": "Teaching illustration",
+          "type": "image-generation",
+          "status": "completed"
+        },
+        {
+          "id": "wEQAZfmsSfji5fKOQnmy",
+          "label": "Narration brief",
+          "type": "text",
+          "status": "static_asset"
+        },
+        {
+          "id": "AB4VQEAIYQsFqtjOVwDp",
+          "label": "Quiz brief",
+          "type": "text",
+          "status": "static_asset"
+        },
+        {
+          "id": "hwD3bbShYpaTPLgFgO7v",
+          "label": "Visual brief",
+          "type": "text",
+          "status": "static_asset"
+        }
+      ],
+      "edges": [
+        {
+          "source": "wEQAZfmsSfji5fKOQnmy",
+          "target": "Cv6iYROsWsbhqc3PPhWD",
+          "port": "references"
+        },
+        {
+          "source": "AB4VQEAIYQsFqtjOVwDp",
+          "target": "cGVD3YMCnRGlSZOdyMnB",
+          "port": "references"
+        },
+        {
+          "source": "hwD3bbShYpaTPLgFgO7v",
+          "target": "0dVsKJa2qnj958WQcoen",
+          "port": "references"
+        },
+        {
+          "source": "Cv6iYROsWsbhqc3PPhWD",
+          "target": "R3ZBEsE1ZSI3SyTLpWff",
+          "port": "prompt"
+        },
+        {
+          "source": "R3ZBEsE1ZSI3SyTLpWff",
+          "target": "zLeOgetjBUYGPRXumyBo",
+          "port": "source"
+        },
+        {
+          "source": "0dVsKJa2qnj958WQcoen",
+          "target": "wzWdxdQywXlgyi9tOFN7",
+          "port": "prompt"
+        }
+      ]
+    },
+    {
+      "flowId": "04Y2ZUoBsV1BQj9uMv9k",
+      "url": "https://elevenlabs.io/app/flows/04Y2ZUoBsV1BQj9uMv9k",
+      "nodes": [
+        {
+          "id": "O8syEcFfLYgHrBDUw5WU",
+          "label": "Pressure at the port",
+          "type": "video-generation",
+          "status": "completed"
+        },
+        {
+          "id": "IPn4sMtR5Gk5XwQzMMrc",
+          "label": "From complexity to clarity",
+          "type": "video-generation",
+          "status": "completed"
+        },
+        {
+          "id": "1bCqfAjbVKeNtVxeTJdi",
+          "label": "Human decision",
+          "type": "video-generation",
+          "status": "completed"
+        },
+        {
+          "id": "l29XG1ewnonqzg3qZdmH",
+          "label": "Static image asset",
+          "type": "image",
+          "status": "static_asset"
+        },
+        {
+          "id": "6QmvApVFM63XmiyGlzAV",
+          "label": "Transparent Academy illustration",
+          "type": "image-generation",
+          "status": "completed"
+        },
+        {
+          "id": "GLpR7qVQwrHG5prfswee",
+          "label": "Print-size Academy illustration",
+          "type": "image-generation",
+          "status": "completed"
+        },
+        {
+          "id": "tW89eaB3VEmksgkNLxh9",
+          "label": "Static video asset",
+          "type": "video",
+          "status": "static_asset"
+        },
+        {
+          "id": "9FL4OlCfCBxgm3thRQ1x",
+          "label": "Static video asset",
+          "type": "video",
+          "status": "static_asset"
+        },
+        {
+          "id": "ndds9yi2p7BtVg6qlJe1",
+          "label": "Static video asset",
+          "type": "video",
+          "status": "static_asset"
+        },
+        {
+          "id": "1K4mxFUntuROy2cshMf2",
+          "label": "Static video asset",
+          "type": "video",
+          "status": "static_asset"
+        },
+        {
+          "id": "MXxhajQGn2Bjt1R5kpcI",
+          "label": "Static video asset",
+          "type": "video",
+          "status": "static_asset"
+        },
+        {
+          "id": "34VmXO1J0SvdKdgWId9i",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        }
+      ],
+      "edges": [
+        {
+          "source": "l29XG1ewnonqzg3qZdmH",
+          "target": "6QmvApVFM63XmiyGlzAV",
+          "port": "image"
+        },
+        {
+          "source": "l29XG1ewnonqzg3qZdmH",
+          "target": "GLpR7qVQwrHG5prfswee",
+          "port": "image"
+        }
+      ]
+    },
+    {
+      "flowId": "autfYixTUdY8eSnjlDOb",
+      "url": "https://elevenlabs.io/app/flows/autfYixTUdY8eSnjlDOb",
+      "nodes": [
+        {
+          "id": "uAsFTTiDMZh8tRxnQSSU",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "HyfMmEkNiSBkfni0rpq0",
+          "label": "Localize product narration · nl",
+          "type": "dubbing-audio",
+          "status": "not_run"
+        },
+        {
+          "id": "d7GySuhBwqh2u83rrUXf",
+          "label": "Localize product narration · fr",
+          "type": "dubbing-audio",
+          "status": "completed"
+        }
+      ],
+      "edges": [
+        {
+          "source": "uAsFTTiDMZh8tRxnQSSU",
+          "target": "HyfMmEkNiSBkfni0rpq0",
+          "port": "source"
+        },
+        {
+          "source": "uAsFTTiDMZh8tRxnQSSU",
+          "target": "d7GySuhBwqh2u83rrUXf",
+          "port": "source"
+        }
+      ]
+    },
+    {
+      "flowId": "DOwVWkHNl1M8XZpmGo1C",
+      "url": "https://elevenlabs.io/app/flows/DOwVWkHNl1M8XZpmGo1C",
+      "nodes": [
+        {
+          "id": "84Br2Hpv3RnPB1rdnS7n",
+          "label": "Academy course cover",
+          "type": "image-generation",
+          "status": "completed"
+        },
+        {
+          "id": "WmbMTtQ9dTVa7K44T9Nx",
+          "label": "Academy · six-second harbor opening",
+          "type": "video-generation",
+          "status": "completed"
+        },
+        {
+          "id": "8FAS9GsJwAxfDjC5llEo",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "KBREDFhAQUQFbp9pYOaB",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "Z7v6LldI27oU6HgwrPHT",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "A0UpHMJQqplcw6Z53SLY",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "uIny33J6b9Uy9bHaJQBr",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "fYQsbMsftDqP45eoEgO0",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        }
+      ],
+      "edges": []
+    },
+    {
+      "flowId": "fRthJyA26LAFJ6NqNi6g",
+      "url": "https://elevenlabs.io/app/flows/fRthJyA26LAFJ6NqNi6g",
+      "nodes": [
+        {
+          "id": "SoSAph898LTUXUbowYMH",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "SHuWlshBDkN7ZiQ5q0fU",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "Jjax1UTYlJpRcbWq9hIp",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        }
+      ],
+      "edges": []
+    },
+    {
+      "flowId": "E2fQbenOCnV06r0CVwQ0",
+      "url": "https://elevenlabs.io/app/flows/E2fQbenOCnV06r0CVwQ0",
+      "nodes": [
+        {
+          "id": "nlPc6lkeEktRdgZNvU5S",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "AVbllN3nJ7G5MmCKZHLf",
+          "label": "Briefing transcript",
+          "type": "speech-to-text",
+          "status": "completed"
+        }
+      ],
+      "edges": [
+        {
+          "source": "nlPc6lkeEktRdgZNvU5S",
+          "target": "AVbllN3nJ7G5MmCKZHLf",
+          "port": "source"
+        }
+      ]
+    },
+    {
+      "flowId": "GznQuf5YZTpRrJQBpQSg",
+      "url": "https://elevenlabs.io/app/flows/GznQuf5YZTpRrJQBpQSg",
+      "nodes": [
+        {
+          "id": "ZCwa5vUG7HYafm2ACKQi",
+          "label": "Lesson script · source and human control",
+          "type": "text",
+          "status": "static_asset"
+        },
+        {
+          "id": "YR9stLtzuUVGyPNwK2Zl",
+          "label": "Learning narration",
+          "type": "tts",
+          "status": "completed"
+        }
+      ],
+      "edges": [
+        {
+          "source": "ZCwa5vUG7HYafm2ACKQi",
+          "target": "YR9stLtzuUVGyPNwK2Zl",
+          "port": "prompt"
+        }
+      ]
+    },
+    {
+      "flowId": "Xf1iuvlDWlQzdy9RhgdZ",
+      "url": "https://elevenlabs.io/app/flows/Xf1iuvlDWlQzdy9RhgdZ",
+      "nodes": [
+        {
+          "id": "XcPWVX8Qe8LcCsxz2ZSX",
+          "label": "New tts node",
+          "type": "tts",
+          "status": "completed"
+        },
+        {
+          "id": "xDzI5lOuBx1ztjzmLQ6K",
+          "label": "HarborVoice · 12-second instrumental identity",
+          "type": "music",
+          "status": "completed"
+        },
+        {
+          "id": "okFchBBLq5cRS28vD7Kf",
+          "label": "HarborVoice · gentle review notification",
+          "type": "sfx",
+          "status": "completed"
+        },
+        {
+          "id": "MghTzfv5nv4xVFM7Z91f",
+          "label": "Source · Nora introduction, take 1",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "z2vK4adwy0SMS2v1qbUF",
+          "label": "Not run · native dubbing estimate exceeds reserved budget",
+          "type": "dubbing-audio",
+          "status": "not_run"
+        },
+        {
+          "id": "XqPIo9MO8xpFDHOfDO73",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "B5iZPhpS8w9hzrzkrEfg",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "KfHKeYQj1QS62TymsZT1",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "id": "QfhIcmXHWNLNHkjD4tJD",
+          "label": "Static audio asset",
+          "type": "audio",
+          "status": "static_asset"
+        }
+      ],
+      "edges": [
+        {
+          "source": "MghTzfv5nv4xVFM7Z91f",
+          "target": "z2vK4adwy0SMS2v1qbUF",
+          "port": "source"
+        }
+      ]
+    }
+  ]
+}

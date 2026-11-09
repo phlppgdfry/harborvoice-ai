@@ -34,3 +34,7 @@ Source: https://github.com/phlppgdfry/harborvoice-ai
 The project source is MIT-licensed and publicly available. The project cover and demonstration media are original project materials generated or captured for HarborVoice. No real customer data, credentials or cloned personal voices are included. Please review the documented limits: bounded live access, deterministic text demo, synthetic data, 50/52 original agent results and 10/10 targeted corrected regressions.
 
 No X/Twitter announcement handle supplied. Independent project; no ElevenLabs employment or endorsement claimed.
+
+## Final Mastery amendment (9 November 2026)
+
+Current upstream remains `870ee29c311eaccd33425f326e72e14a120c69e2`; official contribution guide and source schema were reread. The local MDX now points its unrestricted demo to GitHub Pages, distinguishes the protected production draft, and describes AgentOps/AgentProof without treating fixture counts as model reliability. The old fork commit is historical; final synchronization/compare receipts are in the Phase 4 release report. No external PR was opened.

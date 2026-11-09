@@ -23,7 +23,7 @@ if (process.argv.includes("--record")) {
     manifest,
     JSON.stringify(
       {
-        version: "2.1.0",
+        version: JSON.parse(readFileSync("package.json", "utf8")).version,
         scope:
           "Project-owned generated and recorded media. Safe copies; no signed URLs. Original source assets remain native. Full render specs and provenance live in docs/elite.",
         files: entries,

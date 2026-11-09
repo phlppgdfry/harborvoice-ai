@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-11-09T13:14:51.700806+00:00",
+  "sourceSha256": "d063dd9aa4966e22569a1bee8d4f3dd94f213929884737778d27f888d32dc97e",
+  "nativeExportSha256": "4dc2ed007f0945745acb5842a02c834b45445c1091bbd257a3192647c81ce345",
+  "nativeExportBytes": 26209007,
+  "source": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000"
+      }
+    ],
+    "format": {
+      "duration": "36.000000"
+    }
+  },
+  "nativeExport": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100"
+      }
+    ],
+    "format": {
+      "duration": "36.000000"
+    }
+  },
+  "fullDecodePassed": true,
+  "audioComparison": {
+    "sampleRate": 16000,
+    "lagSamples": 0,
+    "lagMilliseconds": 0.0,
+    "normalizedCorrelation": 0.999120451755386,
+    "scope": "Aligned mono PCM waveform comparison; lossy native export is not expected to have identical bytes."
+  },
+  "captionComparison": {
+    "wordSequenceMatchesFinalVtt": true,
+    "cueCount": 6,
+    "firstStartSeconds": 2.04,
+    "lastEndSeconds": 28.26,
+    "scope": "Fresh native SRT export; complete wording matches final source VTT, cue order/times valid. Interior word-level timing and human readability remain scoped separately."
+  },
+  "privateExportPath": "/Users/philippegodfroy/Downloads/ElevenLabs_HarborVoice_Elite_-_Product_Commercial.mp4",
+  "scope": "Supported native entire-timeline High Quality MP4 and SRT export; no Studio Agent, model generation, API allowlist bypass or public share. Full native MP4 retained outside Git.",
+  "visualQa": "FAILED \u2014 additional native captions duplicated the source burned-in subtitles. Preserved as failure evidence; superseded by corrected export."
+}

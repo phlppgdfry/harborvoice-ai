@@ -1,0 +1,7 @@
+# Upstream contribution review
+
+Official target is [elevenlabs/examples](https://github.com/elevenlabs/examples). Read-only inspection on 9 November 2026 returned HEAD `07454da05a9265bb008a5024771cf51ae2f66eb3`, unchanged from Phase 3. Its README uses product/language directories, PROMPT.md, setup.sh and generated example/ folders. It asks contributors to install pre-commit hooks. No upstream script or generation runner was executed. The separate `elevenlabs/elevenlabs-examples` repository also exists; its existence does not change the proposal's original target.
+
+A targeted all-state PR search for “tool validation” returned no rows. This is a narrow query, not proof of no overlap or maintainer demand. The local [five-test example](../phase3/contribution/example.test.mjs) demonstrates why tool presence alone cannot establish grounded success or authorization. It remains a scoped teaching proposal, not a reported SDK bug.
+
+The new AgentOps structured-argument/fact tests make this proposal more concrete. Before external submission, adapt a small standalone example into the current product/language scaffold, inspect official template and hooks, run upstream lint and show the exact patch. Do not run the repository's AI generation runner: it is unnecessary and may require additional provider services. Maintainer scope approval is unknown. No external fork/branch/PR has been created for this contribution; the local draft is not yet an upstream-ready patch.

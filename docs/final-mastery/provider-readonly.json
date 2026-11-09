@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-11-09T12:09:30.307Z",
+  "requests": [
+    {
+      "path": "/v1/user/subscription",
+      "status": 200,
+      "tier": "creator",
+      "used": 90071,
+      "limit": 128715,
+      "remaining": 38644,
+      "canExtend": false,
+      "overage": "0"
+    },
+    {
+      "path": "/v1/flows/templates",
+      "status": 402
+    },
+    {
+      "path": "/v1/convai/test-invocations?page_size=20",
+      "status": 200,
+      "hasMore": false,
+      "invocations": [
+        {
+          "id": "suite_8601m6y77njvf76bbrfh2wp7r25q",
+          "pendingCount": 0,
+          "passedCount": 6,
+          "failedCount": 0,
+          "credits": 1946
+        },
+        {
+          "id": "suite_7401m6w8c76kfrd8gx8aahdnhkfe",
+          "pendingCount": 0,
+          "passedCount": 10,
+          "failedCount": 0,
+          "credits": 2967
+        },
+        {
+          "id": "suite_7801m6w7rhdbfjr843egrdnz6zb0",
+          "pendingCount": 0,
+          "passedCount": 50,
+          "failedCount": 2,
+          "credits": 16622
+        },
+        {
+          "id": "suite_1801m6vbrgn2fdpa1h1ebwb9fp72",
+          "pendingCount": 0,
+          "passedCount": 6,
+          "failedCount": 0,
+          "credits": 1714
+        }
+      ]
+    }
+  ],
+  "paidRequests": 0
+}

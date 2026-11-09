@@ -1,0 +1,35 @@
+
+> harborvoice-ai@2.2.0-rc.1 test:browser
+> node --import tsx scripts/browser-check.ts
+
+Terminal map selection and shipment search
+Grounded shipment conversation
+Dutch conversation
+Escalation proposal, operator review and unchanged shipment
+Evaluation suite and JSON evidence export
+Persisted session transcript
+All workspace pages render
+Public Experience lab audio decodes without operator login; comparison categories render
+Audio tools have contextual defaults, keyboard navigation and disabled generation without credentials; deep link survives reload
+Mobile layout has no page-level horizontal overflow
+Mobile navigation has visible labels and accessible names
+All eight studio forms and completed-dub download exercised with explicitly mocked provider responses (no real audio generation)
+No browser runtime errors
+{
+  "checks": [
+    "Terminal map selection and shipment search",
+    "Grounded shipment conversation",
+    "Dutch conversation",
+    "Escalation proposal, operator review and unchanged shipment",
+    "Evaluation suite and JSON evidence export",
+    "Persisted session transcript",
+    "All workspace pages render",
+    "Public Experience lab audio decodes without operator login; comparison categories render",
+    "Audio tools have contextual defaults, keyboard navigation and disabled generation without credentials; deep link survives reload",
+    "Mobile layout has no page-level horizontal overflow",
+    "Mobile navigation has visible labels and accessible names",
+    "All eight studio forms and completed-dub download exercised with explicitly mocked provider responses (no real audio generation)",
+    "No browser runtime errors"
+  ],
+  "errors": []
+}

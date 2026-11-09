@@ -5,6 +5,8 @@ import {
   diff,
   validate,
   budget,
+  importNativeReceipt,
+  type NativeReceiptExpectation,
   report,
   type Config,
   type Report,
@@ -21,6 +23,12 @@ try {
   };
   let output: unknown;
   switch (command) {
+    case "import-native":
+      output = importNativeReceipt(
+        read(a),
+        read(b) as NativeReceiptExpectation,
+      );
+      break;
     case "inspect":
       output = inspect(read(a) as Config);
       break;
@@ -50,7 +58,7 @@ try {
     }
     default:
       throw Error(
-        "Usage: agentops inspect|validate config.json; diff|drift before.json after.json; budget policy.json; report evidence.json [json|markdown|html]. Tests use evaluate() with an explicit transport.",
+        "Usage: agentops inspect|validate config.json; diff|drift before.json after.json; budget policy.json; import-native receipt.json expected.json; report evidence.json [json|markdown|html]. Tests use evaluate() with an explicit transport.",
       );
   }
   if (output !== undefined) console.log(JSON.stringify(output, null, 2));

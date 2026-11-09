@@ -1,0 +1,24 @@
+{
+  "observedAt": "2026-11-09T12:40:19.664099+00:00",
+  "observationTimeScope": "Recorded after completion; not a reconstructed runner start time.",
+  "commit": "ae15f1f99e4677d6eeea1d86f80b4b183c4ec8a6",
+  "environment": "Existing production-review worktree; Node 24; local Docker PostgreSQL 17-alpine; synthetic disposable database",
+  "results": [
+    {
+      "command": "npm run check",
+      "result": "PASS",
+      "passed": 62,
+      "skipped": 1,
+      "scope": "Default suite skips PostgreSQL without explicit test configuration."
+    },
+    {
+      "command": "npm run test:postgres",
+      "result": "PASS",
+      "passed": 2,
+      "skipped": 0,
+      "backupRestore": "Actual pg_dump/pg_restore round trip passed",
+      "scope": "Disposable local database only; no hosted database access, migration or operational backup acceptance."
+    }
+  ],
+  "workingTreeAfter": "Clean; production branch not changed."
+}

@@ -1,0 +1,10 @@
+
+> harborvoice-ai@2.2.0-rc.1 test:mastery
+> node --import tsx scripts/final-mastery/browser.ts
+
+Portfolio link loads bundled AgentProof
+Twelve contract rows show nine failures and three accepted controls
+Contract report downloads
+390px viewport: controls visible; no document overflow
+Existing comparison and filtering remain functional
+No page errors; no external requests from AgentProof interactions

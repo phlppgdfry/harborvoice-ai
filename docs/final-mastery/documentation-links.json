@@ -1,0 +1,693 @@
+{
+  "checkedAt": "2026-11-09T12:14:01.457824+00:00",
+  "scope": "Official documentation URL reachability and source hashes only. Does not prove capability availability, plan access or execution. Historical claims remain dated.",
+  "capabilities": 119,
+  "sources": [
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech",
+      "sha256": "71d8e6c39c387da8a8c3f91bae24d3675f66ceea09bdddd1377ed1da2cb9f462",
+      "bytes": 276047
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/models",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/models",
+      "sha256": "6b1fa864c9f398f7c91be4ab09c411503e950377966043c1e7b943e9ea2180b5",
+      "bytes": 749358
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/concepts/audio-streaming",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/concepts/audio-streaming",
+      "sha256": "adafae0ec70ce5d72c6a93b2a02dcb13f741197154e146dfa3ef96d050d9ddf7",
+      "bytes": 235533
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/websockets/tts-vs-ttd-websockets",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/guides/how-to/websockets/tts-vs-ttd-websockets",
+      "sha256": "52e777c8f4454ef4e5144bffdb7bc0e0caddbded70f61bf5a679bef48bc3b8a8",
+      "bytes": 299460
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/text-to-dialogue",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/text-to-dialogue",
+      "sha256": "2ef6d8c3bf601ace1bd932a3394eae6d5ee1d9288304f8a7d7c752faa64e38a4",
+      "bytes": 269180
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech/eleven-v4",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech/eleven-v4",
+      "sha256": "14efbe9b05d746b8b801ab923a68cc1375f43180bd8b69691b47b69b62588d3f",
+      "bytes": 301781
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/playground/text-to-speech",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/playground/text-to-speech",
+      "sha256": "87b8ce3305de16adda67a1cde4ee0223bc1648f20dd8802c9474f1049b0b3cac",
+      "bytes": 473561
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/voice/audio-environment",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/voice/audio-environment",
+      "sha256": "aad1cbf2cf572a477590477985d9d474968917d35f72dcdbc92c3cd9b073cbea",
+      "bytes": 366146
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/voices/voice-library",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/voices/voice-library",
+      "sha256": "379738d7bd22dd4f18897f84ac3863da7439a6f61db7285ab454cde246a44271",
+      "bytes": 365490
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/voices/voice-design",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/voices/voice-design",
+      "sha256": "92106adc80905e5dffe1bf4e7e2a8ef848fdfa387b12d9e77f2987cfb3f2af35",
+      "bytes": 320425
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/voices/voice-design",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/guides/how-to/voices/voice-design",
+      "sha256": "bcb30ea26ecb326eaba8089b882819bc5d2d8245d055e7036feeeb1fbde1fd15",
+      "bytes": 340339
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/voice-remixing",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/voice-remixing",
+      "sha256": "014cd95e2187857e66038ce949702e41a3842ac151564bb1b82016f1204e8502",
+      "bytes": 219377
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning",
+      "sha256": "5e02c98e69343f0dcb757cff6e7e1a4511efe8497bcb8c14c9d82ef119651345",
+      "bytes": 272318
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning",
+      "sha256": "d8052698905745aac958b49d94464d30ca8d7f722cff79812dfde3a9a7fe1ca0",
+      "bytes": 388100
+    },
+    {
+      "url": "https://elevenlabs.io/docs/help-center/product/voices/voice-library/can-i-share-an-ai-generated-voice-in-the-voice-library",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/help-center/product/voices/voice-library/can-i-share-an-ai-generated-voice-in-the-voice-library",
+      "sha256": "1344c07e43b6ae12ec847e4f31828430f45edaef51e4bd33fd86d83ed09a06f0",
+      "bytes": 285378
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/voice/pronunciation-dictionary",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/voice/pronunciation-dictionary",
+      "sha256": "ea35117cc51c4cceec8062f4fa3910b70fe598b6641bd99711a1ec7c4bb51585",
+      "bytes": 351417
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/speech-to-text",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/speech-to-text",
+      "sha256": "fd60fb9d091c201b23792b03d3e0fd9517687142a5ba3a23030caa1a75c5c893",
+      "bytes": 928101
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/speech-to-text/realtime/client-side-streaming",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/guides/how-to/speech-to-text/realtime/client-side-streaming",
+      "sha256": "83ef1d6a64efb5f194d687fc569d3350a72d5cb9a68eb19c80e9db514a2f591d",
+      "bytes": 611050
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/speech-to-text/realtime/transcript-editing",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/guides/how-to/speech-to-text/realtime/transcript-editing",
+      "sha256": "513a1f110e1abbfa3b4747ed3af5cd52c60f1c64da038ad110daead1c3c89589",
+      "bytes": 388931
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/speech-to-text/batch/multichannel-transcription",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/guides/how-to/speech-to-text/batch/multichannel-transcription",
+      "sha256": "d1962fdc23c2567256ba180b1c33df72a7287305f2a6eaf6bc0fb835e4a7050d",
+      "bytes": 792252
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/voice-changer",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/voice-changer",
+      "sha256": "55b6ddf64f533e56c1642112b0c6174107ff1af9abd8084cac8a227b48a46666",
+      "bytes": 207178
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/voice-isolator",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/voice-isolator",
+      "sha256": "948c07dc68c9fe851119c730ee1b7ca2627768b40f487ca042026be244669643",
+      "bytes": 205786
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/forced-alignment",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/forced-alignment",
+      "sha256": "ca84267959a64517dc5895fe20acfadaece3d8e92ba5735bbd965fc4a1a7a5c2",
+      "bytes": 201247
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/sound-effects",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/sound-effects",
+      "sha256": "4f68f07c8db554242ac1a0fbc5545baea7d44049c2437fed806bc934b8e61b3b",
+      "bytes": 238011
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/products/music",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/products/music",
+      "sha256": "0e1f2559e23eb770d53d4fba463944bff494ed953e9fd1b991fd16761cbb1486",
+      "bytes": 370142
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/guides/how-to/music/inpainting",
+      "sha256": "624c3ce8e81a06bbf047c9b9f91319f6fe3302e1b0350ecea3a3cab9e3f2f2d5",
+      "bytes": 1067929
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/music",
+      "sha256": "53023283ea88c1f609bf1c5abd1011b58eccfb15c110586678000dc778d7fbea",
+      "bytes": 595729
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/products/music/finetunes",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/products/music/finetunes",
+      "sha256": "4da77909244bec5c3f5a5cbf51fcbb8683400dd58770994abb2df624cfd59341",
+      "bytes": 251241
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/music/marketplace",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/music/marketplace",
+      "sha256": "7c96b6f8d975a528f5566d3dd124390690cf19ee9b2bbab789e2affda8d4f3f9",
+      "bytes": 219680
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/products/flows",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/products/flows",
+      "sha256": "aad0075ef0a034c71ec3bd7b15fcda9b3beff7eb89516c47fc041e9acdaa631b",
+      "bytes": 339938
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/administration/assets",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/administration/assets",
+      "sha256": "9f15429518afddc6287e248fd616008a8c194fe3142a26b461484ac174011c08",
+      "bytes": 218193
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/image-video",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/image-video",
+      "sha256": "2142df3313b1716ab6e44a8bdbbf807aed639b900f7603a2fa71457e74c80a1c",
+      "bytes": 774157
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/playground/image-video",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/playground/image-video",
+      "sha256": "499aa408fd976dba0fff92506f119b03c8859d0a8ab99dda54603e36db89555e",
+      "bytes": 835874
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/image-video/avatars",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/image-video/avatars",
+      "sha256": "2ba9d1097a60ff291cad878c65559c3a8d5779eb76f9c4b0bc0d793237970593",
+      "bytes": 228854
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/products/studio",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/products/studio",
+      "sha256": "d2735961d983adc6b48c1481170013ee228fcb7e2665a5f589d7e274ab50d667",
+      "bytes": 617234
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/products/templates",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/products/templates",
+      "sha256": "bb42f7ca73d8828dd5b91b7b93bcc39e034d2a2f128c92f153c681e0d9976aab",
+      "bytes": 276783
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/templates",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/templates",
+      "sha256": "7773de3b472e09225c5c423619790b7c948a2c58e54f02017ae875a82485fff4",
+      "bytes": 426253
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/image-and-video",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/image-and-video",
+      "sha256": "dba85848f19d76b227ccfc5cc67a0b8d49bdc0092d5f17c82325b0de90a14b92",
+      "bytes": 637442
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/ads-engine",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/ads-engine",
+      "sha256": "9afefbf8290223e9404da6849622e113cb8f7ba086f0e8b10c32e79bb9019715",
+      "bytes": 217602
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/dubbing",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/dubbing",
+      "sha256": "7a75563e45cac4c44f8ab332d87fac018bb7e370373669de0fed8dd55fcfbf39",
+      "bytes": 297044
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/dubbing",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/dubbing",
+      "sha256": "8248db0755a2119c05b05a3253d33a73c409f569d1451934e3b046e8b62c2602",
+      "bytes": 475244
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/products/dubbing/dubbing-studio",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/products/dubbing/dubbing-studio",
+      "sha256": "fa043f32d103234f72f6c80b99e629bd4ee64b4facfb6e0248b54b9b4b4b7358",
+      "bytes": 343679
+    },
+    {
+      "url": "https://elevenlabs.io/docs/api-reference/studio-api-information",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/api-reference/studio-api-information",
+      "sha256": "195097a527aae5fa8edc75d541374fd47d4f0365898d8ed7be78d3788db781f9",
+      "bytes": 292717
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/products/audiobooks",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/products/audiobooks",
+      "sha256": "c864d5bdc86b9c397bd53dc7f51bf6502c1d46575c60ef52f64036d2148d54a2",
+      "bytes": 354058
+    },
+    {
+      "url": "https://elevenlabs.io/docs/help-center/product/distribution-publishing/gen-fm/how-do-i-use-gen-fm",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/help-center/product/distribution-publishing/gen-fm/how-do-i-use-gen-fm",
+      "sha256": "054753e7d1d9ad3693da5dff62a7c20f2a0f9576ffa94a2a56564822b42cc51e",
+      "bytes": 296052
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/audio-tools/audio-native",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-creative/audio-tools/audio-native",
+      "sha256": "191c127d78df397a26134f9a9c21a665f275b02d84b606512cb99b552ae67bd2",
+      "bytes": 314433
+    },
+    {
+      "url": "https://elevenlabs.io/docs/help-center/product/distribution-publishing/elevenreader-publishing",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/help-center/product/distribution-publishing/elevenreader-publishing",
+      "sha256": "4947e557aaed498ccf31846b3bc83d6c9023467c50c5e536bd5f0ed8d10200c3",
+      "bytes": 348018
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/overview",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/overview",
+      "sha256": "ddf55469e1ba57f6816b88380c798d8c2697851f1c6a2ce1a0bfd7ed4b9cd7dd",
+      "bytes": 284633
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/voice/customization/language",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/voice/customization/language",
+      "sha256": "dea502e5ea86f69f615ab346abad14ceb83cd05868f84d314c7d9db86a58320a",
+      "bytes": 350727
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/knowledge-base",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/knowledge-base",
+      "sha256": "92d891c1bf87ecba9dc4128d9eea4b4a2cf9c648706d4b792232b92bee11aec1",
+      "bytes": 254482
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/knowledge-base/rag",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/knowledge-base/rag",
+      "sha256": "07913e2359c86f1e644969802044eb8c907e705207079646f9ac5e625896f980",
+      "bytes": 455188
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/tools/client-tools",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/tools/client-tools",
+      "sha256": "cd7470e691ad725f96b6b214dc127aaf3e9e56b2844dc4764154f7ea00271f10",
+      "bytes": 498062
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/authentication",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/authentication",
+      "sha256": "0a6d55b0cb35fd56deae256ca3c6376d8f79037c4a463a7a507906630ec2954e",
+      "bytes": 601943
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/libraries/react",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/libraries/react",
+      "sha256": "f7eab20e9404aeb5648edd466c3cb833b2d694d39328cb2da447224df5920d8c",
+      "bytes": 987984
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/api-reference/eleven-agents/websocket",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/api-reference/eleven-agents/websocket",
+      "sha256": "ce775c9686351fba0ac8565262f941fcf09cf51413a155a942d45cdd87dc9f10",
+      "bytes": 693194
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/agent-testing",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/agent-testing",
+      "sha256": "e239c4d7b25e3bd9e8944e3125ef15c5f60a30b657928b6253bdb5d5c4b4e5f3",
+      "bytes": 423405
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/agent-workflows",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/agent-workflows",
+      "sha256": "0ea1f9d58d97475e8afdd620d46e5f200cf67f7619c0643fc930cda0307394ac",
+      "bytes": 446997
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/agent-workflows-as-code",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/agent-workflows-as-code",
+      "sha256": "aaf10cb021c44169cf21efa7af348779da73113b63961e8b844344ebb64cb8d3",
+      "bytes": 862683
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/personalization/dynamic-variables",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/personalization/dynamic-variables",
+      "sha256": "38c6e1130749fd348a35212e2bd496569e686b148cd6ee00b3a61409241d8f73",
+      "bytes": 721238
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/tools/webhook-tools",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/tools/webhook-tools",
+      "sha256": "6692c5efdedfda1cab9725156fc0b243c6d2cd6b8dfcde8f8a2ae5b539f4dc22",
+      "bytes": 448072
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/tools/code-tools",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/tools/code-tools",
+      "sha256": "f5c90838c4666f093d439a6820cbd23aa33e3bb91389de3e4c3947785aee247a",
+      "bytes": 421467
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/tools/mcp",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/tools/mcp",
+      "sha256": "1a5bfc5cdf4efc883ad15081ed54db39b48b0dcd9488782c07650d50c702400f",
+      "bytes": 366657
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/tools/system-tools",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/tools/system-tools",
+      "sha256": "9abb11d62f816b0b25f0ae52f9891932fbb2b9f4a9cd1898f55332ea9a84b721",
+      "bytes": 566444
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/tools/system-tools/agent-transfer",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/tools/system-tools/agent-transfer",
+      "sha256": "cca518c31d264a135fb1f46e3a71036e50792270df7fd728cc4c5e09dfab23c3",
+      "bytes": 428065
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/tools/system-tools/transfer-to-number",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/tools/system-tools/transfer-to-number",
+      "sha256": "8c00123d21a2eaf0d515c9bdd25298752304750713f2015983063f66c372f264",
+      "bytes": 548558
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/widget",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/widget",
+      "sha256": "223c154c1bdc60923ee4947786db7925fbf83ce81cd15e62f6b5b688a5b47f70",
+      "bytes": 564805
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/speech-engine",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/speech-engine",
+      "sha256": "ea6606af690a392b3f132a2ceea17d0146fe12939e594eac277dd8c49c13ee45",
+      "bytes": 221656
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/realtime-models",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/realtime-models",
+      "sha256": "b90d3f0213dfd32dc8742e1433f192e5d9b2720eb0a4fbceb42520e81c74057f",
+      "bytes": 324680
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/operate/versioning",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/operate/versioning",
+      "sha256": "c93284e7f74c7a3fac8f9619581304f630ca5fe4d999f6aba27b39bec2b084f6",
+      "bytes": 771003
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/agent-analysis/analysis-library",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/agent-analysis/analysis-library",
+      "sha256": "64ff16599379bb32c375233e5f8a8db7612422b68edb9c7e81c8b95fa1f024ca",
+      "bytes": 250771
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/dashboard",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/dashboard",
+      "sha256": "9cdd90bf8ccad26f3c9bb59fb2f5d2816bdea91c0e82809e1555d735aeb566ff",
+      "bytes": 291768
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/operate/experiments",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/operate/experiments",
+      "sha256": "aa686aba3a9aa899b460d4058d45b889cbf33d402890f99363e998bd9338cca1",
+      "bytes": 287791
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/llm/optimizing-costs",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/llm/optimizing-costs",
+      "sha256": "4e083d69f40a89fc52523a3d1ec7a9d394763b4a4a8581c42c97d5d09e0f94ad",
+      "bytes": 272490
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/privacy/retention",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/privacy/retention",
+      "sha256": "cebbf68fda24a84b5c4bf16bc56b87576d6f367f78f3351f7712fe964c37e818",
+      "bytes": 284986
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/privacy/zrm",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/privacy/zrm",
+      "sha256": "c1393ec3ed3269797d07b4af6eca7d33d17572894fd43efaaad90ada97850f0c",
+      "bytes": 281727
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/privacy/conversation-history-redaction",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/privacy/conversation-history-redaction",
+      "sha256": "766e83eb3d208899ab37981761b29b1827ef80a94898673b7eb6be875ae7ab74",
+      "bytes": 336006
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/workflows/post-call-webhooks",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/workflows/post-call-webhooks",
+      "sha256": "b6813ffb7c661a7b9fa26c4ba81e9c2135fa76a06184ea5bdd85609bbc5c41a9",
+      "bytes": 1279775
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/phone-numbers/twilio-integration/native-integration",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/phone-numbers/twilio-integration/native-integration",
+      "sha256": "9acb03fdf6ba0ec1c0d976134ad5643a4f58f16559479958e3c2dc47b4664870",
+      "bytes": 299809
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/operate/cli",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/operate/cli",
+      "sha256": "5a2cefdd9f6a5f2bba078f7a6caece4eacda4bac3e6a503c21b87d54dd0076b3",
+      "bytes": 497437
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/resources/libraries",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/resources/libraries",
+      "sha256": "a38fabf51fe711f1f89138b9786d5ef218231310c27498810c97fcf87a379ecd",
+      "bytes": 292542
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/libraries/python",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/libraries/python",
+      "sha256": "f5ed557da92a628c6de35f0ca638c08fda6b74fe8b8992d6f8db30707e70ee20",
+      "bytes": 367580
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+      "sha256": "217d0aac1adfb1cbdb632835e186516d60733abe86115142ac843bfe35f77feb",
+      "bytes": 288968
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/administration/workspaces/api-keys",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/administration/workspaces/api-keys",
+      "sha256": "ec2094817a18b651cef0fed16586756f5096b1b92ea93c80bdbebd139bf836b8",
+      "bytes": 230012
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/administration/usage-analytics",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/administration/usage-analytics",
+      "sha256": "90fc55decda16bfa331ad80e4aab800ed118df7f9f15a62456be9cc67f104dbc",
+      "bytes": 201901
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-api/resources/webhooks",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-api/resources/webhooks",
+      "sha256": "fcef78435f5f845052c53b446f200521572f9e659716de246d4367f437c3a363",
+      "bytes": 554684
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/procedures",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/procedures",
+      "sha256": "536f7cc71bcb72b7be7101dce47613b92ab006a7799f1430cd2bc8b170ffc1b7",
+      "bytes": 370927
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/operate/architect",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/operate/architect",
+      "sha256": "cf244650510cf3b0c474bbdd04e10b33525811c2409817d8b7be0c5a352dc322",
+      "bytes": 272107
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/multimodal-input",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/multimodal-input",
+      "sha256": "9a56814eec95fbfa614a49e95eda48030971b13356699345930c6159cfb54c5b",
+      "bytes": 381574
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/best-practices/guardrails",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/best-practices/guardrails",
+      "sha256": "96a6cbe1c4b7029e69a79be3de2aa5cb40183fe6a11f167b449ae5b40f54080c",
+      "bytes": 465633
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/dashboard/spotlight",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/dashboard/spotlight",
+      "sha256": "e5207a88ac1da9dae95715b41f3cdc46d3911a451b476bc504699e7dd1536098",
+      "bytes": 252652
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/guides/realtime-monitoring",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/guides/realtime-monitoring",
+      "sha256": "b36bb707298d5335ea3d3b1feb74cd9e59c506fcc92503bfab0999ada609e69e",
+      "bytes": 472165
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/opentelemetry-traces",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/opentelemetry-traces",
+      "sha256": "c88baec7a8ea8ce398528ee4f905ea4048361af70007e235abb8ac9245a54866",
+      "bytes": 584732
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/operate/alerts",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/operate/alerts",
+      "sha256": "3b32c3b358418454d3431ae1b2807b436e80f7fca0b24325954cdf3d62fa9ead",
+      "bytes": 327777
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/private-deployment",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/capabilities/private-deployment",
+      "sha256": "a28499ab9eb4f35dc4db5ee92f0733c53936aebed2ac2a630678776064c77947",
+      "bytes": 206312
+    },
+    {
+      "url": "https://elevenlabs.io/docs/reception-ai/overview",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/reception-ai/overview",
+      "sha256": "215d1685ec085e0d5c1568c839a4e082b224122275d6bcb8f04373f48a5439b7",
+      "bytes": 210034
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/integrations/custom_channel",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/eleven-agents/customization/integrations/custom_channel",
+      "sha256": "9d3370674c9e05ade5128319d608875f8270d9455ae5fbd54e834f234c8f32e0",
+      "bytes": 449002
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/administration/workspaces/service-accounts",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/administration/workspaces/service-accounts",
+      "sha256": "c7bc22ee672d9fcfdd3f6c3c48a79bfbd72ffe2fba28c3d252c85339864b55d3",
+      "bytes": 195692
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/administration/workspaces/sso",
+      "status": 200,
+      "finalUrl": "https://elevenlabs.io/docs/overview/administration/workspaces/sso",
+      "sha256": "b0660da71b47b8d4986c19fb13b09bb7f0567fabfd2c528b06c59bec5f40d5c4",
+      "bytes": 234699
+    }
+  ]
+}

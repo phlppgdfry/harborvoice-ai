@@ -8,6 +8,35 @@ export default function PortfolioEvidence() {
   return (
     <div className="two-column">
       <section className="panel padded">
+        <h2>ElevenLabs Engineering &amp; Creative Automation Portfolio</h2>
+        <p>
+          Explore voice operations, recorded creative work, reusable tooling and
+          developer education. Shipment records are fictional. Historical
+          provider evaluations and offline contracts have separate evidence.
+        </p>
+        <a className="button primary" href="./agentproof/">
+          Open AgentProof · offline evidence explorer <ArrowUpRight size={15} />
+        </a>
+        <p>
+          Compare 110 scripted scenarios and inspect twelve multilingual
+          contracts for tool arguments and structured facts. No API key,
+          microphone or paid generation is used by AgentProof.
+        </p>
+        <p>
+          <a href="https://github.com/phlppgdfry/harborvoice-ai/tree/main/packages/agentops-kit">
+            AgentOps Kit source
+          </a>{" "}
+          ·{" "}
+          <a href="https://github.com/phlppgdfry/harborvoice-ai/blob/main/docs/final-mastery/portfolio.md">
+            Evidence portfolio
+          </a>{" "}
+          ·{" "}
+          <a href="https://github.com/phlppgdfry/harborvoice-ai/blob/main/docs/final-mastery/publication-status.md">
+            Publication status
+          </a>
+        </p>
+      </section>
+      <section className="panel padded">
         <h2>Nora Enterprise v2</h2>
         <p>
           The initial suite passed {enterprise.passed} /{" "}

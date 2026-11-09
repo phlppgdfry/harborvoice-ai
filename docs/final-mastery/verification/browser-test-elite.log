@@ -1,0 +1,12 @@
+
+> harborvoice-ai@2.2.0-rc.1 test:elite
+> node --import tsx scripts/elite/browser-check.ts
+
+{
+  "checks": [
+    "Three localized films decode at 30–45 seconds; four native flow references and scoped engineering evidence render",
+    "All fifteen modules render; search/category filter, exercise notes, self-review persistence and guide download work",
+    "390px mobile views have no horizontal overflow"
+  ],
+  "errors": []
+}

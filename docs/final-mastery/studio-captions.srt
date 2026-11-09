@@ -1,0 +1,27 @@
+1
+00:00:02,040 --> 00:00:07,940
+A shipment is waiting, a customer needs an
+answer, and a guess is not good enough.
+
+2
+00:00:08,600 --> 00:00:14,240
+Meet HarborVoice. Nora checks fictional
+shipment data, explains what is known, and
+
+3
+00:00:14,360 --> 00:00:20,200
+keeps human decisions with people across
+languages with explicit tools, tested
+
+4
+00:00:20,280 --> 00:00:25,240
+boundaries, and a clear path to review.
+Explore the voice agent, hear the
+
+5
+00:00:25,240 --> 00:00:25,860
+evidence,
+
+6
+00:00:26,300 --> 00:00:28,260
+build trust into the conversation.

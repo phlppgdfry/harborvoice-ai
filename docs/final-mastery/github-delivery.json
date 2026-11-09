@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-09T13:32:13.310804+00:00",
+  "sourcePr": "https://github.com/phlppgdfry/harborvoice-ai/pull/5",
+  "verifiedImplementationCommit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+  "implementationCi": [
+    {
+      "workflow": "Verify",
+      "result": "success",
+      "url": "https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42625767270"
+    },
+    {
+      "workflow": "Phase 3 offline verification",
+      "result": "success",
+      "url": "https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42625767277"
+    }
+  ],
+  "sourceIntegrationState": "READY \u2014 final receipt/notice changes await exact-head CI before merge",
+  "releaseVersion": "v2.2.0-rc.1",
+  "stableReleasePreserved": "v2.1.0",
+  "productionPr": {
+    "number": 1,
+    "draft": true,
+    "head": "ae15f1f99e4677d6eeea1d86f80b4b183c4ec8a6",
+    "mergedByPhase4": false
+  },
+  "vercelPreserved": {
+    "deploymentId": "dpl_C9wP3SGQr748FqB2ifTt3ruRtnTZ",
+    "sha": "234281a806150a79b12220d182df3fc9e97534b9"
+  },
+  "externalSubmissions": 0,
+  "scope": "Point-in-time pre-merge receipt; PR/release URLs and subsequent closeout receipt record later changes. No production promotion authorized."
+}

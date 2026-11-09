@@ -1,0 +1,93 @@
+{
+  "sourceCommit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+  "results": [
+    {
+      "command": "npm run check",
+      "startedAt": "2026-11-09T13:28:07.897Z",
+      "endedAt": "2026-11-09T13:28:16.641Z",
+      "commit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+      "environment": "macOS arm64; Node v24.22.2; isolated final-mastery worktree",
+      "result": "PASS",
+      "exitCode": 0,
+      "evidence": "verification/npm-run-check.log",
+      "scope": "Offline software/asset checks; no provider generation."
+    },
+    {
+      "command": "npm run phase3:verify",
+      "startedAt": "2026-11-09T13:28:16.642Z",
+      "endedAt": "2026-11-09T13:28:20.248Z",
+      "commit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+      "environment": "macOS arm64; Node v24.22.2; isolated final-mastery worktree",
+      "result": "PASS",
+      "exitCode": 0,
+      "evidence": "verification/npm-run-phase3_verify.log",
+      "scope": "Offline software/asset checks; no provider generation."
+    },
+    {
+      "command": "npm run format:check",
+      "startedAt": "2026-11-09T13:28:20.248Z",
+      "endedAt": "2026-11-09T13:28:22.193Z",
+      "commit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+      "environment": "macOS arm64; Node v24.22.2; isolated final-mastery worktree",
+      "result": "PASS",
+      "exitCode": 0,
+      "evidence": "verification/npm-run-format_check.log",
+      "scope": "Offline software/asset checks; no provider generation."
+    },
+    {
+      "command": "npm run format:phase3:check",
+      "startedAt": "2026-11-09T13:28:22.193Z",
+      "endedAt": "2026-11-09T13:28:22.939Z",
+      "commit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+      "environment": "macOS arm64; Node v24.22.2; isolated final-mastery worktree",
+      "result": "PASS",
+      "exitCode": 0,
+      "evidence": "verification/npm-run-format_phase3_check.log",
+      "scope": "Offline software/asset checks; no provider generation."
+    },
+    {
+      "command": "npm run elite:validate",
+      "startedAt": "2026-11-09T13:28:22.939Z",
+      "endedAt": "2026-11-09T13:28:23.434Z",
+      "commit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+      "environment": "macOS arm64; Node v24.22.2; isolated final-mastery worktree",
+      "result": "PASS",
+      "exitCode": 0,
+      "evidence": "verification/npm-run-elite_validate.log",
+      "scope": "Offline software/asset checks; no provider generation."
+    },
+    {
+      "command": "npm run recognition:validate",
+      "startedAt": "2026-11-09T13:28:23.434Z",
+      "endedAt": "2026-11-09T13:28:23.731Z",
+      "commit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+      "environment": "macOS arm64; Node v24.22.2; isolated final-mastery worktree",
+      "result": "PASS",
+      "exitCode": 0,
+      "evidence": "verification/npm-run-recognition_validate.log",
+      "scope": "Offline software/asset checks; no provider generation."
+    },
+    {
+      "command": "npm audit --json",
+      "startedAt": "2026-11-09T13:28:23.731Z",
+      "endedAt": "2026-11-09T13:28:24.379Z",
+      "commit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+      "environment": "macOS arm64; Node v24.22.2; isolated final-mastery worktree",
+      "result": "PASS",
+      "exitCode": 0,
+      "evidence": "verification/npm-audit---json.log",
+      "scope": "Offline software/asset checks; no provider generation."
+    },
+    {
+      "command": "git diff --check",
+      "startedAt": "2026-11-09T13:28:24.379Z",
+      "endedAt": "2026-11-09T13:28:24.403Z",
+      "commit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+      "environment": "macOS arm64; Node v24.22.2; isolated final-mastery worktree",
+      "result": "PASS",
+      "exitCode": 0,
+      "evidence": "verification/git-diff---check.log",
+      "scope": "Offline software/asset checks; no provider generation."
+    }
+  ]
+}
