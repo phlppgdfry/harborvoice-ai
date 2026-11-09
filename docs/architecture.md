@@ -12,8 +12,8 @@ available separately and is not a production fallback. Agent selection is constr
 the configured private agent; no public administrative CRUD was added.
 
 See [deployment and recovery](deployment.md), [voice integration](elevenlabs-integration.md),
-[security](security.md) and [tests](testing.md). Production cloud/voice acceptance is pending
-external gates; this diagram does not assert a successful deployment.
+[security](security.md) and [tests](testing.md). The persistent runtime and one real voice call are deployed and verified;
+see [current evidence](production-verification.json) for scope and limitations.
 
 ---
 

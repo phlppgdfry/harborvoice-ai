@@ -1,8 +1,8 @@
 # Production deployment and rollback
 
 This branch prepares a private single-operator workbench, not a multi-tenant SaaS.
-Production acceptance is incomplete until the real database, HTTPS deployment and
-voice smoke gates pass. Do not call the existing browser-storage gateway a durable release.
+The PostgreSQL-backed production deployment and one capped real voice call are verified.
+Broader production acceptance remains bounded by the operational/manual items below.
 
 ## Configuration
 
@@ -18,8 +18,10 @@ upgrade authorized. Provisioning through the already-linked HarborVoice Vercel p
 completed after the owner acceptance gate was satisfied. The dedicated resource was
 created on the explicitly selected Free plan and connected to preview only. The real
 TLS connection and schema migration passed on 8 November 2026. No unrelated Supabase
-project was reused or unpaused. Production promotion and a real voice smoke test remain
-separate acceptance gates; resource creation is not proof of a finished deployment.
+project was reused or unpaused. A second explicitly Free resource, `harborvoice-live`, isolates production from the
+`harborvoice-production` preview resource. Both migrations passed. Production at
+https://harborvoice-ai.vercel.app was verified on 9 November 2026; see
+[the actual voice and persistence evidence](production-verification.json).
 
 ## Safe sequence
 
@@ -72,3 +74,20 @@ provider records. This is not a blanket GDPR-compliance certification.
 Rollback: restore the previous verified deployment without dropping the new database.
 Migration 1 is additive. If rolling back to browser-storage code, do not imply it can read
 the PostgreSQL records; retain the database and backups, then resolve forward deliberately.
+
+## Browser-data preservation
+
+The update does not erase `harborvoice-state-v1` from local storage. Existing browser
+records are not automatically trusted as production approvals. Preserve/export that JSON
+before clearing site data (browser developer tools → Application/Storage → Local Storage),
+review it, then use Settings' explicit conversation import. It merges validated conversation
+records only and leaves both the source and existing server IDs intact. Shipments and
+approval decisions are deliberately not imported from an unauthenticated browser snapshot.
+
+## Verified release and rollback point
+
+The deployed implementation is `234281a806150a79b12220d182df3fc9e97534b9`, rebuilt from
+its CI-verified GitHub preview into production. The existing production operator secret
+and provider credentials were preserved. The former browser-storage deployment is
+https://harborvoice-ifzpcma5f-kippiegs-projects.vercel.app; inspect it before rollback.
+Do not delete the PostgreSQL database during rollback. Feature branch/PR remain unmerged.

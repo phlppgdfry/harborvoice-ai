@@ -40,7 +40,9 @@ validated conversation records, preserves source and does not import approval/sh
 Provider recording/transcript deletion remains separate; never imply the local button
 erases all copies. See [deployment](deployment.md) for retention and backups.
 
-Verified: dedicated free database provisioning and TLS migration. Unverified gates: production deployment,
-live voice smoke and actual device/microphone permissions. These cannot be marked passed
-from SDK fixtures or read-only account access. No secrets or private voice recordings
-belong in Git. Never weaken TLS, disable auth or enable demo mode to make readiness green.
+Verified: separate free preview/production databases, TLS migrations, public HTTPS,
+protected readiness, logout and one capped real voice call. Physical microphone quality,
+provider retention/DPA decisions, scheduled retention, operational backup ownership and
+all account-restricted audio products have not been fully accepted. No secrets or private
+voice recordings belong in Git. Never weaken TLS, disable auth or enable demo mode to
+make readiness green.

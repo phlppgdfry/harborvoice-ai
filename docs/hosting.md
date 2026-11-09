@@ -1,3 +1,7 @@
+> Current persistent-runtime deployment: see [deployment](deployment.md) and
+> [verified delivery](PROJECT_FINALIZATION_REPORT.md). The browser-storage gateway
+> description below is retained as historical/demo context.
+
 # Live hosting
 
 Live URL: https://harborvoice-ai.vercel.app

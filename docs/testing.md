@@ -16,6 +16,10 @@ verifies dump/restore, stops its own disposable container and removes only its o
 temporary data. It never uses a production database. Do not set TEST_POSTGRES on a
 deployment's live connection: the fixture deliberately resets synthetic sessions/tickets.
 
+Install Chromium with `npx playwright install chromium` (and use `BROWSER_CHANNEL=chromium`
+when Chrome is unavailable). The optional real-call recording harness additionally requires
+FFmpeg; it never generates a new synthetic voice asset.
+
 For browser checks start `npm run dev` with `APP_MODE=demo` and a fresh local SQLite
 store. The original walkthrough checks actual domain/UI/API behavior and mocked audio
 products. Evidence goes to ignored `var/browser-evidence`, preserving committed history.

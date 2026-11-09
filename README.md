@@ -1,17 +1,16 @@
-> **Production delivery branch:** this branch adds durable PostgreSQL, strict production
-> configuration, fail-closed UI behavior, operator logout revocation and real database/
-> fixture-voice lifecycle tests. The dedicated free Neon database and its TLS migration are verified;
-> deployed voice smoke testing and production acceptance remain unverified.
-> See [deployment](docs/deployment.md), [security](docs/security.md),
-> [ElevenLabs integration](docs/elevenlabs-integration.md) and [tests](docs/testing.md).
-> The previously published static demo/live gateway below is not evidence that this new
-> persistent release has been deployed. Historical verification is preserved.
+> **Persistent runtime:** the public application now uses a dedicated PostgreSQL database,
+> protected operator sessions and real ElevenLabs voice. One authorized synthetic-microphone
+> call completed on 9 November 2026; the provider recorded 14 seconds. Production mode has
+> no deterministic/browser-storage fallback. This is a single-operator fictional workbench,
+> not an independently certified enterprise production system. See [delivery report](docs/PROJECT_FINALIZATION_REPORT.md),
+> [live evidence](docs/production-verification.json), [deployment](docs/deployment.md),
+> [security](docs/security.md) and [tests](docs/testing.md). Historical evidence is retained.
 
 # HarborVoice AI · Contribution Edition
 
 **Voice intelligence with evidence and human control.** A working logistics voice-AI portfolio, creative production studio and practical learning environment.
 
-[Live application](https://harborvoice-ai.vercel.app) · [Watch the product film](public/elite/commercial-en.mp4) · [Mastery Lab](https://harborvoice-ai.vercel.app/#mastery-lab) · [Capability matrix](docs/elite/capability-matrix.md) · [Release evidence](docs/elite/release-report.md)
+[Private live application](https://harborvoice-ai.vercel.app) · [Credential-free synthetic preview](https://phlppgdfry.github.io/harborvoice-ai/) · [Watch the product film](public/elite/commercial-en.mp4) · [Mastery Lab](https://harborvoice-ai.vercel.app/#mastery-lab) · [Capability matrix](docs/elite/capability-matrix.md) · [Release evidence](docs/elite/release-report.md)
 
 [![HarborVoice product film](public/elite/film-poster.jpg)](public/elite/commercial-en.mp4)
 
