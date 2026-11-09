@@ -23,3 +23,5 @@ Baseline 35,157. Owner explicitly approved up to 16,500 credits for one Product 
 Book owner explicitly approved free worldwide distribution under HarborVoice Project, confirmed rights/content guidelines and accepted linked terms/privacy; later explicitly approved the app audio preview. No Stripe, tax, payment, banking or fabricated personal identity entered. Music has no equivalent commercial-rights approval; the native licensing screen was not reachable for these resources.
 
 See [the detailed tracker](submission-tracker.md) and [Dutch final report](final-report-nl.md) for evidence and remaining actions. Prepared assets are never counted as an external publication.
+
+Final native read-back: Learning and NL/FR both reopen as published Link only templates with preserved inputs. Earlier Explore-submission confirmations are retained; the reopened editor exposes no new moderation decision. ElevenReader remains Pending review after reload. [Read-back receipt](final-native-verification.json).
