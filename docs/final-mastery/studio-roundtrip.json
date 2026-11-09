@@ -59,5 +59,6 @@
     "scope": "Fresh native SRT export; complete wording matches final source VTT, cue order/times valid. Interior word-level timing and human readability remain scoped separately."
   },
   "privateExportPath": "/Users/philippegodfroy/Downloads/ElevenLabs_HarborVoice_Elite_-_Product_Commercial.mp4",
-  "scope": "Supported native entire-timeline High Quality MP4 and SRT export; no Studio Agent, model generation, API allowlist bypass or public share. Full native MP4 retained outside Git."
+  "scope": "Supported native entire-timeline High Quality MP4 and SRT export; no Studio Agent, model generation, API allowlist bypass or public share. Full native MP4 retained outside Git.",
+  "visualQa": "FAILED \u2014 additional native captions duplicated the source burned-in subtitles. Preserved as failure evidence; superseded by corrected export."
 }

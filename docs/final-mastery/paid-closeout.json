@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-11-09T13:23:59.038Z",
+  "authority": "Owner explicitly approved new Phase4 maximum10000 and confirmed other paid sessions paused before paid dispatch.",
+  "maximumAdditional": 10000,
+  "billingBuffer": 3000,
+  "startingBalance": 38644,
+  "currentBalance": 35157,
+  "startingUsed": 90071,
+  "latestUsed": 93558,
+  "limit": 128715,
+  "observedAccountUsage": 3487,
+  "retainedReservations": 5800,
+  "conservativeDispatchHeadroom": 1200,
+  "pending": 0,
+  "failed": 1,
+  "operations": [
+    {
+      "key": "learning-template-preview-phase4",
+      "workstream": "native-learning",
+      "status": "completed",
+      "estimate": 3600,
+      "reportedCredits": null,
+      "reservedAt": "2026-11-09T12:55:01.263Z",
+      "updatedAt": "2026-11-09T13:02:37.095Z",
+      "note": "One native preview completed; outputs script, 61-second narration and quiz. Observed account delta 3007 after owner pause confirmation, not final per-job invoice. Full 3600 hold retained."
+    },
+    {
+      "key": "learning-revised-scribe",
+      "workstream": "learning-audio-qa",
+      "status": "failed",
+      "estimate": 100,
+      "reportedCredits": null,
+      "reservedAt": "2026-11-09T13:02:38.758Z",
+      "updatedAt": "2026-11-09T13:03:43.215Z",
+      "note": "MCP rejected local resource path before a provider job was returned. 100-credit hold retained; no zero-cost settlement assumed."
+    },
+    {
+      "key": "learning-revised-scribe-allowed-path",
+      "workstream": "learning-audio-qa",
+      "status": "completed",
+      "estimate": 100,
+      "reportedCredits": null,
+      "reservedAt": "2026-11-09T13:03:44.600Z",
+      "updatedAt": "2026-11-09T13:10:40.023Z",
+      "note": "One Scribe transcription completed; text matches the full native narration script. Per-job billing absent. Both 100-credit holds retained, including the initial local validation failure."
+    },
+    {
+      "key": "studio-existing-master-export",
+      "workstream": "native-studio-qa",
+      "status": "completed",
+      "estimate": 500,
+      "reportedCredits": null,
+      "reservedAt": "2026-11-09T13:13:18.318Z",
+      "updatedAt": "2026-11-09T13:15:47.414Z",
+      "note": "One 36-second native MP4 and SRT export completed. MP4 full-decodes; audio correlation 0.99912 at zero lag versus approved master; all caption words match final VTT. No model generation or Studio Agent. Hold500 retained until billing reconciliation."
+    },
+    {
+      "key": "studio-caption-rendering-repair",
+      "workstream": "native-studio-qa",
+      "status": "completed",
+      "estimate": 1000,
+      "reportedCredits": 458,
+      "reservedAt": "2026-11-09T13:18:28.698Z",
+      "updatedAt": "2026-11-09T13:20:14.182Z",
+      "note": "Studio Agent cumulative counter 1619→2077 =458 credits. Readback enabled=false; same source hO18ngHbeNz2vHdkBJqq, 36s timeline, unmuted audio and completed caption transcript item retained. No media generation. Full 1000 hold retained."
+    },
+    {
+      "key": "studio-corrected-master-export",
+      "workstream": "native-studio-qa",
+      "status": "completed",
+      "estimate": 500,
+      "reportedCredits": null,
+      "reservedAt": "2026-11-09T13:20:16.552Z",
+      "updatedAt": "2026-11-09T13:23:57.560Z",
+      "note": "Corrected native MP4 completed at 36.0s; full decode and audio correlation0.99912 at zero lag; visual contact-sheet review confirms duplicate overlay removed, original burned-in subtitles preserved. Native caption editor still exposes all text. Full500 hold retained."
+    }
+  ],
+  "overageDisabled": true,
+  "coordination": "Owner-confirmed pause plus local atomic reservations; not distributed account-wide fencing.",
+  "historicalHolds": "Original Elite/Recognition ledgers unchanged; no failed hold released.",
+  "billingScope": "Account delta over this authorized window, not a final per-job invoice. All completed/failed estimates remain held; no further paid dispatch."
+}

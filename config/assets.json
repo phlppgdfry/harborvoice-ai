@@ -446,21 +446,6 @@
       "path": "public/recognition/learning-revised.mp3",
       "bytes": 999791,
       "sha256": "4421df52518e012c5caa788207e8cbaef22d15928ccd6cba5ad1862dbd4c7955"
-    },
-    {
-      "path": "public/recognition/learning-revised-transcript.txt",
-      "bytes": 920,
-      "sha256": "d464cdaef5d8d738bc06eb5a2c9f9f5d69db76e96e9f499be66bb641a971df52"
-    },
-    {
-      "path": "public/recognition/learning-revised-transcript.json",
-      "bytes": 1140,
-      "sha256": "0d50d3a23c3923cc4f3d10b99f0528e204e08bc84c97b85eca31e6fde8355543"
-    },
-    {
-      "path": "public/recognition/learning-revised-quiz.txt",
-      "bytes": 1699,
-      "sha256": "957776f9494b6d117a83ee719a3be44378b26a011cb69fef10878f5d252746b4"
     }
   ]
 }

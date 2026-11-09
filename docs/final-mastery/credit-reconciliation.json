@@ -57,5 +57,6 @@
     "elite": 44850.04,
     "recognition": 21756
   },
-  "limitation": "Envelopes overlap with observed account usage and must not be blindly summed as new unbilled costs. Exact outstanding liability remains unknown; failed/completed holds retained. Other agent/browser clients were observed, but process names do not prove their account activity."
+  "limitation": "Envelopes overlap with observed account usage and must not be blindly summed as new unbilled costs. Exact outstanding liability remains unknown; failed/completed holds retained. Other agent/browser clients were observed, but process names do not prove their account activity.",
+  "supersededPhase4Authority": "Initial zero-budget audit is historical. Owner later authorized10000 and confirmed all other paid sessions paused. Current operations/balance/holds are authoritative in paid-closeout.json."
 }

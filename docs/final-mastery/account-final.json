@@ -1,10 +1,13 @@
 {
-  "checkedAt": "2026-11-09T12:41:16.505Z",
-  "used": 90071,
+  "checkedAt": "2026-11-09T13:23:59.038Z",
+  "used": 93558,
   "limit": 128715,
-  "remaining": 38644,
+  "remaining": 35157,
   "tier": "creator",
   "canExtend": false,
   "currentOverage": "0",
-  "phase4PaidRequests": 0
+  "phase4AuthorizedCredits": 10000,
+  "phase4ObservedAccountUsage": 3487,
+  "phase4Pending": 0,
+  "scope": "Account delta over this authorized window, not a final per-job invoice. All completed/failed estimates remain held; no further paid dispatch."
 }

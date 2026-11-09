@@ -59,5 +59,27 @@
     "scope": "Fresh native SRT export; complete wording matches final source VTT, cue order/times valid. Interior word-level timing and human readability remain scoped separately."
   },
   "privateExportPath": "/Users/philippegodfroy/Downloads/ElevenLabs_HarborVoice_Elite_-_Product_Commercial (1).mp4",
-  "scope": "Supported native entire-timeline High Quality MP4 and SRT export; no Studio Agent, model generation, API allowlist bypass or public share. Full native MP4 retained outside Git."
+  "scope": "Supported native entire-timeline High Quality MP4 and SRT export; no Studio Agent, model generation, API allowlist bypass or public share. Full native MP4 retained outside Git.",
+  "captionRendering": {
+    "enabled": false,
+    "editableCueTextRetainedInNativeUi": true,
+    "sourceBurnedInCaptionsPreserved": true,
+    "agentUiCumulativeCreditsBefore": 1619,
+    "agentUiCumulativeCreditsAfter": 2077,
+    "agentUiDeltaCredits": 458,
+    "autoGenerationThresholdCredits": 1
+  },
+  "visualQa": {
+    "sampledFrames": "4.5, 13.5, 22.5, 31.5 seconds; 2x2 contact sheet",
+    "duplicateOverlayRemoved": true,
+    "meaningfulScenesMatchApprovedSource": true,
+    "evidence": "screenshots/studio-after-overlay-fix.png",
+    "scope": "Sampled visual inspection plus complete file decode; no claim of frame-by-frame human review."
+  },
+  "videoComparison": {
+    "method": "FFmpeg SSIM after scaling both streams to640x360 with timestamp normalization",
+    "all": 0.971703,
+    "scope": "Lossy native render; no byte-identical or full round-trip editing sync claim."
+  },
+  "status": "IMPLEMENTED AND TESTED"
 }
