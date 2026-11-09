@@ -1,7 +1,7 @@
 name: Phase 3 offline verification
 on:
   push:
-    branches: [main, integration/pre-phase4-audit]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 permissions:
