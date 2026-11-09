@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import assert from "node:assert/strict";
+import { format } from "prettier";
 import {
   evaluate,
   report,
@@ -57,7 +58,10 @@ const r: Report = {
 };
 mkdirSync("apps/agentproof/public", { recursive: true });
 writeFileSync("apps/agentproof/public/contracts.json", report(r, "json"));
-writeFileSync("docs/final-mastery/contracts.json", report(r, "json"));
+writeFileSync(
+  "docs/final-mastery/contracts.json",
+  await format(report(r, "json"), { parser: "json" }),
+);
 console.log(
   "12 multilingual adversarial contracts: 3 accepted controls, 9 detected failures; zero provider calls.",
 );
