@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-09T16:49:06.649729+00:00",
+  "commit": "8d221ff6d71f43328b38a6dfcd53ad74d252e37c",
+  "gitleaks": {
+    "command": "gitleaks git --log-opts=0f84738..8d221ff --redact --no-banner",
+    "commits": 8,
+    "bytesScanned": 627632,
+    "findings": 0
+  },
+  "earlierDirectoryScan": {
+    "bytesApprox": 178926475,
+    "findings": 0
+  },
+  "dependencyAudit": "npm audit zero known vulnerabilities at recorded observation",
+  "scope": "Scoped automated scans and auth tests. Not a penetration test, secrets guarantee, independent certification or GDPR assessment."
+}

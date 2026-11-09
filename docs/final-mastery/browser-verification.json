@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-11-09T13:28:49.123Z",
-  "sourceCommit": "3cee65658c699bfd6ca92048e6485e2b98003633",
-  "url": "http://127.0.0.1:4414",
+  "checkedAt": "2026-11-09T13:38:25.624Z",
+  "sourceCommit": "8d221ff6d71f43328b38a6dfcd53ad74d252e37c",
+  "url": "https://phlppgdfry.github.io/harborvoice-ai",
   "viewports": ["1440x1000", "390x844"],
   "browser": "Chrome via Playwright; Browser plugin not available; native CUA transport failed timeoutMs.",
   "checks": [
