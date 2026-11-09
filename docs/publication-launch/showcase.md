@@ -8,7 +8,7 @@
 - Upstream base audited: `870ee29c311eaccd33425f326e72e14a120c69e2`.
 - Exactly three changed files: author YAML, project MDX, project cover. No generated public image, dependencies or unrelated code included.
 
-Current guide, workflow and actual schema read; no repository PR template found. Original project-generated cover/provenance reviewed, MIT source confirmed, isFeatured=false and independent-project disclosures retained. Demo points to unrestricted Pages; protected voice runtime is accurately distinguished. Current live/demo/source/video URLs all return HTTP 200. No new current browser rendering test is claimed because the browser transport failed.
+Current guide, workflow and actual schema read; no repository PR template found. Original project-generated cover/provenance reviewed, MIT source confirmed, isFeatured=false and independent-project disclosures retained. Demo points to unrestricted Pages; protected voice runtime is accurately distinguished. Current live/demo/source/video URLs all return HTTP 200. The static production page was validated locally; this report does not claim a new complete visual browser test of every application feature.
 
 ## Validation
 
@@ -34,3 +34,5 @@ At first post-submission inspection:
 CI has **not passed**. Existing unrelated recent PRs show the same workflow startup/action-required pattern; this does not prove the exact cause. No upstream settings changed or controls bypassed. Recheck after maintainers enable runs; standalone typecheck may still expose the documented baseline errors. [Sanitized PR receipt](showcase-pr.json).
 
 The connected GitHub app could not create an upstream PR (403), so the existing authenticated gh login was used successfully. No new authentication scopes were granted. No merge, maintainer ping or extra issue was created.
+
+Final recheck 2026-11-09T22:38:20.279458+00:00: PR remains OPEN; no inline comments or human requested changes observed. Vercel still reports “Authorization required to deploy.” No new contributor-actionable content failure was available.

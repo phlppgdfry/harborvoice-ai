@@ -1,0 +1,19 @@
+{
+  "observedAt": "2026-11-09T22:35:25.065424+00:00",
+  "flowId": "autfYixTUdY8eSnjlDOb",
+  "templateId": "autfYixTUdY8eSnjlDOb",
+  "url": "https://elevenlabs.io/app/templates/autfYixTUdY8eSnjlDOb",
+  "title": "Multilingual Campaign Factory \u00b7 English to Dutch + French",
+  "confirmation": "Submitted for Explore review",
+  "detail": "Template is live with link sharing while pending review. It will appear in Explore once an admin approves it.",
+  "category": "Songs & Audio",
+  "tags": ["localization"],
+  "inputs": ["Source campaign audio"],
+  "outputs": ["Dutch campaign audio", "French campaign audio"],
+  "exampleTitle": "English campaign \u2192 Dutch and French \u00b7 fixed language pair",
+  "exampleSession": "I1pUIPbXXCifhIqBgDZs",
+  "consumerQuote": 11915,
+  "arbitraryTargetLanguageSelector": false,
+  "captions": false,
+  "legalDeclarationShown": false
+}

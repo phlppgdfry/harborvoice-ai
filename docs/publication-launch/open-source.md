@@ -1,35 +1,22 @@
 # Official open-source contribution
 
-**BLOCKED — no official PR exists.** The implementation and remote push are complete; GitHub refuses PR creation for this repository with the current account. This is not pending maintainer review of a submitted contribution.
+Observed 2026-11-09T22:38:20.279458+00:00. **PENDING REVIEW**: real, open, non-draft [elevenlabs/elevenlabs-js #484](https://github.com/elevenlabs/elevenlabs-js/pull/484). Not merged. No human review or requested changes observed.
 
-- Upstream: https://github.com/elevenlabs/examples .
-- Audited base: `07454da05a9265bb008a5024771cf51ae2f66eb3` (verify current local receipt for exact SHA).
-- Fork: https://github.com/phlppgdfry/examples .
-- Branch: `feat/offline-agent-tool-contracts`.
-- Commit: `67ccb01` (full SHA in oss-validation.json).
-- [Review diff / manual PR creation](https://github.com/elevenlabs/examples/compare/main...phlppgdfry:examples:feat/offline-agent-tool-contracts?expand=1).
-- Proposed title: Add offline agent tool contract testing example in Python.
+- Fork: https://github.com/phlppgdfry/elevenlabs-js .
+- Branch: `docs/offline-tool-contracts`.
+- Commit: `c3ae2441e88543335197e47e6f21b45716af41b0`.
+- Rationale: provider tool-choice tests do not test the application boundary. This original runnable TypeScript guide tests exact arguments, schema and facts, trusted resource authorization, unavailable versus unknown, safe failure handling, pending-review semantics and no effects after denial.
+- Four files, 209 added lines, exclusively in `.fernignore`-protected docs and custom test paths. Read current AGENTS.md and CONTRIBUTING.md. No generated SDK files, private resources or API keys included.
+- No SDK/network calls or paid ElevenLabs usage; synthetic injected fake backends. Adapter responsibilities, transport/authentication, idempotency and limits of deterministic tests are documented.
 
-## Developer value and scope
+## Validation and upstream state
 
-The historical five-test proposal checked observed outcome labels. This contribution implements and tests the application boundary itself: exact tool arguments, reference authorization, structured backend response validation, unknown versus unavailable facts, pending-review outcomes and stale-success recovery. It is a teaching example, not an invented SDK bug. Standard library Python requires no SDK/API keys or paid calls. README and application schemas explain mapping to ElevenAgents client-tool parameters without misrepresenting schemas as an agent-create payload. Production transport, model behavior, deadlines, idempotency and durable audit remain explicitly out of scope.
+29 Jest cases PASS from the installed checkout; SDK `yarn build` PASS; Biome lint and format PASS for both TypeScript files; strict standalone TypeScript PASS; documentation links and diff whitespace PASS; commit-range Gitleaks PASS. Full credential-dependent integration tests were not run because they can make paid calls. Do not equate the scoped local tests with the entire repository suite.
 
-Current upstream README, lint workflow, shared template, scaffold skill and examples inspected. The new example uses `agents/python/tool-contracts/{PROMPT.md,README.md,setup.sh,example/}`; no legacy examples folder. Setup seeds `templates/python`, strips online dependencies, copies no credentials and refuses to overwrite existing work. No external generation or Cursor run was used. Targeted live PR search for tool topics and contract overlap found no matching contribution; no global absence claim is made.
+The actual upstream **Cursor Bugbot** check completed successfully: [run](https://github.com/elevenlabs/elevenlabs-js/runs/129334994611). Bot summary describes low risk; no actionable inline finding observed. This check is an automated review, not proof of full upstream integration CI. Mergeable=true, mergeable_state=blocked at inspection; maintainer review/merge remains external. [Receipt](sdk-contribution.json).
 
-## Verification
+## Original target restrictions
 
-- 14/14 unittest methods, with additional malformed-input/response subcases: PASS.
-- Clean temporary setup, fresh venv without third-party packages, repeated tests and demo: PASS.
-- `ruff check .`: PASS over the complete upstream repository plus contribution.
-- Root pinned Prettier 3.8.1, `npx prettier . --check`: PASS over the complete repository.
-- Gitleaks staged scan and active commit hook, git diff --check: PASS.
-- Fork parent and upstream comparison confirmed: one commit ahead, zero behind, ten intended files.
-- Upstream CI for this contribution: **NOT RUN**, because PR creation failed.
+The current examples structure was audited and a working current-layout example prepared on [phlppgdfry/examples](https://github.com/phlppgdfry/examples/tree/feat/offline-agent-tool-contracts), commit `67ccb011ed7bebe8bd9d7967abfbf0083cb5a03a`. Fourteen Python tests, clean setup, full Ruff/Prettier and Gitleaks passed. Actual GitHub compare UI states: “An owner of this repository has limited the ability to open a pull request to users that are collaborators on this repository.” API PR creation was also denied. [Restriction evidence](examples-access-restriction.json). No PR was fabricated or restriction bypassed.
 
-The README's pre-commit installer refuses the host's existing global core.hooksPath; upstream also contains no .pre-commit-config.yaml. The global Gitleaks hook remains active and no hook was disabled. Actual upstream Ruff/Prettier commands were run directly.
-
-## Exact external failure and next action
-
-`gh pr create --repo elevenlabs/examples ...` returned: `phlppgdfry does not have the correct permissions to execute CreatePullRequest`. Official REST POST returned HTTP 404 / Not Found, including a final attempt with explicit API version. Fork verification succeeds; authenticated comparison sees the ten files. Upstream is public, not archived or disabled. The interaction-restrictions endpoint requires repository admin rights (403), so the underlying policy **cannot be established**; it is not attributed to an invented ban or outage.
-
-No PR number or URL exists. No duplicate fork PR, unrelated issue, alternate-account submission or restriction bypass was attempted. Owner can open the compare link with the intended account and inspect GitHub's visible reason. If it permits creation, use the committed `open-source-pr-body.md`; otherwise a repository maintainer/GitHub must resolve the permission restriction. Recheck PR existence before retrying. Existing owner authorization already covers creation after access is restored.
+A scoped skills documentation adaptation on [phlppgdfry/skills](https://github.com/phlppgdfry/skills/tree/docs/offline-agent-tool-testing), commit `3c0b277`, was also denied PR creation; no PR exists there. The final SDK contribution is the one actual official OSS PR. No duplicate PRs or low-value issues were opened. These local proposal branches are not submissions.

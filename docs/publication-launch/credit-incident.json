@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-11-09T22:35:25.065424+00:00",
+  "authorizedTemplateRuns": 2,
+  "authorizedTemplateCharge": 14844,
+  "approvedMaximum": 16500,
+  "unintendedBookPreviewCharge": 287,
+  "incident": "During native book frontmatter formatting, a keyboard action reached Studio preview generation instead of the text editor. One preview was generated without separate credit authorization. Reported candidly to owner; no retry.",
+  "totalPhaseCharge": 15131,
+  "remaining": 20026,
+  "paidBookPreviewApproved": false
+}

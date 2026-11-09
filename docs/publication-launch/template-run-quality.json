@@ -1,0 +1,78 @@
+{
+  "observedAt": "2026-11-09T17:51:29.734869+00:00",
+  "authorization": "Owner explicitly approved at most 16500 credits, one run per template, no repeats",
+  "balanceBefore": 35157,
+  "balanceAfter": 20313,
+  "charged": 14844,
+  "product": {
+    "generation": "ArE29aHJwAeyf6yTqMCC",
+    "session": "uphHLTqz8JF2Co7xmeqt",
+    "state": "completed",
+    "visualGate": "FAILED: abstract network animation instead of preserved supplied product screenshot",
+    "speechGate": "Local ASR found no intelligible English voice-over; needs correction and verified rerun before submission",
+    "submitted": false
+  },
+  "multilingual": {
+    "session": "I1pUIPbXXCifhIqBgDZs",
+    "nl": "tzI34UdD037N1cIUnDEj",
+    "fr": "RkaP7sgd5yRdgh9XVTYz",
+    "state": "completed",
+    "languagesVerified": "Local MLX Whisper identified Dutch and French; content follows synthetic logistics source",
+    "limitation": "Fixed NL/FR destinations; no arbitrary target selector or captions"
+  },
+  "media": [
+    {
+      "file": "product-launch.mp4",
+      "sha256": "7196b5c69fc35acdd26179951871623a93bddd469e885820e5f3caa4c7fc7431",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_name": "aac"
+          }
+        ],
+        "format": {
+          "duration": "12.200000"
+        }
+      }
+    },
+    {
+      "file": "campaign-nl.mp3",
+      "sha256": "68a607a08eb530dc986d627e9817ac7a05d609cb701c380e91ceea75938b28c6",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3"
+          }
+        ],
+        "format": {
+          "duration": "26.480000"
+        }
+      }
+    },
+    {
+      "file": "campaign-fr.mp3",
+      "sha256": "9c54f953c2489a1a867edeb67d08ddee367e916cfc9fc7ad2b86ec1f385ff39b",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3"
+          }
+        ],
+        "format": {
+          "duration": "26.480000"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-11-09T17:51:29.734869+00:00",
+  "history": "Submit a prompt to start your first project.",
+  "published": "Publish your songs to Music Marketplace",
+  "workflow": [
+    "Go to History",
+    "Open a project",
+    "Select a generation and click Publish"
+  ],
+  "historyProjects": 0,
+  "publishedListings": 0,
+  "draftCreated": false,
+  "blocker": "Three API-origin tracks have no eligible native history project visible in this account. Flow uploads are not marketplace songs. No supported import publication path was exposed.",
+  "paidActions": 0
+}

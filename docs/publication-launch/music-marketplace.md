@@ -1,6 +1,6 @@
 # Cinematic Technology Soundtracks — Marketplace
 
-9 November 2026 UTC. **All three tracks BLOCKED; none submitted or publicly listed by this phase. Native Marketplace drafts were not created.** Browser publishing access failed; the connector cannot inspect Marketplace history or publish. Existing Flow assets are live and unchanged, but they are uploads rather than evidence of eligible original Music-history songs.
+9 November 2026 UTC. **All three tracks BLOCKED; none submitted or publicly listed by this phase. Native Marketplace drafts were not created.** Authenticated native Music History and Published tabs were inspected. History says “Submit a prompt to start your first project”; Published has no listings and instructs History → open a project → select a generation → Publish. No eligible native original project is visible for these three API-origin tracks. [Native UI receipt](music-native-check.json). Existing Flow assets are live and unchanged, but they are uploads rather than evidence of eligible original Music-history songs.
 
 | Track              | Original completion / provider reference   | Native review upload | Technical QA                                                   | Eligibility / publication                         |
 | ------------------ | ------------------------------------------ | -------------------- | -------------------------------------------------------------- | ------------------------------------------------- |
@@ -24,7 +24,7 @@ These are local listing drafts, not saved native drafts. Commercial use cases de
 
 ## Remaining gates and exact owner work
 
-1. In original Music history, find each provider generation and inspect whether a supported Marketplace publication control exists for that resource. Do not use a Flow upload as a substitute. If absent, stop and establish provider support; do not regenerate or use a paid upload endpoint. Existing eligibility is **unverified**, not proven ineligible.
+1. Provider support must establish a supported publication path for the original API resources: actual account History is empty, and the native publication action requires a History project. Do not use a Flow upload as a substitute. If absent, stop and establish provider support; do not regenerate or use a paid upload endpoint. Existing eligibility is **unverified**, not proven ineligible.
 2. Listen to each whole track, especially opening, transitions and ending; explicitly approve subjective musical quality. Technical decode/loudness does not establish coherence, distortion perception or commercial usefulness. Review [the existing collection](https://phlppgdfry.github.io/harborvoice-ai/#community-studio); no listening approval has been received.
 3. If eligible, fill the metadata/artwork above, then present the actual rights, licensing and payout screen for owner approval. No contractual declaration, payout enrollment, tax information or commercial publication has been accepted here. There is no current screen whose terms can yet be approved.
 4. After owner approval, publish one variation per song, reopen each actual listing and record its URL. Check for pre-existing listings first.
