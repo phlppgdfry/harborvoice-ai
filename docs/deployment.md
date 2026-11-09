@@ -91,3 +91,8 @@ its CI-verified GitHub preview into production. The existing production operator
 and provider credentials were preserved. The former browser-storage deployment is
 https://harborvoice-ifzpcma5f-kippiegs-projects.vercel.app; inspect it before rollback.
 Do not delete the PostgreSQL database during rollback. Feature branch/PR remain unmerged.
+
+The concurrently merged deployment freeze is retained in `vercel.json` as
+`git.deploymentEnabled=false`: Git pushes do not automatically publish a new Vercel
+deployment. Keep the successful GitHub verification gate and use an intentional reviewed
+deployment/promotion. Do not remove the freeze as a shortcut for a pending status.

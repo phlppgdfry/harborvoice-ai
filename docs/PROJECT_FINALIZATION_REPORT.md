@@ -124,7 +124,7 @@ and private audio remain outside Git; only synthetic, reviewed evidence is publi
   aliased to https://harborvoice-ai.vercel.app.
 - Existing production operator/provider credentials were preserved. Preview uses a separate
   operator secret. Free databases were explicitly selected in Frankfurt, with no upgrades.
-- Main advanced independently during this task; changes through `b129328` were preserved
+- Main advanced independently during this task; changes through `0f84738` were preserved
   in the candidate. This task did not push directly to main or merge the draft PR.
 
 ## 8. Remaining acceptance items
@@ -154,9 +154,10 @@ only approved product scopes in the provider secret manager, or restrict unavail
 Do not purchase or expand permissions without owner authorization.
 
 **Owner decision:** review/authorize merging PR #1. No merge is implied by deployment.
-Until main contains the persistent runtime, a future main-branch production deployment
-could replace it with the older browser-storage backend. This source/deployment alignment
-is a release-management acceptance item; no automatic merge is authorized.
+The concurrent deployment freeze (`git.deploymentEnabled=false`) is preserved, so a Git
+push does not automatically replace production. Until main contains this runtime, an
+explicit deployment of older main code could still replace it. Source/deployment alignment
+remains an owner review item; no automatic merge is authorized.
 No additional voice calls, purchases, cloud deployments or broad feature work are required to
 inspect this delivery. The existing browser data remains intact; see the import procedure.
 

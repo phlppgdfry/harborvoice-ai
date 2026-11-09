@@ -91,5 +91,32 @@
       }
     ]
   },
-  "scope": "Read-only SDK 2.77.0; legacy usage endpoint, workspace-wide hourly aggregates. Speech history excludes music/SFX and is not an exhaustive bill. No paid calls. No per-job attribution established."
+  "scope": "Read-only SDK 2.77.0; legacy usage endpoint, workspace-wide hourly aggregates. Speech history excludes music/SFX and is not an exhaustive bill. No paid calls. No per-job attribution established.",
+  "finalObservation": {
+    "checkedAt": "2026-11-09T00:25:23.933Z",
+    "subscription": {
+      "used": 90071,
+      "limit": 128715,
+      "remaining": 38644,
+      "extension": false,
+      "overage": {
+        "amount": "0",
+        "currency": "usd"
+      },
+      "openInvoices": false
+    },
+    "additionalObservedDecrease": 132,
+    "paidRequestsStartedByAudit": 0,
+    "recentConversationMetadata": [
+      {
+        "startedAtUtc": "2026-11-09T00:22:17+00:00",
+        "status": "done",
+        "durationSeconds": 14,
+        "reportedCredits": 132,
+        "callCharge": 106,
+        "llmCharge": 26
+      }
+    ],
+    "attribution": "Provider metadata supports a completed 132-credit conversation. Initiating client/operator is unverified; the audit initiated no calls. Original 26,546 decline remains unattributed at job/session level."
+  }
 }
