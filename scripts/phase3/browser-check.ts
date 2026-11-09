@@ -1,5 +1,6 @@
 import { chromium, expect } from "@playwright/test";
 import { mkdirSync, writeFileSync } from "node:fs";
+const baseUrl = process.env.AGENTPROOF_URL || "http://127.0.0.1:4313";
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1512, height: 1100 } });
 const errors: string[] = [];
@@ -8,7 +9,7 @@ const requests: string[] = [];
 page.on("request", (r) => requests.push(r.url()));
 const checks: string[] = [];
 try {
-  await page.goto("http://127.0.0.1:4313");
+  await page.goto(baseUrl);
   await expect(
     page.getByRole("heading", { name: "Know where your agent breaks." }),
   ).toBeVisible();
@@ -106,9 +107,9 @@ try {
   });
   checks.push("390px layout without horizontal document overflow");
   expect(errors).toEqual([]);
-  expect(requests.every((u) => u.startsWith("http://127.0.0.1:4313"))).toBe(
-    true,
-  );
+  expect(
+    requests.every((u) => new URL(u).origin === new URL(baseUrl).origin),
+  ).toBe(true);
   checks.push("no page errors or external network requests");
   writeFileSync(
     "docs/phase3/browser-verification.json",

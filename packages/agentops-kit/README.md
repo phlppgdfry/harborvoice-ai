@@ -18,12 +18,12 @@ node packages/agentops-kit/dist/cli.js report benchmarks/voice-ai/results/baseli
 The package runtime uses only Node built-ins. In a separate checkout, install package devDependencies before building. `inspectElevenLabs` accepts an injected official SDK client; SDK is an integration-test devDependency, not a runtime requirement. No implicit credential loading, network calls, evaluation retries or paid CLI commands.
 
 ```ts
-import { evaluate, inspectElevenLabs } from 'harborvoice-agentops-kit';
+import { evaluate, inspectElevenLabs } from "harborvoice-agentops-kit";
 // Server only; client is your official ElevenLabsClient with least-privilege access.
 const snapshot = await inspectElevenLabs(client, agentId);
 const results = await evaluate(scenarios, {
-  evidenceType: 'fixture',
-  execute: async scenario => recordedObservations[scenario.id]
+  evidenceType: "fixture",
+  execute: async (scenario) => recordedObservations[scenario.id],
 });
 ```
 

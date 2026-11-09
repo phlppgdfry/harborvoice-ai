@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-11-09T00:05:32.980Z",
+  "scope": "Existing references read only; reachability does not assert configuration or generated content quality.",
+  "resources": [
+    {
+      "name": "Nora Enterprise v2",
+      "type": "agent-branch",
+      "status": "reachable",
+      "authenticationEnabled": true
+    },
+    {
+      "name": "Gate & collection procedures",
+      "type": "knowledge",
+      "status": "reachable"
+    },
+    {
+      "name": "Customs & exception playbook",
+      "type": "knowledge",
+      "status": "reachable"
+    },
+    {
+      "name": "Multilingual service guide",
+      "type": "knowledge",
+      "status": "reachable"
+    },
+    {
+      "name": "Disruption response",
+      "type": "knowledge",
+      "status": "reachable"
+    },
+    {
+      "name": "HarborVoice \u00b7 Dutch Training 1",
+      "type": "voice",
+      "status": "reachable"
+    },
+    {
+      "name": "HarborVoice \u00b7 Dutch Training 2",
+      "type": "voice",
+      "status": "reachable"
+    },
+    {
+      "name": "HarborVoice \u00b7 Dutch Training 3",
+      "type": "voice",
+      "status": "reachable"
+    },
+    {
+      "name": "Recognition context experiments",
+      "type": "agent-branch",
+      "status": "reachable",
+      "authenticationEnabled": true
+    }
+  ]
+}

@@ -2,16 +2,16 @@
 
 Audience: developers, IT professionals, business analysts, founders and students. English delivery with Dutch/French exercises. No prior paid plan. Prerequisites: Node 24, Git or downloaded repository, text editor; optional participant-owned ElevenLabs account. Never project personal credentials.
 
-| Minutes | Activity | Concrete outcome |
-|---|---|---|
-| 0–8 | What voice AI does; evidence distinctions | Participants separate text, audio and fixture evidence |
-| 8–20 | First agent, guided dashboard demonstration | Language, first message, prompt and voice understood |
-| 20–35 | Knowledge and tools | Fictional lookup input/output contract and authority boundary |
-| 35–50 | Failure exercise | Missing reference, unknown record, invalid response and timeout |
-| 50–65 | Evaluate and inspect AgentProof | Find failure, compare fixture fix, export scoped report |
-| 65–77 | Multilingual and safety | Translate intent; preserve authorization and escalation invariants |
-| 77–84 | Deployment and cost | Server-side credentials, bounded usage and shared spending |
-| 84–90 | Questions and follow-up | Each participant names one unresolved measurement |
+| Minutes | Activity                                    | Concrete outcome                                                   |
+| ------- | ------------------------------------------- | ------------------------------------------------------------------ |
+| 0–8     | What voice AI does; evidence distinctions   | Participants separate text, audio and fixture evidence             |
+| 8–20    | First agent, guided dashboard demonstration | Language, first message, prompt and voice understood               |
+| 20–35   | Knowledge and tools                         | Fictional lookup input/output contract and authority boundary      |
+| 35–50   | Failure exercise                            | Missing reference, unknown record, invalid response and timeout    |
+| 50–65   | Evaluate and inspect AgentProof             | Find failure, compare fixture fix, export scoped report            |
+| 65–77   | Multilingual and safety                     | Translate intent; preserve authorization and escalation invariants |
+| 77–84   | Deployment and cost                         | Server-side credentials, bounded usage and shared spending         |
+| 84–90   | Questions and follow-up                     | Each participant names one unresolved measurement                  |
 
 Before event: run starter tests, build app, open local preview and slides. Confirm projector contrast and readable body text. Use approved prerecorded existing Academy/HarborVoice media only if it can be played locally; captions/transcript should accompany it. Do not depend on network or a private native resource for core teaching.
 

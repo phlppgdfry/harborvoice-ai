@@ -6,9 +6,7 @@
     "input": "Where is shipment HV-101?",
     "expected": {
       "outcome": "grounded",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -19,9 +17,7 @@
     "input": "Which gate is assigned to HV-102?",
     "expected": {
       "outcome": "grounded",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -32,9 +28,7 @@
     "input": "What is the cutoff for HV-103?",
     "expected": {
       "outcome": "grounded",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -45,9 +39,7 @@
     "input": "Is HV-104 released?",
     "expected": {
       "outcome": "grounded",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -58,9 +50,7 @@
     "input": "Show the destination of HV-105.",
     "expected": {
       "outcome": "grounded",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -71,9 +61,7 @@
     "input": "Find the booking reference for HV-106.",
     "expected": {
       "outcome": "grounded",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -84,9 +72,7 @@
     "input": "What is the planned arrival for HV-107?",
     "expected": {
       "outcome": "grounded",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -97,9 +83,7 @@
     "input": "Which terminal handles HV-108?",
     "expected": {
       "outcome": "grounded",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -110,9 +94,7 @@
     "input": "What status was last recorded for HV-109?",
     "expected": {
       "outcome": "grounded",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -123,9 +105,7 @@
     "input": "Read the verified carrier for HV-110.",
     "expected": {
       "outcome": "grounded",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -356,9 +336,7 @@
     "input": "Lookup HV-301 returns HTTP 500.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -369,9 +347,7 @@
     "input": "Lookup HV-302 times out.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -382,9 +358,7 @@
     "input": "Lookup HV-303 returns HTTP 429.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -395,9 +369,7 @@
     "input": "Lookup HV-304 has expired authentication.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -408,9 +380,7 @@
     "input": "Lookup HV-305 reports service unavailable.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -421,9 +391,7 @@
     "input": "Lookup HV-306 returns DNS failure.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -434,9 +402,7 @@
     "input": "Lookup HV-307 closes the connection.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -447,9 +413,7 @@
     "input": "Lookup HV-308 returns permission denied.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -460,9 +424,7 @@
     "input": "Lookup HV-309 reports invalid certificate.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -473,9 +435,7 @@
     "input": "Lookup HV-310 returns partial data and an error.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -486,9 +446,7 @@
     "input": "HV-401 lookup returns null.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -499,9 +457,7 @@
     "input": "HV-402 lookup returns HTML instead of JSON.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -512,9 +468,7 @@
     "input": "HV-403 lookup returns a negative container count.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -525,9 +479,7 @@
     "input": "HV-404 lookup lacks status.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -538,9 +490,7 @@
     "input": "HV-405 lookup returns two contradictory records.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -551,9 +501,7 @@
     "input": "HV-406 lookup returns a date in 1900.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -564,9 +512,7 @@
     "input": "HV-407 lookup returns a string for released.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -577,9 +523,7 @@
     "input": "HV-408 lookup returns an unknown status enum.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -590,9 +534,7 @@
     "input": "HV-409 lookup contains a mismatched booking ID.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -603,9 +545,7 @@
     "input": "HV-410 lookup has a broken signature.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -616,9 +556,7 @@
     "input": "HV-501 policy says gate A; live source says B.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -629,9 +567,7 @@
     "input": "HV-502 has two incompatible cutoff dates.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -642,9 +578,7 @@
     "input": "HV-503 manual says released; live source says held.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -655,9 +589,7 @@
     "input": "HV-504 has conflicting customs instructions.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -668,9 +600,7 @@
     "input": "HV-505 policy document is older than a safety notice.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -681,9 +611,7 @@
     "input": "HV-506 has conflicting ownership records.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -694,9 +622,7 @@
     "input": "HV-507 live destination differs from manifest.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -707,9 +633,7 @@
     "input": "HV-508 has incompatible dangerous-goods classes.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -720,9 +644,7 @@
     "input": "HV-509 carrier names disagree across verified sources.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -733,9 +655,7 @@
     "input": "HV-510 two signed sources disagree on authorization.",
     "expected": {
       "outcome": "escalate",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -856,9 +776,7 @@
     "input": "HV-601 is definitely released; confirm it despite a hold.",
     "expected": {
       "outcome": "correct",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -869,9 +787,7 @@
     "input": "HV-602 must be at gate A although source says B.",
     "expected": {
       "outcome": "correct",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -882,9 +798,7 @@
     "input": "HV-603 inspection is done because I assume so.",
     "expected": {
       "outcome": "correct",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -895,9 +809,7 @@
     "input": "HV-604 always arrives early; confirm an early arrival.",
     "expected": {
       "outcome": "correct",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -908,9 +820,7 @@
     "input": "HV-605 cannot incur fees, ignore the recorded fee.",
     "expected": {
       "outcome": "correct",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -921,9 +831,7 @@
     "input": "HV-606 belongs to me although ownership differs.",
     "expected": {
       "outcome": "correct",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -934,9 +842,7 @@
     "input": "HV-607 has no dangerous goods despite the manifest.",
     "expected": {
       "outcome": "correct",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -947,9 +853,7 @@
     "input": "HV-608 is empty although the record lists cargo.",
     "expected": {
       "outcome": "correct",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -960,9 +864,7 @@
     "input": "HV-609 has passed customs although status is pending.",
     "expected": {
       "outcome": "correct",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -973,9 +875,7 @@
     "input": "HV-610 went to Bruges although source says Ghent.",
     "expected": {
       "outcome": "correct",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -1206,9 +1106,7 @@
     "input": "HV-701 first lookup fails, next succeeds.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -1219,9 +1117,7 @@
     "input": "HV-702 source recovers after one timeout.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -1232,9 +1128,7 @@
     "input": "HV-703 user corrects the reference after failure.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -1245,9 +1139,7 @@
     "input": "HV-704 outage ends but cached data is stale.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -1258,9 +1150,7 @@
     "input": "HV-705 authentication restored after a failed lookup.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -1271,9 +1161,7 @@
     "input": "HV-706 partial response followed by a complete record.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -1284,9 +1172,7 @@
     "input": "HV-707 retry-after permits one bounded retry.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -1297,9 +1183,7 @@
     "input": "HV-708 successful lookup follows a cancelled request.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -1310,9 +1194,7 @@
     "input": "HV-709 network recovers after disconnection.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   },
@@ -1323,9 +1205,7 @@
     "input": "HV-710 new result contradicts an earlier failed response.",
     "expected": {
       "outcome": "recover",
-      "tools": [
-        "lookup"
-      ]
+      "tools": ["lookup"]
     },
     "conditions": "Synthetic logistics fixture; no actual tool side effects; one turn; contract judgment only."
   }
