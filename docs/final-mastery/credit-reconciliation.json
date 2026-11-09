@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-11-09T12:33:22.009351+00:00",
+  "files": [
+    {
+      "file": "experience-budget.json",
+      "operationCount": 0,
+      "pendingCount": 0,
+      "failedCount": 0,
+      "scope": "Private ledger read only; no holds changed."
+    },
+    {
+      "file": "academy-reservations.json",
+      "operationCount": 0,
+      "pendingCount": 0,
+      "failedCount": 0,
+      "scope": "Private ledger read only; no holds changed."
+    },
+    {
+      "file": "academy-budget.json",
+      "operationCount": 0,
+      "pendingCount": 0,
+      "failedCount": 0,
+      "scope": "Private ledger read only; no holds changed."
+    },
+    {
+      "file": "recognition/credit-ledger.json",
+      "operationCount": 11,
+      "pendingCount": 0,
+      "failedCount": 2,
+      "scope": "Private ledger read only; no holds changed."
+    },
+    {
+      "file": "recognition/prior-ledger.json",
+      "operationCount": 23,
+      "pendingCount": 0,
+      "failedCount": 1,
+      "scope": "Private ledger read only; no holds changed."
+    },
+    {
+      "file": "elite/credit-ledger.json",
+      "operationCount": 23,
+      "pendingCount": 0,
+      "failedCount": 1,
+      "scope": "Private ledger read only; no holds changed."
+    }
+  ],
+  "accountWideCoordinationVerified": false,
+  "otherClientsExcluded": false,
+  "phase4PaidBudget": 0,
+  "phase4Spend": 0,
+  "phase4NewReservations": 0,
+  "historicalFailedHolds": {
+    "elite": 500,
+    "recognition": 5000
+  },
+  "historicalConservativeEnvelopes": {
+    "elite": 44850.04,
+    "recognition": 21756
+  },
+  "limitation": "Envelopes overlap with observed account usage and must not be blindly summed as new unbilled costs. Exact outstanding liability remains unknown; failed/completed holds retained. Other agent/browser clients were observed, but process names do not prove their account activity."
+}

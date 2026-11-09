@@ -1,0 +1,70 @@
+{
+  "results": [
+    {
+      "command": "npm run test:browser",
+      "startedAt": "2026-11-09T12:38:14.127Z",
+      "endedAt": "2026-11-09T12:38:27.420Z",
+      "commit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+      "result": "PASS",
+      "exitCode": 0,
+      "environment": "Chrome/Playwright, local production builds; DEMO_URL=4414, AGENTPROOF_URL=4413",
+      "evidence": "verification/browser-test-browser.log",
+      "scope": "Provider paid paths are mocked or not invoked. Media playback uses existing assets."
+    },
+    {
+      "command": "npm run test:academy",
+      "startedAt": "2026-11-09T12:38:27.421Z",
+      "endedAt": "2026-11-09T12:38:31.421Z",
+      "commit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+      "result": "PASS",
+      "exitCode": 0,
+      "environment": "Chrome/Playwright, local production builds; DEMO_URL=4414, AGENTPROOF_URL=4413",
+      "evidence": "verification/browser-test-academy.log",
+      "scope": "Provider paid paths are mocked or not invoked. Media playback uses existing assets."
+    },
+    {
+      "command": "npm run test:elite",
+      "startedAt": "2026-11-09T12:38:31.421Z",
+      "endedAt": "2026-11-09T12:38:35.919Z",
+      "commit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+      "result": "PASS",
+      "exitCode": 0,
+      "environment": "Chrome/Playwright, local production builds; DEMO_URL=4414, AGENTPROOF_URL=4413",
+      "evidence": "verification/browser-test-elite.log",
+      "scope": "Provider paid paths are mocked or not invoked. Media playback uses existing assets."
+    },
+    {
+      "command": "npm run test:community",
+      "startedAt": "2026-11-09T12:38:35.920Z",
+      "endedAt": "2026-11-09T12:38:37.666Z",
+      "commit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+      "result": "PASS",
+      "exitCode": 0,
+      "environment": "Chrome/Playwright, local production builds; DEMO_URL=4414, AGENTPROOF_URL=4413",
+      "evidence": "verification/browser-test-community.log",
+      "scope": "Provider paid paths are mocked or not invoked. Media playback uses existing assets."
+    },
+    {
+      "command": "npm run phase3:browser",
+      "startedAt": "2026-11-09T12:38:37.666Z",
+      "endedAt": "2026-11-09T12:38:39.214Z",
+      "commit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+      "result": "PASS",
+      "exitCode": 0,
+      "environment": "Chrome/Playwright, local production builds; DEMO_URL=4414, AGENTPROOF_URL=4413",
+      "evidence": "verification/browser-phase3-browser.log",
+      "scope": "Provider paid paths are mocked or not invoked. Media playback uses existing assets."
+    },
+    {
+      "command": "npm run test:mastery",
+      "startedAt": "2026-11-09T12:38:39.214Z",
+      "endedAt": "2026-11-09T12:38:41.045Z",
+      "commit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+      "result": "PASS",
+      "exitCode": 0,
+      "environment": "Chrome/Playwright, local production builds; DEMO_URL=4414, AGENTPROOF_URL=4413",
+      "evidence": "verification/browser-test-mastery.log",
+      "scope": "Provider paid paths are mocked or not invoked. Media playback uses existing assets."
+    }
+  ]
+}

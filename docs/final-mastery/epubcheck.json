@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-11-09T12:31:23.629803+00:00",
+  "validator": "Official W3C EPUBCheck 5.4.0",
+  "source": "https://github.com/w3c/epubcheck/releases/tag/v5.4.0",
+  "command": "java -jar epubcheck-5.4.0/epubcheck.jar public/recognition/reliable-enterprise-voice-ai.epub -j report.json",
+  "file": "public/recognition/reliable-enterprise-voice-ai.epub",
+  "sha256": "d21cf6f538092e332b6166f1f3fc9286e21a6be8b9bdc0601cb0ec8fd0aae365",
+  "result": "PASS",
+  "fatal": 0,
+  "errors": 0,
+  "warnings": 0,
+  "scope": "EPUB format validation; not editorial, rights, byline or provider acceptance."
+}

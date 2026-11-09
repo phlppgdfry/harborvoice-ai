@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-09T12:44:41.328099+00:00",
+  "upstream": "elevenlabs/showcase",
+  "upstreamCommit": "870ee29c311eaccd33425f326e72e14a120c69e2",
+  "fork": "phlppgdfry/showcase",
+  "branch": "add/harborvoice-final-mastery",
+  "commit": "7030340",
+  "changedFiles": [
+    "authors/philippe-godfroy.yml",
+    "projects/harborvoice-ai.mdx",
+    "projects/images/harborvoice-ai.jpg"
+  ],
+  "imageSync": "PASS: node scripts/sync-images.cjs",
+  "localContractValidation": "PASS: npm run recognition:validate",
+  "fullUpstreamAppBuild": "NOT RUN",
+  "externalPullRequest": null,
+  "compareUrl": "https://github.com/elevenlabs/showcase/compare/main...phlppgdfry:showcase:add/harborvoice-final-mastery",
+  "ownerRightsDeclaration": "PENDING"
+}

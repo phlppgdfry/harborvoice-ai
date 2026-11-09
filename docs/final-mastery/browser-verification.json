@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-09T12:38:40.873Z",
+  "sourceCommit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+  "url": "http://127.0.0.1:4414",
+  "viewports": ["1440x1000", "390x844"],
+  "browser": "Chrome via Playwright; Browser plugin not available; native CUA transport failed timeoutMs.",
+  "checks": [
+    "Portfolio link loads bundled AgentProof",
+    "Twelve contract rows show nine failures and three accepted controls",
+    "Contract report downloads",
+    "390px viewport: controls visible; no document overflow",
+    "Existing comparison and filtering remain functional",
+    "No page errors; no external requests from AgentProof interactions"
+  ],
+  "errors": [],
+  "providerCalls": 0,
+  "scope": "DOM, interaction, downloads, console and responsive checks; no full WCAG audit or screen-reader acceptance."
+}

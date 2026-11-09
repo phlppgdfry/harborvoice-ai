@@ -1,0 +1,13 @@
+
+> harborvoice-ai@2.2.0-rc.1 test:academy
+> node --import tsx scripts/verify-academy.ts
+
+{
+  "checks": [
+    "All twelve real lesson audio files decode in four languages",
+    "Incorrect-answer feedback, all English checks, persistence and scoped JSON export",
+    "Native audiobook, dialogue, three voice previews, terminology comparison and video decode; playback is exclusive",
+    "Mobile layout has no horizontal overflow; malformed local progress recovers safely"
+  ],
+  "errors": []
+}

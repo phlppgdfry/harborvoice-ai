@@ -1,0 +1,10 @@
+
+> harborvoice-ai@2.2.0-rc.1 elite:validate
+> node --import tsx scripts/elite/validate-publication.ts && npm run assets:verify
+
+Public files checked: 467; no secret-pattern or signed-URL findings.
+
+> harborvoice-ai@2.2.0-rc.1 assets:verify
+> node --import tsx scripts/elite/validate-assets.ts
+
+Verified 87 asset hashes.

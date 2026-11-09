@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-11-09T12:13:39.162Z",
+  "source": "Authenticated read-only provider GET of existing historical invocation; no execution.",
+  "mappingSource": "Existing private var/agent-invocation-detail.json and var/agent-tests.json; independent expected IDs fixed before read.",
+  "schemaVersion": 1,
+  "evidenceType": "provider-test-receipt",
+  "sourceSha256": "29125ab255f3d06831cda3949e7adfc1521b84412813134c817fbd64491c9c71",
+  "invocationId": "suite_1801m6vbrgn2fdpa1h1ebwb9fp72",
+  "agentId": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
+  "branchId": "agtbrch_8201m6t6k4wnfcjvpzh2v3j6r2pd",
+  "runs": [
+    {
+      "runId": "trun_3001m6vbrgngevbsskpqmc7t95qa",
+      "testId": "test_3901m6vbp4nae4r966v2pgsfyr8t",
+      "status": "passed",
+      "reportedCredits": 332
+    },
+    {
+      "runId": "trun_6801m6vbrgnhegcsr2yhnfk9e8bn",
+      "testId": "test_2301m6vbp4wjf2f9k21a3v6nta8t",
+      "status": "passed",
+      "reportedCredits": 304
+    },
+    {
+      "runId": "trun_0301m6vbrgnjfj5aqtmwwhpnarq0",
+      "testId": "test_4401m6vbp51vfx59t59k5erv30f9",
+      "status": "passed",
+      "reportedCredits": 228
+    },
+    {
+      "runId": "trun_7401m6vbrgnkeknsm1aejywd6zy4",
+      "testId": "test_5201m6vbp591fdht67frzgf799mk",
+      "status": "passed",
+      "reportedCredits": 331
+    },
+    {
+      "runId": "trun_9601m6vbrgnmfck8hdz5qjy1ymbj",
+      "testId": "test_3001m6vbp5gxf3cb9gsnmb2tx8hb",
+      "status": "passed",
+      "reportedCredits": 250
+    },
+    {
+      "runId": "trun_7901m6vbrgnnenqv7cwp4qq8x9v8",
+      "testId": "test_3801m6vbp5nzffr936genhvawkrr",
+      "status": "passed",
+      "reportedCredits": 269
+    }
+  ],
+  "missingRuns": 0,
+  "complete": true,
+  "passed": true,
+  "knownCredits": 1714,
+  "reportedCredits": 1714,
+  "holdDisposition": "RETAIN — requires separate final billing reconciliation",
+  "limitations": [
+    "Caller-supplied receipt; source hash is integrity metadata, not provider authentication.",
+    "Native test status does not establish benchmark grounding, voice quality or real-user acceptance.",
+    "Missing costs remain unknown. Import never settles reservations. Raw transcripts and charging details are omitted."
+  ]
+}

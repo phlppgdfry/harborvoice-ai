@@ -1,0 +1,31 @@
+
+> harborvoice-ai@2.2.0-rc.1 recognition:validate
+> node --import tsx scripts/recognition/validate-showcase.ts && node --test examples/reliable-agent-workshop/starter.test.mjs
+
+{
+  checkedAt: '2026-11-09T12:36:04.492Z',
+  upstreamCommit: '870ee29c311eaccd33425f326e72e14a120c69e2',
+  status: 'TESTED — READY FOR REVIEW',
+  checks: [
+    'Required frontmatter and author reference',
+    '145-character description',
+    'Official categories and isFeatured false',
+    'Cover source and upstream image-sync path',
+    'Historical evaluation scope preserved',
+    'No signed access URLs or credential patterns'
+  ],
+  scope: 'Submission contract checks plus actual upstream image sync. Full upstream application build not run.'
+}
+✔ known reference preserves recorded hold (0.518958ms)
+✔ missing and malformed inputs are distinct (0.244125ms)
+✔ unknown references cannot create proposals (0.085791ms)
+✔ a valid proposal stays pending and does not release the record (0.460542ms)
+✔ language switches preserve reference and mode (0.102125ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 53.179417

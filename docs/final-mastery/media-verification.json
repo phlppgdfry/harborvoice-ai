@@ -1,0 +1,319 @@
+{
+  "checkedAt": "2026-11-09T12:39:22.005915+00:00",
+  "command": "ffprobe metadata; ffmpeg -v error -i FILE -f null -",
+  "commit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+  "environment": "Local FFmpeg; existing immutable media, no generations",
+  "files": [
+    {
+      "file": "public/recognition/future-systems.mp3",
+      "sha256": "902ea396a2b3f65a76a3dd3d3b6aa0a7cfa04a290813de439e7459ffbb1b5883",
+      "durationSeconds": 60.024,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/recognition/human-intelligence.mp3",
+      "sha256": "32baa4705eb1df575b1eb7ca97e84b46d3f58cc63272229fb518ddfe63f1ad11",
+      "durationSeconds": 60.024,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/recognition/learning-example.mp3",
+      "sha256": "1209bdc3235f47789e43c955c1dfe19c5b3c0a0c85bbe1237b6cebadd37eaf12",
+      "durationSeconds": 52.16,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/recognition/northern-lights.mp3",
+      "sha256": "a886d59360ff80aaa8bf396ac01a997193f5af5b2947828385a073b6c0613d55",
+      "durationSeconds": 60.024,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/briefing-en.mp3",
+      "sha256": "581fb40de6821b3b5ed1e9156d3da8130cd73cf9e1917b738a34a8660cdbc764",
+      "durationSeconds": 39.28,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/cinematic-1.mp4",
+      "sha256": "9c344521d5f305fe025cb56332c114bef55e760da873b7420bae9a830515ede9",
+      "durationSeconds": 8.04,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/cinematic-2.mp4",
+      "sha256": "0c944029324429d0cd37845e8edf022bc0f012f14e06a1ca9c55e1a6b1f104e1",
+      "durationSeconds": 8.04,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/cinematic-3.mp4",
+      "sha256": "0880405b219991a38c6473959bb6c6a3c3d8154a36cc750aefef9e599d8b841d",
+      "durationSeconds": 8.04,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/commercial-en-portrait.mp4",
+      "sha256": "11e2e9d0c03d83478613d3661abdf88397c623feeedc3877fcbd50e2a005f681",
+      "durationSeconds": 36.0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 1280
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/commercial-en.mp3",
+      "sha256": "735901f03cba844a69b13bdb7efff8778f80469981f8f5f4173c6256580a27aa",
+      "durationSeconds": 26.48,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/commercial-en.mp4",
+      "sha256": "d063dd9aa4966e22569a1bee8d4f3dd94f213929884737778d27f888d32dc97e",
+      "durationSeconds": 36.0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/commercial-fr.mp3",
+      "sha256": "ab28d9ab6e5f3ff8eabca508b65926962e034f3ca6074a16b8d1581a1768f0ae",
+      "durationSeconds": 26.0,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/commercial-fr.mp4",
+      "sha256": "abc8522933a1dc555da58859c7c85475ee70d03ebea7c7200eea810ebd2efd10",
+      "durationSeconds": 36.0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/commercial-nl.mp3",
+      "sha256": "a06494e46dce2c47098ac505b727bdc44df542d9cf9814dfbcd9a1f19660e199",
+      "durationSeconds": 27.68,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/commercial-nl.mp4",
+      "sha256": "2f8df2be86219bc8fb8747b8f5e76dea826238876e6c4dd3cb34193f260a862c",
+      "durationSeconds": 36.0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/enterprise-explainer.mp4",
+      "sha256": "16515653a5691e7c27cdd6decfa654d83faecc714bd75582d48c4905da47ccb5",
+      "durationSeconds": 78.0,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/explainer-en.mp3",
+      "sha256": "edeccaa00cdfcdcfc893a3e4f4ad5cf5c011549e9c32dd4570242a279e1b42b3",
+      "durationSeconds": 72.0,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/native-dub-fr.mp3",
+      "sha256": "70dc8a5eb354ee557146d39955a4ff11331193dc5a9d47b2e516881872153798",
+      "durationSeconds": 26.48,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/native-learning.mp3",
+      "sha256": "674dddc5af1f854b9d80509dd10add610381607063a928a0d737db714c1ac1e8",
+      "durationSeconds": 22.08,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/original-score.mp3",
+      "sha256": "dd73317016f4a30d5289cb424e048fac4188cddd9701f0f6f5e101bfeebbeefb",
+      "durationSeconds": 90.024,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "public/elite/streaming-speech.mp3",
+      "sha256": "3e4ebcfca20425e5e59ba588b436f76aa17671ecdec17697996dbafeed4748eb",
+      "durationSeconds": 4.5975,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio"
+        }
+      ],
+      "probePassed": true,
+      "fullDecodePassed": true
+    }
+  ],
+  "passed": true,
+  "scope": "Technical integrity/duration/stream checks only. Musical quality, native caption synchronization and rights need human acceptance."
+}

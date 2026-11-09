@@ -1,0 +1,6 @@
+
+> harborvoice-ai@2.2.0-rc.1 format:check
+> prettier --check src server scripts tests agent api lib config docs README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml vercel.json
+
+Checking formatting...
+All matched files use Prettier code style!

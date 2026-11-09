@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-09T12:44:41.326701+00:00",
+  "sourceCommit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+  "files": [
+    {
+      "name": "agentproof-0.2.0.zip",
+      "bytes": 227044,
+      "sha256": "7ba69da6440e37ec86fd8ff0c7044d92b7977a6b92ea3fc7f26f5845ab69ea9d"
+    },
+    {
+      "name": "harborvoice-agentops-kit-0.2.0.tgz",
+      "bytes": 12108,
+      "sha256": "29d46a04e495c8d75f5124b5f155c9cc35292f01205ef4533bbcb2d41debd281"
+    }
+  ],
+  "packageSmoke": "Unpacked dist/cli.js inspect runs under Node without installed dependencies",
+  "npmPublished": false,
+  "externalPilotRecruited": false
+}

@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-09T12:44:40.978555+00:00",
+  "id": "dpl_C9wP3SGQr748FqB2ifTt3ruRtnTZ",
+  "readyState": "READY",
+  "target": "production",
+  "url": "harborvoice-qzt51h8is-kippiegs-projects.vercel.app",
+  "aliases": [
+    "harborvoice-ai.vercel.app",
+    "harborvoice-ai-kippiegs-projects.vercel.app",
+    "harborvoice-ai-git-production-persiste-11f4ce-kippiegs-projects.vercel.app"
+  ],
+  "gitSource": {
+    "ref": "production/persistent-runtime",
+    "repoId": 1449019827,
+    "sha": "234281a806150a79b12220d182df3fc9e97534b9",
+    "type": "github",
+    "prId": null
+  },
+  "gitCommit": "234281a806150a79b12220d182df3fc9e97534b9",
+  "gitRef": "production/persistent-runtime",
+  "scope": "Read-only Vercel deployment GET via official authenticated CLI; no deployment/promotion or environment change."
+}
