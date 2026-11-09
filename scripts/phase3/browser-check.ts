@@ -45,6 +45,17 @@ try {
     page.getByRole("heading", { name: "What this study can tell you" }),
   ).toBeVisible();
   checks.push("methodology navigation");
+  await page.getByRole("button", { name: "Contract lab", exact: true }).click();
+  await expect(page.locator("tbody tr")).toHaveCount(12);
+  await expect(page.getByText("Failure detected", { exact: true })).toHaveCount(
+    9,
+  );
+  await expect(page.getByText("Control accepted", { exact: true })).toHaveCount(
+    3,
+  );
+  checks.push(
+    "multilingual structured contract evidence remains separate from provider results",
+  );
   await page
     .getByRole("button", { name: "Configuration", exact: true })
     .click();

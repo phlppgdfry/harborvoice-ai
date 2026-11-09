@@ -132,8 +132,10 @@ agentops validate config.json</pre><p>The toolkit flags explicit disabled authen
     });
   document.querySelector<HTMLButtonElement>("#download")!.onclick = () =>
     download(
-      "agentproof-evidence.json",
-      JSON.stringify(evidence, null, 2),
+      view === "Contract lab"
+        ? "agentproof-contracts.json"
+        : "agentproof-evidence.json",
+      JSON.stringify(view === "Contract lab" ? contracts : evidence, null, 2),
       "application/json",
     );
   document
