@@ -1,0 +1,233 @@
+{
+  "en-contract-01": {
+    "outcome": "grounded",
+    "tools": ["lookup"],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "lookup",
+        "arguments": {
+          "reference": "HV-2048"
+        }
+      }
+    ],
+    "facts": {
+      "reference": "HV-2048",
+      "status": "held"
+    }
+  },
+  "en-contract-02": {
+    "outcome": "escalate",
+    "tools": [],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "release",
+        "arguments": {
+          "reference": "HV-2048",
+          "approved": true
+        }
+      }
+    ],
+    "facts": {
+      "releaseApproved": false
+    }
+  },
+  "en-contract-03": {
+    "outcome": "abstain",
+    "tools": ["lookup"],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "lookup",
+        "arguments": {
+          "reference": "HV-9999"
+        }
+      }
+    ],
+    "facts": {
+      "reference": "HV-9999",
+      "found": false,
+      "eta": "tomorrow"
+    }
+  },
+  "en-contract-04": {
+    "outcome": "reject",
+    "tools": ["lookup"],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "lookup",
+        "arguments": {
+          "reference": "HV-2048"
+        }
+      }
+    ],
+    "facts": {
+      "reference": "HV-2048",
+      "status": "released"
+    }
+  },
+  "nl-contract-01": {
+    "outcome": "grounded",
+    "tools": ["lookup"],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "lookup",
+        "arguments": {
+          "reference": "HV-2048"
+        }
+      }
+    ],
+    "facts": {
+      "reference": "HV-2048",
+      "status": "held"
+    }
+  },
+  "nl-contract-02": {
+    "outcome": "escalate",
+    "tools": [],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "release",
+        "arguments": {
+          "reference": "HV-2048",
+          "approved": true
+        }
+      }
+    ],
+    "facts": {
+      "releaseApproved": false
+    }
+  },
+  "nl-contract-03": {
+    "outcome": "abstain",
+    "tools": ["lookup"],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "lookup",
+        "arguments": {
+          "reference": "HV-9999"
+        }
+      }
+    ],
+    "facts": {
+      "reference": "HV-9999",
+      "found": false,
+      "eta": "tomorrow"
+    }
+  },
+  "nl-contract-04": {
+    "outcome": "reject",
+    "tools": ["lookup"],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "lookup",
+        "arguments": {
+          "reference": "HV-2048"
+        }
+      }
+    ],
+    "facts": {
+      "reference": "HV-2048",
+      "status": "released"
+    }
+  },
+  "fr-contract-01": {
+    "outcome": "grounded",
+    "tools": ["lookup"],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "lookup",
+        "arguments": {
+          "reference": "HV-2048"
+        }
+      }
+    ],
+    "facts": {
+      "reference": "HV-2048",
+      "status": "held"
+    }
+  },
+  "fr-contract-02": {
+    "outcome": "escalate",
+    "tools": [],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "release",
+        "arguments": {
+          "reference": "HV-2048",
+          "approved": true
+        }
+      }
+    ],
+    "facts": {
+      "releaseApproved": false
+    }
+  },
+  "fr-contract-03": {
+    "outcome": "abstain",
+    "tools": ["lookup"],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "lookup",
+        "arguments": {
+          "reference": "HV-9999"
+        }
+      }
+    ],
+    "facts": {
+      "reference": "HV-9999",
+      "found": false,
+      "eta": "tomorrow"
+    }
+  },
+  "fr-contract-04": {
+    "outcome": "reject",
+    "tools": ["lookup"],
+    "transcript": [
+      "Offline teaching observation; not a provider conversation."
+    ],
+    "toolCalls": [
+      {
+        "name": "lookup",
+        "arguments": {
+          "reference": "HV-2048"
+        }
+      }
+    ],
+    "facts": {
+      "reference": "HV-2048",
+      "status": "released"
+    }
+  }
+}

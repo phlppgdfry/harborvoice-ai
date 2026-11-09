@@ -167,7 +167,12 @@ export type Scenario = {
   category: string;
   language: string;
   input: string;
-  expected: { outcome: string; tools: string[] };
+  expected: {
+    outcome: string;
+    tools: string[];
+    toolCalls?: { name: string; arguments: Config }[];
+    facts?: Config;
+  };
   conditions: string;
 };
 export type Observation = {
@@ -176,12 +181,15 @@ export type Observation = {
   transcript: string[];
   latencyMs?: number;
   credits?: number;
+  toolCalls?: { name: string; arguments: Config }[];
+  facts?: Config;
 };
 export type Result = {
   scenario: Scenario;
   observation?: Observation;
   passed: boolean;
   error?: string;
+  failedAssertions?: string[];
   repeat: number;
   evidenceType: "fixture" | "provider-text" | "recorded-voice" | "live-audio";
 };
@@ -206,15 +214,37 @@ export async function evaluate(
     for (let repeat = 0; repeat < repeats; repeat++) {
       try {
         const observation = await transport.execute(scenario);
+        const failedAssertions: string[] = [];
+        if (observation.outcome !== scenario.expected.outcome)
+          failedAssertions.push("outcome");
+        if (
+          stable([...observation.tools].sort()) !==
+          stable([...scenario.expected.tools].sort())
+        )
+          failedAssertions.push("tools");
+        // Ordered calls include exact JSON arguments: names alone cannot prove authorization.
+        if (
+          scenario.expected.toolCalls !== undefined &&
+          stable(observation.toolCalls ?? null) !==
+            stable(scenario.expected.toolCalls)
+        )
+          failedAssertions.push("toolCalls");
+        // Structured facts are an exact contract, not a semantic transcript judge.
+        if (
+          scenario.expected.facts !== undefined &&
+          stable(observation.facts ?? null) !== stable(scenario.expected.facts)
+        )
+          failedAssertions.push("facts");
         results.push({
           scenario,
           observation,
           repeat,
           evidenceType: transport.evidenceType,
-          passed:
-            observation.outcome === scenario.expected.outcome &&
-            stable([...observation.tools].sort()) ===
-              stable([...scenario.expected.tools].sort()),
+          passed: failedAssertions.length === 0,
+          ...(scenario.expected.toolCalls !== undefined ||
+          scenario.expected.facts !== undefined
+            ? { failedAssertions }
+            : {}),
         });
       } catch {
         results.push({
@@ -346,6 +376,10 @@ export function report(
     : `# ${heading}\n\nEvidence types must be interpreted separately.\n\n\`\`\`json\n${body.replace(/\`/g, "\\u0060")}\n\`\`\`\n`;
 }
 export { inspectElevenLabs, type AgentReader } from "./elevenlabs.js";
+export {
+  importNativeReceipt,
+  type NativeReceiptExpectation,
+} from "./receipts.js";
 
 export type Reservation = {
   id: string;

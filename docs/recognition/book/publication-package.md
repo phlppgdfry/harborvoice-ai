@@ -22,12 +22,12 @@ Prepared by the HarborVoice Project with AI-assisted drafting and engineering su
 
 ## Current provider requirements
 
-The [content guidelines](https://elevenreader.io/content-guidelines), checked 8 November 2026, require a complete literary/book work starting at 6,000 words, accurate metadata, quality text and a suitable cover; the body currently supports text only. English is accepted. Promotional articles and excessive outbound links are unsuitable. This manuscript is a complete instructional book with sparse references, not a split newsletter or commercial script. Actual editorial acceptance remains the provider's decision.
+The [content guidelines](https://elevenreader.io/content-guidelines), checked 8 November 2026, require a complete literary/book work starting at 6,000 words, accurate metadata, quality text and a suitable cover; the body currently supports text only. English is accepted; the current guidelines also list Spanish, Portuguese, French, German and Polish. Promotional articles and excessive outbound links are unsuitable. This manuscript is a complete instructional book with sparse references, not a split newsletter or commercial script. Actual editorial acceptance remains the provider's decision.
 
 The former `/publishing` address currently redirects to [ElevenLabs Audiobooks](https://elevenlabs.io/audiobooks). Do not rely on the older launch blog's language or US royalty eligibility as current policy. Review the authenticated publishing flow and current terms before claiming distribution or payouts in Belgium. No account, tax, payout or identity form has been submitted.
 
 ## Review gate
 
-Read and edit the entire manuscript; check every historical result against the versioned reports; proofread with a technical reviewer; open the EPUB in an EPUB reader and run EPUBCheck before external submission. Local checks currently verify ZIP/CRC, mimetype placement, XML, manifest/spine and chapter links. These are not an EPUBCheck pass or provider acceptance.
+Read and edit the entire manuscript; check every historical result against the versioned reports; proofread with a technical reviewer; open the EPUB in an EPUB reader and run EPUBCheck before external submission. EPUBCheck 5.4.0 passed on 9 November 2026 with zero errors and warnings; [receipt](../../final-mastery/epubcheck.json). Structural checks also verify ZIP/CRC, mimetype, XML and manifest/spine. This is not editorial or provider acceptance.
 
 Status: manuscript CREATED; structural package TESTED; editorial and personal-author approval PENDING; external submission NOT SUBMITTED; ElevenReader approval/listing NOT APPROVED and NOT PUBLISHED.

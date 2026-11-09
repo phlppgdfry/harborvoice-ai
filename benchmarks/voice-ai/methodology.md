@@ -25,3 +25,9 @@ Report numerator/denominator by configuration, category, language and evidence t
 Historical 6/6: illustrative Wilson lower bound about 0.61, upper 1.00. Cases were purposively chosen, with no random sampling or repeats, so even this interval is not a justified deployment guarantee.
 
 Threats: synthetic tasks, category-conditioned stubs, English-heavy design, no blinded annotators, no field users, no human-audio sessions, provider judge bias, temporal model drift, unavailable raw historical transcripts and partial provider billing attribution. Findings cannot support competitive rankings or safety certification.
+
+## Structured contract extension (Phase 4)
+
+`npm run test:contracts` runs twelve separately authored adversarial observations, balanced across EN/NL/FR. Three valid controls pass; nine intentionally flawed observations fail. Unlike the 110 category-selected teaching policies, the observation map is stored separately and the validator checks optional ordered tool arguments and exact structured facts, including extra claims. The data remain synthetic and deliberately known to the author. This is validator sensitivity evidence, not an independently annotated model holdout or a provider success rate.
+
+For a future provider study, freeze scenario IDs, trusted fixture records, extraction rules and configuration hashes before running. Use a second reviewer for reference, action authority, uncertainty and language correctness; record disagreements and missing evidence. Store consented transcripts privately, publish only reviewed synthetic summaries. Treat each configuration/language as a separate small sample. Paired repeats are correlated; Wilson intervals do not fix sampling bias or establish population reliability. Start with two sentinel cases only after a fresh cost quote and explicit owner budget; do not infer funding from this plan.

@@ -1,12 +1,12 @@
 {
   "name": "harborvoice-ai",
-  "version": "2.1.0",
+  "version": "2.2.0-rc.1",
   "private": true,
   "type": "module",
   "description": "A logistics voice operations workbench powered by ElevenLabs",
   "scripts": {
     "dev": "concurrently -k \"tsx watch server/index.ts\" \"vite --host 127.0.0.1\"",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && npm run build:agentproof",
     "start": "tsx server/index.ts",
     "test": "tsx --test tests/*.test.ts",
     "check": "npm run build && npm test",
@@ -43,7 +43,10 @@
     "test:community": "node --import tsx scripts/recognition/browser.ts",
     "phase3:verify": "bash scripts/phase3/verify.sh",
     "phase3:browser": "node --import tsx scripts/phase3/browser-check.ts",
-    "format:phase3:check": "prettier --check packages/agentops-kit apps/agentproof/src apps/agentproof/*.json apps/agentproof/*.ts apps/agentproof/index.html community/elevenlabs-belgium benchmarks/voice-ai/*.md benchmarks/voice-ai/scenarios scripts/phase3 docs/phase3"
+    "format:phase3:check": "prettier --check packages/agentops-kit apps/agentproof/src apps/agentproof/*.json apps/agentproof/*.ts apps/agentproof/index.html community/elevenlabs-belgium benchmarks/voice-ai/*.md benchmarks/voice-ai/scenarios scripts/phase3 docs/phase3",
+    "build:agentproof": "node --import tsx scripts/final-mastery/build-agentproof.ts",
+    "test:contracts": "node --import tsx scripts/final-mastery/contracts.ts",
+    "test:mastery": "node --import tsx scripts/final-mastery/browser.ts"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "2.77.0",

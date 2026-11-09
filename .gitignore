@@ -11,3 +11,7 @@ playwright-report/
 .vercel/
 .firecrawl/
 .vercel
+
+# Worktree-local dependency links
+node_modules
+**/node_modules

@@ -27,3 +27,7 @@ A paid account's general commercial generation rights should not be described as
 Each actual composition reserved 2,500 credits; three successful requests completed. Two earlier 422 schema-validation failures retained 2,500 each rather than assuming them free. The current Music v2.5 API uses `CompositionPlan.chunks`; older `MusicPrompt.sections` is a different model schema, and `forceInstrumental` belongs to prompt mode. The corrected generator uses typed chunks with explicit instrumental instructions and no automatic retries. Do not rerun completed tracks; receipts and file existence deduplicate them.
 
 Exact itemized billing was not returned for every API request. Account-wide observations, conservative reservations and the native template quote remain separate in `credit-usage.json`.
+
+## Phase 4 current review
+
+The official [Marketplace documentation](https://elevenlabs.io/docs/overview/capabilities/music/marketplace), reread 9 November 2026, separates buyer usage licenses and creator payouts. Buyer licenses do not authorize music-streaming redistribution. This does not establish the publication eligibility of our API-origin tracks or substitute for creator rights/terms acceptance. Native Flow imports remain private review assets. No new composition, payout setup or publication was performed. Full subjective listening review and a confirmed native API-origin publishing path remain blocking.

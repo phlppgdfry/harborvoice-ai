@@ -7,6 +7,7 @@ type Result = {
     input: string;
     expected: { outcome: string; tools: string[] };
   };
+  failedAssertions?: string[];
   passed: boolean;
   observation: { outcome: string; tools: string[]; transcript: string[] };
 };
@@ -28,13 +29,20 @@ const esc = (s: string) =>
   );
 let baseline: Evidence,
   candidate: Evidence,
+  contracts: Evidence,
   active = "baseline",
   query = "",
   category = "all",
   status = "all",
   selected = "tool-error-01",
   view = "Evidence";
-const nav = ["Evidence", "Configuration", "Methodology", "Pilot feedback"];
+const nav = [
+  "Evidence",
+  "Contract lab",
+  "Configuration",
+  "Methodology",
+  "Pilot feedback",
+];
 const read = async (path: string) => {
   const response = await fetch(import.meta.env.BASE_URL + path);
   if (!response.ok) throw Error("Evidence could not be loaded.");
@@ -53,7 +61,7 @@ function render() {
     );
   const chosen = evidence.results.find((r) => r.scenario.id === selected)!;
   const failed = evidence.results.filter((r) => !r.passed).length;
-  app.innerHTML = `<aside><a class="brand" href="#">◧ <span>AgentProof</span></a><p class="brand-sub">Voice AI reliability</p><nav aria-label="Primary">${nav.map((n, i) => `<button data-view="${n}" aria-current="${view === n ? "page" : "false"}"><span aria-hidden="true">${["◉", "⊞", "≡", "↗"][i]}</span>${n}</button>`).join("")}</nav><div class="workspace"><span class="orb"></span><div>HarborVoice lab<small>Independent research workspace</small></div></div><div class="aside-bottom">Pilot v0.1.0<br>Built for evidence, not impressions.<a href="https://github.com/phlppgdfry/harborvoice-ai/tree/feat/elevenlabs-ecosystem-phase3">Source & documentation</a></div></aside>
+  app.innerHTML = `<aside><a class="brand" href="#">◧ <span>AgentProof</span></a><p class="brand-sub">Voice AI reliability</p><nav aria-label="Primary">${nav.map((n, i) => `<button data-view="${n}" aria-current="${view === n ? "page" : "false"}"><span aria-hidden="true">${["◉", "◇", "⊞", "≡", "↗"][i]}</span>${n}</button>`).join("")}</nav><div class="workspace"><span class="orb"></span><div>HarborVoice lab<small>Independent research workspace</small></div></div><div class="aside-bottom">Pilot v0.2.0<br>Built for evidence, not impressions.<a href="https://github.com/phlppgdfry/harborvoice-ai/tree/main">Source & documentation</a></div></aside>
  <div class="shell"><header><span>Workspace <span class="muted">/</span> ${esc(view)}</span><span class="mode">Local demonstration · no credentials</span></header><main id="main"><div class="title-row"><div><h1>${view === "Evidence" ? "Know where your agent breaks." : esc(view)}</h1><p>${view === "Evidence" ? "Trace a failure. Compare the fix. Keep the evidence." : "A clear boundary between what is measured and what is proposed."}</p></div><button class="primary" id="download">Export evidence ↓</button></div>
  <div class="notice"><span aria-hidden="true">◈</span><div><strong>Deterministic fixture study</strong> · 110 synthetic scenarios. These results test scripted contracts; they do not measure ElevenLabs agent reliability. <button data-view="Methodology">Read the methodology</button></div></div>
  ${
@@ -65,6 +73,7 @@ function render() {
  <section class="historical"><div><h2>Keep the evidence types separate.</h2><p>The earlier six-case ElevenLabs study reported 6/6 successful text simulations and 1,946 credits. It was not rerun here. No microphone performance or speech latency was measured.</p></div><a href="./historical.json" download>Download historical receipt ↓</a></section>`
      : ""
  }
+ ${view === "Contract lab" ? `<section class="document"><h2>Inspect what a pass can miss.</h2><p>Twelve adversarial contract checks, four each in English, Dutch and French. The observations deliberately include nine failures. These are offline validator tests; no model was evaluated.</p><p>An outcome label and tool name can match while arguments target the wrong record or structured facts invent an arrival time. AgentOps now checks ordered calls and exact structured facts when a scenario declares them.</p><div class="table-scroll"><table><thead><tr><th>Contract</th><th>Language</th><th>Assertion result</th></tr></thead><tbody>${contracts.results.map((r) => `<tr><td><strong>${esc(r.scenario.id)}</strong><small>${esc(r.scenario.input)}</small></td><td>${esc(r.scenario.language.toUpperCase())}</td><td><span class="status ${r.passed ? "pass" : "fail"}">${r.passed ? "Control accepted" : "Failure detected"}</span><small>${esc(r.failedAssertions?.join(", ") || "Exact structured contract")}</small></td></tr>`).join("")}</tbody></table></div><h3>What this does not establish</h3><p>Structured facts supplied by a transport are not independent verification of spoken claims. A real evaluation must extract claims from the actual response, match them to trusted source records and use qualified multilingual review. There is no population success rate or model-quality comparison here.</p><h3>Native receipts and unknown costs</h3><p>The offline <code>agentops import-native receipt.json expected.json</code> command validates invocation, agent, branch, test IDs, repeats, status and credit fields. Pending runs and absent costs remain unknown. Imports omit transcripts and never release a spending hold.</p><a class="secondary" href="./contracts.json" download>Download contract evidence ↓</a><h3>Provenance</h3><p>Source commit <code>${esc(contracts.sourceCommit)}</code>. Generated ${esc(contracts.generatedAt)}.</p></section>` : ""}
  ${
    view === "Configuration"
      ? `<section class="document"><h2>Review the boundary before deployment</h2><p>This demo compares local teaching policies. It does not read or change Nora or any provider resource.</p><table><thead><tr><th>Boundary</th><th>Baseline fixture</th><th>Corrected fixture</th></tr></thead><tbody><tr><td>Tool failure</td><td>Accept as grounded</td><td>Recover</td></tr><tr><td>Invalid response schema</td><td>Accept as grounded</td><td>Escalate</td></tr><tr><td>Conflicting sources</td><td>Accept as grounded</td><td>Escalate</td></tr></tbody></table><h3>Reproduce the inspection</h3><pre>agentops inspect config.json
@@ -145,10 +154,15 @@ function download(name: string, body: string, type: string) {
   a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
-Promise.all([read("baseline.json"), read("candidate.json")])
-  .then(([a, b]) => {
+Promise.all([
+  read("baseline.json"),
+  read("candidate.json"),
+  read("contracts.json"),
+])
+  .then(([a, b, c]) => {
     baseline = a;
     candidate = b;
+    contracts = c;
     render();
   })
   .catch(() => {

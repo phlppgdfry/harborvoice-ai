@@ -1,5 +1,17 @@
 # HarborVoice AI · Contribution Edition
 
+**Final Mastery release candidate · v2.2.0-rc.1.** A fictional logistics voice workbench plus recorded creative workflows, reusable AgentOps tooling, a static AgentProof failure explorer and developer education. [Evidence portfolio](docs/final-mastery/portfolio.md) · [119 capability rows](docs/final-mastery/capability-matrix.md) · [Publication dashboard](docs/final-mastery/publication-status.md).
+
+| Explore                                                                 | What it demonstrates                                                             | Validation boundary                                                                  |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Public static workbench](https://phlppgdfry.github.io/harborvoice-ai/) | Synthetic logistics operations, recorded films/music, Academy and Mastery Lab    | No real terminal/customer system                                                     |
+| [AgentProof](https://phlppgdfry.github.io/harborvoice-ai/agentproof/)   | Filters, failure analysis, comparison and downloadable evidence                  | 110 scripted scenarios plus 12 EN/NL/FR adversarial contracts; no model success rate |
+| [AgentOps Kit](packages/agentops-kit)                                   | Redaction, drift, bounded evaluation, native receipt import and cost uncertainty | v0.2.0 candidate; not npm-published; no account-wide dispatch lock                   |
+| [Protected voice application](https://harborvoice-ai.vercel.app)        | Existing deployed PostgreSQL/ElevenLabs runtime                                  | Separate draft PR #1; operational acceptance remains incomplete                      |
+| [Education and community](community/elevenlabs-belgium)                 | No-key exercises, technical manuscript and proposed workshop                     | No event participants, external publication or official recognition claimed          |
+
+Build with Node 24: `npm ci`, `npm run check`, `npm run phase3:verify`. The production build includes the static `/agentproof/` bundle. `npm run test:contracts` is offline. Provider credentials are server-only; paid operations require separate authorization. Phase 4 generation budget and spend are zero. Native template visual/caption QA, external submissions and registry publication remain gated. The Vercel deployment freeze is preserved; merging these source changes does not authorize replacing the persistent runtime.
+
 **Voice intelligence with evidence and human control.** A working logistics voice-AI portfolio, creative production studio and practical learning environment.
 
 [Live application](https://harborvoice-ai.vercel.app) · [Watch the product film](public/elite/commercial-en.mp4) · [Mastery Lab](https://harborvoice-ai.vercel.app/#mastery-lab) · [Capability matrix](docs/elite/capability-matrix.md) · [Release evidence](docs/elite/release-report.md)
