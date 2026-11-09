@@ -1,0 +1,23 @@
+[
+  {
+    "id": "future-systems",
+    "originalExists": true,
+    "originalSha256": "fcd4f25159e39dc6f5ca4e47eaeb9376b5b1d57874a09fec88c4502823d5aebb",
+    "masterSha256": "902ea396a2b3f65a76a3dd3d3b6aa0a7cfa04a290813de439e7459ffbb1b5883",
+    "artworkExists": true
+  },
+  {
+    "id": "northern-lights",
+    "originalExists": true,
+    "originalSha256": "198e35158ee0e4adeaaef240128ce3746c3af920d3fd7ffa78cde0fdd1fc68b1",
+    "masterSha256": "a886d59360ff80aaa8bf396ac01a997193f5af5b2947828385a073b6c0613d55",
+    "artworkExists": true
+  },
+  {
+    "id": "human-intelligence",
+    "originalExists": true,
+    "originalSha256": "afc48bb528041a4f8781c2e42d9d1788d3c0580988ab34f37039a06574478143",
+    "masterSha256": "32baa4705eb1df575b1eb7ca97e84b46d3f58cc63272229fb518ddfe63f1ad11",
+    "artworkExists": true
+  }
+]

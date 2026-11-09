@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-09T17:10:34.202Z",
+  "used": 93558,
+  "limit": 128715,
+  "remaining": 35157,
+  "tier": "creator",
+  "canExtend": false,
+  "currentOverage": null,
+  "phase5PaidDispatches": 0,
+  "phase4BaselineRemaining": 35157,
+  "deltaSincePhase4": 0,
+  "retainedReservations": {
+    "elite": 44850.04,
+    "recognition": 21756,
+    "phase4": 5800
+  },
+  "scope": "Read-only subscription snapshot. Historical reservation envelopes overlap observed billing; not additive unpaid invoices. No holds released. No global pending-job enumeration available."
+}

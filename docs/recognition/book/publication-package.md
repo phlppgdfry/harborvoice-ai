@@ -2,7 +2,7 @@
 
 Title: **Building Reliable Enterprise Voice AI Agents**
 
-Language: English. Complete manuscript: **6,184 words before the references**. Text-only EPUB 3, ten numbered chapters plus introduction, practical review protocol and worked exercise. The cover is a separate original 1600×2400 PNG. No images are embedded in the book body. Companion source and workshop exercises are separate so the book remains a standalone educational work.
+Language: English. Complete manuscript: **6,251 words before the references** (publication-launch revision, 9 November 2026). Text-only EPUB 3, ten numbered chapters plus introduction, practical review protocol and worked exercise. The cover is a separate original 1600×2400 PNG. No images are embedded in the book body. Companion source and workshop exercises are separate so the book remains a standalone educational work.
 
 ## Publication description
 
@@ -31,3 +31,7 @@ The former `/publishing` address currently redirects to [ElevenLabs Audiobooks](
 Read and edit the entire manuscript; check every historical result against the versioned reports; proofread with a technical reviewer; open the EPUB in an EPUB reader and run EPUBCheck before external submission. EPUBCheck 5.4.0 passed on 9 November 2026 with zero errors and warnings; [receipt](../../final-mastery/epubcheck.json). Structural checks also verify ZIP/CRC, mimetype, XML and manifest/spine. This is not editorial or provider acceptance.
 
 Status: manuscript CREATED; structural package TESTED; editorial and personal-author approval PENDING; external submission NOT SUBMITTED; ElevenReader approval/listing NOT APPROVED and NOT PUBLISHED.
+
+## Publication-launch revision — 9 November 2026
+
+The complete manuscript was reviewed, historical scope clarified and the Studio repair paragraph corrected. The rebuilt EPUB passes official EPUBCheck 5.4.0 with zero errors/warnings. See [the current publishing report](../../publication-launch/elevenreader.md). This is a local package revision; no native publishing draft or review submission exists from this execution.

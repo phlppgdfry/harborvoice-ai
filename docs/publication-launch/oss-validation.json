@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-09T17:09:45.589964+00:00",
+  "upstreamCommit": "07454da05a9265bb008a5024771cf51ae2f66eb3",
+  "commit": "67ccb011ed7bebe8bd9d7967abfbf0083cb5a03a",
+  "fork": "phlppgdfry/examples",
+  "branch": "feat/offline-agent-tool-contracts",
+  "unitTests": 14,
+  "cleanVenvTests": "PASS",
+  "ruffWholeRepository": "PASS",
+  "prettierWholeRepository": "PASS",
+  "secretScan": "PASS",
+  "paidCalls": 0,
+  "upstreamPullRequest": null,
+  "upstreamCI": "NOT RUN",
+  "prCreationErrors": [
+    "GraphQL: phlppgdfry does not have the correct permissions to execute CreatePullRequest",
+    "REST HTTP404 Not Found"
+  ],
+  "forkVerified": true,
+  "ahead": 1,
+  "behind": 0
+}
