@@ -1,11 +1,12 @@
 {
-  "checkedAt": "2026-11-09T12:44:41.326701+00:00",
-  "sourceCommit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+  "checkedAt": "2026-11-09T13:33:28.466538+00:00",
+  "verifiedImplementationCommit": "3cee65658c699bfd6ca92048e6485e2b98003633",
+  "finalSourceHead": "b601429",
   "files": [
     {
       "name": "agentproof-0.2.0.zip",
-      "bytes": 227044,
-      "sha256": "7ba69da6440e37ec86fd8ff0c7044d92b7977a6b92ea3fc7f26f5845ab69ea9d"
+      "bytes": 229422,
+      "sha256": "138f613befabef4bea18837744a35d426da6c9086ae12381c9fd4257dcb61e02"
     },
     {
       "name": "harborvoice-agentops-kit-0.2.0.tgz",
@@ -13,7 +14,12 @@
       "sha256": "29d46a04e495c8d75f5124b5f155c9cc35292f01205ef4533bbcb2d41debd281"
     }
   ],
-  "packageSmoke": "Unpacked dist/cli.js inspect runs under Node without installed dependencies",
+  "packageSmoke": "Unpacked Node CLI runs with no installed dependencies. AgentProof ZIP includes Inter font license.",
   "npmPublished": false,
-  "externalPilotRecruited": false
+  "scope": "Local technical release assets. Registry publication and external submissions remain gated.",
+  "publishedRelease": "https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.2.0-rc.1",
+  "downloadedPublishedFilesVerified": true,
+  "publicSha256Manifest": "PASS \u2014 both published archive digests match downloaded SHA256SUMS.txt",
+  "publicPackageCliSmoke": "PASS \u2014 unpacked published tarball runs without installed dependencies",
+  "publicStaticZip": "Contains Inter-LICENSE.txt, assets and JSON evidence; source remains fixture-only."
 }

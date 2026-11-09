@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-09T13:38:28.603Z",
+  "url": "https://phlppgdfry.github.io/harborvoice-ai",
+  "status": "TESTED",
+  "checks": [
+    "Three language views preserve exact reference",
+    "Unknown reference does not select another shipment",
+    "Known pickup record does not become a customs hold",
+    "All three recorded tracks decode at60 seconds",
+    "EPUB downloads as ZIP/EPUB payload",
+    "Revised native lesson decodes at 61 seconds; reviewed three-question quiz downloads",
+    "390px layout has no horizontal overflow"
+  ],
+  "errors": [],
+  "providerCallsStarted": 0
+}

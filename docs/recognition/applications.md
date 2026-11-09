@@ -50,3 +50,11 @@ Official [CPP page](https://elevenlabs.io/cpp) describes application, matching t
 ## Submission checklist
 
 Owner edits biography and application answers; verifies eligibility and current forms; approves media/author rights; supplies authentic social metrics if required; approves each external submission separately. Then record SUBMITTED URL/date. APPROVED and PUBLISHED require actual provider confirmation. LinkedIn remains owner-controlled. No spend threshold establishes Top User or invitation-only Power User status.
+
+## Final Mastery evidence amendment — 9 November 2026
+
+**New engineering contribution.** AgentOps Kit 0.2.0 imports existing native test receipts offline, rejects identity/branch/test mismatches and preserves unknown billing. Optional assertions check exact ordered tool arguments and structured facts. Forty package tests pass; the new twelve-case EN/NL/FR study deliberately tests validator failures, not model reliability. The static AgentProof explorer makes failure comparison and exports available without keys or paid generations. No npm publication, real-user adoption or accepted upstream contribution is claimed.
+
+**Native creative quality improvement.** The private Learning Content Creator now excludes the misleading illustration, uses an exact authored diagram thumbnail, exposes two briefs and three outputs, and has a freshly reviewed 61-second preview plus a matching Scribe transcript and three-question quiz. A duplicate-caption defect in native Studio was discovered through a real export and corrected reversibly while preserving cue data and approved source/audio. No public Explore submission or Marketplace/Reader acceptance is implied.
+
+**Contribution plan.** Use these concrete failure analyses in the prepared no-key workshop and technical articles. Recruit a small voluntary pilot only after an owner-approved contact, privacy process and schedule exist. Do not add invented users, community size, reach or testimonials. The official Ambassador and Creator Partner pages currently share an application form; owner reviews the appropriate track(s), eligibility, personal metrics and terms before any submission.

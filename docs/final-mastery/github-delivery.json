@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-09T13:32:13.310804+00:00",
+  "checkedAt": "2026-11-09T16:49:06.643955+00:00",
   "sourcePr": "https://github.com/phlppgdfry/harborvoice-ai/pull/5",
   "verifiedImplementationCommit": "3cee65658c699bfd6ca92048e6485e2b98003633",
   "implementationCi": [
@@ -14,7 +14,7 @@
       "url": "https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42625767277"
     }
   ],
-  "sourceIntegrationState": "READY \u2014 final receipt/notice changes await exact-head CI before merge",
+  "sourceIntegrationState": "MERGED",
   "releaseVersion": "v2.2.0-rc.1",
   "stableReleasePreserved": "v2.1.0",
   "productionPr": {
@@ -28,5 +28,32 @@
     "sha": "234281a806150a79b12220d182df3fc9e97534b9"
   },
   "externalSubmissions": 0,
-  "scope": "Point-in-time pre-merge receipt; PR/release URLs and subsequent closeout receipt record later changes. No production promotion authorized."
+  "scope": "Release implementation and initial successful public deployment receipt; subsequent documentation-only receipts may advance main without changing the released code. No external submissions or production promotion.",
+  "sourcePrMergedAt": "2026-11-09T13:34:22Z",
+  "sourcePrHead": "b601429bb4a1780c3c77c1d4f5f934e80d380316",
+  "releaseCommit": "8d221ff6d71f43328b38a6dfcd53ad74d252e37c",
+  "releasePublishedAt": "2026-11-09T13:38:35Z",
+  "releaseUrl": "https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.2.0-rc.1",
+  "releaseStatus": "PUBLISHED PRERELEASE",
+  "mainCi": [
+    {
+      "workflow": "Verify",
+      "result": "success",
+      "url": "https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42626653936"
+    },
+    {
+      "workflow": "Phase3",
+      "result": "success",
+      "url": "https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42626654018"
+    }
+  ],
+  "pages": {
+    "deploymentId": 7656114864,
+    "sha": "8d221ff6d71f43328b38a6dfcd53ad74d252e37c",
+    "workflow": "https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42626914234",
+    "result": "success",
+    "agentproof": "https://phlppgdfry.github.io/harborvoice-ai/agentproof/",
+    "publicSmoke": "PASS \u2014 browser-verification.json and public-deployment.json"
+  },
+  "vercelAfterSourceMerge": "Same preserved deployment ID and Git SHA confirmed via read-only CLI/API. No promotion."
 }

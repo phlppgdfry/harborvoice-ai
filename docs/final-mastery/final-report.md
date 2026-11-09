@@ -1,6 +1,6 @@
 # HarborVoice AI — Final Mastery-eindrapport
 
-9 november 2026 · onafhankelijke technische beoordeling · kandidaat **v2.2.0-rc.1**.
+9 november 2026 · onafhankelijke technische beoordeling · gepubliceerde prerelease **v2.2.0-rc.1**.
 
 ## A. Managementsamenvatting
 
@@ -18,7 +18,7 @@ Beginpunt: actuele `origin/main` op `0f8473881d15b36608c8ac1d5fff529a6922042b`. 
 
 Implementatiecommits: `a323d7a` (receipt-import en contractlab), `c75b148` (CI-contractweergave en export van geselecteerde evidence), `92cc85d` (reproduceerbare formattering). De eerste volledige lokale verificatie hoorde bij `92cc85d`. Na native learning-integratie en Studio-correctie zijn alle software- en browsersuites opnieuw geslaagd op **`3cee65658c699bfd6ca92048e6485e2b98003633`**. Deze tweede ronde controleert ook de gewijzigde Community Studio-audio/quiz en 89 assethashes. Latere commits leggen de definitieve receipts vast. De actuele PR, CI-runs, merge-/release- en Pages-receipts worden vastgelegd in [GitHub-aflevering](github-delivery.json); deze receipt is leidend voor wijzigingen na de rapporttekst.
 
-De bestaande stabiele release **v2.1.0** blijft behouden. Rootversie wordt **2.2.0-rc.1** omdat functionele evaluatieverbeteringen zijn toegevoegd terwijl acceptatiepunten openstaan. AgentOps Kit en AgentProof zijn **0.2.0-kandidaten**. Geen npm-publicatie.
+[PR #5](https://github.com/phlppgdfry/harborvoice-ai/pull/5) is gemerged op **8d221ff6d71f43328b38a6dfcd53ad74d252e37c**; beide main-workflows en de Pages-publicatie zijn geslaagd. De [prerelease v2.2.0-rc.1](https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.2.0-rc.1) is op 9 november 2026 om 13:38:35 UTC gepubliceerd met AgentOps-tarball, AgentProof-ZIP en SHA-256-manifest. De bestaande stabiele release **v2.1.0** blijft de laatste stabiele release. Rootversie is **2.2.0-rc.1** omdat functionele evaluatieverbeteringen zijn toegevoegd terwijl acceptatiepunten openstaan. AgentOps Kit en AgentProof zijn **0.2.0-kandidaten**. Geen npm-publicatie.
 
 Productie-PR [#1](https://github.com/phlppgdfry/harborvoice-ai/pull/1) blijft draft op de geobserveerde branchhead `ae15f1f99e4677d6eeea1d86f80b4b183c4ec8a6`. De actieve Vercel-deployment is afzonderlijk read-only bevestigd als READY, `dpl_C9wP3SGQr748FqB2ifTt3ruRtnTZ`, implementatie **`234281a806150a79b12220d182df3fc9e97534b9`**, branch `production/persistent-runtime`. Zie [Vercel-receipt](vercel-deployment.json). Geen nieuwe Vercel-deploy, promotie, rollback of databasewijziging. De private native learning-template is wel expliciet bijgewerkt na de goedgekeurde preview. `git.deploymentEnabled=false` blijft behouden.
 
@@ -55,7 +55,7 @@ De native leersjabloon is nu privé opnieuw gepubliceerd met een 61,36-secondenv
 
 AgentOps Kit: TypeScript/declarations en **40 tests geslaagd**. De runtime gebruikt Node-builtins. De lokaal gebouwde tarball bevat elf bestanden en de uitgepakte CLI werkt zonder geïnstalleerde dependencies. `import-native` verricht geen netwerkverzoek. Een fresh read-only GET van de bestaande historische zes-case-suite is correct verwerkt: zes terminale geslaagde runs, **1.714 historische credits**. Dit zijn geen Phase 4-uitgaven. [Receipt](native-receipt.json).
 
-AgentProof: statische build, bestaande 110 scripted cases, afzonderlijke twaalf meertalige contractcases, vergelijking, foutanalyse en downloads. Zes browsersuites slagen; het nieuwe pad is desktop en op 390px getest. AgentProof-interacties versturen geen externe requests. De bestaande hoofdpagina gebruikt wel een extern font; die netwerkgrens is in de testcorrectie expliciet gemaakt. Geen credentials, microfoon, analytics, betaalde publieke generatie of gebruikersregistratie toegevoegd. Het nieuwe audio- en quizvoorbeeld gebruikt uitsluitend de reeds gegenereerde bestanden bij publiek afspelen.
+AgentProof: [publiek gehost en getest](https://phlppgdfry.github.io/harborvoice-ai/agentproof/) op exact releasecommit `8d221ff`; statische build, bestaande 110 scripted cases, afzonderlijke twaalf meertalige contractcases, vergelijking, foutanalyse en downloads. Zes browsersuites slagen; het nieuwe pad is desktop en op 390px getest. AgentProof-interacties versturen geen externe requests. De bestaande hoofdpagina gebruikt wel een extern font; die netwerkgrens is in de testcorrectie expliciet gemaakt. Geen credentials, microfoon, analytics, betaalde publieke generatie of gebruikersregistratie toegevoegd. Het nieuwe audio- en quizvoorbeeld gebruikt uitsluitend de reeds gegenereerde bestanden bij publiek afspelen.
 
 De 110 fixtures blijven een rapportage-/beleidsdemonstratie. De twaalf nieuwe contractcases toetsen de gevoeligheid van de validator voor foute argumenten en extra/verkeerde feiten. Ze zijn geen onafhankelijke modelholdout. Semantische transcriptclaims, native-speaker-taalkwaliteit, voice latency en echte gebruikerservaring vereisen afzonderlijk onderzoek. [Methodologie](../../benchmarks/voice-ai/methodology.md).
 
@@ -85,7 +85,7 @@ Open source: officiële `elevenlabs/examples` nog op `07454da0`; gerichte PR-ove
 
 **Geen officiële onderscheiding is in deze audit vastgesteld.** Geen Top User-, Power User-, Ambassador- of certificeringsstatus toegevoegd. De actuele Ambassador-voorwaarden onderscheiden sollicitatiegebaseerde community/creator-tracks van discretionaire uitnodigingen voor Power Users. De Ambassador- en CPP-pagina verwijzen naar hetzelfde aanvraagformulier.
 
-LinkedIn is niet verbonden door de agent. De laatste accountwaarneming blijft historisch; [eigenaarinstructies](recognition.md) beschrijven persoonlijk verbinden en de afzonderlijke controle van een capability statement en Top User-status. Geen creditdrempel of gegarandeerde erkenningsroute vastgesteld. Startup Grants en Impact-fit zijn niet bewezen door een fictief logistiek portfolio.
+LinkedIn is niet verbonden door de agent. De laatste LinkedIn-accountwaarneming blijft historisch; [eigenaarinstructies](recognition.md) beschrijven persoonlijk verbinden en de afzonderlijke controle van een capability statement en Top User-status. Geen creditdrempel of gegarandeerde erkenningsroute vastgesteld. Startup Grants en Impact-fit zijn niet bewezen door een fictief logistiek portfolio.
 
 ## J. Creditreconciliatie
 
@@ -93,7 +93,7 @@ Het beginbudget van deze fase was nul. De eigenaar heeft daarna in deze sessie e
 
 De goedgekeurde native leersjabloon-preview had een UI-schatting van circa 3.042 en een reservering van 3.600. Direct erna was de accountdaling 3.007. De volgende geslaagde Scribe-pass correspondeerde met 21 extra accountcredits. Een eerste lokale MCP-padvalidatie mislukte; daarvoor bleef een aparte hold van 100 staan, naast 100 voor de geslaagde transcriptie. De Studio Agent-configuratiecorrectie heeft een UI-receipt van **458** credits (cumulatief 1.619 → 2.077), met een behouden envelope van 1.000. Twee native exports hebben elk een conservatieve hold van 500; geen modelgeneratie of nieuwe filmbron is daarvoor aangevraagd.
 
-De definitieve actuele balans, accountdaling, open/pending-status en vastgehouden envelopes staan in [account-final.json](account-final.json) en [paid-closeout.json](paid-closeout.json). Op het laatste tussenpunt: **35.157 beschikbaar**, een geobserveerde daling van **3.487** in het goedgekeurde venster. Accountbeweging is geen definitieve jobspecifieke factuur; vertraagde posting blijft mogelijk. Geen herhaling van afgeronde providerjobs, geen creditaankoop, upgrade of telephony.
+De definitieve actuele balans, accountdaling, open/pending-status en vastgehouden envelopes staan in [account-final.json](account-final.json) en [paid-closeout.json](paid-closeout.json). Bij de afsluitende budgetcontrole: **35.157 beschikbaar**, een geobserveerde daling van **3.487** in het goedgekeurde venster. Accountbeweging is geen definitieve jobspecifieke factuur; vertraagde posting blijft mogelijk. Geen herhaling van afgeronde providerjobs, geen creditaankoop, upgrade of telephony.
 
 Historische conservatieve envelopes Elite **44.850,04** en Recognition **21.756**, inclusief gefaalde holds **500** en **5.000**, zijn ongewijzigd behouden. Deze overlappen met geobserveerde usage en mogen niet als nieuwe onbetaalde kosten worden opgeteld. Exacte resterende historische liabilities blijven onzeker. De eerdere accountdaling van 26.546 is op product-/uurniveau verklaard, niet volledig per job/sessie; de daaropvolgende 132 hoort bij een historische afgeronde conversatie. Geen van die oude holds is vrijgegeven om deze fase te financieren.
 
@@ -118,5 +118,7 @@ De browser-tab-transportfout is via native appbediening omzeild binnen de onders
 ## M. Eindoordeel
 
 **Geschikt als geverifieerde software-releasecandidate en publieke synthetische demonstratie. Niet geschikt voor een ongekwalificeerde finale stabiele productie-/masteryclaim.** De implementatie verbetert echte ontwikkelaarswaarde, kostonzekerheid en bewijsvoering met beperkte, expliciet geautoriseerde native QA-generaties. Externe publicatie kan per pakket na eigenaarreview; echte data en bredere voice-uitrol wachten op de genoemde operationele acceptatie.
+
+Publieke post-deploymentcontrole: Portfolio → AgentProof → contractlab/export/vergelijking werkt op desktop en 390px; vernieuwde native les, quiz, bestaande tracks en EPUB zijn bereikbaar. De publieke JSON meldt exact `8d221ff`; nul providerjobs gestart door deze smoke tests. De gepubliceerde release-archieven zijn opnieuw gedownload, hashes gecontroleerd en de uitgepakte CLI is zonder dependencies gestart. Vercel bleef `234281a`.
 
 Zie de [interne veertien-delige scorecard](scorecard.md) voor concrete beoordelingen. Hoogste prioriteit is het sluiten van de native en operationele gaten en vervolgens echte vrijwillige feedback; extra featureaantallen of creditgebruik voegen nu minder waarde toe.

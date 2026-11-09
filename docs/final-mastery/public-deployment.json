@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-11-09T13:38:24.744Z",
+  "url": "https://phlppgdfry.github.io/harborvoice-ai/",
+  "expectedCommit": "8d221ff6d71f43328b38a6dfcd53ad74d252e37c",
+  "checks": [
+    {
+      "path": "agentproof/contracts.json",
+      "status": 200,
+      "sourceCommit": "8d221ff6d71f43328b38a6dfcd53ad74d252e37c",
+      "results": 12,
+      "evidenceTypes": ["fixture"]
+    },
+    {
+      "path": "agentproof/Inter-LICENSE.txt",
+      "status": 200
+    },
+    {
+      "path": "recognition/learning-revised.mp3",
+      "status": 200
+    },
+    {
+      "path": "recognition/learning-revised-quiz.txt",
+      "status": 200
+    }
+  ],
+  "passed": true,
+  "scope": "Public GET/HEAD only; source commit is embedded by the deployed build. No provider execution."
+}
