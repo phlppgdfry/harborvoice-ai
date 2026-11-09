@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-09T12:38:40.873Z",
-  "sourceCommit": "92cc85de27d0a130a9320d9397e357e8e890f79e",
+  "checkedAt": "2026-11-09T13:28:49.123Z",
+  "sourceCommit": "3cee65658c699bfd6ca92048e6485e2b98003633",
   "url": "http://127.0.0.1:4414",
   "viewports": ["1440x1000", "390x844"],
   "browser": "Chrome via Playwright; Browser plugin not available; native CUA transport failed timeoutMs.",

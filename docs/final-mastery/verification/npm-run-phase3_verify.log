@@ -14,46 +14,46 @@
 > harborvoice-agentops-kit@0.2.0 test
 > tsc -p tsconfig.test.json && node --import tsx --test test/*.test.ts
 
-✔ redacts nested secrets and URL credentials (0.948959ms)
-✔ canonical version independent of key order (0.183125ms)
-✔ diff sees secret rotation without revealing values (0.189709ms)
-✔ removed tools marked potentially breaking (0.638917ms)
-✔ heuristics flag explicit auth and insecure URLs (0.294834ms)
-✔ budget blocks absent coordination and stale balances (0.1355ms)
-✔ budget preserves other commitments, floor and buffer (0.065625ms)
-✔ budget rejects invalid numbers and ceiling (0.191958ms)
-✔ failed reservations remain liabilities (0.071209ms)
-✔ evaluation detects incorrect tool and regression (0.785417ms)
-✔ transport failures redact private error and never retry (0.139833ms)
-✔ bounds repeats and duplicate IDs (0.117375ms)
-✔ Wilson interval handles small samples and empty counts (0.087ms)
-✔ HTML escapes script payload (0.1925ms)
-✔ reservation proposals are immutable and consume capacity (0.145917ms)
-✔ duplicate operation cannot dispatch again (0.0495ms)
-✔ receipt below estimate retains liability until confirmed final (0.133375ms)
-✔ receipt above estimate increases liability (0.125375ms)
-✔ failed operation retains conservative liability (0.070041ms)
-✔ uncoordinated reservations rejected (0.04875ms)
-✔ corrupt imported reservation cannot expand capacity (0.044209ms)
-✔ account reset requires reconciliation (0.037958ms)
-✔ provider identity and final receipt cannot be reopened (0.067292ms)
-✔ inspector supports SDK-normalized and raw configuration fields (0.1105ms)
-✔ JSON-imported string numbers and missing budget fields fail closed (0.060917ms)
-✔ official client structural adapter uses mock transport and redacts (0.836959ms)
-✔ invalid ID fails before transport (0.709125ms)
-✔ native adapter fails closed without account-wide guard (0.205667ms)
-✔ native adapter respects denied reservation before provider call (0.136708ms)
-✔ native adapter uses official request and persists invocation under guard (0.760791ms)
-✔ native adapter bounds repeats and requires isolated branch (0.129334ms)
-✔ guard cannot dispatch same operation twice (0.128375ms)
-✔ native receipt read is separate and never submits a run (0.097834ms)
-✔ offline importer preserves provenance and excludes raw transcript/secrets (0.751708ms)
-✔ SDK camelCase and explicit zero credit receipts are supported (0.1115ms)
-✔ missing, partial, pending and historical costs never become zero final bills (0.185417ms)
-✔ wrong identity, unmapped tests, duplicate runs and malformed costs fail closed (0.343584ms)
-✔ cancelled and failed terminal receipts retain failure and known billing (0.106167ms)
-✔ a plausible outcome with wrong tool arguments and invented facts fails (0.541042ms)
-✔ missing structured evidence fails; exact verified contract passes (0.210583ms)
+✔ redacts nested secrets and URL credentials (0.883ms)
+✔ canonical version independent of key order (0.151125ms)
+✔ diff sees secret rotation without revealing values (0.161292ms)
+✔ removed tools marked potentially breaking (0.113667ms)
+✔ heuristics flag explicit auth and insecure URLs (0.22775ms)
+✔ budget blocks absent coordination and stale balances (0.122291ms)
+✔ budget preserves other commitments, floor and buffer (0.108417ms)
+✔ budget rejects invalid numbers and ceiling (0.193541ms)
+✔ failed reservations remain liabilities (0.083708ms)
+✔ evaluation detects incorrect tool and regression (0.686458ms)
+✔ transport failures redact private error and never retry (0.117292ms)
+✔ bounds repeats and duplicate IDs (0.104917ms)
+✔ Wilson interval handles small samples and empty counts (0.073792ms)
+✔ HTML escapes script payload (0.157417ms)
+✔ reservation proposals are immutable and consume capacity (0.12125ms)
+✔ duplicate operation cannot dispatch again (0.050417ms)
+✔ receipt below estimate retains liability until confirmed final (0.135875ms)
+✔ receipt above estimate increases liability (0.048042ms)
+✔ failed operation retains conservative liability (0.045583ms)
+✔ uncoordinated reservations rejected (0.039625ms)
+✔ corrupt imported reservation cannot expand capacity (0.049375ms)
+✔ account reset requires reconciliation (0.037ms)
+✔ provider identity and final receipt cannot be reopened (0.079417ms)
+✔ inspector supports SDK-normalized and raw configuration fields (0.186416ms)
+✔ JSON-imported string numbers and missing budget fields fail closed (0.094917ms)
+✔ official client structural adapter uses mock transport and redacts (1.315125ms)
+✔ invalid ID fails before transport (0.276958ms)
+✔ native adapter fails closed without account-wide guard (0.206333ms)
+✔ native adapter respects denied reservation before provider call (0.13125ms)
+✔ native adapter uses official request and persists invocation under guard (0.526667ms)
+✔ native adapter bounds repeats and requires isolated branch (0.117625ms)
+✔ guard cannot dispatch same operation twice (0.121209ms)
+✔ native receipt read is separate and never submits a run (0.081459ms)
+✔ offline importer preserves provenance and excludes raw transcript/secrets (0.82225ms)
+✔ SDK camelCase and explicit zero credit receipts are supported (0.111541ms)
+✔ missing, partial, pending and historical costs never become zero final bills (0.174458ms)
+✔ wrong identity, unmapped tests, duplicate runs and malformed costs fail closed (0.41725ms)
+✔ cancelled and failed terminal receipts retain failure and known billing (0.14925ms)
+✔ a plausible outcome with wrong tool arguments and invented facts fails (0.597375ms)
+✔ missing structured evidence fails; exact verified contract passes (0.513334ms)
 ℹ tests 40
 ℹ suites 0
 ℹ pass 40
@@ -61,21 +61,21 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 93.959125
+ℹ duration_ms 92.390208
 Validated 110 scenarios; wrote baseline, candidate and historical evidence.
-✔ known record stays held (0.538375ms)
-✔ missing reference clarifies (0.072292ms)
-✔ unknown record does not invent (0.655916ms)
-✔ untrusted instructions fail before tool call (0.097042ms)
-✔ tool timeout recovers without claiming release (0.101958ms)
-✔ invalid schema escalates (0.076333ms)
-✔ mismatched record escalates (0.066458ms)
-✔ reference format bounded (0.138209ms)
-✔ rejects ungrounded success after tool error (0.463792ms)
-✔ accepts honest recovery after source error (0.078042ms)
-✔ rejects unauthorized side effect (0.060291ms)
-✔ rejects unexpected tool (0.503459ms)
-✔ rejects malformed trace (0.146666ms)
+✔ known record stays held (0.596458ms)
+✔ missing reference clarifies (0.0765ms)
+✔ unknown record does not invent (0.5515ms)
+✔ untrusted instructions fail before tool call (0.085792ms)
+✔ tool timeout recovers without claiming release (0.093917ms)
+✔ invalid schema escalates (0.074542ms)
+✔ mismatched record escalates (0.068584ms)
+✔ reference format bounded (0.124291ms)
+✔ rejects ungrounded success after tool error (0.554958ms)
+✔ accepts honest recovery after source error (0.086041ms)
+✔ rejects unauthorized side effect (0.062291ms)
+✔ rejects unexpected tool (0.547583ms)
+✔ rejects malformed trace (0.2535ms)
 ℹ tests 13
 ℹ suites 0
 ℹ pass 13
@@ -83,7 +83,7 @@ Validated 110 scenarios; wrote baseline, candidate and historical evidence.
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 55.739125
+ℹ duration_ms 56.701625
 12 multilingual adversarial contracts: 3 accepted controls, 9 detected failures; zero provider calls.
 
 > agentproof-pilot@0.2.0 build

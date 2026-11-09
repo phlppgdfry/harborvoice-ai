@@ -3,7 +3,7 @@
 > node --import tsx scripts/recognition/validate-showcase.ts && node --test examples/reliable-agent-workshop/starter.test.mjs
 
 {
-  checkedAt: '2026-11-09T12:36:04.492Z',
+  checkedAt: '2026-11-09T13:28:23.632Z',
   upstreamCommit: '870ee29c311eaccd33425f326e72e14a120c69e2',
   status: 'TESTED — READY FOR REVIEW',
   checks: [
@@ -16,11 +16,11 @@
   ],
   scope: 'Submission contract checks plus actual upstream image sync. Full upstream application build not run.'
 }
-✔ known reference preserves recorded hold (0.518958ms)
-✔ missing and malformed inputs are distinct (0.244125ms)
-✔ unknown references cannot create proposals (0.085791ms)
-✔ a valid proposal stays pending and does not release the record (0.460542ms)
-✔ language switches preserve reference and mode (0.102125ms)
+✔ known reference preserves recorded hold (0.451458ms)
+✔ missing and malformed inputs are distinct (0.225334ms)
+✔ unknown references cannot create proposals (0.081208ms)
+✔ a valid proposal stays pending and does not release the record (0.4405ms)
+✔ language switches preserve reference and mode (0.104708ms)
 ℹ tests 5
 ℹ suites 0
 ℹ pass 5
@@ -28,4 +28,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 53.179417
+ℹ duration_ms 52.558416

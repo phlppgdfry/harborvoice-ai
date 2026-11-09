@@ -16,21 +16,21 @@ dist/assets/EliteStudio-BZYDcmyO.css          2.52 kB │ gzip:   0.85 kB
 dist/assets/CommunityStudio-DLNaFzuS.css      3.86 kB │ gzip:   1.18 kB
 dist/assets/MasteryLab-CuJVNOV6.css           5.27 kB │ gzip:   1.55 kB
 dist/assets/index-DQu82Txy.css               31.04 kB │ gzip:   7.63 kB
-dist/assets/circle-check-CAQSURCM.js          0.23 kB │ gzip:   0.20 kB
-dist/assets/volume-2-DYf3gwnk.js              0.78 kB │ gzip:   0.40 kB
-dist/assets/PortfolioEvidence-Do-tWqI3.js     6.20 kB │ gzip:   2.23 kB
-dist/assets/ConnectionSettings-DsBf22Ih.js    6.43 kB │ gzip:   2.34 kB
-dist/assets/ExperienceLab-q1T1jKpg.js        12.08 kB │ gzip:   4.07 kB
-dist/assets/AudioStudio-DkiSOGrw.js          13.12 kB │ gzip:   4.66 kB
+dist/assets/circle-check-1_GP5xC0.js          0.23 kB │ gzip:   0.20 kB
+dist/assets/volume-2-C7l6QIDg.js              0.78 kB │ gzip:   0.41 kB
+dist/assets/PortfolioEvidence-BkZiUx0F.js     6.20 kB │ gzip:   2.23 kB
+dist/assets/ConnectionSettings-DOZwd4Vq.js    6.43 kB │ gzip:   2.34 kB
+dist/assets/ExperienceLab-DmyfDGlU.js        12.08 kB │ gzip:   4.07 kB
+dist/assets/AudioStudio-4YT3nkl_.js          13.12 kB │ gzip:   4.66 kB
 dist/assets/remediation-BpGS9ycO.js          14.05 kB │ gzip:   1.93 kB
-dist/assets/EliteStudio-CyqCdybM.js          23.31 kB │ gzip:   8.01 kB
-dist/assets/Academy-CCmj51kn.js              31.64 kB │ gzip:  11.98 kB
-dist/assets/CommunityStudio-K7hiGPUd.js      33.37 kB │ gzip:   9.28 kB
-dist/assets/MasteryLab-CSn-i1xE.js           42.59 kB │ gzip:  14.49 kB
-dist/assets/index-2zX1-sw9.js               353.10 kB │ gzip: 108.63 kB
-dist/assets/VoiceAgent-CrOLZy8s.js          615.52 kB │ gzip: 162.13 kB
+dist/assets/CommunityStudio-CFHHPImZ.js      15.38 kB │ gzip:   5.77 kB
+dist/assets/EliteStudio-zmB8rl-k.js          23.31 kB │ gzip:   8.01 kB
+dist/assets/Academy-DqIvL_3c.js              31.64 kB │ gzip:  11.98 kB
+dist/assets/MasteryLab-BR9b8q04.js           42.59 kB │ gzip:  14.49 kB
+dist/assets/index-BZrtNVPt.js               353.10 kB │ gzip: 108.63 kB
+dist/assets/VoiceAgent-DP1KrGls.js          615.52 kB │ gzip: 162.13 kB
 
-✓ built in 499ms
+✓ built in 570ms
 
 > harborvoice-ai@2.2.0-rc.1 build:agentproof
 > node --import tsx scripts/final-mastery/build-agentproof.ts
@@ -51,73 +51,73 @@ dist/assets/Inter-ipl4pJhC.ttf  419.74 kB
 dist/assets/index-B-Rm4tuW.css    8.11 kB │ gzip: 2.58 kB
 dist/assets/index-HTI7dSAo.js    14.70 kB │ gzip: 5.81 kB
 
-✓ built in 44ms
+✓ built in 45ms
 Static AgentProof bundled at /agentproof/.
 
 > harborvoice-ai@2.2.0-rc.1 test
 > tsx --test tests/*.test.ts
 
-✔ status never reveals secrets (24.71425ms)
-✔ workspace requires configured operator token (7.229542ms)
-✔ cross-origin requests are rejected even with credentials (2.614917ms)
-✔ lookup reports unknown without hallucinating data (28.060791ms)
-✔ invalid input cannot mutate workspace (6.807208ms)
-✔ persisted escalation is pending, repeated request deduplicates, approval leaves cargo untouched (10.793333ms)
-✔ demo sessions persist transcript and language (2.648167ms)
-✔ missing API key gives actionable error without external call (1.601125ms)
-✔ webhook signature rejects tampering, expiry, missing and future timestamp (0.497459ms)
-✔ signed webhook delivery is idempotent and cannot mutate shipment status (2.521333ms)
-✔ webhook without valid signature is rejected (1.226875ms)
-✔ malformed JSON returns a client error rather than a provider error (2.281083ms)
-✔ governor preserves hard allowance, billing buffer and minimum account balance (12.675333ms)
-✔ failed and pending jobs retain reservations and cannot be blindly retried (6.229917ms)
-✔ account-wide external spend and delayed billing reconcile conservatively (6.306084ms)
-✔ independent governor instances cannot concurrently overwrite reservations (3.2825ms)
-✔ corrupt reservation data cannot turn the available allowance into NaN (3.230542ms)
-✔ a configuration cannot expand the owner-authorized maximum (1.183042ms)
-✔ a separate authorized sprint keeps the legacy policy and ledger intact (4.954125ms)
-✔ execution-specific allowance cannot be expanded by changing initialization arguments (1.337125ms)
-✔ lookup requires an exact reference, supports case and whitespace (0.578ms)
-✔ unknown shipment cannot create an escalation (0.194875ms)
-✔ escalation retries deduplicate and review does not release cargo (1.608083ms)
-✔ unknown reference yields no invented status (0.35125ms)
-✔ supported languages return localized guidance (0.282667ms)
-✔ demo evaluation suite passes and identifies its scope (0.816292ms)
-✔ persisted workspace validation rejects malformed nested data without crashing (86.971875ms)
-✔ speech: HTTP route serializes a real SDK request and returns provider output (43.578417ms)
-✔ effects: HTTP route serializes a real SDK request and returns provider output (8.541833ms)
-✔ music: HTTP route serializes a real SDK request and returns provider output (5.5345ms)
-✔ transcribe: HTTP route serializes a real SDK request and returns provider output (10.818334ms)
-✔ isolate: HTTP route serializes a real SDK request and returns provider output (5.894625ms)
-✔ change: HTTP route serializes a real SDK request and returns provider output (4.712917ms)
-✔ align: HTTP route serializes a real SDK request and returns provider output (4.450042ms)
-✔ dubbing: HTTP route serializes a real SDK request and returns provider output (4.880375ms)
-✔ signed sessions return SDK-normalized signedUrl (3.966042ms)
-✔ completed automatic dub is streamed after checking provider job status (4.614292ms)
-✔ unfinished dubbing cannot return a fake completed audio result (2.938959ms)
-✔ provider auth failures are actionable and do not expose credentials (4.278875ms)
-✔ invalid studio inputs fail before a provider request (4.489ms)
-✔ connection check reads provider access without generating billable audio (2.751ms)
-✔ concurrent knowledge uploads preserve existing and both new attachments (6.806ms)
-✔ live simulation creates the current test type and polls the returned invocation (6.233792ms)
-✔ RAG-enabled agents index newly attached knowledge after attaching it (4.894792ms)
-✔ current audio model selections serialize distinct Creative and API model names correctly (8.306417ms)
-✔ hosted status separates configured API, browser workspace and operator authentication (25.783ms)
-✔ hosted gateway fails closed when no operator secret is configured (0.4125ms)
-✔ public visitors cannot trigger a paid provider request (8.36475ms)
-✔ workspace writes and webhook retention are explicitly unavailable on a stateless gateway (13.153792ms)
-✔ wrong operator code and cross-origin sign-in do not create a session (27.188667ms)
-✔ operator sign-in creates a secure HttpOnly session without echoing the secret (7.781ms)
-✔ cookie signatures reject tampering, expiry and a rotated secret (0.198875ms)
-✔ remembered session lasts thirty days and can still be revoked by key rotation (1.759208ms)
-✔ Vercel rewrite routes preserve nested API paths (1.833417ms)
-✔ hosted uploads above four MB are rejected before a provider call (15.681875ms)
-✔ visitor session targets only the constrained guest agent; private paid tools stay locked (80.96075ms)
-✔ expired visitor window does not issue a signed session (8.2785ms)
-✔ unsafe provider limits fail closed before issuing a visitor URL (4.317958ms)
-✔ managed projection compares owned fields while preserving unknown remote settings (7.778708ms)
-✔ three-way drift separates local, remote and conflicting edits (0.360208ms)
-✔ apply refuses stale snapshots and remote conflicts (0.604417ms)
+✔ status never reveals secrets (20.343375ms)
+✔ workspace requires configured operator token (10.241708ms)
+✔ cross-origin requests are rejected even with credentials (2.527875ms)
+✔ lookup reports unknown without hallucinating data (26.380959ms)
+✔ invalid input cannot mutate workspace (3.8115ms)
+✔ persisted escalation is pending, repeated request deduplicates, approval leaves cargo untouched (7.804834ms)
+✔ demo sessions persist transcript and language (2.414875ms)
+✔ missing API key gives actionable error without external call (1.827625ms)
+✔ webhook signature rejects tampering, expiry, missing and future timestamp (0.494917ms)
+✔ signed webhook delivery is idempotent and cannot mutate shipment status (2.277959ms)
+✔ webhook without valid signature is rejected (1.092667ms)
+✔ malformed JSON returns a client error rather than a provider error (1.643834ms)
+✔ governor preserves hard allowance, billing buffer and minimum account balance (17.00325ms)
+✔ failed and pending jobs retain reservations and cannot be blindly retried (4.146125ms)
+✔ account-wide external spend and delayed billing reconcile conservatively (5.627542ms)
+✔ independent governor instances cannot concurrently overwrite reservations (4.064083ms)
+✔ corrupt reservation data cannot turn the available allowance into NaN (2.746417ms)
+✔ a configuration cannot expand the owner-authorized maximum (0.728208ms)
+✔ a separate authorized sprint keeps the legacy policy and ledger intact (5.75775ms)
+✔ execution-specific allowance cannot be expanded by changing initialization arguments (1.358333ms)
+✔ lookup requires an exact reference, supports case and whitespace (0.523375ms)
+✔ unknown shipment cannot create an escalation (0.192958ms)
+✔ escalation retries deduplicate and review does not release cargo (9.901583ms)
+✔ unknown reference yields no invented status (0.425542ms)
+✔ supported languages return localized guidance (0.306667ms)
+✔ demo evaluation suite passes and identifies its scope (0.880917ms)
+✔ persisted workspace validation rejects malformed nested data without crashing (102.026875ms)
+✔ speech: HTTP route serializes a real SDK request and returns provider output (43.131375ms)
+✔ effects: HTTP route serializes a real SDK request and returns provider output (8.601833ms)
+✔ music: HTTP route serializes a real SDK request and returns provider output (6.335459ms)
+✔ transcribe: HTTP route serializes a real SDK request and returns provider output (9.975166ms)
+✔ isolate: HTTP route serializes a real SDK request and returns provider output (5.195709ms)
+✔ change: HTTP route serializes a real SDK request and returns provider output (4.125541ms)
+✔ align: HTTP route serializes a real SDK request and returns provider output (4.459333ms)
+✔ dubbing: HTTP route serializes a real SDK request and returns provider output (4.172667ms)
+✔ signed sessions return SDK-normalized signedUrl (4.244583ms)
+✔ completed automatic dub is streamed after checking provider job status (4.732209ms)
+✔ unfinished dubbing cannot return a fake completed audio result (3.648875ms)
+✔ provider auth failures are actionable and do not expose credentials (4.094167ms)
+✔ invalid studio inputs fail before a provider request (3.124916ms)
+✔ connection check reads provider access without generating billable audio (2.566375ms)
+✔ concurrent knowledge uploads preserve existing and both new attachments (5.959125ms)
+✔ live simulation creates the current test type and polls the returned invocation (5.700125ms)
+✔ RAG-enabled agents index newly attached knowledge after attaching it (4.511125ms)
+✔ current audio model selections serialize distinct Creative and API model names correctly (8.01575ms)
+✔ hosted status separates configured API, browser workspace and operator authentication (20.261ms)
+✔ hosted gateway fails closed when no operator secret is configured (1.408417ms)
+✔ public visitors cannot trigger a paid provider request (6.731708ms)
+✔ workspace writes and webhook retention are explicitly unavailable on a stateless gateway (11.619417ms)
+✔ wrong operator code and cross-origin sign-in do not create a session (20.445083ms)
+✔ operator sign-in creates a secure HttpOnly session without echoing the secret (6.882584ms)
+✔ cookie signatures reject tampering, expiry and a rotated secret (0.186291ms)
+✔ remembered session lasts thirty days and can still be revoked by key rotation (1.532958ms)
+✔ Vercel rewrite routes preserve nested API paths (1.715083ms)
+✔ hosted uploads above four MB are rejected before a provider call (15.150625ms)
+✔ visitor session targets only the constrained guest agent; private paid tools stay locked (67.051ms)
+✔ expired visitor window does not issue a signed session (5.862333ms)
+✔ unsafe provider limits fail closed before issuing a visitor URL (3.082709ms)
+✔ managed projection compares owned fields while preserving unknown remote settings (11.736667ms)
+✔ three-way drift separates local, remote and conflicting edits (0.102917ms)
+✔ apply refuses stale snapshots and remote conflicts (0.286416ms)
 ℹ tests 61
 ℹ suites 0
 ℹ pass 61
@@ -125,7 +125,7 @@ Static AgentProof bundled at /agentproof/.
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 2700.008209
+ℹ duration_ms 2549.105458
 [plugin builtin:vite-reporter] 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application

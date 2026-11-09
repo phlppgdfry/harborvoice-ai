@@ -3,7 +3,7 @@
 > node --import tsx scripts/recognition/browser.ts
 
 {
-  "checkedAt": "2026-11-09T12:38:37.540Z",
+  "checkedAt": "2026-11-09T13:28:45.428Z",
   "url": "http://127.0.0.1:4414",
   "status": "TESTED",
   "checks": [
@@ -12,6 +12,7 @@
     "Known pickup record does not become a customs hold",
     "All three recorded tracks decode at60 seconds",
     "EPUB downloads as ZIP/EPUB payload",
+    "Revised native lesson decodes at 61 seconds; reviewed three-question quiz downloads",
     "390px layout has no horizontal overflow"
   ],
   "errors": [],
