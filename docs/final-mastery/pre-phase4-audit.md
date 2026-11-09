@@ -23,6 +23,8 @@ The full 85-file Phase 3 change was reviewed: toolkit implementation/tests, stat
 - Belgian workshop with eight starter tests, five-test upstream example proposal, five editorial articles and launch drafts. No event, participant results, external PR or publication is claimed.
 - Active secret-free `.github/workflows/phase3.yml`, root convenience commands, explicit Phase 3 formatting check and configurable `AGENTPROOF_URL` so existing previews need not be stopped.
 
+Main currently has no GitHub branch protection (API returns “Branch not protected”); this audit enforces the check gate explicitly. Consider owner-approved protection as follow-up. Gitleaks scanned the six Phase 3/integration commits (~1.10 MB) with no findings; this is a scoped scan, not a guarantee.
+
 The integration PR targets main and must have both existing Verify and Phase 3 offline verification green at its final HEAD before merge. This document describes that change; GitHub PR state is the authoritative merge receipt. Original Phase 3 reports remain historical, including their earlier statement that CI was only proposed.
 
 ## Actual deployments: source and hosting are different
