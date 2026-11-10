@@ -45,6 +45,7 @@ import {
   review,
   request,
   exportJson,
+  deleteConversation,
 } from "./api";
 import {
   initialState,
@@ -119,6 +120,28 @@ function App() {
   const notify = (s: string) => setNotice(s);
   const fail = (e: unknown) =>
     setError(e instanceof Error ? e.message : String(e));
+  if (
+    ready &&
+    (config.deployment === "unavailable" ||
+      (config.production &&
+        config.operatorRequired &&
+        !config.operatorAuthenticated))
+  ) {
+    return (
+      <main className="app">
+        <h1>HarborVoice operator workspace</h1>
+        {error && <p role="alert">{error}</p>}
+        <p>
+          {config.deployment === "unavailable"
+            ? "Backend unavailable. Your workspace has not been replaced with browser demo data."
+            : "Sign in before accessing persistent workspace data and live voice."}
+        </p>
+        <React.Suspense fallback={<p>Loading connection settings…</p>}>
+          <ConnectionSettings notify={notify} />
+        </React.Suspense>
+      </main>
+    );
+  }
   const active =
     state.shipments.find((s) => s.id === selected) || state.shipments[0];
   const pending = state.tickets.filter(
@@ -579,7 +602,9 @@ function App() {
             />
           )}
           {page === "Evaluations" && <Evaluations fail={fail} />}
-          {page === "Conversations" && <Conversations state={state} />}
+          {page === "Conversations" && (
+            <Conversations state={state} refresh={refresh} fail={fail} />
+          )}
           {page === "Academy" && (
             <React.Suspense fallback={<p>Loading the training course…</p>}>
               <Academy />
@@ -1194,7 +1219,16 @@ function Evaluations({ fail }: { fail: (e: unknown) => void }) {
     </>
   );
 }
-function Conversations({ state }: { state: State }) {
+function Conversations({
+  state,
+  refresh,
+  fail,
+}: {
+  state: State;
+  refresh: () => Promise<void>;
+  fail: (e: unknown) => void;
+}) {
+  const [deleting, setDeleting] = useState(false);
   const [id, setId] = useState("");
   const selected = state.sessions.find((s) => s.id === id) || state.sessions[0];
   return (
@@ -1254,6 +1288,30 @@ function Conversations({ state }: { state: State }) {
           <section className="panel padded">
             <div className="panel-heading">
               <h2>Transcript</h2>
+              <button
+                className="button"
+                disabled={deleting}
+                onClick={async () => {
+                  if (
+                    !window.confirm(
+                      "Delete this local transcript? This does not delete ElevenLabs provider records.",
+                    )
+                  )
+                    return;
+                  setDeleting(true);
+                  try {
+                    await deleteConversation(selected.id);
+                    setId("");
+                    await refresh();
+                  } catch (e) {
+                    fail(e);
+                  } finally {
+                    setDeleting(false);
+                  }
+                }}
+              >
+                {deleting ? "Deleting…" : "Delete local transcript"}
+              </button>
               <button
                 className="button"
                 onClick={() =>

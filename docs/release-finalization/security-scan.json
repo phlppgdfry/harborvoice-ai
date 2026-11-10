@@ -1,0 +1,5 @@
+{
+  "scope": "Current tracked files including integrated source; credentials, ignored runtime state and dependencies excluded. Git history separately scanned: 44 commits, zero findings. Earlier whole-directory scan included ignored private operational data; two local findings were not a public-source leak.",
+  "exitCode": 0,
+  "findings": []
+}

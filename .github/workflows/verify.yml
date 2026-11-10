@@ -1,22 +1,25 @@
 name: Verify
 on:
   push:
-    branches: [main]
+    branches: [main, production/persistent-runtime]
   pull_request:
 permissions:
   contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 24
           cache: npm
       - run: npm ci
       - run: npm run format:check
       - run: npm run check
+      - run: npm audit --audit-level=high
+      - run: npm run test:postgres
       - run: npm run elite:validate
       - run: npm run recognition:validate
       - run: npx playwright install --with-deps chromium
@@ -33,14 +36,21 @@ jobs:
           npm run test:academy
           npm run test:elite
           npm run test:community
-      - uses: actions/upload-artifact@v4
+          DEMO_URL=http://127.0.0.1:5173 npm run test:production-browser
+          APP_MODE=production NODE_ENV=production PUBLIC_ORIGIN=https://operator.example OPERATOR_TOKEN=synthetic-ci-only-operator-secret-00000000 ELEVENLABS_API_KEY=fixture ELEVENLABS_AGENT_ID=fixture PORT=4100 SQLITE_PATH=var/csp-fixture.sqlite npm start > /tmp/harborvoice-csp.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl --silent --fail http://127.0.0.1:4100/api/health; then break; fi
+            sleep 1
+          done
+          DEMO_URL=http://127.0.0.1:4100 npm run test:production-browser
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
           name: browser-evidence
           path: |
-            docs/screenshots/
-            docs/browser-verification.json
-            docs/academy-browser-verification.json
+            var/browser-evidence/
+            var/production-browser.json
+            var/production-browser-failure.png
             docs/elite/browser-verification.json
             docs/elite/screenshots/
             var/browser-failure.png

@@ -13,8 +13,10 @@ export type Config = {
   configured: boolean;
   agentReady: boolean;
   backend: boolean;
+  production?: boolean;
+  demoEnabled?: boolean;
   deployment?: "local" | "hosted" | "static" | "unavailable";
-  workspaceStorage?: "sqlite" | "browser";
+  workspaceStorage?: "sqlite" | "browser" | "postgres";
   uploadLimitBytes?: number;
   operatorRequired?: boolean;
   operatorAuthenticated?: boolean;
@@ -48,15 +50,17 @@ export function operatorHeaders(): Record<string, string> {
 export async function request<T = any>(
   path: string,
   body?: unknown,
+  method?: "GET" | "POST" | "DELETE",
 ): Promise<T> {
   const response = await fetch(`/api${path}`, {
-    method: body === undefined ? "GET" : "POST",
+    method: method || (body === undefined ? "GET" : "POST"),
     headers: {
       ...operatorHeaders(),
       ...(body instanceof FormData
         ? {}
         : { "Content-Type": "application/json" }),
     },
+    signal: AbortSignal.timeout(25000),
     body:
       body === undefined
         ? undefined
@@ -64,6 +68,7 @@ export async function request<T = any>(
           ? body
           : JSON.stringify(body),
   });
+  if (response.status === 204) return undefined as T;
   const data = await response.json().catch(() => {
     throw new Error(
       `The server returned an unreadable response (${response.status}). Check the backend connection.`,
@@ -80,6 +85,7 @@ export async function init() {
       configured: false,
       agentReady: false,
       backend: false,
+      demoEnabled: true,
       deployment: "static",
       workspaceStorage: "browser",
     };
@@ -93,6 +99,8 @@ export async function init() {
       configured: false,
       agentReady: false,
       backend: false,
+      production: true,
+      demoEnabled: false,
       deployment: "unavailable",
       workspaceStorage: "browser",
     };
@@ -102,7 +110,17 @@ export async function init() {
 function serverWorkspace() {
   return config.backend && config.workspaceStorage !== "browser";
 }
+function requireDemo() {
+  if (
+    config.demoEnabled === false ||
+    (!config.backend && config.deployment !== "static")
+  )
+    throw new Error(
+      "Production API unavailable or demo disabled. No local fallback was used.",
+    );
+}
 function save() {
+  requireDemo();
   try {
     localStorage.setItem("harborvoice-state-v1", JSON.stringify(memory));
   } catch {
@@ -110,11 +128,14 @@ function save() {
   }
 }
 export async function getState(): Promise<State> {
-  return serverWorkspace() ? request("/state") : structuredClone(memory);
+  if (serverWorkspace()) return request("/state");
+  requireDemo();
+  return structuredClone(memory);
 }
 export async function chat(text: string, language: string, sessionId: string) {
   if (serverWorkspace())
     return request("/demo/chat", { text, language, sessionId });
+  requireDemo();
   const reply = demoReply(memory, text, language);
   let session = memory.sessions.find((s) => s.id === sessionId);
   if (!session) {
@@ -136,6 +157,7 @@ export async function chat(text: string, language: string, sessionId: string) {
 }
 export async function escalation(shipmentId: string, reason: string) {
   if (serverWorkspace()) return request("/escalations", { shipmentId, reason });
+  requireDemo();
   const t = proposeEscalation(memory, shipmentId, reason);
   save();
   return t;
@@ -143,12 +165,14 @@ export async function escalation(shipmentId: string, reason: string) {
 export async function review(id: string, decision: "Approved" | "Rejected") {
   if (serverWorkspace())
     return request("/escalations/review", { id, decision });
+  requireDemo();
   const t = decideTicket(memory, id, decision);
   save();
   return t;
 }
 export async function saveLive(session: Session) {
   if (serverWorkspace()) return request("/sessions", session);
+  requireDemo();
   if (!memory.sessions.some((s) => s.id === session.id))
     memory.sessions.unshift(session);
   memory.sessions = memory.sessions.slice(0, 100);
@@ -164,4 +188,16 @@ export function exportJson(data: unknown, name: string) {
   a.download = name;
   a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+export async function deleteConversation(id: string) {
+  if (serverWorkspace())
+    return request(
+      `/conversations/${encodeURIComponent(id)}`,
+      undefined,
+      "DELETE",
+    );
+  requireDemo();
+  memory.sessions = memory.sessions.filter((s) => s.id !== id);
+  save();
 }

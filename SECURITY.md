@@ -1,3 +1,5 @@
+Current persistent-runtime controls and operational boundaries: [docs/security.md](docs/security.md).
+
 # Security
 
 Do not post credentials or sensitive recordings in public issues. Rotate a leaked key in its official provider settings, then remove it from delivery artifacts and review repository history. This project has no published bug bounty or response-time guarantee.

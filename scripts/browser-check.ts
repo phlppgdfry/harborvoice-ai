@@ -16,6 +16,7 @@ await page.route("**/api/status", (route) =>
     json: { mode: "demo", configured: false, agentReady: false },
   }),
 );
+const evidenceDir = process.env.BROWSER_EVIDENCE_DIR || "var/browser-evidence";
 const checks: string[] = [];
 const log = checks.push.bind(checks);
 checks.push = (...items: string[]) => {
@@ -34,9 +35,9 @@ try {
   assert.equal(await page.locator("tbody tr").count(), 1);
   await page.getByRole("textbox", { name: "Find a shipment" }).fill("");
   checks.push("Terminal map selection and shipment search");
-  mkdirSync("docs/screenshots", { recursive: true });
+  mkdirSync(`${evidenceDir}/screenshots`, { recursive: true });
   await page.screenshot({
-    path: "docs/screenshots/overview.png",
+    path: `${evidenceDir}/screenshots/overview.png`,
     fullPage: true,
   });
   await page.getByRole("button", { name: "Voice agents", exact: true }).click();
@@ -127,7 +128,7 @@ try {
   }
   await page.getByRole("status").waitFor({ state: "hidden" });
   await page.screenshot({
-    path: "docs/screenshots/experience-lab.png",
+    path: `${process.env.BROWSER_EVIDENCE_DIR || "var/browser-evidence"}/experience-lab.png`,
     fullPage: true,
   });
   checks.push(
@@ -160,7 +161,7 @@ try {
   );
   await page.getByRole("status").waitFor({ state: "hidden" });
   await page.screenshot({
-    path: "docs/screenshots/audio-studio.png",
+    path: `${evidenceDir}/screenshots/audio-studio.png`,
     fullPage: true,
   });
   await page.reload();
@@ -175,7 +176,7 @@ try {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole("status").waitFor({ state: "hidden" });
   await page.screenshot({
-    path: "docs/screenshots/mobile.png",
+    path: `${evidenceDir}/screenshots/mobile.png`,
     fullPage: true,
   });
   assert.ok(
@@ -294,7 +295,7 @@ try {
   assert.deepEqual(errors, []);
   checks.push("No browser runtime errors");
   writeFileSync(
-    "docs/browser-verification.json",
+    `${evidenceDir}/browser-verification.json`,
     JSON.stringify(
       {
         at: new Date().toISOString(),

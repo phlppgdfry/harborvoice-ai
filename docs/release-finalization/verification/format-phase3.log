@@ -1,0 +1,6 @@
+
+> harborvoice-ai@2.2.0 format:phase3:check
+> prettier --check packages/agentops-kit apps/agentproof/src apps/agentproof/*.json apps/agentproof/*.ts apps/agentproof/index.html community/elevenlabs-belgium benchmarks/voice-ai/*.md benchmarks/voice-ai/scenarios scripts/phase3 docs/phase3
+
+Checking formatting...
+All matched files use Prettier code style!

@@ -71,9 +71,9 @@ try {
     "Three localized films decode at 30–45 seconds; four native flow references and scoped engineering evidence render",
   );
   await page.getByRole("tab", { name: "Productions", exact: true }).click();
-  mkdirSync("docs/elite/screenshots", { recursive: true });
+  mkdirSync("var/browser-evidence/elite", { recursive: true });
   await page.screenshot({
-    path: "docs/elite/screenshots/productions-desktop.png",
+    path: "var/browser-evidence/elite/productions-desktop.png",
     fullPage: true,
   });
   await page.getByRole("button", { name: "Mastery lab", exact: true }).click();
@@ -134,7 +134,7 @@ try {
     "All fifteen modules render; search/category filter, exercise notes, self-review persistence and guide download work",
   );
   await page.screenshot({
-    path: "docs/elite/screenshots/mastery-desktop.png",
+    path: "var/browser-evidence/elite/mastery-desktop.png",
     fullPage: true,
   });
   await page.setViewportSize({ width: 390, height: 844 });
@@ -144,7 +144,7 @@ try {
     ),
   );
   await page.screenshot({
-    path: "docs/elite/screenshots/mastery-mobile.png",
+    path: "var/browser-evidence/elite/mastery-mobile.png",
     fullPage: true,
   });
   await page.getByRole("button", { name: "Elite studio", exact: true }).click();
@@ -155,13 +155,13 @@ try {
     ),
   );
   await page.screenshot({
-    path: "docs/elite/screenshots/productions-mobile.png",
+    path: "var/browser-evidence/elite/productions-mobile.png",
     fullPage: true,
   });
   checks.push("390px mobile views have no horizontal overflow");
   assert.deepEqual(errors, []);
   writeFileSync(
-    "docs/elite/browser-verification.json",
+    "var/browser-evidence/elite/browser-verification.json",
     JSON.stringify(
       {
         checkedAt: new Date().toISOString(),

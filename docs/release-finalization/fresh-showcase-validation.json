@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-10T01:32:52.343Z",
+  "upstreamCommit": "870ee29c311eaccd33425f326e72e14a120c69e2",
+  "status": "TESTED — READY FOR REVIEW",
+  "checks": [
+    "Required frontmatter and author reference",
+    "145-character description",
+    "Official categories and isFeatured false",
+    "Cover source and upstream image-sync path",
+    "Historical evaluation scope preserved",
+    "No signed access URLs or credential patterns"
+  ],
+  "scope": "Submission contract checks plus actual upstream image sync. Full upstream application build not run."
+}

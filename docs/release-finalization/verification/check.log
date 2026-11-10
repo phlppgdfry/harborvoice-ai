@@ -1,0 +1,200 @@
+
+> harborvoice-ai@2.2.0-rc.2 check
+> npm run build && npm test
+
+
+> harborvoice-ai@2.2.0-rc.2 build
+> tsc --noEmit && vite build && npm run build:agentproof
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 2259 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.97 kB │ gzip:   0.58 kB
+dist/assets/audioConcatProcessor-uPSNaV9j.js       3.66 kB
+dist/assets/rawAudioProcessor-m_FxNOBg.js          3.97 kB
+dist/assets/Manrope-DIRNzeTG.ttf                 164.70 kB
+dist/assets/DMSans-OkNhvBry.ttf                  240.16 kB
+dist/assets/libsamplerate.worklet-BCDdbA-T.js  2,016.42 kB
+dist/assets/EliteStudio-BZYDcmyO.css               2.52 kB │ gzip:   0.85 kB
+dist/assets/CommunityStudio-DLNaFzuS.css           3.86 kB │ gzip:   1.18 kB
+dist/assets/MasteryLab-CuJVNOV6.css                5.27 kB │ gzip:   1.55 kB
+dist/assets/index-a81wPfid.css                    31.16 kB │ gzip:   7.64 kB
+dist/assets/circle-check-BN-xk0vj.js               0.23 kB │ gzip:   0.20 kB
+dist/assets/volume-2-CwcMEyEv.js                   0.78 kB │ gzip:   0.41 kB
+dist/assets/PortfolioEvidence-CdJXFWwZ.js          7.27 kB │ gzip:   2.55 kB
+dist/assets/ConnectionSettings-BLN-ByAh.js         7.68 kB │ gzip:   2.81 kB
+dist/assets/ExperienceLab-CAWfxMNa.js             12.08 kB │ gzip:   4.07 kB
+dist/assets/AudioStudio-Ce77Zk3b.js               13.12 kB │ gzip:   4.66 kB
+dist/assets/remediation-BpGS9ycO.js               14.05 kB │ gzip:   1.93 kB
+dist/assets/CommunityStudio-BkDPLZPp.js           15.76 kB │ gzip:   5.91 kB
+dist/assets/EliteStudio-DzR_Xi9K.js               23.31 kB │ gzip:   8.01 kB
+dist/assets/Academy-CVUu_k7n.js                   31.64 kB │ gzip:  11.98 kB
+dist/assets/MasteryLab-4VsFtjek.js                42.59 kB │ gzip:  14.49 kB
+dist/assets/index-CkgNRW2g.js                    354.61 kB │ gzip: 109.04 kB
+dist/assets/VoiceAgent-CmOhdTJz.js               617.44 kB │ gzip: 162.77 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 679ms
+
+> harborvoice-ai@2.2.0-rc.2 build:agentproof
+> node --import tsx scripts/final-mastery/build-agentproof.ts
+
+Validated 110 scenarios; wrote baseline, candidate and historical evidence.
+12 multilingual adversarial contracts: 3 accepted controls, 9 detected failures; zero provider calls.
+
+> agentproof-pilot@0.2.0 build
+> tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 5 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.70 kB │ gzip: 0.42 kB
+dist/assets/Inter-ipl4pJhC.ttf  419.74 kB
+dist/assets/index-B-Rm4tuW.css    8.11 kB │ gzip: 2.58 kB
+dist/assets/index-DZ5G9ByY.js    14.87 kB │ gzip: 5.86 kB
+
+✓ built in 54ms
+Static AgentProof bundled at /agentproof/.
+
+> harborvoice-ai@2.2.0-rc.2 test
+> tsx --test tests/*.test.ts
+
+{"event":"http","requestId":"09e38849-e539-48b5-9591-089562c4ec65","method":"GET","route":"/api/status","status":200,"durationMs":5}
+✔ status never reveals secrets (60.628416ms)
+{"event":"http","requestId":"8d3bc49d-b2c1-44a1-8581-c0e0e82bd995","method":"GET","route":"unmatched","status":401,"durationMs":0}
+{"event":"http","requestId":"46ada5d9-e385-462f-b6d6-7a930f3aa53b","method":"GET","route":"unmatched","status":401,"durationMs":0}
+✔ workspace requires configured operator token (25.410291ms)
+{"event":"http","requestId":"1c00a6bb-7a2f-4b3c-840d-eef9580bc9c4","method":"POST","route":"unmatched","status":403,"durationMs":0}
+✔ cross-origin requests are rejected even with credentials (3.148792ms)
+{"event":"http","requestId":"03d04a1d-55da-4b4d-b849-623a4db0cb12","method":"POST","route":"/api/tools/lookup","status":200,"durationMs":11}
+✔ lookup reports unknown without hallucinating data (12.851958ms)
+{"event":"http","requestId":"30b0c588-76e2-49bb-8fdc-312531ae5ea6","method":"POST","route":"/api/escalations","status":400,"durationMs":2}
+✔ invalid input cannot mutate workspace (3.075167ms)
+{"event":"http","requestId":"7f476333-1c4d-4125-9f7d-abae384133da","method":"POST","route":"/api/escalations","status":200,"durationMs":2}
+{"event":"http","requestId":"23a62f9a-7e07-4911-bf41-661281760cdc","method":"POST","route":"/api/escalations","status":200,"durationMs":1}
+{"event":"http","requestId":"3afd5d53-0861-4b16-86fe-0fd82ebfc37e","method":"POST","route":"/api/escalations/review","status":200,"durationMs":1}
+{"event":"http","requestId":"fa3383e0-23bb-4e33-b978-73455568ade0","method":"POST","route":"/api/escalations/review","status":400,"durationMs":1}
+✔ persisted escalation is pending, repeated request deduplicates, approval leaves cargo untouched (8.751209ms)
+{"event":"http","requestId":"8fa2b43d-f1d8-4e91-8390-1bf6fb36b6d1","method":"POST","route":"/api/demo/chat","status":200,"durationMs":2}
+✔ demo sessions persist transcript and language (2.7305ms)
+{"event":"http","requestId":"7626a185-3c1c-4a3a-bea2-6d061bc22db7","method":"POST","route":"/api/agent/session","status":400,"durationMs":1}
+✔ missing API key gives actionable error without external call (2.254208ms)
+✔ webhook signature rejects tampering, expiry, missing and future timestamp (0.4755ms)
+{"event":"http","requestId":"c02a717f-288b-4d7b-a47e-fd2988ec6d25","method":"POST","route":"/api/webhooks/elevenlabs","status":200,"durationMs":0}
+{"event":"http","requestId":"3bd8b632-71b1-40ce-93fe-20e88bc03edc","method":"POST","route":"/api/webhooks/elevenlabs","status":200,"durationMs":0}
+✔ signed webhook delivery is idempotent and cannot mutate shipment status (5.184083ms)
+{"event":"http","requestId":"0716fc3b-e90b-4deb-b3a5-243dac2ec496","method":"POST","route":"/api/webhooks/elevenlabs","status":401,"durationMs":0}
+✔ webhook without valid signature is rejected (1.064542ms)
+{"event":"http","requestId":"45690c85-968d-4308-aefc-22e6cb11232f","method":"POST","route":"unmatched","status":400,"durationMs":1}
+✔ malformed JSON returns a client error rather than a provider error (1.589417ms)
+✔ governor preserves hard allowance, billing buffer and minimum account balance (12.54725ms)
+✔ failed and pending jobs retain reservations and cannot be blindly retried (6.060625ms)
+✔ account-wide external spend and delayed billing reconcile conservatively (3.300708ms)
+✔ independent governor instances cannot concurrently overwrite reservations (4.477583ms)
+✔ unattributed account consumption freezes dispatch while retaining receipts (4.314292ms)
+✔ a provider receipt above its own reservation freezes new dispatch (4.678833ms)
+✔ corrupt reservation data cannot turn the available allowance into NaN (2.502209ms)
+✔ a configuration cannot expand the owner-authorized maximum (0.989792ms)
+✔ a separate authorized sprint keeps the legacy policy and ledger intact (6.266917ms)
+✔ execution-specific allowance cannot be expanded by changing initialization arguments (2.860334ms)
+✔ lookup requires an exact reference, supports case and whitespace (5.46225ms)
+✔ unknown shipment cannot create an escalation (4.87725ms)
+✔ escalation retries deduplicate and review does not release cargo (3.93375ms)
+✔ unknown reference yields no invented status (0.352833ms)
+✔ supported languages return localized guidance (0.2755ms)
+✔ demo evaluation suite passes and identifies its scope (0.80625ms)
+✔ persisted workspace validation rejects malformed nested data without crashing (138.382625ms)
+{"event":"http","requestId":"4d01c070-3328-47d7-b746-a6c64052fe44","method":"POST","route":"/api/audio/speech","status":200,"durationMs":18}
+✔ speech: HTTP route serializes a real SDK request and returns provider output (52.355416ms)
+{"event":"http","requestId":"c519ec79-0cc2-4734-be0a-352b37ddf91b","method":"POST","route":"/api/audio/effects","status":200,"durationMs":3}
+✔ effects: HTTP route serializes a real SDK request and returns provider output (9.84ms)
+{"event":"http","requestId":"a3c47dcd-2115-48bc-a384-b0541bd2fcea","method":"POST","route":"/api/audio/music","status":200,"durationMs":3}
+✔ music: HTTP route serializes a real SDK request and returns provider output (6.539417ms)
+{"event":"http","requestId":"41c035a1-70dd-43b1-8867-7ddd24807e11","method":"POST","route":"/api/audio/:tool","status":200,"durationMs":6}
+✔ transcribe: HTTP route serializes a real SDK request and returns provider output (11.958916ms)
+{"event":"http","requestId":"87ac2289-dadd-4b82-83b7-b9aed6a71d7a","method":"POST","route":"/api/audio/:tool","status":200,"durationMs":2}
+✔ isolate: HTTP route serializes a real SDK request and returns provider output (5.412375ms)
+{"event":"http","requestId":"6ea5f869-3ed8-40a9-9dc7-4774cad98c20","method":"POST","route":"/api/audio/:tool","status":200,"durationMs":2}
+✔ change: HTTP route serializes a real SDK request and returns provider output (6.216667ms)
+{"event":"http","requestId":"04fbc5c4-dec2-47e8-9748-f0336281c6d7","method":"POST","route":"/api/audio/:tool","status":200,"durationMs":2}
+✔ align: HTTP route serializes a real SDK request and returns provider output (4.978334ms)
+{"event":"http","requestId":"0d8cbcf1-a7f7-48f7-b494-3f397cdf9ccd","method":"POST","route":"/api/audio/:tool","status":200,"durationMs":2}
+✔ dubbing: HTTP route serializes a real SDK request and returns provider output (5.039709ms)
+{"event":"http","requestId":"5ad74b6d-fa0e-4f0d-8616-ae73d007ac9f","method":"POST","route":"/api/agent/session","status":200,"durationMs":1}
+✔ signed sessions return SDK-normalized signedUrl (4.610333ms)
+{"event":"http","requestId":"6d6c583a-3711-4aa7-8cea-fe923d3cda4b","method":"GET","route":"/api/dubbing/:id/audio/:language","status":200,"durationMs":2}
+✔ completed automatic dub is streamed after checking provider job status (4.663167ms)
+{"event":"http","requestId":"2daa236a-35fd-4328-9ed5-af9ca3a0ee74","method":"GET","route":"/api/dubbing/:id/audio/:language","status":409,"durationMs":1}
+✔ unfinished dubbing cannot return a fake completed audio result (3.583834ms)
+{"event":"http","requestId":"5dc71835-23fd-406a-a26e-42a950a72e90","method":"POST","route":"/api/audio/speech","status":502,"durationMs":2}
+✔ provider auth failures are actionable and do not expose credentials (4.568709ms)
+{"event":"http","requestId":"1485c80f-fd46-4867-b11a-1fdad4c5b843","method":"POST","route":"/api/audio/speech","status":400,"durationMs":1}
+✔ invalid studio inputs fail before a provider request (3.725333ms)
+{"event":"http","requestId":"685f1642-3b9b-47ff-8066-65276d8aa9ca","method":"POST","route":"/api/connection/check","status":200,"durationMs":1}
+✔ connection check reads provider access without generating billable audio (3.333334ms)
+{"event":"http","requestId":"26f0e135-9fd4-498c-8db8-b43f1e6a4db4","method":"POST","route":"/api/knowledge","status":200,"durationMs":3}
+{"event":"http","requestId":"6bc5d85a-6407-4a0f-8bf5-7dde8253ca11","method":"POST","route":"/api/knowledge","status":200,"durationMs":1}
+✔ concurrent knowledge uploads preserve existing and both new attachments (7.137083ms)
+{"event":"http","requestId":"213a7380-d633-4403-b030-5a6df597d6dd","method":"POST","route":"/api/agent/simulate","status":200,"durationMs":2}
+{"event":"http","requestId":"fb6fc186-3386-4a7e-b3fd-3be2649b3afc","method":"GET","route":"/api/agent/test-runs/:id","status":200,"durationMs":1}
+✔ live simulation creates the current test type and polls the returned invocation (6.164542ms)
+{"event":"http","requestId":"4dd3d22c-540d-4458-8287-7e1099135beb","method":"POST","route":"/api/knowledge","status":200,"durationMs":2}
+✔ RAG-enabled agents index newly attached knowledge after attaching it (4.801708ms)
+{"event":"http","requestId":"2d4d5d9c-9c0b-4077-ad70-8877bb0247b5","method":"POST","route":"/api/audio/speech","status":200,"durationMs":1}
+{"event":"http","requestId":"91070a85-cb72-4003-9ecd-4b6d57c45162","method":"POST","route":"/api/audio/effects","status":200,"durationMs":2}
+{"event":"http","requestId":"5fc68681-714e-4e4f-bd87-9ce88fcda25b","method":"POST","route":"/api/audio/music","status":200,"durationMs":1}
+{"event":"http","requestId":"7ed33084-252a-42fb-ab7d-c263c2a90403","method":"POST","route":"/api/audio/music","status":400,"durationMs":1}
+✔ current audio model selections serialize distinct Creative and API model names correctly (8.811125ms)
+{"event":"http","requestId":"4658b7c6-6379-4e90-a81b-1b845a8a6697","method":"GET","route":"/api/status","status":200,"durationMs":19}
+✔ hosted status separates configured API, browser workspace and operator authentication (57.288417ms)
+✔ hosted gateway fails closed when no operator secret is configured (0.39425ms)
+{"event":"http","requestId":"624193c5-c5d5-4a69-8c2f-72eac35d0f61","method":"POST","route":"unmatched","status":401,"durationMs":0}
+✔ public visitors cannot trigger a paid provider request (5.066875ms)
+✔ workspace writes and webhook retention are explicitly unavailable on a stateless gateway (3.165209ms)
+{"event":"http","requestId":"2d9701ef-4636-4136-b950-768705c84124","method":"POST","route":"/api/auth/session","status":401,"durationMs":10}
+{"event":"http","requestId":"663f8230-25a9-4dae-bb9f-c80dc004573a","method":"POST","route":"unmatched","status":403,"durationMs":0}
+✔ wrong operator code and cross-origin sign-in do not create a session (13.085208ms)
+{"event":"http","requestId":"eb48b8c8-e922-45f8-918d-5fbe8de67f68","method":"POST","route":"/api/auth/session","status":200,"durationMs":2}
+{"event":"http","requestId":"1447fba5-8181-4e2c-aed7-7009a5350c44","method":"GET","route":"/api/status","status":200,"durationMs":0}
+{"event":"http","requestId":"528920ad-fe68-41c7-a56a-a6d389e4898a","method":"POST","route":"/api/tools/lookup","status":200,"durationMs":1}
+✔ operator sign-in creates a secure HttpOnly session without echoing the secret (6.1875ms)
+✔ cookie signatures reject tampering, expiry and a rotated secret (0.2045ms)
+{"event":"http","requestId":"97c7c2ae-8f93-4966-a395-b49c37de4efb","method":"POST","route":"/api/auth/session","status":200,"durationMs":0}
+✔ remembered session lasts thirty days and can still be revoked by key rotation (1.738208ms)
+{"event":"http","requestId":"f64cfd5d-cf92-4aff-90a6-dc110125f8f3","method":"POST","route":"/api/tools/lookup","status":200,"durationMs":1}
+✔ Vercel rewrite routes preserve nested API paths (1.5465ms)
+{"event":"http","requestId":"82365ab1-86e8-4b69-aef1-0ccd4b30f2f6","method":"POST","route":"/api/audio/:tool","status":400,"durationMs":11}
+✔ hosted uploads above four MB are rejected before a provider call (15.419292ms)
+{"event":"http","requestId":"88e5b6f5-18bf-44f7-9b38-5f5b9eab6a89","method":"GET","route":"/api/status","status":200,"durationMs":2}
+{"event":"http","requestId":"20e30d69-2758-4c54-95a0-161c2513e1cf","method":"POST","route":"/api/guest/session","status":200,"durationMs":3}
+{"event":"http","requestId":"46206373-f74d-4200-b1f4-83c292e78c8e","method":"POST","route":"unmatched","status":401,"durationMs":0}
+{"event":"http","requestId":"543083db-9a87-4093-82cf-d0112879a61d","method":"POST","route":"unmatched","status":401,"durationMs":1}
+{"event":"http","requestId":"788c7aec-a86d-4355-ab36-99417fabc69d","method":"POST","route":"unmatched","status":401,"durationMs":0}
+{"event":"http","requestId":"f251f30d-3522-4b2c-855c-91b9dd3092c0","method":"POST","route":"/api/guest/lookup","status":200,"durationMs":39}
+{"event":"http","requestId":"1bc6a280-6bb4-4eb0-b29c-be1cf85cc3eb","method":"POST","route":"unmatched","status":403,"durationMs":0}
+✔ visitor session targets only the constrained guest agent; private paid tools stay locked (165.0465ms)
+{"event":"http","requestId":"455139b8-7d61-4f1a-9957-f1b3487e602d","method":"POST","route":"unmatched","status":410,"durationMs":0}
+✔ expired visitor window does not issue a signed session (9.553584ms)
+{"event":"http","requestId":"2729a55a-fd82-4697-82de-01efa7bda9ad","method":"POST","route":"/api/guest/session","status":503,"durationMs":1}
+✔ unsafe provider limits fail closed before issuing a visitor URL (6.152541ms)
+✔ production config rejects demo storage, weak secrets and invalid public origin (5.670667ms)
+﹣ PostgreSQL migration, concurrency, rollback, restart and production authorization (0.070916ms) # SKIP
+✔ managed projection compares owned fields while preserving unknown remote settings (8.823709ms)
+✔ three-way drift separates local, remote and conflicting edits (0.201166ms)
+✔ apply refuses stale snapshots and remote conflicts (16.756917ms)
+ℹ tests 65
+ℹ suites 0
+ℹ pass 64
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 3491.004083

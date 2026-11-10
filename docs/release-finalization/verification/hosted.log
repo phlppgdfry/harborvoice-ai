@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-10T03:34:34.434Z",
+  "url": "https://harborvoice-ai.vercel.app",
+  "live": false,
+  "audioFrames": 0,
+  "checks": [],
+  "errors": [],
+  "passed": false,
+  "failure": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Sign out', exact: true }) to be visible\u001b[22m\n"
+}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 20000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: 'Sign out', exact: true }) to be visible[22m
+
+    at <anonymous> (/Users/philippegodfroy/harborvoice-ai/scripts/verify-production-hosted.ts:113:69) {
+  log: [
+    "  - waiting for getByRole('button', { name: 'Sign out', exact: true }) to be visible"
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.2

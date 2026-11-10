@@ -1,0 +1,21 @@
+{
+  "name": "harborvoice-ai",
+  "id": "prj_OEKyf1dNOkzY7M5YBi8IJI3gVsuD",
+  "targets": {
+    "production": {
+      "id": "dpl_C9wP3SGQr748FqB2ifTt3ruRtnTZ",
+      "url": "harborvoice-qzt51h8is-kippiegs-projects.vercel.app",
+      "readyState": "READY",
+      "target": "production",
+      "gitSource": null
+    },
+    "preview": {
+      "id": "dpl_3BdVvfN2eeQCv61awELWExam1oej",
+      "url": "harborvoice-961r6kpfm-kippiegs-projects.vercel.app",
+      "readyState": "READY",
+      "target": null,
+      "gitSource": null
+    }
+  },
+  "scope": "Read-only project targets; existing immutable production deployment is rollback anchor. Rollback not exercised; no preview or promotion performed."
+}

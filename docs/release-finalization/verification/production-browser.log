@@ -1,0 +1,16 @@
+
+> harborvoice-ai@2.2.0-rc.2 test:production-browser
+> node --import tsx scripts/production-browser-check.ts
+
+{
+  "checks": [
+    "Production text UI cannot invoke deterministic chat before live connection",
+    "Actual SDK establishes fixture WebSocket using synthetic microphone and receives transcript",
+    "Microphone mute control exercised through SDK",
+    "Ending session persists client-reported transcript through API fixture",
+    "Transcript survives page refresh via API fixture (real PostgreSQL verified separately)",
+    "Mobile page has no horizontal overflow",
+    "Unavailable backend fails closed without browser demo fallback"
+  ],
+  "errors": []
+}
