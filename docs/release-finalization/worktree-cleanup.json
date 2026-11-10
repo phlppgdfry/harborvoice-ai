@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-11-10T03:42:44.702537+00:00",
+  "recoveryRoot": "/Users/philippegodfroy/harborvoice-private-recovery/2026-11-10-consolidation",
+  "scope": "Verified private archives preserve ignored evidence before removal. Main and production worktree including credentials remain in place. Dependency links and compiled outputs are regenerable.",
+  "worktrees": [
+    {
+      "worktree": "/private/tmp/harborvoice-excellence-production-check",
+      "archive": "/Users/philippegodfroy/harborvoice-private-recovery/2026-11-10-consolidation/harborvoice-excellence-production-check.tar.gz",
+      "archiveSha256": "2048f22a2f7b555a2544588a2e91f030b72318f9c35b094053f0249232a2e8c9",
+      "verifiedFiles": 0,
+      "preservedIgnored": [],
+      "discardedRegenerableOnly": [
+        "dist/",
+        "node_modules directory or dependency symlink"
+      ],
+      "head": "ae15f1f99e4677d6eeea1d86f80b4b183c4ec8a6",
+      "removed": true
+    },
+    {
+      "worktree": "/Users/philippegodfroy/harborvoice-excellence",
+      "archive": "/Users/philippegodfroy/harborvoice-private-recovery/2026-11-10-consolidation/harborvoice-excellence.tar.gz",
+      "archiveSha256": "385ffae06c27a243e696cf567a46a01f61a074401de37380f03c867e4b55a234",
+      "verifiedFiles": 1,
+      "preservedIgnored": ["var"],
+      "discardedRegenerableOnly": [
+        "dist/",
+        "node_modules directory or dependency symlink"
+      ],
+      "head": "dade8ec84686cd2324ff9c36db21b8c24f309371",
+      "removed": true
+    },
+    {
+      "worktree": "/Users/philippegodfroy/harborvoice-final-mastery",
+      "archive": "/Users/philippegodfroy/harborvoice-private-recovery/2026-11-10-consolidation/harborvoice-final-mastery.tar.gz",
+      "archiveSha256": "b97672b39c465a8d07add0b7fc4615f24a332f123803166bbfb3d57b5a0b57cd",
+      "verifiedFiles": 4,
+      "preservedIgnored": ["var"],
+      "discardedRegenerableOnly": [
+        "dist/",
+        "node_modules directory or dependency symlink"
+      ],
+      "head": "eff0b8258a98a4ffc1559781666c5e04f1c60724",
+      "removed": true
+    },
+    {
+      "worktree": "/Users/philippegodfroy/harborvoice-integration",
+      "archive": "/Users/philippegodfroy/harborvoice-private-recovery/2026-11-10-consolidation/harborvoice-integration.tar.gz",
+      "archiveSha256": "49ce5ea39985c6592dbe55853e4846a88983e27ae32c733989e304b2508911b7",
+      "verifiedFiles": 32,
+      "preservedIgnored": ["var"],
+      "discardedRegenerableOnly": [
+        "dist/",
+        "node_modules directory or dependency symlink"
+      ],
+      "head": "59664b64c6798f78e287194d6a34f30273bf2c49",
+      "removed": true
+    },
+    {
+      "worktree": "/Users/philippegodfroy/harborvoice-phase3",
+      "archive": "/Users/philippegodfroy/harborvoice-private-recovery/2026-11-10-consolidation/harborvoice-phase3.tar.gz",
+      "archiveSha256": "0b6a86b1ec7cd9e457d3a2b9ae990f33d4317c1e5c5e8dec64a3e7612b8e4ecf",
+      "verifiedFiles": 4,
+      "preservedIgnored": ["var"],
+      "discardedRegenerableOnly": [
+        "dist/",
+        "node_modules directory or dependency symlink"
+      ],
+      "head": "f8a2a40d5475e6a44938ecae1d9959b05d5d4264",
+      "removed": true
+    },
+    {
+      "worktree": "/Users/philippegodfroy/harborvoice-publication-launch",
+      "archive": "/Users/philippegodfroy/harborvoice-private-recovery/2026-11-10-consolidation/harborvoice-publication-launch.tar.gz",
+      "archiveSha256": "eeb21c81cc69c6b31429b5eafe6b1037169a74950e237310d8784f12acbbb2b0",
+      "verifiedFiles": 0,
+      "preservedIgnored": [],
+      "discardedRegenerableOnly": [
+        "dist/",
+        "node_modules directory or dependency symlink"
+      ],
+      "head": "b162f73c17b47f489e9d17c9dca2403646625701",
+      "removed": true
+    }
+  ]
+}

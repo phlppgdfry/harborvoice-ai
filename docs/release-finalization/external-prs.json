@@ -1,0 +1,16 @@
+[
+  {
+    "number": 113,
+    "state": "open",
+    "merged": false,
+    "updated_at": "2026-11-09T17:05:36Z",
+    "html_url": "https://github.com/elevenlabs/showcase/pull/113"
+  },
+  {
+    "number": 484,
+    "state": "open",
+    "merged": false,
+    "updated_at": "2026-11-09T17:44:17Z",
+    "html_url": "https://github.com/elevenlabs/elevenlabs-js/pull/484"
+  }
+]

@@ -1,0 +1,103 @@
+
+> harborvoice-ai@2.2.0-rc.2 phase3:verify
+> bash scripts/phase3/verify.sh
+
+
+> harborvoice-agentops-kit@0.2.0 check
+> npm run build && npm test
+
+
+> harborvoice-agentops-kit@0.2.0 build
+> tsc -p tsconfig.json
+
+
+> harborvoice-agentops-kit@0.2.0 test
+> tsc -p tsconfig.test.json && node --import tsx --test test/*.test.ts
+
+✔ redacts nested secrets and URL credentials (1.056ms)
+✔ canonical version independent of key order (0.167666ms)
+✔ diff sees secret rotation without revealing values (0.174125ms)
+✔ removed tools marked potentially breaking (0.132084ms)
+✔ heuristics flag explicit auth and insecure URLs (0.232667ms)
+✔ budget blocks absent coordination and stale balances (0.136417ms)
+✔ budget preserves other commitments, floor and buffer (0.061417ms)
+✔ budget rejects invalid numbers and ceiling (0.1655ms)
+✔ failed reservations remain liabilities (0.079083ms)
+✔ evaluation detects incorrect tool and regression (2.012375ms)
+✔ transport failures redact private error and never retry (0.143625ms)
+✔ bounds repeats and duplicate IDs (0.128625ms)
+✔ Wilson interval handles small samples and empty counts (0.090958ms)
+✔ HTML escapes script payload (0.273917ms)
+✔ reservation proposals are immutable and consume capacity (0.17875ms)
+✔ duplicate operation cannot dispatch again (0.072334ms)
+✔ receipt below estimate retains liability until confirmed final (0.139208ms)
+✔ receipt above estimate increases liability (0.068958ms)
+✔ failed operation retains conservative liability (0.055334ms)
+✔ uncoordinated reservations rejected (0.05475ms)
+✔ corrupt imported reservation cannot expand capacity (0.056666ms)
+✔ account reset requires reconciliation (0.049792ms)
+✔ provider identity and final receipt cannot be reopened (0.079667ms)
+✔ inspector supports SDK-normalized and raw configuration fields (0.147166ms)
+✔ JSON-imported string numbers and missing budget fields fail closed (0.081167ms)
+✔ official client structural adapter uses mock transport and redacts (0.8695ms)
+✔ invalid ID fails before transport (0.22ms)
+✔ native adapter fails closed without account-wide guard (0.1715ms)
+✔ native adapter respects denied reservation before provider call (0.133667ms)
+✔ native adapter uses official request and persists invocation under guard (0.55875ms)
+✔ native adapter bounds repeats and requires isolated branch (0.114625ms)
+✔ guard cannot dispatch same operation twice (0.12925ms)
+✔ native receipt read is separate and never submits a run (0.090583ms)
+✔ offline importer preserves provenance and excludes raw transcript/secrets (0.872208ms)
+✔ SDK camelCase and explicit zero credit receipts are supported (0.11875ms)
+✔ missing, partial, pending and historical costs never become zero final bills (0.196041ms)
+✔ wrong identity, unmapped tests, duplicate runs and malformed costs fail closed (0.362125ms)
+✔ cancelled and failed terminal receipts retain failure and known billing (0.099167ms)
+✔ a plausible outcome with wrong tool arguments and invented facts fails (0.559125ms)
+✔ missing structured evidence fails; exact verified contract passes (0.145708ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 134.713458
+Validated 110 scenarios; wrote baseline, candidate and historical evidence.
+✔ known record stays held (0.736375ms)
+✔ missing reference clarifies (0.142583ms)
+✔ unknown record does not invent (0.5625ms)
+✔ untrusted instructions fail before tool call (0.103875ms)
+✔ tool timeout recovers without claiming release (0.189125ms)
+✔ invalid schema escalates (0.123125ms)
+✔ mismatched record escalates (0.1045ms)
+✔ reference format bounded (0.200125ms)
+✔ rejects ungrounded success after tool error (0.514333ms)
+✔ accepts honest recovery after source error (0.086458ms)
+✔ rejects unauthorized side effect (0.063291ms)
+✔ rejects unexpected tool (0.629083ms)
+✔ rejects malformed trace (0.206791ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 65.838083
+12 multilingual adversarial contracts: 3 accepted controls, 9 detected failures; zero provider calls.
+
+> agentproof-pilot@0.2.0 build
+> tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 5 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.70 kB │ gzip: 0.42 kB
+dist/assets/Inter-ipl4pJhC.ttf  419.74 kB
+dist/assets/index-B-Rm4tuW.css    8.11 kB │ gzip: 2.58 kB
+dist/assets/index-DZ5G9ByY.js    14.87 kB │ gzip: 5.86 kB
+
+✓ built in 51ms
+Corpus/result invariants and limited secret-pattern scan passed (57 text files). Not a complete secret or security audit.

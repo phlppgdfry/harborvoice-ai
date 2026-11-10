@@ -1,0 +1,411 @@
+{
+  "checkedAt": "2026-11-10T03:40:48.146Z",
+  "scope": "Read-only connector metadata; no signed links or media URLs retained. No pending states in the listed nodes; not exhaustive settlement of other products.",
+  "flows": [
+    {
+      "flowId": "autfYixTUdY8eSnjlDOb",
+      "states": [
+        {
+          "node_id": "uAsFTTiDMZh8tRxnQSSU",
+          "label": "Source campaign audio",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "HyfMmEkNiSBkfni0rpq0",
+          "label": "Dutch campaign audio",
+          "node_type": "dubbing-audio",
+          "status": "completed"
+        },
+        {
+          "node_id": "d7GySuhBwqh2u83rrUXf",
+          "label": "French campaign audio",
+          "node_type": "dubbing-audio",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "flowId": "04Y2ZUoBsV1BQj9uMv9k",
+      "states": [
+        {
+          "node_id": "O8syEcFfLYgHrBDUw5WU",
+          "label": "Pressure at the port",
+          "node_type": "video-generation",
+          "status": "completed"
+        },
+        {
+          "node_id": "IPn4sMtR5Gk5XwQzMMrc",
+          "label": "From complexity to clarity",
+          "node_type": "video-generation",
+          "status": "completed"
+        },
+        {
+          "node_id": "1bCqfAjbVKeNtVxeTJdi",
+          "label": "Human decision",
+          "node_type": "video-generation",
+          "status": "completed"
+        },
+        {
+          "node_id": "l29XG1ewnonqzg3qZdmH",
+          "label": "Static image asset",
+          "node_type": "image",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "6QmvApVFM63XmiyGlzAV",
+          "label": "Transparent Academy illustration",
+          "node_type": "image-generation",
+          "status": "completed"
+        },
+        {
+          "node_id": "GLpR7qVQwrHG5prfswee",
+          "label": "Print-size Academy illustration",
+          "node_type": "image-generation",
+          "status": "completed"
+        },
+        {
+          "node_id": "tW89eaB3VEmksgkNLxh9",
+          "label": "Static video asset",
+          "node_type": "video",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "9FL4OlCfCBxgm3thRQ1x",
+          "label": "Static video asset",
+          "node_type": "video",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "ndds9yi2p7BtVg6qlJe1",
+          "label": "Static video asset",
+          "node_type": "video",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "1K4mxFUntuROy2cshMf2",
+          "label": "Static video asset",
+          "node_type": "video",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "MXxhajQGn2Bjt1R5kpcI",
+          "label": "Static video asset",
+          "node_type": "video",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "34VmXO1J0SvdKdgWId9i",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "Brcyc7UxpdSEEepg4Y9D",
+          "label": "Product launch brief",
+          "node_type": "text",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "CBhWb2U3JOycO6RLh4Ij",
+          "label": "Authorized product visual",
+          "node_type": "image",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "mCu4riZWPpb3Fn4opdkL",
+          "label": "Cinematic launch direction",
+          "node_type": "llm",
+          "status": "completed"
+        },
+        {
+          "node_id": "WnGtk2F9abS600R9aT0V",
+          "label": "Reusable cinematic product promotion",
+          "node_type": "video-generation",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "flowId": "DkSzGeLnRPG557cTaRSf",
+      "states": [
+        {
+          "node_id": "99SIsBDSxxWVKWD6YiE7",
+          "label": "Learning brief",
+          "node_type": "text",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "Cv6iYROsWsbhqc3PPhWD",
+          "label": "Narration script",
+          "node_type": "llm",
+          "status": "completed"
+        },
+        {
+          "node_id": "cGVD3YMCnRGlSZOdyMnB",
+          "label": "Quiz and marking guide",
+          "node_type": "llm",
+          "status": "completed"
+        },
+        {
+          "node_id": "0dVsKJa2qnj958WQcoen",
+          "label": "Learning visual direction",
+          "node_type": "llm",
+          "status": "completed"
+        },
+        {
+          "node_id": "R3ZBEsE1ZSI3SyTLpWff",
+          "label": "Narrated lesson",
+          "node_type": "tts",
+          "status": "completed"
+        },
+        {
+          "node_id": "zLeOgetjBUYGPRXumyBo",
+          "label": "Accessible transcript",
+          "node_type": "speech-to-text",
+          "status": "completed"
+        },
+        {
+          "node_id": "wzWdxdQywXlgyi9tOFN7",
+          "label": "Teaching illustration",
+          "node_type": "image-generation",
+          "status": "completed"
+        },
+        {
+          "node_id": "wEQAZfmsSfji5fKOQnmy",
+          "label": "Narration brief",
+          "node_type": "text",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "AB4VQEAIYQsFqtjOVwDp",
+          "label": "Quiz brief",
+          "node_type": "text",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "hwD3bbShYpaTPLgFgO7v",
+          "label": "Visual brief",
+          "node_type": "text",
+          "status": "static_asset"
+        }
+      ]
+    },
+    {
+      "flowId": "DOwVWkHNl1M8XZpmGo1C",
+      "states": [
+        {
+          "node_id": "84Br2Hpv3RnPB1rdnS7n",
+          "label": "Academy course cover",
+          "node_type": "image-generation",
+          "status": "completed"
+        },
+        {
+          "node_id": "WmbMTtQ9dTVa7K44T9Nx",
+          "label": "Academy · six-second harbor opening",
+          "node_type": "video-generation",
+          "status": "completed"
+        },
+        {
+          "node_id": "8FAS9GsJwAxfDjC5llEo",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "KBREDFhAQUQFbp9pYOaB",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "Z7v6LldI27oU6HgwrPHT",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "A0UpHMJQqplcw6Z53SLY",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "uIny33J6b9Uy9bHaJQBr",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "fYQsbMsftDqP45eoEgO0",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        }
+      ]
+    },
+    {
+      "flowId": "fRthJyA26LAFJ6NqNi6g",
+      "states": [
+        {
+          "node_id": "SoSAph898LTUXUbowYMH",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "SHuWlshBDkN7ZiQ5q0fU",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "Jjax1UTYlJpRcbWq9hIp",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        }
+      ]
+    },
+    {
+      "flowId": "E2fQbenOCnV06r0CVwQ0",
+      "states": [
+        {
+          "node_id": "nlPc6lkeEktRdgZNvU5S",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "AVbllN3nJ7G5MmCKZHLf",
+          "label": "Briefing transcript",
+          "node_type": "speech-to-text",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "flowId": "GznQuf5YZTpRrJQBpQSg",
+      "states": [
+        {
+          "node_id": "ZCwa5vUG7HYafm2ACKQi",
+          "label": "Lesson script · source and human control",
+          "node_type": "text",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "YR9stLtzuUVGyPNwK2Zl",
+          "label": "Learning narration",
+          "node_type": "tts",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "flowId": "Xf1iuvlDWlQzdy9RhgdZ",
+      "states": [
+        {
+          "node_id": "XcPWVX8Qe8LcCsxz2ZSX",
+          "label": "New tts node",
+          "node_type": "tts",
+          "status": "completed"
+        },
+        {
+          "node_id": "xDzI5lOuBx1ztjzmLQ6K",
+          "label": "HarborVoice · 12-second instrumental identity",
+          "node_type": "music",
+          "status": "completed"
+        },
+        {
+          "node_id": "okFchBBLq5cRS28vD7Kf",
+          "label": "HarborVoice · gentle review notification",
+          "node_type": "sfx",
+          "status": "completed"
+        },
+        {
+          "node_id": "MghTzfv5nv4xVFM7Z91f",
+          "label": "Source · Nora introduction, take 1",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "z2vK4adwy0SMS2v1qbUF",
+          "label": "Not run · native dubbing estimate exceeds reserved budget",
+          "node_type": "dubbing-audio",
+          "status": "not_run"
+        },
+        {
+          "node_id": "XqPIo9MO8xpFDHOfDO73",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "B5iZPhpS8w9hzrzkrEfg",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "KfHKeYQj1QS62TymsZT1",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "QfhIcmXHWNLNHkjD4tJD",
+          "label": "Static audio asset",
+          "node_type": "audio",
+          "status": "static_asset"
+        }
+      ]
+    },
+    {
+      "flowId": "nJxjp3oNpnaSL5mPQUcm",
+      "states": [
+        {
+          "node_id": "WSCQOb6qbAix2AaRkFES",
+          "label": "New tts node",
+          "node_type": "tts",
+          "status": "completed"
+        },
+        {
+          "node_id": "iy3UP8mQRSdMADBMiIs3",
+          "label": "New music node",
+          "node_type": "music",
+          "status": "not_run"
+        },
+        {
+          "node_id": "42XuQp0KhOdyPD060QoM",
+          "label": "New music node",
+          "node_type": "music",
+          "status": "completed"
+        },
+        {
+          "node_id": "HYUyrz5RHYsGr2x8XPKZ",
+          "label": "Music take 1",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "kcNcMTHB2y6ioENZJcvm",
+          "label": "Music take 2",
+          "node_type": "audio",
+          "status": "static_asset"
+        },
+        {
+          "node_id": "m1TgBOUv4dUsyOokOJtd",
+          "label": "New speech-to-text node",
+          "node_type": "speech-to-text",
+          "status": "completed"
+        },
+        {
+          "node_id": "Csd2XA1RlqBgQwvuRrBo",
+          "label": "New speech-to-text node",
+          "node_type": "speech-to-text",
+          "status": "completed"
+        }
+      ]
+    }
+  ]
+}

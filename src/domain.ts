@@ -22,6 +22,9 @@ export type Session = {
   id: string;
   mode: "demo" | "live";
   startedAt: string;
+  endedAt?: string;
+  durationSeconds?: number;
+  providerConversationId?: string;
   messages: Message[];
   language: string;
 };

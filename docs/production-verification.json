@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-09T00:22:41.966Z",
+  "url": "https://harborvoice-ai.vercel.app",
+  "live": true,
+  "audioFrames": 30,
+  "observedAccountCreditDelta": 0,
+  "checks": [
+    "HTTPS operator sign-in; secure HttpOnly Strict cookie; anonymous workspace denied",
+    "Real remote PostgreSQL and authenticated ElevenLabs agent readiness; production demo rejected",
+    "Real configured-agent selection and read-only provider verification render",
+    "One real capped WebSocket call: synthetic microphone ASR, grounded answer and incoming audio",
+    "Live conversation metadata persisted through real API and survives refresh",
+    "Hosted mobile view has no horizontal overflow",
+    "Hosted logout denies subsequent workspace access"
+  ],
+  "errors": [],
+  "passed": true,
+  "limitations": "Synthetic prerecorded microphone; physical device permissions and subjective speech quality not assessed. Account delta can include concurrent usage/delayed billing.",
+  "implementationCommit": "234281a806150a79b12220d182df3fc9e97534b9",
+  "deployment": "https://harborvoice-qzt51h8is-kippiegs-projects.vercel.app",
+  "providerReconciliation": {
+    "checkedAt": "2026-11-09T00:23:17.609Z",
+    "providerStatus": "done",
+    "providerDurationSeconds": 14,
+    "clientDurationSeconds": 13,
+    "providerTranscriptMessages": 6,
+    "localMessageCount": 4,
+    "scope": "Read-only reconciliation of the one authorized synthetic live call; no new conversation.",
+    "eventBreakdown": "Four text events and two non-text tool events. Local text is SDK callback output, not a guarantee of the exact spoken audio."
+  },
+  "billingNote": "Immediate account delta was zero; delayed billing is possible. This is not a claim of a free call."
+}

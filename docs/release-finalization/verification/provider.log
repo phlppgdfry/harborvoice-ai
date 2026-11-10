@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-11-10T01:32:54.464Z",
+  "subscriptionStatus": 200,
+  "remaining": 20026,
+  "resourceStatuses": [
+    {
+      "path": "/v1/flows/templates",
+      "status": 402
+    },
+    {
+      "path": "/v1/studio/projects",
+      "status": 403
+    },
+    {
+      "path": "/v1/convai/agents?page_size=100",
+      "status": 200
+    },
+    {
+      "path": "/v1/models",
+      "status": 200
+    },
+    {
+      "path": "/v1/convai/knowledge-base/0cWKuMvzyVrMJrwsZGIh",
+      "status": 200
+    },
+    {
+      "path": "/v1/convai/knowledge-base/lqeVB5zAbP3PX07ycuTj",
+      "status": 200
+    },
+    {
+      "path": "/v1/convai/knowledge-base/upJ1H8u8g9Y5DcYmmuAA",
+      "status": 200
+    },
+    {
+      "path": "/v1/convai/knowledge-base/BQTtheyqkToDdsLG8xmZ",
+      "status": 200
+    },
+    {
+      "path": "/v1/voices/ZUpnQ45ABkkc2OcDuVHI",
+      "status": 200
+    },
+    {
+      "path": "/v1/voices/GXnX5R1mzyXfGGG0fF4s",
+      "status": 200
+    },
+    {
+      "path": "/v1/voices/pFO8yqt1betwfwbKm2y1",
+      "status": 200
+    }
+  ],
+  "hosted": [
+    {
+      "path": "/api/status",
+      "status": 200,
+      "cacheControl": "no-store",
+      "runtime": {
+        "production": true,
+        "workspaceStorage": "postgres",
+        "operatorRequired": true,
+        "operatorAuthenticated": false,
+        "deployment": "hosted"
+      }
+    },
+    {
+      "path": "/api/state",
+      "status": 401,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/conversations",
+      "status": 401,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/agents",
+      "status": 401,
+      "cacheControl": "no-store"
+    }
+  ]
+}

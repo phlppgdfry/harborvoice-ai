@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-11-10T03:43:11.582Z",
+  "total": 2,
+  "pages": 1,
+  "statuses": {
+    "done": 2
+  },
+  "hasMore": false,
+  "scope": "Read-only conversation status counts. No transcripts, identifiers, audio, signed URLs or new sessions retained. Other product jobs and external account consumers are not exhaustively covered."
+}

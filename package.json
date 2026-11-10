@@ -1,6 +1,6 @@
 {
   "name": "harborvoice-ai",
-  "version": "2.2.0-rc.2",
+  "version": "2.2.0",
   "private": true,
   "type": "module",
   "description": "A logistics voice operations workbench powered by ElevenLabs",
@@ -41,6 +41,12 @@
     "recognition:validate": "node --import tsx scripts/recognition/validate-showcase.ts && node --test examples/reliable-agent-workshop/starter.test.mjs",
     "recognition:experiments": "node --import tsx scripts/recognition/experiments.ts",
     "test:community": "node --import tsx scripts/recognition/browser.ts",
+    "typecheck": "tsc --noEmit",
+    "test:postgres": "node --import tsx scripts/test-postgres.ts",
+    "test:production-browser": "node --import tsx scripts/production-browser-check.ts",
+    "db:migrate": "node --import tsx scripts/migrate.ts",
+    "lint": "prettier --check src server scripts tests agent api lib config docs README.md index.html package.json tsconfig.json vite.config.ts .github/workflows compose.yaml vercel.json",
+    "verify:production": "node --import tsx scripts/verify-production-hosted.ts",
     "phase3:verify": "bash scripts/phase3/verify.sh",
     "phase3:browser": "node --import tsx scripts/phase3/browser-check.ts",
     "format:phase3:check": "prettier --check packages/agentops-kit apps/agentproof/src apps/agentproof/*.json apps/agentproof/*.ts apps/agentproof/index.html community/elevenlabs-belgium benchmarks/voice-ai/*.md benchmarks/voice-ai/scenarios scripts/phase3 docs/phase3",
@@ -49,6 +55,8 @@
     "test:mastery": "node --import tsx scripts/final-mastery/browser.ts"
   },
   "dependencies": {
+    "@alexanderolsen/libsamplerate-js": "2.1.2",
+    "@elevenlabs/client": "1.35.0",
     "@elevenlabs/elevenlabs-js": "2.77.0",
     "@elevenlabs/react": "1.21.1",
     "dotenv": "^17.0.0",
@@ -57,6 +65,7 @@
     "helmet": "^8.0.0",
     "lucide-react": "1.70.0",
     "multer": "^2.0.2",
+    "pg": "8.23.1",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "zod": "^4.0.0"
@@ -66,6 +75,7 @@
     "@types/express": "^5.0.0",
     "@types/multer": "^2.0.0",
     "@types/node": "^22.0.0",
+    "@types/pg": "8.23.1",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.2.1",

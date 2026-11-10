@@ -1,6 +1,6 @@
-# HarborVoice AI · Contribution Edition
+# HarborVoice AI
 
-**Final Excellence release candidate · v2.2.0-rc.2.** A fictional logistics voice workbench plus recorded creative workflows, reusable AgentOps tooling, a static AgentProof failure explorer and developer education. [Final Dutch report](docs/final-excellence/FINAL-REPORT-NL.md) · [Complete inventory](docs/final-excellence/complete-inventory.md) · [Capability evidence](docs/final-excellence/capability-matrix.md) · [Actual publication status](docs/final-excellence/publication-verification.md).
+**v2.2.0 — stable public demo and developer tools.** The protected PostgreSQL runtime is source-integrated; operational production acceptance remains separate. A fictional logistics voice workbench plus recorded creative workflows, reusable AgentOps tooling, a static AgentProof failure explorer and developer education. [Current Dutch consolidation report](docs/release-finalization/FINAL-CONSOLIDATION-REPORT-NL.md) · [Complete inventory](docs/final-excellence/complete-inventory.md) · [Capability evidence](docs/final-excellence/capability-matrix.md) · [Actual publication status](docs/final-excellence/publication-verification.md).
 
 | Explore                                                                 | What it demonstrates                                                             | Validation boundary                                                                  |
 | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -14,11 +14,11 @@ Build with Node 24: `npm ci`, `npm run check`, `npm run phase3:verify`. The prod
 
 **Voice intelligence with evidence and human control.** A working logistics voice-AI portfolio, creative production studio and practical learning environment.
 
-[Live application](https://harborvoice-ai.vercel.app) · [Watch the product film](public/elite/commercial-en.mp4) · [Mastery Lab](https://harborvoice-ai.vercel.app/#mastery-lab) · [Capability matrix](docs/elite/capability-matrix.md) · [Release evidence](docs/elite/release-report.md)
+[Private live application](https://harborvoice-ai.vercel.app) · [Credential-free synthetic preview](https://phlppgdfry.github.io/harborvoice-ai/) · [Watch the product film](public/elite/commercial-en.mp4) · [Mastery Lab](https://harborvoice-ai.vercel.app/#mastery-lab) · [Capability matrix](docs/elite/capability-matrix.md) · [Release evidence](docs/elite/release-report.md)
 
 [![HarborVoice product film](public/elite/film-poster.jpg)](public/elite/commercial-en.mp4)
 
-**v2.1 Recognition & Community Sprint:** [Community Studio](https://harborvoice-ai.vercel.app/#community-studio) adds a multilingual rehearsal, three original review tracks, a complete technical book of more than 6,000 words and an EPUB and two isolated native agent experiments (**6/6** synthetic cases). The learning template is privately published; Showcase, Marketplace, Reader and program submissions remain unsubmitted. [Review the exact states and gaps](docs/recognition/final-report.md).
+**v2.1 Recognition & Community Sprint:** [Community Studio](https://harborvoice-ai.vercel.app/#community-studio) adds a multilingual rehearsal, three original review tracks, a complete technical book of more than 6,000 words and an EPUB and two isolated native agent experiments (**6/6** synthetic cases). Two Explore templates and the ElevenReader book were submitted in later phases. Official Showcase PR #113 and SDK PR #484 are open and unmerged (fresh GitHub check). Latest Explore/Reader approval states could not be reverified in this consolidation; no acceptance is claimed. Music Marketplace listing and program membership remain unverified. [Review the exact states and gaps](docs/recognition/final-report.md).
 
 Nora looks up synthetic shipments, explains source-grounded procedures and prepares human-review requests. The surrounding platform makes the engineering inspectable: versioned tests, native ElevenLabs resources, a Credit Governor, drift previews and reproducible production media.
 
@@ -39,7 +39,7 @@ Nora looks up synthetic shipments, explains source-grounded procedures and prepa
 
 The [public static Experience lab](https://phlppgdfry.github.io/harborvoice-ai/#experience-lab) offers existing recordings, comparison takes and transcripts. The earlier bounded visitor trial has expired; the native Visitor agent still exists. The [protected hosted workbench](https://harborvoice-ai.vercel.app) uses server-side ElevenLabs configuration. Authorized operators can open **Settings** and use the existing operator sign-in. Never paste the ElevenLabs API key into the browser. New paid testing requires reconciled account liabilities and bounded reservations.
 
-The existing production deployment uses PostgreSQL and required operator authentication on a separate production branch, with draft PR #1 still open. Main's static Pages preview uses browser storage; its local development server uses SQLite. These environments must not be substituted for one another. See the [current architecture and acceptance audit](docs/final-excellence/technical-audit.md), [deployment receipt](docs/final-excellence/production-deployment.json) and [agent evidence](docs/final-excellence/agent-evaluation.md).
+The PostgreSQL runtime and required operator authentication are consolidated through PR #1. Source integration does not promote production. The active protected alias remains at SHA `234281a806150a79b12220d182df3fc9e97534b9`; see the [fresh deployment receipt](docs/release-finalization/production-deployment.json). Automatic Vercel Git deployments remain disabled (`git.deploymentEnabled=false`). Main's static Pages preview uses browser storage; its local demo server uses SQLite. These environments must not be substituted for one another. See the [current architecture and acceptance audit](docs/final-excellence/technical-audit.md), [deployment receipt](docs/final-excellence/production-deployment.json) and [agent evidence](docs/final-excellence/agent-evaluation.md).
 
 ## Run locally
 
@@ -121,18 +121,18 @@ The agent's `lookup_shipment` and `request_escalation` tools execute through the
 
 ### Operator access
 
-The default server binds to loopback. To bind to a network interface, set `HOST=0.0.0.0` and a strong `OPERATOR_TOKEN`. The server refuses non-loopback binding without a token. Enter that token in **Settings**. The server exchanges it for an HttpOnly session cookie lasting eight hours, or 30 days with Keep me signed in selected; the hosted cookie also requires HTTPS. Sign out to clear the current browser session. Rotating the server token invalidates all existing sessions.
+The default server binds to loopback. To bind to a network interface, set `HOST=0.0.0.0` and a strong `OPERATOR_TOKEN`. The server refuses non-loopback binding without a token. Enter that token in **Settings**. The server exchanges it for an HttpOnly session cookie lasting eight hours, or 30 days with Keep me signed in selected; the hosted cookie also requires HTTPS. Sign out to clear and durably revoke the current browser session. Rotating the server token invalidates all existing sessions.
 
 This shared operator token is for a single-user workbench, not enterprise SSO or role separation. Do not deploy it as a public customer service without an authentication layer, TLS, per-user permissions, caller verification, retention controls and spend limits. Operator access includes all workspace data and paid features.
 
 ### Webhooks
 
-Expose `POST /api/webhooks/elevenlabs` over HTTPS using your deployment infrastructure, set `ELEVENLABS_WEBHOOK_SECRET`, and configure the matching ElevenLabs webhook. Signature verification is covered by local tests. Real ElevenLabs webhook delivery has not been verified. Raw payloads are retained in a separate SQLite table; apply a retention policy before using personal data.
+Expose `POST /api/webhooks/elevenlabs` over HTTPS using your deployment infrastructure, set `ELEVENLABS_WEBHOOK_SECRET`, and configure the matching ElevenLabs webhook. Signature verification is covered by local tests. Real ElevenLabs webhook delivery has not been verified. Raw payloads are retained in the configured SQLite or PostgreSQL store. PostgreSQL prunes records older than 30 days on workspace mutation; scheduled retention and provider-side deletion still require owner decisions.
 
 ## Verification
 
 ```bash
-npm run check                 # TypeScript + production build + 50 tests
+npm run check                 # TypeScript + workbench/AgentProof builds + root tests
 npm run verify:live           # Explicit read-only verification against your configured account
 npm run verify:hosted         # Production browser/login check; requires a private operator code
 npm run agent:evaluate        # Refresh existing real agent test results, no new suite
@@ -209,6 +209,18 @@ See [audio evidence](docs/academy-audio-evidence.json), [native audiobook eviden
 
 ## Phase 3 developer tools
 
-[AgentOps Kit](packages/agentops-kit/README.md), [AgentProof](apps/agentproof/README.md), the [110-scenario fixture corpus](benchmarks/voice-ai/README.md), [workshop](community/elevenlabs-belgium/README.md) and [article drafts](docs/phase3/articles/) are included as source candidates. Run `npm run phase3:verify` and `npm run format:phase3:check`; start the AgentProof preview, then run `npm run phase3:browser`. `AGENTPROOF_URL` can select another local preview port. Offline CI runs without provider secrets. AgentProof has no public deployment in this integration; no npm or editorial publication is included.
+[AgentOps Kit](packages/agentops-kit/README.md), [AgentProof](apps/agentproof/README.md), the [110-scenario fixture corpus](benchmarks/voice-ai/README.md), [workshop](community/elevenlabs-belgium/README.md) and [article drafts](docs/phase3/articles/) are included as maintained developer tools. Run `npm run phase3:verify` and `npm run format:phase3:check`; start the AgentProof preview, then run `npm run phase3:browser`. `AGENTPROOF_URL` can select another local preview port. Offline CI runs without provider secrets. AgentProof is [publicly deployed](https://phlppgdfry.github.io/harborvoice-ai/agentproof/). AgentOps Kit is supplied as a downloadable package, not published to npm. The 110 scenarios are deterministic teaching fixtures; the separate 12-case contract study intentionally detects nine failures and accepts three controls. Neither establishes deployed model reliability.
 
 See the [pre-Phase 4 audit](docs/final-mastery/pre-phase4-audit.md) for verified scope, account reconciliation, production acceptance blockers and owner decisions.
+
+## Current release and operational boundaries
+
+Stable scope: public synthetic demo, AgentProof and AgentOps Kit. Source-complete, demo-complete, production-accepted, publication-submitted and externally-approved are separate states. No unconditional production-readiness or ElevenLabs endorsement is claimed.
+
+Run `npm run phase3:verify`, `npm run format:phase3:check`, `npm run elite:validate`, `npm run recognition:validate` and `npm audit --audit-level=high` in addition to the root checks. `npm run test:postgres` uses a disposable Docker database and verifies migrations, concurrency, rollback, authorization, persistence, deletion and pg_dump/pg_restore without touching production.
+
+Before production rollout the owner must accept physical microphone quality, interruptions, Dutch/French pronunciation, retention/privacy policy, provider-side deletion, live backup ownership and a scheduled recovery exercise. No live migration, restore or alias promotion occurred during consolidation. The runtime remains a single-operator synthetic workspace. Saved text is client-reported, not provider-attested.
+
+New paid tests require account-wide liability reconciliation and bounded reservations. The observed 20,026 credits are not automatically a safe spending budget. Historical uncertain liabilities keep new paid dispatch capped at zero. No media was regenerated for this release.
+
+See the [branch inventory](docs/release-finalization/branch-inventory.md), [current handoff report](docs/release-finalization/FINAL-CONSOLIDATION-REPORT-NL.md), [security details](docs/security.md) and [production deployment/recovery procedures](docs/deployment.md). Font and worklet licenses are retained under `public/licenses/fonts/` and `public/vendor/`.

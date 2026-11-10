@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-10T03:34:15.010Z",
+  "base": "https://phlppgdfry.github.io/harborvoice-ai",
+  "checks": [
+    "Portfolio explains provenance and current submissions",
+    "Failure filtering, search, empty state and fixture comparison work",
+    "Evidence export and separate 12-case contract evidence work",
+    "390px navigation and keyboard activation work without document overflow",
+    "360px navigation and keyboard activation work without document overflow",
+    "Community status, existing audio files and EPUB download are accessible"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "providerDispatches": 0,
+  "scope": "Desktop Chrome and 390/360px emulation; DOM, keyboard, screenshots, downloads and audio HTTP checks. No physical mobile/microphone, human listening, screen reader or Safari acceptance."
+}

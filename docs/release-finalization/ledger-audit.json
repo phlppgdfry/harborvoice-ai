@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-11-10T03:40:34.400493+00:00",
+  "ledgers": [
+    {
+      "worktree": "/Users/philippegodfroy/harborvoice-ai",
+      "file": "var/recognition/credit-ledger.json",
+      "sha256": "50b59eeb4eba5485a4a6ff34440ab32568539369018c3e208855392dcca48b49",
+      "operations": 11,
+      "statuses": {
+        "pending": 0,
+        "failed": 2,
+        "completed": 9
+      },
+      "retainedEstimate": 21700
+    },
+    {
+      "worktree": "/Users/philippegodfroy/harborvoice-ai",
+      "file": "var/recognition/prior-ledger.json",
+      "sha256": "653cbd51b9dc23efd665a5cd5bfc51f9d9f2ba0dcf7c9420cf78becccf9b734a",
+      "operations": 23,
+      "statuses": {
+        "pending": 0,
+        "failed": 1,
+        "completed": 22
+      },
+      "retainedEstimate": 44052
+    },
+    {
+      "worktree": "/Users/philippegodfroy/harborvoice-ai",
+      "file": "var/elite/credit-ledger.json",
+      "sha256": "653cbd51b9dc23efd665a5cd5bfc51f9d9f2ba0dcf7c9420cf78becccf9b734a",
+      "operations": 23,
+      "statuses": {
+        "pending": 0,
+        "failed": 1,
+        "completed": 22
+      },
+      "retainedEstimate": 44052
+    },
+    {
+      "worktree": "/Users/philippegodfroy/harborvoice-final-mastery",
+      "file": "var/final-mastery/credit-ledger.json",
+      "sha256": "2914180378f78d8d6813f14dae4ec0c8c88e2f156725b6754ca849a879a65142",
+      "operations": 6,
+      "statuses": {
+        "pending": 0,
+        "failed": 1,
+        "completed": 5
+      },
+      "retainedEstimate": 5800
+    }
+  ],
+  "safeBudgetEstablished": false,
+  "newPaidDispatchCap": 0,
+  "reason": "Historical holds overlap posted usage; unresolved per-job settlement and other consumers prevent a positive account-wide budget. No holds released; duplicate hashes are not separate liabilities."
+}

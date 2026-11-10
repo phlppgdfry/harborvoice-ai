@@ -42,6 +42,9 @@ const schema = z.object({
         id: z.uuid(),
         mode: z.enum(["demo", "live"]),
         startedAt: timestamp,
+        endedAt: timestamp.optional(),
+        durationSeconds: z.number().int().min(0).max(86400).optional(),
+        providerConversationId: z.string().max(150).optional(),
         language: z.string().max(10),
         messages: z
           .array(

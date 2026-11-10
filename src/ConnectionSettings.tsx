@@ -16,12 +16,18 @@ export default function ConnectionSettings({
   notify: (s: string) => void;
 }) {
   const [code, setCode] = useState(""),
-    [remember, setRemember] = useState(true),
+    [remember, setRemember] = useState(false),
     [busy, setBusy] = useState(false),
     [message, setMessage] = useState("");
+  const [readiness, setReadiness] = useState<{
+    ready: boolean;
+    database?: { status: string };
+    provider?: { status: string };
+    agent?: { status: string };
+  } | null>(null);
   const preview = config.deployment === "static";
   const locked = !!config.operatorRequired && !config.operatorAuthenticated;
-  const ready = config.configured && config.agentReady;
+  const ready = readiness?.ready === true;
   const rows = [
     [
       "Backend",
@@ -38,7 +44,9 @@ export default function ConnectionSettings({
       preview
         ? "Use the live workspace"
         : config.configured
-          ? "Configured on the server"
+          ? readiness?.provider?.status === "authenticated"
+            ? "Authenticated · provider verified"
+            : "Configured · verification needed"
           : "Server configuration unavailable",
     ],
     [
@@ -46,14 +54,34 @@ export default function ConnectionSettings({
       preview
         ? "Use the live workspace"
         : config.agentReady
-          ? "Nora is configured"
+          ? readiness?.agent?.status === "available"
+            ? "Available · provider verified"
+            : "Configured · availability not verified"
           : "Agent configuration unavailable",
+    ],
+    [
+      "Database",
+      config.workspaceStorage === "postgres"
+        ? readiness?.database?.status === "reachable"
+          ? "Connected · PostgreSQL"
+          : "PostgreSQL · verification needed"
+        : config.workspaceStorage === "sqlite"
+          ? "Local SQLite"
+          : "No server persistence",
+    ],
+    [
+      "Demo adapter",
+      config.demoEnabled === false
+        ? "Disabled · production mode"
+        : "Explicit demo enabled",
     ],
     [
       "Workspace data",
       config.workspaceStorage === "browser"
         ? "Saved in this browser"
-        : "Saved on the local server",
+        : config.workspaceStorage === "postgres"
+          ? "Persistent server database"
+          : "Saved on the local server",
     ],
     [
       "Operator access",
@@ -109,8 +137,13 @@ export default function ConnectionSettings({
               onClick={async () => {
                 setBusy(true);
                 try {
-                  const r = await request("/connection/check", {});
-                  setMessage(`${r.voiceCount} voices available. ${r.scope}`);
+                  const r = await request("/readiness");
+                  setReadiness(r);
+                  setMessage(
+                    r.ready
+                      ? "Database and authenticated agent verified. No conversation was started."
+                      : "Readiness checks failed.",
+                  );
                 } catch (e) {
                   setMessage((e as Error).message);
                 } finally {
@@ -126,6 +159,40 @@ export default function ConnectionSettings({
               Verify ElevenLabs connection
             </button>
           </div>
+        )}
+        {config.backend && config.workspaceStorage !== "browser" && !locked && (
+          <label className="field">
+            Import client-reported conversation JSON (merges records; preserves
+            source)
+            <input
+              type="file"
+              accept="application/json,.json"
+              disabled={busy}
+              onChange={async (e) => {
+                const file = e.target.files?.[0];
+                if (!file) return;
+                setBusy(true);
+                try {
+                  if (file.size > 90000)
+                    throw new Error("Import file must be smaller than 90 KB.");
+                  const data = JSON.parse(await file.text());
+                  const r = await request("/import/conversations", {
+                    sessions: Array.isArray(data.sessions)
+                      ? data.sessions
+                      : [data],
+                  });
+                  setMessage(
+                    `${r.imported} conversation records imported. Original browser/file data was retained.`,
+                  );
+                } catch (error) {
+                  setMessage((error as Error).message);
+                } finally {
+                  setBusy(false);
+                  e.target.value = "";
+                }
+              }}
+            />
+          </label>
         )}
         {message && <p role="status">{message}</p>}
       </section>
