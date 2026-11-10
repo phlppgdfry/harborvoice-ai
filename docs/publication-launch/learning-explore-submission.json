@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-11-09T17:16:29.186821+00:00",
+  "templateId": "DkSzGeLnRPG557cTaRSf",
+  "flowId": "DkSzGeLnRPG557cTaRSf",
+  "url": "https://elevenlabs.io/app/templates/DkSzGeLnRPG557cTaRSf",
+  "state": "SUBMITTED FOR EXPLORE REVIEW",
+  "nativeConfirmation": [
+    "Submitted for Explore review",
+    "Template is live with link sharing while pending review. It will appear in Explore once an admin approves it."
+  ],
+  "category": "Songs & Audio",
+  "tags": ["education"],
+  "estimatedRunCredits": 3042,
+  "example": "Verified facts and human review \u00b7 English lesson",
+  "exampleDurationSeconds": 61,
+  "outputs": ["Narrated lesson", "Quiz and marking guide", "Narration script"],
+  "paidDispatches": 0,
+  "termsAttestationShown": false,
+  "method": "Native Chrome UI; existing selected compatible run reused; original corrected thumbnail visually verified."
+}

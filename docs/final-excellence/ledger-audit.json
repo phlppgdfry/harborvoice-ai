@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-11-09T23:15:49.789026+00:00",
+  "scope": "Private ledger metadata only. No holds released; snapshots are not additive unpaid invoices.",
+  "ledgers": [
+    {
+      "worktree": "harborvoice-ai",
+      "file": "recognition/credit-ledger.json",
+      "sha256": "50b59eeb4eba5485a4a6ff34440ab32568539369018c3e208855392dcca48b49",
+      "operationCount": 11,
+      "pendingCount": 0,
+      "failedCount": 2,
+      "retainedEstimates": 21700,
+      "starting": {
+        "used": 54231,
+        "limit": 128715,
+        "checkedAt": "2026-11-08T18:11:13.273Z"
+      },
+      "latest": {
+        "used": 63393,
+        "limit": 128715,
+        "checkedAt": "2026-11-08T19:23:12.791Z"
+      }
+    },
+    {
+      "worktree": "harborvoice-ai",
+      "file": "recognition/prior-ledger.json",
+      "sha256": "653cbd51b9dc23efd665a5cd5bfc51f9d9f2ba0dcf7c9420cf78becccf9b734a",
+      "operationCount": 23,
+      "pendingCount": 0,
+      "failedCount": 1,
+      "retainedEstimates": 44052,
+      "starting": {
+        "used": 18515,
+        "limit": 128715,
+        "checkedAt": "2026-11-07T20:51:15.791Z"
+      },
+      "latest": {
+        "used": 54231,
+        "limit": 128715,
+        "checkedAt": "2026-11-08T18:11:11.885Z"
+      }
+    },
+    {
+      "worktree": "harborvoice-ai",
+      "file": "elite/credit-ledger.json",
+      "sha256": "653cbd51b9dc23efd665a5cd5bfc51f9d9f2ba0dcf7c9420cf78becccf9b734a",
+      "operationCount": 23,
+      "pendingCount": 0,
+      "failedCount": 1,
+      "retainedEstimates": 44052,
+      "starting": {
+        "used": 18515,
+        "limit": 128715,
+        "checkedAt": "2026-11-07T20:51:15.791Z"
+      },
+      "latest": {
+        "used": 54231,
+        "limit": 128715,
+        "checkedAt": "2026-11-08T18:11:11.885Z"
+      }
+    },
+    {
+      "worktree": "harborvoice-final-mastery",
+      "file": "final-mastery/credit-ledger.json",
+      "sha256": "2914180378f78d8d6813f14dae4ec0c8c88e2f156725b6754ca849a879a65142",
+      "operationCount": 6,
+      "pendingCount": 0,
+      "failedCount": 1,
+      "retainedEstimates": 5800,
+      "starting": {
+        "used": 90071,
+        "limit": 128715,
+        "checkedAt": "2026-11-09T12:54:59.918Z"
+      },
+      "latest": {
+        "used": 93558,
+        "limit": 128715,
+        "checkedAt": "2026-11-09T13:23:59.037Z"
+      }
+    }
+  ]
+}

@@ -86,6 +86,44 @@ test("independent governor instances cannot concurrently overwrite reservations"
   }
 });
 
+test("unattributed account consumption freezes dispatch while retaining receipts", async () => {
+  const f = fixture();
+  try {
+    await f.g.initialize("test");
+    await f.g.reserve("a", "audio", 2000);
+    f.setUsed(3001);
+    await assert.rejects(
+      f.g.reserve("b", "audio", 1),
+      /Unreconciled consumption/,
+    );
+    const report = await f.g.report();
+    assert.equal(report.ledger.operations.a.estimate, 2000);
+    assert.equal(report.observedUsage, 2001);
+    assert.equal(report.ledger.operations.b, undefined);
+  } finally {
+    f.close();
+  }
+});
+
+test("a provider receipt above its own reservation freezes new dispatch", async () => {
+  const f = fixture();
+  try {
+    await f.g.initialize("test");
+    await f.g.reserve("a", "audio", 100);
+    await f.g.reserve("other", "video", 5000);
+    await f.g.update("a", { status: "completed", reportedCredits: 101 });
+    await assert.rejects(
+      f.g.reserve("b", "audio", 1),
+      /Unreconciled consumption/,
+    );
+    const report = await f.g.report();
+    assert.equal(report.ledger.operations.a.reportedCredits, 101);
+    assert.equal(report.ledger.operations.other.estimate, 5000);
+  } finally {
+    f.close();
+  }
+});
+
 test("corrupt reservation data cannot turn the available allowance into NaN", async () => {
   const f = fixture();
   try {

@@ -1,5 +1,7 @@
 # Live hosting
 
+Current production status (10 November 2026): the existing Vercel application uses protected PostgreSQL storage on the separate production branch. The browser-storage gateway described below is Main's historical implementation, not a replacement deployment target. Preserve the deployment freeze and consult the [current architecture/acceptance audit](final-excellence/technical-audit.md) and [exact live deployment receipt](final-excellence/production-deployment.json) before any production change.
+
 Live URL: https://harborvoice-ai.vercel.app
 
 The Vite frontend uses a same-origin Vercel function at `api/index.ts`. `vercel.json` rewrites `/api/*` to the gateway. The status endpoint exposes configuration booleans, never credentials. GitHub Pages builds with `VITE_STATIC_DEMO=true` and explicitly links to the live workspace.

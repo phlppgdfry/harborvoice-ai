@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-11-09T23:06:57.218Z",
+  "scope": "Authenticated read-only native metadata. No new provider tests or generation.",
+  "branches": [
+    {
+      "id": "agtbrch_8201m6t6k4wnfcjvpzh2v3j6r2pd",
+      "name": "Main",
+      "last_committed_at": 1794141719,
+      "current_live_percentage": 100,
+      "draft_exists": false
+    },
+    {
+      "id": "agtbrch_3001m6y70js1eejrt38cmgekye3j",
+      "name": "recognition-context-evaluation",
+      "last_committed_at": 1794162838,
+      "current_live_percentage": 0,
+      "draft_exists": false
+    },
+    {
+      "id": "agtbrch_8401m6w7fx43e40vxgq7gs253chg",
+      "name": "HarborVoice Enterprise v2",
+      "last_committed_at": 1794097154,
+      "current_live_percentage": 0,
+      "draft_exists": false,
+      "merged_into_branch_id": "agtbrch_8201m6t6k4wnfcjvpzh2v3j6r2pd"
+    }
+  ],
+  "invocations": [
+    {
+      "id": "suite_8601m6y77njvf76bbrfh2wp7r25q",
+      "name": "HarborVoice v2.1 · multilingual context and trust boundaries",
+      "branch_id": "agtbrch_3001m6y70js1eejrt38cmgekye3j",
+      "version_id": "agtvrsn_3801m6y70js0e5nv479tj0zedfc7",
+      "created_at_unix_secs": 1794163070,
+      "test_run_count": 6,
+      "passed_count": 6,
+      "failed_count": 0,
+      "pending_count": 0,
+      "repeat_count": 1,
+      "credits_used": 1946,
+      "runs_diverged_from_version": false
+    },
+    {
+      "id": "suite_7401m6w8c76kfrd8gx8aahdnhkfe",
+      "name": "HarborVoice Elite · targeted multilingual remediation",
+      "branch_id": "agtbrch_8401m6w7fx43e40vxgq7gs253chg",
+      "version_id": "agtvrsn_0301m6w8c2dvessrk4p8tgd6j695",
+      "created_at_unix_secs": 1794097159,
+      "test_run_count": 10,
+      "passed_count": 10,
+      "failed_count": 0,
+      "pending_count": 0,
+      "repeat_count": 1,
+      "credits_used": 2967,
+      "runs_diverged_from_version": false
+    },
+    {
+      "id": "suite_7801m6w7rhdbfjr843egrdnz6zb0",
+      "name": "HarborVoice Elite · 52 multilingual enterprise scenarios",
+      "branch_id": "agtbrch_8401m6w7fx43e40vxgq7gs253chg",
+      "version_id": "agtvrsn_6901m6w7hx46fvyr49tw0924sqwb",
+      "created_at_unix_secs": 1794096514,
+      "test_run_count": 52,
+      "passed_count": 50,
+      "failed_count": 2,
+      "pending_count": 0,
+      "repeat_count": 1,
+      "credits_used": 16622,
+      "runs_diverged_from_version": false
+    },
+    {
+      "id": "suite_1801m6vbrgn2fdpa1h1ebwb9fp72",
+      "name": "HarborVoice 1.2 · six bounded multilingual scenarios",
+      "branch_id": "agtbrch_8201m6t6k4wnfcjvpzh2v3j6r2pd",
+      "version_id": "agtvrsn_1501m6vbp7n6f1bb4c9edh9n8aks",
+      "created_at_unix_secs": 1794067153,
+      "test_run_count": 6,
+      "passed_count": 6,
+      "failed_count": 0,
+      "pending_count": 0,
+      "repeat_count": 1,
+      "credits_used": 1714,
+      "runs_diverged_from_version": false
+    }
+  ],
+  "hasMore": false
+}

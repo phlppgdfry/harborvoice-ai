@@ -1,0 +1,137 @@
+
+> harborvoice-ai@2.2.0-rc.2 check
+> npm run build && npm test
+
+
+> harborvoice-ai@2.2.0-rc.2 build
+> tsc --noEmit && vite build && npm run build:agentproof
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 2256 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                               0.97 kB │ gzip:   0.58 kB
+dist/assets/Manrope-DIRNzeTG.ttf            164.70 kB
+dist/assets/DMSans-OkNhvBry.ttf             240.16 kB
+dist/assets/EliteStudio-BZYDcmyO.css          2.52 kB │ gzip:   0.85 kB
+dist/assets/CommunityStudio-DLNaFzuS.css      3.86 kB │ gzip:   1.18 kB
+dist/assets/MasteryLab-CuJVNOV6.css           5.27 kB │ gzip:   1.55 kB
+dist/assets/index-a81wPfid.css               31.16 kB │ gzip:   7.64 kB
+dist/assets/circle-check-0sElR2jW.js          0.23 kB │ gzip:   0.20 kB
+dist/assets/volume-2-Cuo4ThIZ.js              0.78 kB │ gzip:   0.41 kB
+dist/assets/ConnectionSettings-Dz0v8Krq.js    6.43 kB │ gzip:   2.34 kB
+dist/assets/PortfolioEvidence-CTPs4XwH.js     7.27 kB │ gzip:   2.55 kB
+dist/assets/ExperienceLab-DlOXwc9F.js        12.08 kB │ gzip:   4.07 kB
+dist/assets/AudioStudio-CMzvCnds.js          13.12 kB │ gzip:   4.66 kB
+dist/assets/remediation-BpGS9ycO.js          14.05 kB │ gzip:   1.93 kB
+dist/assets/CommunityStudio-DNgsgq-M.js      15.76 kB │ gzip:   5.92 kB
+dist/assets/EliteStudio-DG5h7log.js          23.31 kB │ gzip:   8.01 kB
+dist/assets/Academy-CzUJyI3c.js              31.64 kB │ gzip:  11.98 kB
+dist/assets/MasteryLab-BOLvY81m.js           42.59 kB │ gzip:  14.49 kB
+dist/assets/index-DgzqGSSz.js               353.05 kB │ gzip: 108.61 kB
+dist/assets/VoiceAgent-6xc-OOcE.js          615.52 kB │ gzip: 162.14 kB
+
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.41s
+
+> harborvoice-ai@2.2.0-rc.2 build:agentproof
+> node --import tsx scripts/final-mastery/build-agentproof.ts
+
+Validated 110 scenarios; wrote baseline, candidate and historical evidence.
+12 multilingual adversarial contracts: 3 accepted controls, 9 detected failures; zero provider calls.
+
+> agentproof-pilot@0.2.0 build
+> tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 5 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.70 kB │ gzip: 0.42 kB
+dist/assets/Inter-ipl4pJhC.ttf  419.74 kB
+dist/assets/index-B-Rm4tuW.css    8.11 kB │ gzip: 2.58 kB
+dist/assets/index-DZ5G9ByY.js    14.87 kB │ gzip: 5.86 kB
+
+✓ built in 50ms
+Static AgentProof bundled at /agentproof/.
+
+> harborvoice-ai@2.2.0-rc.2 test
+> tsx --test tests/*.test.ts
+
+✔ status never reveals secrets (36.400458ms)
+✔ workspace requires configured operator token (9.799125ms)
+✔ cross-origin requests are rejected even with credentials (5.5105ms)
+✔ lookup reports unknown without hallucinating data (26.644292ms)
+✔ invalid input cannot mutate workspace (6.097292ms)
+✔ persisted escalation is pending, repeated request deduplicates, approval leaves cargo untouched (13.780875ms)
+✔ demo sessions persist transcript and language (3.075875ms)
+✔ missing API key gives actionable error without external call (1.66475ms)
+✔ webhook signature rejects tampering, expiry, missing and future timestamp (0.492208ms)
+✔ signed webhook delivery is idempotent and cannot mutate shipment status (2.756666ms)
+✔ webhook without valid signature is rejected (2.958125ms)
+✔ malformed JSON returns a client error rather than a provider error (4.102584ms)
+✔ governor preserves hard allowance, billing buffer and minimum account balance (8.54125ms)
+✔ failed and pending jobs retain reservations and cannot be blindly retried (9.179417ms)
+✔ account-wide external spend and delayed billing reconcile conservatively (4.805208ms)
+✔ independent governor instances cannot concurrently overwrite reservations (2.985542ms)
+✔ unattributed account consumption freezes dispatch while retaining receipts (2.519667ms)
+✔ a provider receipt above its own reservation freezes new dispatch (7.217875ms)
+✔ corrupt reservation data cannot turn the available allowance into NaN (2.771ms)
+✔ a configuration cannot expand the owner-authorized maximum (0.771375ms)
+✔ a separate authorized sprint keeps the legacy policy and ledger intact (5.514125ms)
+✔ execution-specific allowance cannot be expanded by changing initialization arguments (1.461ms)
+✔ lookup requires an exact reference, supports case and whitespace (0.566709ms)
+✔ unknown shipment cannot create an escalation (0.207959ms)
+✔ escalation retries deduplicate and review does not release cargo (9.201583ms)
+✔ unknown reference yields no invented status (0.395833ms)
+✔ supported languages return localized guidance (0.272333ms)
+✔ demo evaluation suite passes and identifies its scope (0.852209ms)
+✔ persisted workspace validation rejects malformed nested data without crashing (92.785209ms)
+✔ speech: HTTP route serializes a real SDK request and returns provider output (51.743667ms)
+✔ effects: HTTP route serializes a real SDK request and returns provider output (8.914917ms)
+✔ music: HTTP route serializes a real SDK request and returns provider output (5.026041ms)
+✔ transcribe: HTTP route serializes a real SDK request and returns provider output (10.098709ms)
+✔ isolate: HTTP route serializes a real SDK request and returns provider output (5.869667ms)
+✔ change: HTTP route serializes a real SDK request and returns provider output (4.215375ms)
+✔ align: HTTP route serializes a real SDK request and returns provider output (5.2425ms)
+✔ dubbing: HTTP route serializes a real SDK request and returns provider output (3.879792ms)
+✔ signed sessions return SDK-normalized signedUrl (3.323709ms)
+✔ completed automatic dub is streamed after checking provider job status (4.427167ms)
+✔ unfinished dubbing cannot return a fake completed audio result (3.603792ms)
+✔ provider auth failures are actionable and do not expose credentials (4.490292ms)
+✔ invalid studio inputs fail before a provider request (2.782167ms)
+✔ connection check reads provider access without generating billable audio (2.436084ms)
+✔ concurrent knowledge uploads preserve existing and both new attachments (5.970125ms)
+✔ live simulation creates the current test type and polls the returned invocation (5.702291ms)
+✔ RAG-enabled agents index newly attached knowledge after attaching it (4.873167ms)
+✔ current audio model selections serialize distinct Creative and API model names correctly (8.152375ms)
+✔ hosted status separates configured API, browser workspace and operator authentication (29.70475ms)
+✔ hosted gateway fails closed when no operator secret is configured (0.332667ms)
+✔ public visitors cannot trigger a paid provider request (5.8ms)
+✔ workspace writes and webhook retention are explicitly unavailable on a stateless gateway (4.967833ms)
+✔ wrong operator code and cross-origin sign-in do not create a session (35.845458ms)
+✔ operator sign-in creates a secure HttpOnly session without echoing the secret (7.446292ms)
+✔ cookie signatures reject tampering, expiry and a rotated secret (1.383208ms)
+✔ remembered session lasts thirty days and can still be revoked by key rotation (8.223333ms)
+✔ Vercel rewrite routes preserve nested API paths (2.887708ms)
+✔ hosted uploads above four MB are rejected before a provider call (24.376459ms)
+✔ visitor session targets only the constrained guest agent; private paid tools stay locked (89.705ms)
+✔ expired visitor window does not issue a signed session (17.27825ms)
+✔ unsafe provider limits fail closed before issuing a visitor URL (5.704584ms)
+✔ managed projection compares owned fields while preserving unknown remote settings (7.716042ms)
+✔ three-way drift separates local, remote and conflicting edits (0.136958ms)
+✔ apply refuses stale snapshots and remote conflicts (0.287875ms)
+ℹ tests 63
+ℹ suites 0
+ℹ pass 63
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3133.905541

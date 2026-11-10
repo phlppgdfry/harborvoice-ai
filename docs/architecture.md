@@ -1,5 +1,7 @@
 # Architecture and operating boundaries
 
+This diagram describes Main's local/demo architecture. The existing live Vercel deployment is a separate protected PostgreSQL implementation, verified on 10 November 2026; see the [current architecture and acceptance audit](final-excellence/technical-audit.md). Main must not overwrite that persistent runtime. Production PR #1 remains draft and operational acceptance is incomplete.
+
 ```mermaid
 flowchart LR
   U[Operator / caller] --> UI[React workbench]

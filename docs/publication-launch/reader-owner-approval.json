@@ -1,0 +1,12 @@
+{
+  "observedAt": "2026-11-09T22:35:25.065424+00:00",
+  "source": "Explicit user response to approval question in this session",
+  "answer": "Ja: gratis, projectnaam, ik bevestig rechten en richtlijnen en ga akkoord met deze voorwaarden",
+  "scope": "Worldwide free distribution under HarborVoice Project; owner confirmed publishing rights and content guidelines, accepted Publishing Terms and acknowledged Privacy Policy. No Stripe/payout setup.",
+  "terms": "https://elevenreader.io/publishing-terms-of-service",
+  "guidelines": "https://elevenreader.io/content-guidelines",
+  "privacy": "https://elevenlabs.io/privacy-policy",
+  "audioApproval": "Ik heb de ElevenReader-preview beluisterd en keur de audio goed",
+  "audioApprovalSource": "Explicit subsequent owner response in this session",
+  "audioApprovedAt": "2026-11-09T22:41:04.835008+00:00"
+}

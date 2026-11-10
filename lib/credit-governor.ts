@@ -245,6 +245,18 @@ export class CreditGovernor {
       if (!Number.isFinite(estimate) || estimate <= 0)
         throw Error("A positive conservative estimate is required.");
       const state = budgetState(ledger);
+      // Account deltas are not job attribution. Preserve all holds and stop
+      // dispatch when the observed usage cannot be covered by reservations.
+      // Recording receipts/reporting remains available for reconciliation.
+      if (
+        state.observedUsage > state.estimatedCommitted ||
+        Object.values(ledger.operations).some(
+          (operation) => (operation.reportedCredits ?? 0) > operation.estimate,
+        )
+      )
+        throw Error(
+          "Unreconciled consumption exceeds reservations; generation stopped. Inspect account-wide billing before further dispatch.",
+        );
       if (
         estimate > state.budgetRemaining ||
         state.actualBalance - estimate - ledger.billingBuffer <

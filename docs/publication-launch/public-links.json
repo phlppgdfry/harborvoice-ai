@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-11-09T17:04:08.682Z",
+  "results": [
+    {
+      "url": "https://harborvoice-ai.vercel.app",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/agentproof/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://harborvoice-ai.vercel.app/elite/commercial-en.mp4",
+      "status": 200,
+      "contentType": "video/mp4"
+    },
+    {
+      "url": "https://harborvoice-ai.vercel.app/elite/enterprise-explainer.mp4",
+      "status": 200,
+      "contentType": "video/mp4"
+    },
+    {
+      "url": "https://github.com/phlppgdfry/harborvoice-ai",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    }
+  ],
+  "scope": "HTTP availability only; current browser rendering unavailable. Prior browser receipts are historical."
+}

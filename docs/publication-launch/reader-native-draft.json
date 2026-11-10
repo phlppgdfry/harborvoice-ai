@@ -1,0 +1,32 @@
+{
+  "observedAt": "2026-11-09T22:44:40.187150+00:00",
+  "draftId": "CJgq6QXO12sRReayiBoG",
+  "url": "https://elevenlabs.io/app/audiobooks/CJgq6QXO12sRReayiBoG",
+  "status": "Pending review",
+  "mode": "Dynamic narration",
+  "sourceSha256": "d2a8cc918101141539999581c60831f83bcab336b94971c7cc122b2d0fe52084",
+  "duplicateCheck": "Existing Academy project 0suF3Lkx3CT2h6kQyuqv is a different short course, not this manuscript. Bookshelf showed only that prior project.",
+  "upload": "27.6kB validated EPUB; Create and preview book via Publish to ElevenReader (free dynamic narration path)",
+  "authorDraft": "HarborVoice Project; public project biography and repository; no personal author claim",
+  "authorStep": "Completed",
+  "agreementsAccepted": true,
+  "submissionForReview": true,
+  "balanceDisplayed": 20026,
+  "author": "HarborVoice Project",
+  "bookDetails": "Title/subtitle/description, Non-Fiction, Technology and Education and Learning, original 1600x2400 cover uploaded",
+  "distribution": "Worldwide; free; English; adult audience; no mature content; synchronized text/audio; voice chat disabled; proposed publication date 2026-11-09",
+  "agreementBasis": "Explicit linked-screen owner approval in this session; no invented rights",
+  "finalNativeControls": [
+    "Pending review",
+    "Edit submission",
+    "Withdraw submission"
+  ],
+  "ownerAudioApproval": "Owner explicitly confirmed listening to the ElevenReader preview and approved the audio",
+  "recommendedVoice": "Sarah - Mature, Reassuring, Confident",
+  "nativeChapterCount": 15,
+  "nativeRevision": "Frontmatter duplicate title/draft notice removed; approved project byline; technical chapters unchanged",
+  "stripeConnected": false,
+  "payoutTaxBankDataEntered": false,
+  "unintendedStudioPreviewCredits": 287,
+  "publicBookUrl": null
+}

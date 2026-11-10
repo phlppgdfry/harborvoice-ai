@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-11-10T00:08:39.524394+00:00",
+  "package": "harborvoice-agentops-kit",
+  "version": "0.2.0",
+  "fileCount": 11,
+  "sha256": "483d1f2ce4b46e4e90fb2acee1a6db29940fab7e4506e461f9614ddb42e6d371",
+  "helpExit": 0,
+  "inspectExit": 0,
+  "npmPublished": false,
+  "scope": "Actual package cwd npm pack, unpacked CLI --help and inspect in a directory without node_modules. No registry write."
+}

@@ -1,6 +1,6 @@
 # HarborVoice AI · Contribution Edition
 
-**Final Mastery release candidate · v2.2.0-rc.1.** A fictional logistics voice workbench plus recorded creative workflows, reusable AgentOps tooling, a static AgentProof failure explorer and developer education. [Evidence portfolio](docs/final-mastery/portfolio.md) · [119 capability rows](docs/final-mastery/capability-matrix.md) · [Publication dashboard](docs/final-mastery/publication-status.md).
+**Final Excellence release candidate · v2.2.0-rc.2.** A fictional logistics voice workbench plus recorded creative workflows, reusable AgentOps tooling, a static AgentProof failure explorer and developer education. [Final Dutch report](docs/final-excellence/FINAL-REPORT-NL.md) · [Complete inventory](docs/final-excellence/complete-inventory.md) · [Capability evidence](docs/final-excellence/capability-matrix.md) · [Actual publication status](docs/final-excellence/publication-verification.md).
 
 | Explore                                                                 | What it demonstrates                                                             | Validation boundary                                                                  |
 | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -37,9 +37,9 @@ Nora looks up synthetic shipments, explains source-grounded procedures and prepa
 
 ## Live workspace
 
-The [public Experience lab](https://harborvoice-ai.vercel.app/#experience-lab) offers real recordings, comparison takes, transcripts and a limited live visitor trial without an access code. The [hosted workbench](https://harborvoice-ai.vercel.app) has its ElevenLabs API and Nora agent configured server-side. Open **Settings**, enter your private operator access code, then verify the connection or start a live voice session. The public portfolio preview links to this workspace. Never paste the ElevenLabs API key into the browser.
+The [public static Experience lab](https://phlppgdfry.github.io/harborvoice-ai/#experience-lab) offers existing recordings, comparison takes and transcripts. The earlier bounded visitor trial has expired; the native Visitor agent still exists. The [protected hosted workbench](https://harborvoice-ai.vercel.app) uses server-side ElevenLabs configuration. Authorized operators can open **Settings** and use the existing operator sign-in. Never paste the ElevenLabs API key into the browser. New paid testing requires reconciled account liabilities and bounded reservations.
 
-Hosted workspace records stay in your browser; the serverless API handles live ElevenLabs requests. Hosted uploads are limited to 4 MiB, and webhook retention is disabled. The local server offers SQLite persistence and 20 MiB uploads. See [hosting](docs/hosting.md), [real agent evaluation](docs/agent-evaluation.json) and [LinkedIn recognition](docs/linkedin-recognition.md).
+The existing production deployment uses PostgreSQL and required operator authentication on a separate production branch, with draft PR #1 still open. Main's static Pages preview uses browser storage; its local development server uses SQLite. These environments must not be substituted for one another. See the [current architecture and acceptance audit](docs/final-excellence/technical-audit.md), [deployment receipt](docs/final-excellence/production-deployment.json) and [agent evidence](docs/final-excellence/agent-evaluation.md).
 
 ## Run locally
 

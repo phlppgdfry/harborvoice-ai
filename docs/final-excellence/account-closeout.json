@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-10T00:08:45.984Z",
+  "used": 108689,
+  "limit": 128715,
+  "remaining": 20026,
+  "maxCreditLimitExtension": 0,
+  "canExtend": false,
+  "currentOverage": {
+    "amount": "0",
+    "currency": "usd"
+  },
+  "observedAccountDelta": 0,
+  "newPaidDispatches": 0,
+  "attributableNewDispatchCredits": 0,
+  "safeBudgetEstablished": false,
+  "newDispatchCap": 0,
+  "pendingLiability": "unknown account-wide; historical holds retained",
+  "scope": "Observed account delta is not a per-job invoice. No paid request was submitted in Phase6."
+}

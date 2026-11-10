@@ -198,9 +198,10 @@ export default function CommunityStudio() {
               Download review EPUB
             </a>
             <p className="muted">
-              Prepared for owner and editorial review. Not submitted to
-              ElevenReader. No personal-author approval or provider acceptance
-              implied.
+              Submitted to ElevenReader as HarborVoice Project after owner
+              approval. Pending external review; no public listing or provider
+              acceptance verified. The downloadable EPUB is the imported
+              edition; subsequent native formatting edits are documented.
             </p>
           </div>
         </article>
@@ -338,18 +339,23 @@ export default function CommunityStudio() {
           {[
             [
               "Official Showcase",
-              "Fork and validated submission prepared; external PR not submitted.",
-              "showcase-submission.md",
+              "PR #113 submitted and open; maintainer CI authorization and review pending.",
+              "../publication-launch/showcase.md",
             ],
             [
               "Learning template",
-              "Native private template published and tested; Explore not submitted.",
-              "templates.md",
+              "Working native example submitted for Explore review; no Explore approval verified.",
+              "../publication-launch/explore.md",
             ],
             [
               "Launch & campaign templates",
-              "Existing native factories and input/output contracts; generic templates not published.",
-              "templates.md",
+              "Fixed English-to-Dutch/French campaign submitted for review. Product Launch withheld for output-quality defects.",
+              "../publication-launch/explore.md",
+            ],
+            [
+              "Official SDK contribution",
+              "PR #484 open with 29 offline tests and passing Bugbot; maintainer review required, not merged.",
+              "../publication-launch/open-source.md",
             ],
             [
               "Ambassador & Creator Partner",
