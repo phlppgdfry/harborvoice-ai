@@ -7,9 +7,11 @@
 - Phase-5 source integrated by a non-destructive branch merge: `b162f73c17b47f489e9d17c9dca2403646625701`.
 - Current live persistent Vercel source: `234281a806150a79b12220d182df3fc9e97534b9`; preserved.
 - Separate production draft PR #1: `ae15f1f99e4677d6eeea1d86f80b4b183c4ec8a6`; not merged or promoted.
-- Existing release `v2.2.0-rc.1` remains a prerelease; no stable production label is justified by this audit.
+- Existing release `v2.2.0-rc.1` remains historical; the new candidate is `v2.2.0-rc.2`. No stable production label is justified by this audit.
 
 Final delivery SHAs, PR/CI state and public-deployment verification are recorded in the post-commit machine receipts alongside this file. Local checks performed before committing necessarily test the working tree; exact GitHub CI is the evidence for a committed release. No self-referential claim that a commit contains its own final hash is made.
+
+Implementation commit `7df2684` passed [Verify](https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42726324172) and [Phase 3](https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42726324010). [PR #7](https://github.com/phlppgdfry/harborvoice-ai/pull/7) records the final merge state. The [release](https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.2.0-rc.2) carries exact final-main CI, public-deployment and downloaded-artifact receipts; the [source receipt](release-evidence.json) retains the verified implementation boundary. These links do not turn an unfinished production gate into acceptance.
 
 ## Executed verification
 

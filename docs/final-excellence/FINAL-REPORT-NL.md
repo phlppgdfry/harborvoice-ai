@@ -59,6 +59,8 @@ Zie [publicatieverificatie](publication-verification.md) voor de werkelijke vijf
 
 ## Productie, branches en beveiliging
 
+De fase-6-implementatie staat op `7df2684`; beide exacte GitHub-controles zijn geslaagd. [PR #7](https://github.com/phlppgdfry/harborvoice-ai/pull/7) bewaart de uiteindelijke mergegeschiedenis. De [releasecandidate v2.2.0-rc.2](https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.2.0-rc.2) bevat de definitieve CI-, publieke deployment- en artifactreceipts. Dat is softwarelevering; de hieronder genoemde productieacceptatie blijft afzonderlijk.
+
 De huidige Vercel-productie staat READY op exact **`234281a806150a79b12220d182df3fc9e97534b9`**. Verse API-controles bevestigen PostgreSQL en verplichte operatorauthenticatie; privé-eindpunten geven anoniem 401. Geen productieomgeving, credential, migratie of database is gewijzigd.
 
 Productie-PR **#1** blijft **OPEN DRAFT**, head `ae15f1f`. De bestaande deployment gate en uitgeschakelde automatische Vercel-Gitdeployments zijn behouden. De publieke GitHub Pages-demo is een afzonderlijke statische omgeving. De fase-6-branche en definitieve CI/publicatiecommits staan in [releasebewijs](release-evidence.md) en de bijbehorende actuele receipts; eerdere werkbranches zijn behouden en niet geforceerd herschreven.
