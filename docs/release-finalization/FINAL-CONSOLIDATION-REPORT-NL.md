@@ -1,10 +1,10 @@
 # Definitief consolidatierapport — HarborVoice AI
 
-Datum: 10 november 2026. Deze eerste vastlegging begeleidt de bronintegratie; de onafhankelijke merge-, CI- en releasebewijzen worden hieronder na publicatie aangevuld.
+Datum: 10 november 2026. Definitieve bron- en releaseverificatie; de afsluitende documentatiecommit verandert uitsluitend rapportage en receipts.
 
 ## 1. Samenvatting
 
-De bestaande ontwikkellijnen zijn lokaal samengebracht zonder geschiedenis te herschrijven. De publieke demo, AgentProof en AgentOps zijn technisch gevalideerd. Productieacceptatie blijft beperkt: de bestaande operatorcode geeft HTTP 401. Er is geen productiedeployment, live migratie of herstelactie uitgevoerd. Een stabiele v2.2.0 is uitsluitend bedoeld voor de publieke demo en ontwikkelaarstools.
+De bestaande ontwikkellijnen zijn via PR #1 op main samengebracht zonder geschiedenis te herschrijven. De publieke demo, AgentProof en AgentOps zijn technisch gevalideerd. Productieacceptatie blijft beperkt: de bestaande operatorcode geeft HTTP 401. Er is geen productiedeployment, live migratie of herstelactie uitgevoerd. v2.2.0 is gepubliceerd als stabiele release uitsluitend voor de publieke demo en ontwikkelaarstools.
 
 ## 2. Git voor en na
 
@@ -16,7 +16,7 @@ De productiebranch en productiewerkboom blijven nodig voor privéconfiguratie en
 
 ## 3. Productie-integratie
 
-PR #1 wordt met de volledige huidige main gereconcilieerd via een normale merge, zonder force-push. PostgreSQL, migraties, duurzame sessies, logoutrevocatie, transcriptopslag, import/verwijdering, foutafhandeling, beveiligingsheaders en de native SDK blijven behouden. AgentProof, AgentOps, Community Studio, EPUB-correcties, publicaties en creditgovernor uit fasen 4–6 blijven eveneens behouden. De Pages-workflow behoudt de gate op een geslaagde Verify-run; gepinde Actions uit de productiebranch blijven behouden.
+PR #1 is op 10 november 2026 om 03:48:50 UTC gemerged via een normale merge, zonder force-push. Exacte main-/releasebron: `b26d4010af417b2a770bb7a9395b12272500988f`; PR-head: `cd946b90c0676ce328c1ce1972a4449861149049`. De drie actuele PR-/pushgates waren groen vóór merge. PostgreSQL, migraties, duurzame sessies, logoutrevocatie, transcriptopslag, import/verwijdering, foutafhandeling, beveiligingsheaders en de native SDK blijven behouden. AgentProof, AgentOps, Community Studio, EPUB-correcties, publicaties en creditgovernor uit fasen 4–6 blijven eveneens behouden. De Pages-workflow behoudt de gate op een geslaagde Verify-run; gepinde Actions uit de productiebranch blijven behouden.
 
 De actieve Vercel-alias `harborvoice-ai.vercel.app` wijst op `dpl_C9wP3SGQr748FqB2ifTt3ruRtnTZ`, SHA `234281a806150a79b12220d182df3fc9e97534b9`. [Verse deploymentidentiteit](production-deployment.json) en [projecttargets](deployment-targets.json) zijn read-only opgehaald. Bestaande immutable deployment blijft het rollbackanker; rollback is niet uitgevoerd. `git.deploymentEnabled=false` blijft aan. Er is geen nieuw preview aangemaakt en geen productieconfiguratie gewijzigd.
 
@@ -53,7 +53,7 @@ Beschermde productie: publiek bereikbaar en private routes afgeschermd; bestaand
 
 ## 6. Pakket en release
 
-Voorbereid: v2.2.0 Stable — publieke demo/SDK-scope. AgentOps 0.2.0 wordt waar hashgelijkheid dit bevestigt uit rc.2 hergebruikt. AgentProof-distributie wordt alleen vernieuwd wanneer nieuwe buildprovenance dat vereist. Vite levert voortaan publiek `build-info.json` met exacte commit en projectversie; geen secrets of omgevingswaarden. Tags, CI, downloads en hashes moeten vóór definitieve publicatie onafhankelijk worden gecontroleerd. Definitieve bewijzen volgen in de closeoutsectie. Geen npm-publicatie.
+Gepubliceerd: [v2.2.0 Stable — publieke demo/SDK-scope](https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.2.0), 10 november 2026 03:53:56 UTC, geen draft en geen prerelease. AgentOps 0.2.0 is byte-identiek uit rc.2 hergebruikt: SHA-256 `483d1f2ce4b46e4e90fb2acee1a6db29940fab7e4506e461f9614ddb42e6d371`. Het pakket installeert in een leeg tijdelijk project met npm offline; CLI help/inspect en declarations slagen. AgentProof is opnieuw verpakt voor exacte mergebuild-/benchmarkprovenance: SHA-256 `df158499e4042f654b7eb5e48167bacf23ec3f8500b1805cdf40c19ac7ad3e67`. Bestaande applicatielogica/media zijn niet opnieuw gegenereerd. Vite levert voortaan publiek `build-info.json` met exacte commit en projectversie; geen secrets of omgevingswaarden. De tag is onafhankelijk via Git gecontroleerd op de exacte mergecommit. Anonieme downloads van pakket en AgentProof geven HTTP 200 en dezelfde lokaal berekende SHA-256 als GitHub Release-digests. [Onafhankelijk releasebewijs](release-verification.json). Release bevat SHA256SUMS en release-provenance.json; definitieve documentatie en closeoutreceipts worden aanvullend meegeleverd. Geen npm-publicatie.
 
 ## 7. Credits en resources
 
@@ -75,28 +75,38 @@ Niet-kritiek: grote lazy voicebundle geeft een Vite chunkwaarschuwing; geen blin
 
 ## 10. Aanbeveling en scorecard
 
-**Ja, als onderhoudbaar en professioneel openbaar demo-/ontwikkelaarstoolsproject; nee, als onvoorwaardelijk operationeel geaccepteerd productieplatform.** Bronintegratie en stabiele publicatie worden alleen afgerond na groene actuele CI en onafhankelijk releasebewijs.
+**Ja, als onderhoudbaar en professioneel openbaar demo-/ontwikkelaarstoolsproject; nee, als onvoorwaardelijk operationeel geaccepteerd productieplatform.** Bronintegratie en stabiele publicatie zijn afgerond met groene actuele CI op de exacte broncommit en onafhankelijk releasebewijs. De afsluitende metadata-update behoudt die implementatie.
 
-| Domein                 | Status                                | Bewijs                                        | Resterend werk                             |
-| ---------------------- | ------------------------------------- | --------------------------------------------- | ------------------------------------------ |
-| Git schoon             | closeout volgt                        | inventaris + eindstatus                       | definitieve commit                         |
-| Branchopruiming        | 9 oude branches verwijderd            | branch-cleanup.json                           | productie bewust behouden                  |
-| Commits gepusht        | closeout volgt                        | remote SHA                                    | definitieve push                           |
-| Pull requests verzoend | PR #1 geïntegreerde kandidaat         | originele reviews en gezamenlijke bron        | CI + merge                                 |
-| Main geïntegreerd      | closeout volgt                        | merge-SHA                                     | CI + merge                                 |
-| CI groen               | lokale tests groen                    | verification/                                 | exacte remote SHA controleren              |
-| AgentProof werkt       | bevestigd                             | browser-verification.json                     | geen blokkerend werk                       |
-| AgentOps werkt         | bevestigd                             | 40 tests + package-smoke                      | geen blokkerend werk                       |
-| Media geldig           | technisch bevestigd                   | media-audit.json, EPUBCheck                   | menselijke kwaliteitsacceptatie apart      |
-| Productieruntime       | gedeeltelijk bevestigd                | status PostgreSQL, auth 401                   | geldige operatorcode + authenticated check |
-| Databaseveiligheid     | geïsoleerd bevestigd                  | postgres.log + dump/restore                   | live backup/recovery-eigenaar              |
-| Deployment             | productie behouden                    | production-deployment.json                    | rollout vereist aparte goedkeuring         |
-| Documentatie           | actuele README hersteld               | huidige overview + historische reports intact | closeout                                   |
-| Security               | gerichte controles groen              | audit + tracked/history Gitleaks              | geen pentest/certificering geclaimd        |
-| Release                | demo/SDK stabiel voorbereid           | versie 2.2.0                                  | onafhankelijke publicatiecontrole          |
-| ElevenLabs-credits     | saldo bevestigd; spending geblokkeerd | 20.026, nul dispatch                          | liabilitysettlement/accountcoördinatie     |
-| Externe publicaties    | submitted; niet approved              | open upstream PRs, bestaande native receipts  | reviewers; native status herlezen          |
+| Domein                 | Status                                   | Bewijs                                     | Resterend werk                              |
+| ---------------------- | ---------------------------------------- | ------------------------------------------ | ------------------------------------------- |
+| Git schoon             | bron schoon na afsluitende commit        | eindstatusreceipt op release               | genegeerde privédata bewust behouden        |
+| Branchopruiming        | 9 oude branches, 6 werkbomen verwijderd  | branch-cleanup.json, worktree-cleanup.json | productiebranch bewust behouden             |
+| Commits gepusht        | bronmerge op main; metadata afzonderlijk | b26d401; eindstatusreceipt                 | geen ongepushte implementatie               |
+| Pull requests verzoend | PR #1 MERGED; geen eigen PR open         | GitHub PR #1                               | upstream PRs blijven open                   |
+| Main geïntegreerd      | bevestigd                                | b26d401 bevat beide lijnen                 | geen bronblokkade                           |
+| CI groen               | exacte releasebron groen                 | Verify 42751845741; phase3 42751846044     | metadata-CI in release-closeout             |
+| AgentProof werkt       | bevestigd                                | browser-verification.json                  | geen blokkerend werk                        |
+| AgentOps werkt         | bevestigd                                | 40 tests, package-install.json             | geen blokkerend werk                        |
+| Media geldig           | technisch bevestigd                      | 67 decodes, EPUBCheck foutloos             | menselijke kwaliteit apart                  |
+| Productieruntime       | gedeeltelijk bevestigd                   | PostgreSQL-status, auth 401                | geldige operatorcode en authenticated check |
+| Databaseveiligheid     | geïsoleerd bevestigd                     | postgres.log, pg_dump/restore              | live backup- en recoveryacceptatie          |
+| Deployment             | productie ongewijzigd; Pages groen       | deployment-SHA en build-info               | rollout vereist aparte goedkeuring          |
+| Documentatie           | actuele README en Nederlands rapport     | nul ontbrekende lokale README-doelen       | historische URLs blijven tijdgebonden       |
+| Security               | gerichte controles groen                 | npm audit, tracked/history Gitleaks        | geen pentest/certificering geclaimd         |
+| Release                | stabiele demo/toolrelease gepubliceerd   | v2.2.0, HTTP 200, beide hashes gelijk      | productieacceptatie apart                   |
+| ElevenLabs-credits     | 20.026 bevestigd; nul nieuwe dispatch    | provider-readonly.json                     | liabilitysettlement/accountcoördinatie      |
+| Externe publicaties    | ingediend; geen approval geclaimd        | open upstream PRs en native receipts       | reviewers; native status herlezen           |
 
 ## Onafhankelijke closeout
 
-Wordt na merge, actuele CI en releaseverificatie aangevuld.
+PR #1 is gemerged. Verify [42751845741](https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42751845741), Phase 3 [42751846044](https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42751846044) en Pages [42752040924](https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42752040924) zijn geslaagd voor `b26d4010af417b2a770bb7a9395b12272500988f`. Publiek build-info.json meldde exact deze SHA en versie 2.2.0; de nieuwe publieke build doorliep opnieuw de zes browsercontrolegroepen zonder pageerrors. De beschermde alias bleef onafhankelijk op dpl_C9wP3SGQr748FqB2ifTt3ruRtnTZ / 234281a806150a79b12220d182df3fc9e97534b9.
+
+De afsluitende commit bevat uitsluitend deze rapportage en receipts. De release-tag blijft onveranderd op de geteste implementatiemerge; definitieve main-/werkboom-/CI-identiteiten worden na die commit als afzonderlijke release-assets vastgelegd om een circulaire zelfreferentie in Git te vermijden. De hoofdwerkboom wordt op main gezet; de tijdelijke consolidatiebranch wordt veilig verwijderd. De productiebranch bevat geen unieke broncommits meer, maar blijft bewust staan zolang operator-, backup-/recovery- en privacyacceptatie niet zijn afgerond.
+
+Statusonderscheid: **SOURCE COMPLETE** voor de geconsolideerde implementatie; **DEMO COMPLETE** binnen de geautomatiseerde testscope; **PRODUCTION ACCEPTED: NEE**; **PUBLICATION SUBMITTED: JA** voor de vastgelegde inzendingen; **EXTERNALLY APPROVED: NIET VASTGESTELD**. Het project is overdraagbaar zonder deze grenzen te verhullen.
+
+De lokale browserjourneys voegden synthetische demoactiviteiten toe aan de bestaande genegeerde lokale SQLite-workspace. Die werkboom/data zijn niet verwijderd; productie- en archiefdatabases zijn niet door deze browserjourneys gebruikt. Voor een volledig verse lokale demo kan een eigenaar bewust een nieuw SQLITE_PATH kiezen; bestaande data worden niet automatisch gewist.
+
+GitHub main heeft op het auditmoment geen branch protection (API 404 Branch not protected). Geen administratieve instelling is gewijzigd. Een beschermde PR-workflow kan de eigenaar later afzonderlijk activeren na beoordeling van het effect op CI en hersteltoegang.
+
+Privéarchieven herstellen: controleer eerst de SHA-256 uit worktree-cleanup.json en lees de inhoud met `tar -tzf`. Pak uitsluitend uit naar een nieuwe lege privémap, vergelijk de private manifesthashes en selecteer daarna bewust benodigde bestanden. Herstel geen database over productie; volg daarvoor afzonderlijk de deployment-/recoveryprocedure en vraag eigenaarsgoedkeuring.

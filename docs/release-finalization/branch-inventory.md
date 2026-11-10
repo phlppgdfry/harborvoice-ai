@@ -18,3 +18,5 @@ Baseline: origin/main `1c6c17c416c42cd095006b8025adc33326e7b403`. Counts are ahe
 | `production/persistent-runtime`       | True  | True   | `ae15f1f99e4677d6eeea1d86f80b4b183c4ec8a6` | 8/17         | #1 OPEN   | unique commits | /private/tmp/harborvoice-excellence-production-check<br>/Users/philippegodfroy/harborvoice-production-review | ?? node_modules, ;      | False                                     | 8 unique; local unpushed 0   |
 
 Ignored state and worktree locations: see worktree-inventory.json. Credentials are never copied into tracked evidence. Production branch is retained until operational gates are accepted.
+
+Cleanup completed after inventory: nine fully contained remote/local branches deleted; six obsolete worktrees removed after verified private archival. Exact original tips and outcomes: [branch-cleanup.json](branch-cleanup.json), [worktree-cleanup.json](worktree-cleanup.json). Main and production refs remain; consolidation is temporary and local only.

@@ -1,0 +1,9 @@
+{
+  "source": "v2.2.0-rc.2 unchanged package",
+  "install": "npm install --offline --ignore-scripts in disposable empty project",
+  "installExit": 0,
+  "helpExit": 0,
+  "inspectExit": 0,
+  "typesPresent": true,
+  "providerCalls": 0
+}

@@ -1,0 +1,45 @@
+{
+  "productionDeployments": [
+    {
+      "uid": "dpl_FfjdJiajtPPdQDCANSUBCxQGMm77",
+      "url": "harborvoice-o81f1yiss-kippiegs-projects.vercel.app",
+      "created": 1794184321899,
+      "state": "READY",
+      "target": "production",
+      "commit": "38751afaa9b303f51300e9df83a77d13d0eb1286"
+    },
+    {
+      "uid": "dpl_Gpd2XxSx7s9tnUk8McFDr5zYAEXN",
+      "url": "harborvoice-n44p4lw5e-kippiegs-projects.vercel.app",
+      "created": 1794183895307,
+      "state": "READY",
+      "target": "production",
+      "commit": "b12932847085363ea892226ce4beae20d02e61b2"
+    },
+    {
+      "uid": "dpl_C9wP3SGQr748FqB2ifTt3ruRtnTZ",
+      "url": "harborvoice-qzt51h8is-kippiegs-projects.vercel.app",
+      "created": 1794181563099,
+      "state": "READY",
+      "target": "production",
+      "commit": "234281a806150a79b12220d182df3fc9e97534b9"
+    },
+    {
+      "uid": "dpl_GgX7dQR8gVxVJx2DR3KgXHmUJA9A",
+      "url": "harborvoice-1weas5zn1-kippiegs-projects.vercel.app",
+      "created": 1794179226164,
+      "state": "ERROR",
+      "target": "production",
+      "commit": null
+    },
+    {
+      "uid": "dpl_4UDEzDTvnLFqoAQzfygRgseJda4V",
+      "url": "harborvoice-ifzpcma5f-kippiegs-projects.vercel.app",
+      "created": 1794165579162,
+      "state": "READY",
+      "target": "production",
+      "commit": "a5b7c206114772129253391c62be22d1bee81dba"
+    }
+  ],
+  "scope": "Read-only list after source push. No deployment created by consolidation."
+}

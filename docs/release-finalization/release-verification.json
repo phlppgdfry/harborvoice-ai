@@ -1,0 +1,29 @@
+{
+  "release": {
+    "tagName": "v2.2.0",
+    "url": "https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.2.0",
+    "publishedAt": "2026-11-10T03:53:56Z",
+    "isDraft": false,
+    "isPrerelease": false,
+    "targetCommitish": "b26d4010af417b2a770bb7a9395b12272500988f"
+  },
+  "downloads": [
+    {
+      "name": "harborvoice-agentops-kit-0.2.0.tgz",
+      "status": 200,
+      "bytes": 12146,
+      "sha256": "483d1f2ce4b46e4e90fb2acee1a6db29940fab7e4506e461f9614ddb42e6d371",
+      "matches": true,
+      "anonymousDownload": true
+    },
+    {
+      "name": "harborvoice-agentproof-2.2.0.zip",
+      "status": 200,
+      "bytes": 225832,
+      "sha256": "df158499e4042f654b7eb5e48167bacf23ec3f8500b1805cdf40c19ac7ad3e67",
+      "matches": true,
+      "anonymousDownload": true
+    }
+  ],
+  "scope": "Independent anonymous GitHub release downloads; actual SHA-256 equals locally verified package/ZIP and release API digests. Exact Git tag checked independently."
+}

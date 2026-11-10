@@ -1,0 +1,154 @@
+{
+  "scope": "Current README local link targets; no blanket historical URL guarantee",
+  "results": [
+    {
+      "path": "docs/release-finalization/FINAL-CONSOLIDATION-REPORT-NL.md",
+      "exists": true
+    },
+    {
+      "path": "docs/final-excellence/complete-inventory.md",
+      "exists": true
+    },
+    {
+      "path": "docs/final-excellence/capability-matrix.md",
+      "exists": true
+    },
+    {
+      "path": "docs/final-excellence/publication-verification.md",
+      "exists": true
+    },
+    {
+      "path": "packages/agentops-kit",
+      "exists": true
+    },
+    {
+      "path": "community/elevenlabs-belgium",
+      "exists": true
+    },
+    {
+      "path": "public/elite/commercial-en.mp4",
+      "exists": true
+    },
+    {
+      "path": "docs/elite/capability-matrix.md",
+      "exists": true
+    },
+    {
+      "path": "docs/elite/release-report.md",
+      "exists": true
+    },
+    {
+      "path": "public/elite/film-poster.jpg",
+      "exists": true
+    },
+    {
+      "path": "docs/recognition/final-report.md",
+      "exists": true
+    },
+    {
+      "path": "docs/elite/architecture.md",
+      "exists": true
+    },
+    {
+      "path": "docs/elite/cli.md",
+      "exists": true
+    },
+    {
+      "path": "docs/elite/synchronization.md",
+      "exists": true
+    },
+    {
+      "path": "SECURITY.md",
+      "exists": true
+    },
+    {
+      "path": "docs/elite/creative-production.md",
+      "exists": true
+    },
+    {
+      "path": "docs/release-finalization/production-deployment.json",
+      "exists": true
+    },
+    {
+      "path": "docs/final-excellence/technical-audit.md",
+      "exists": true
+    },
+    {
+      "path": "docs/final-excellence/production-deployment.json",
+      "exists": true
+    },
+    {
+      "path": "docs/final-excellence/agent-evaluation.md",
+      "exists": true
+    },
+    {
+      "path": "docs/feature-coverage.md",
+      "exists": true
+    },
+    {
+      "path": "docs/architecture.md",
+      "exists": true
+    },
+    {
+      "path": "docs/academy-audio-evidence.json",
+      "exists": true
+    },
+    {
+      "path": "docs/academy-native-evidence.json",
+      "exists": true
+    },
+    {
+      "path": "docs/academy-creative-evidence.json",
+      "exists": true
+    },
+    {
+      "path": "docs/academy-pronunciation-evidence.json",
+      "exists": true
+    },
+    {
+      "path": "docs/recognition-research.md",
+      "exists": true
+    },
+    {
+      "path": "packages/agentops-kit/README.md",
+      "exists": true
+    },
+    {
+      "path": "apps/agentproof/README.md",
+      "exists": true
+    },
+    {
+      "path": "benchmarks/voice-ai/README.md",
+      "exists": true
+    },
+    {
+      "path": "community/elevenlabs-belgium/README.md",
+      "exists": true
+    },
+    {
+      "path": "docs/phase3/articles",
+      "exists": true
+    },
+    {
+      "path": "docs/final-mastery/pre-phase4-audit.md",
+      "exists": true
+    },
+    {
+      "path": "docs/release-finalization/branch-inventory.md",
+      "exists": true
+    },
+    {
+      "path": "docs/release-finalization/FINAL-CONSOLIDATION-REPORT-NL.md",
+      "exists": true
+    },
+    {
+      "path": "docs/security.md",
+      "exists": true
+    },
+    {
+      "path": "docs/deployment.md",
+      "exists": true
+    }
+  ],
+  "missing": 0
+}

@@ -1,0 +1,62 @@
+
+> harborvoice-ai@2.2.0 build
+> tsc --noEmit && vite build && npm run build:agentproof
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 2259 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/build-info.json                               0.07 kB │ gzip:   0.09 kB
+dist/index.html                                    0.97 kB │ gzip:   0.58 kB
+dist/assets/audioConcatProcessor-uPSNaV9j.js       3.66 kB
+dist/assets/rawAudioProcessor-m_FxNOBg.js          3.97 kB
+dist/assets/Manrope-DIRNzeTG.ttf                 164.70 kB
+dist/assets/DMSans-OkNhvBry.ttf                  240.16 kB
+dist/assets/libsamplerate.worklet-BCDdbA-T.js  2,016.42 kB
+dist/assets/EliteStudio-BZYDcmyO.css               2.52 kB │ gzip:   0.85 kB
+dist/assets/CommunityStudio-DLNaFzuS.css           3.86 kB │ gzip:   1.18 kB
+dist/assets/MasteryLab-CuJVNOV6.css                5.27 kB │ gzip:   1.55 kB
+dist/assets/index-a81wPfid.css                    31.16 kB │ gzip:   7.64 kB
+dist/assets/circle-check-C5sA8Snq.js               0.23 kB │ gzip:   0.20 kB
+dist/assets/volume-2-b2IMDF1A.js                   0.78 kB │ gzip:   0.40 kB
+dist/assets/PortfolioEvidence-BiMeBj-M.js          7.27 kB │ gzip:   2.55 kB
+dist/assets/ConnectionSettings-qgVF7d9n.js         7.68 kB │ gzip:   2.81 kB
+dist/assets/ExperienceLab-Cilu2jzb.js             12.08 kB │ gzip:   4.06 kB
+dist/assets/AudioStudio-VP8dtN-J.js               13.12 kB │ gzip:   4.66 kB
+dist/assets/remediation-BpGS9ycO.js               14.05 kB │ gzip:   1.93 kB
+dist/assets/CommunityStudio-Dvn-zFl4.js           15.76 kB │ gzip:   5.91 kB
+dist/assets/EliteStudio-DYlzziF7.js               23.31 kB │ gzip:   8.01 kB
+dist/assets/Academy-8oNLrDl_.js                   31.64 kB │ gzip:  11.98 kB
+dist/assets/MasteryLab-BR3GDkeR.js                42.59 kB │ gzip:  14.48 kB
+dist/assets/index-bl7quiDd.js                    354.54 kB │ gzip: 109.01 kB
+dist/assets/VoiceAgent-BUWmrWJR.js               617.44 kB │ gzip: 162.77 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.06s
+
+> harborvoice-ai@2.2.0 build:agentproof
+> node --import tsx scripts/final-mastery/build-agentproof.ts
+
+Validated 110 scenarios; wrote baseline, candidate and historical evidence.
+12 multilingual adversarial contracts: 3 accepted controls, 9 detected failures; zero provider calls.
+
+> agentproof-pilot@0.2.0 build
+> tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 5 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.70 kB │ gzip: 0.42 kB
+dist/assets/Inter-ipl4pJhC.ttf  419.74 kB
+dist/assets/index-B-Rm4tuW.css    8.11 kB │ gzip: 2.58 kB
+dist/assets/index-DZ5G9ByY.js    14.87 kB │ gzip: 5.86 kB
+
+✓ built in 47ms
+Static AgentProof bundled at /agentproof/.
