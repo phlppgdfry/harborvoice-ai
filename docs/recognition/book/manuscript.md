@@ -4,6 +4,8 @@ A practical engineering case study with HarborVoice
 
 Review edition · November 2026 · HarborVoice Project
 
+Case-study scope: the original implementation and measurements in this book describe the v2.0 and v2.1 engineering work of 7–8 November 2026. Later project revisions can differ. The examples are historical observations, not a description of a currently accepted production service.
+
 This is an independent educational manuscript. It describes a fictional logistics application and actual engineering observations. It is not an official ElevenLabs publication, certification, deployment endorsement or promise of production readiness. The author byline, rights declarations and submission metadata require owner review before external publication.
 
 ## Introduction: the answer and the decision
@@ -172,7 +174,7 @@ Knowledge updates need their own lifecycle. Preserve document identifiers where 
 
 Deployment checks should follow the exact commit. A successful build from an earlier commit is not evidence for the current one. The Vercel publication gate checks the repository's Verify workflow for the deployment SHA and stops on failure or an unresolved result. The Pages workflow follows a successful verified commit. Post-deployment browser tests then establish that the published files and API behavior actually work.
 
-Native creative synchronization is less complete. The final film masters were uploaded as native Flow assets, while the editable Studio caption project retained an earlier source cut. Those are two real resources at different revisions. Calling them in sync would be misleading. Where the platform does not provide lossless round-trip serialization, keep a clear manual-action status and describe exactly what remains.
+Native creative synchronization was less complete at the original release. The final film masters were uploaded as native Flow assets, while the editable Studio caption project initially retained an earlier source cut. Those were two real resources at different revisions. Later, on 9 November 2026, the project replaced that source and verified a corrected native export after removing a duplicate caption overlay. This repair does not establish lossless round-trip serialization. Where the platform does not provide that capability, keep a clear manual-action status and describe exactly what remains.
 
 Secrets should never become synchronization artifacts. Keep API keys, OAuth tokens, private access codes and expiring signed media links out of the public repository. A signed download URL is a temporary capability, not durable provenance. Store a safe resource identifier and a hash of a project-owned download instead. CI should validate source and documentation without running paid generation on every push.
 

@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-09T22:47:57.536815+00:00",
+  "learning": {
+    "id": "DkSzGeLnRPG557cTaRSf",
+    "reopened": true,
+    "nativeSharing": "Link only",
+    "nativePublishedDate": "9 nov",
+    "reviewEvidence": "Earlier actual Submitted for Explore review confirmation retained; no new moderation decision or Explore visibility exposed in reopened editor."
+  },
+  "multilingual": {
+    "id": "autfYixTUdY8eSnjlDOb",
+    "reopenedAfterReload": true,
+    "nativeSharing": "Link only",
+    "nativePublishedDate": "9 nov",
+    "inputHelpRetained": true,
+    "reviewEvidence": "Earlier actual Submitted for Explore review confirmation retained; no new moderation decision or Explore visibility exposed in reopened editor."
+  },
+  "elevenreader": {
+    "id": "CJgq6QXO12sRReayiBoG",
+    "reopenedAfterReload": true,
+    "nativeStatus": "Pending review",
+    "actions": ["Edit submission", "Withdraw submission"]
+  },
+  "publicApprovalClaimed": false
+}

@@ -32,7 +32,35 @@ export default function PortfolioEvidence() {
           </a>{" "}
           ·{" "}
           <a href="https://github.com/phlppgdfry/harborvoice-ai/blob/main/docs/final-mastery/publication-status.md">
-            Publication status
+            Historical publication baseline
+          </a>
+        </p>
+      </section>
+      <section className="panel padded">
+        <h2>Publication review · 10 November 2026</h2>
+        <p>
+          Two Explore templates and the ElevenReader book have been submitted
+          for external review. Showcase PR #113 and official SDK PR #484 are
+          open. Submission is separate from approval; no official recognition
+          has been verified.
+        </p>
+        <p>
+          Product Launch remains withheld because its example did not preserve
+          the product image or demonstrate the requested narration. Three
+          original music tracks are available for review; no Marketplace listing
+          has been verified.
+        </p>
+        <p>
+          <a href="https://github.com/elevenlabs/showcase/pull/113">
+            Showcase review
+          </a>
+          {" · "}
+          <a href="https://github.com/elevenlabs/elevenlabs-js/pull/484">
+            SDK contribution
+          </a>
+          {" · "}
+          <a href="https://github.com/phlppgdfry/harborvoice-ai/blob/final/elevenlabs-excellence/docs/final-excellence/FINAL-REPORT-NL.md">
+            Final audit and limitations
           </a>
         </p>
       </section>

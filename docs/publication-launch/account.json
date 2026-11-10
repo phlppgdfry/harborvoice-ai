@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-09T22:43:47.594Z",
+  "used": 108689,
+  "limit": 128715,
+  "remaining": 20026,
+  "tier": "creator",
+  "canExtend": false,
+  "currentOverage": null,
+  "phase5PaidDispatches": 3,
+  "authorizedTemplateRuns": 2,
+  "authorizedTemplateCharge": 14844,
+  "unintendedBookPreviewCharge": 287,
+  "approvedMaximumCredits": 16500,
+  "approvedScope": "One native template run each: Product Launch and fixed NL/FR campaign; no retries",
+  "phase4BaselineRemaining": 35157,
+  "deltaSincePhase4": -15131,
+  "retainedReservations": {
+    "elite": 44850.04,
+    "recognition": 21756,
+    "phase4": 5800
+  },
+  "scope": "Read-only subscription snapshot. Historical reservation envelopes overlap observed billing; not additive unpaid invoices. No holds released. No global pending-job enumeration available."
+}

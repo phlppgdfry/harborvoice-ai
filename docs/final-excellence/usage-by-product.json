@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-09T23:12:01.259Z",
+  "status": 200,
+  "scope": "Deprecated read-only usage endpoint retained for comparability with historical audit. Aggregate usage is not per-job or session attribution.",
+  "data": {
+    "time": [1792800000],
+    "usage": {}
+  }
+}

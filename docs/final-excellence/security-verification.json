@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-10T00:08:09.948518+00:00",
+  "dependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "gitleaksFindingCount": 0,
+  "gitleaksScope": "gitleaks dir . --redact --no-banner; whole isolated checkout directory; ignored dependency symlinks and Git history are not a complete history/secret guarantee",
+  "scope": "Scoped automated checks, not a security certification."
+}

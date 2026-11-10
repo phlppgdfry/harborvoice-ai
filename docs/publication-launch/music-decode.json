@@ -1,0 +1,56 @@
+[
+  {
+    "id": "future-systems",
+    "fullDecode": "PASS",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "48000",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "60.024000"
+      }
+    }
+  },
+  {
+    "id": "northern-lights",
+    "fullDecode": "PASS",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "48000",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "60.024000"
+      }
+    }
+  },
+  {
+    "id": "human-intelligence",
+    "fullDecode": "PASS",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "48000",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "60.024000"
+      }
+    }
+  }
+]

@@ -1,0 +1,60 @@
+
+> harborvoice-agentops-kit@0.2.0 check
+> npm run build && npm test
+
+
+> harborvoice-agentops-kit@0.2.0 build
+> tsc -p tsconfig.json
+
+
+> harborvoice-agentops-kit@0.2.0 test
+> tsc -p tsconfig.test.json && node --import tsx --test test/*.test.ts
+
+✔ redacts nested secrets and URL credentials (0.943583ms)
+✔ canonical version independent of key order (0.142167ms)
+✔ diff sees secret rotation without revealing values (0.17ms)
+✔ removed tools marked potentially breaking (0.126333ms)
+✔ heuristics flag explicit auth and insecure URLs (0.776375ms)
+✔ budget blocks absent coordination and stale balances (0.160125ms)
+✔ budget preserves other commitments, floor and buffer (0.07425ms)
+✔ budget rejects invalid numbers and ceiling (0.18475ms)
+✔ failed reservations remain liabilities (0.073458ms)
+✔ evaluation detects incorrect tool and regression (0.662334ms)
+✔ transport failures redact private error and never retry (0.190083ms)
+✔ bounds repeats and duplicate IDs (0.143375ms)
+✔ Wilson interval handles small samples and empty counts (0.085208ms)
+✔ HTML escapes script payload (0.154375ms)
+✔ reservation proposals are immutable and consume capacity (0.128875ms)
+✔ duplicate operation cannot dispatch again (0.049458ms)
+✔ receipt below estimate retains liability until confirmed final (0.138875ms)
+✔ receipt above estimate increases liability (0.043459ms)
+✔ failed operation retains conservative liability (0.038917ms)
+✔ uncoordinated reservations rejected (0.038542ms)
+✔ corrupt imported reservation cannot expand capacity (0.0485ms)
+✔ account reset requires reconciliation (0.034666ms)
+✔ provider identity and final receipt cannot be reopened (0.06175ms)
+✔ inspector supports SDK-normalized and raw configuration fields (0.097459ms)
+✔ JSON-imported string numbers and missing budget fields fail closed (0.062666ms)
+✔ official client structural adapter uses mock transport and redacts (1.471833ms)
+✔ invalid ID fails before transport (0.248417ms)
+✔ native adapter fails closed without account-wide guard (0.182041ms)
+✔ native adapter respects denied reservation before provider call (0.118667ms)
+✔ native adapter uses official request and persists invocation under guard (0.849333ms)
+✔ native adapter bounds repeats and requires isolated branch (0.147167ms)
+✔ guard cannot dispatch same operation twice (0.138083ms)
+✔ native receipt read is separate and never submits a run (0.110208ms)
+✔ offline importer preserves provenance and excludes raw transcript/secrets (0.946708ms)
+✔ SDK camelCase and explicit zero credit receipts are supported (0.1165ms)
+✔ missing, partial, pending and historical costs never become zero final bills (0.191042ms)
+✔ wrong identity, unmapped tests, duplicate runs and malformed costs fail closed (0.529875ms)
+✔ cancelled and failed terminal receipts retain failure and known billing (0.148ms)
+✔ a plausible outcome with wrong tool arguments and invented facts fails (0.880833ms)
+✔ missing structured evidence fails; exact verified contract passes (0.156416ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 103.529

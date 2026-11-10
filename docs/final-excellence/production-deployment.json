@@ -1,0 +1,16 @@
+{
+  "id": "dpl_C9wP3SGQr748FqB2ifTt3ruRtnTZ",
+  "url": "harborvoice-qzt51h8is-kippiegs-projects.vercel.app",
+  "readyState": "READY",
+  "target": "production",
+  "gitSource": {
+    "ref": "production/persistent-runtime",
+    "repoId": 1449019827,
+    "sha": "234281a806150a79b12220d182df3fc9e97534b9",
+    "type": "github",
+    "prId": null
+  },
+  "aliases": null,
+  "checkedAt": "2026-11-09T23:15:49.789026+00:00",
+  "scope": "Official Vercel CLI read-only API GET. No deployment, environment update or migration."
+}

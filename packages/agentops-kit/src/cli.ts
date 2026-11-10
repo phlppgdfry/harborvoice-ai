@@ -23,6 +23,13 @@ try {
   };
   let output: unknown;
   switch (command) {
+    case undefined:
+    case "help":
+    case "--help":
+      console.log(
+        "Usage: agentops inspect|validate config.json; diff|drift before.json after.json; budget policy.json; import-native receipt.json expected.json; report evidence.json [json|markdown|html]. Tests use evaluate() with an explicit transport. No provider calls are made by this CLI.",
+      );
+      break;
     case "import-native":
       output = importNativeReceipt(
         read(a),

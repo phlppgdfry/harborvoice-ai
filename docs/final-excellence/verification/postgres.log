@@ -1,0 +1,15 @@
+
+> harborvoice-ai@2.1.0 test:postgres
+> node --import tsx scripts/test-postgres.ts
+
+✔ production config rejects demo storage, weak secrets and invalid public origin (1.796458ms)
+✔ PostgreSQL migration, concurrency, rollback, restart and production authorization (243.845417ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3849.847459
+PASS: real pg_dump/pg_restore round trip on the disposable synthetic database

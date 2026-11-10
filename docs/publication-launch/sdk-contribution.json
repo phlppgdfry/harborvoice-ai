@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-11-09T17:51:29.734869+00:00",
+  "upstream": "elevenlabs/elevenlabs-js",
+  "branch": "docs/offline-tool-contracts",
+  "head": "c3ae2441e88543335197e47e6f21b45716af41b0",
+  "pr": 484,
+  "url": "https://github.com/elevenlabs/elevenlabs-js/pull/484",
+  "state": "open",
+  "draft": false,
+  "tests": 29,
+  "build": "passed",
+  "lint": "passed",
+  "format": "passed",
+  "strictTypecheck": "passed",
+  "check": {
+    "Cursor Bugbot": "success"
+  },
+  "fullIntegrationTests": "Not run: credential-dependent and potentially paid",
+  "humanReviews": []
+}

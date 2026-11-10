@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-09T23:06:14.226Z",
+  "httpStatus": 200,
+  "tier": "creator",
+  "status": "active",
+  "used": 108689,
+  "limit": 128715,
+  "remaining": 20026,
+  "canExtend": false,
+  "maxCreditLimitExtension": 0,
+  "allowedToExtend": false,
+  "currentOverage": {
+    "amount": "0",
+    "currency": "usd"
+  },
+  "nextReset": 1796610620,
+  "billingPeriod": "monthly_period",
+  "refreshPeriod": "monthly_period",
+  "hasOpenInvoices": false,
+  "rollover": "not established by subscription response"
+}

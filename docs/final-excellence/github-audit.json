@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-10T00:08:09.948518+00:00",
+  "showcase": {
+    "headRefOid": "70303407af6656fc178700e4b2c043cfba0cff43",
+    "isDraft": false,
+    "mergedAt": null,
+    "number": 113,
+    "reviewDecision": "",
+    "state": "OPEN",
+    "url": "https://github.com/elevenlabs/showcase/pull/113"
+  },
+  "sdk": {
+    "headRefOid": "c3ae2441e88543335197e47e6f21b45716af41b0",
+    "isDraft": false,
+    "mergedAt": null,
+    "number": 484,
+    "reviewDecision": "REVIEW_REQUIRED",
+    "state": "OPEN",
+    "url": "https://github.com/elevenlabs/elevenlabs-js/pull/484"
+  },
+  "scope": "Fresh public PR metadata; review/check narrative based on additional gh pr view inspection in this session. No messages or mutations to upstream."
+}

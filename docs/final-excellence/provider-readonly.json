@@ -1,0 +1,212 @@
+{
+  "checkedAt": "2026-11-09T23:08:48.937Z",
+  "subscription": {
+    "path": "/v1/user/subscription",
+    "status": 200,
+    "data": {
+      "tier": "creator",
+      "status": "active",
+      "character_count": 108689,
+      "character_limit": 128715,
+      "max_credit_limit_extension": 0,
+      "can_extend_character_limit": false,
+      "allowed_to_extend_character_limit": false,
+      "current_overage": {
+        "amount": "0",
+        "currency": "usd"
+      },
+      "next_character_count_reset_unix": 1796610620,
+      "billing_period": "monthly_period",
+      "character_refresh_period": "monthly_period",
+      "has_open_invoices": false,
+      "remaining": 20026
+    }
+  },
+  "resources": [
+    {
+      "path": "/v1/flows/templates",
+      "status": 402
+    },
+    {
+      "path": "/v1/studio/projects",
+      "status": 403
+    },
+    {
+      "path": "/v1/convai/agents?page_size=100",
+      "status": 200,
+      "data": {
+        "agents": [
+          {
+            "agent_id": "agent_8101m6vpg98dfwws14ng5nm6myws",
+            "name": "HarborVoice · Nora Visitor Trial",
+            "archived": false
+          },
+          {
+            "agent_id": "agent_6901m6t6k3tpfnk9n2z3q2h1et7a",
+            "name": "HarborVoice · Nora",
+            "archived": false
+          }
+        ],
+        "has_more": false
+      }
+    },
+    {
+      "path": "/v1/models",
+      "status": 200,
+      "data": [
+        {
+          "model_id": "eleven_v4",
+          "name": "Eleven v4",
+          "can_do_text_to_speech": true,
+          "can_do_voice_conversion": false
+        },
+        {
+          "model_id": "eleven_v4_turbo",
+          "name": "Eleven v4 Turbo",
+          "can_do_text_to_speech": true,
+          "can_do_voice_conversion": false
+        },
+        {
+          "model_id": "eleven_v3",
+          "name": "Eleven v3",
+          "can_do_text_to_speech": true,
+          "can_do_voice_conversion": false
+        },
+        {
+          "model_id": "eleven_v3_conversational",
+          "name": "Eleven v3 Conversational",
+          "can_do_text_to_speech": true,
+          "can_do_voice_conversion": false
+        },
+        {
+          "model_id": "eleven_multilingual_v2",
+          "name": "Eleven Multilingual v2",
+          "can_do_text_to_speech": true,
+          "can_do_voice_conversion": false
+        },
+        {
+          "model_id": "eleven_flash_v2_5",
+          "name": "Eleven Flash v2.5",
+          "can_do_text_to_speech": true,
+          "can_do_voice_conversion": false
+        },
+        {
+          "model_id": "eleven_turbo_v2_5",
+          "name": "Eleven Turbo v2.5",
+          "can_do_text_to_speech": true,
+          "can_do_voice_conversion": false
+        },
+        {
+          "model_id": "eleven_turbo_v2",
+          "name": "Eleven Turbo v2",
+          "can_do_text_to_speech": true,
+          "can_do_voice_conversion": false
+        },
+        {
+          "model_id": "eleven_flash_v2",
+          "name": "Eleven Flash v2",
+          "can_do_text_to_speech": true,
+          "can_do_voice_conversion": false
+        },
+        {
+          "model_id": "eleven_english_sts_v2",
+          "name": "Eleven English v2",
+          "can_do_text_to_speech": false,
+          "can_do_voice_conversion": true
+        },
+        {
+          "model_id": "eleven_multilingual_sts_v2",
+          "name": "Eleven Multilingual v2",
+          "can_do_text_to_speech": false,
+          "can_do_voice_conversion": true
+        }
+      ]
+    },
+    {
+      "name": "Gate & collection procedures",
+      "path": "/v1/convai/knowledge-base/0cWKuMvzyVrMJrwsZGIh",
+      "status": 200,
+      "data": {
+        "exists": true
+      }
+    },
+    {
+      "name": "Customs & exception playbook",
+      "path": "/v1/convai/knowledge-base/lqeVB5zAbP3PX07ycuTj",
+      "status": 200,
+      "data": {
+        "exists": true
+      }
+    },
+    {
+      "name": "Multilingual service guide",
+      "path": "/v1/convai/knowledge-base/upJ1H8u8g9Y5DcYmmuAA",
+      "status": 200,
+      "data": {
+        "exists": true
+      }
+    },
+    {
+      "name": "Disruption response",
+      "path": "/v1/convai/knowledge-base/BQTtheyqkToDdsLG8xmZ",
+      "status": 200,
+      "data": {
+        "exists": true
+      }
+    },
+    {
+      "name": "HarborVoice · Dutch Training 1",
+      "path": "/v1/voices/ZUpnQ45ABkkc2OcDuVHI",
+      "status": 200,
+      "data": {
+        "exists": true
+      }
+    },
+    {
+      "name": "HarborVoice · Dutch Training 2",
+      "path": "/v1/voices/GXnX5R1mzyXfGGG0fF4s",
+      "status": 200,
+      "data": {
+        "exists": true
+      }
+    },
+    {
+      "name": "HarborVoice · Dutch Training 3",
+      "path": "/v1/voices/pFO8yqt1betwfwbKm2y1",
+      "status": 200,
+      "data": {
+        "exists": true
+      }
+    }
+  ],
+  "hosted": [
+    {
+      "path": "/api/status",
+      "status": 200,
+      "cacheControl": "no-store",
+      "runtime": {
+        "production": true,
+        "workspaceStorage": "postgres",
+        "operatorRequired": true,
+        "operatorAuthenticated": false,
+        "deployment": "hosted"
+      }
+    },
+    {
+      "path": "/api/state",
+      "status": 401,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/conversations",
+      "status": 401,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/agents",
+      "status": 401,
+      "cacheControl": "no-store"
+    }
+  ],
+  "scope": "GET only; metadata projections; no per-job cost attribution, full pending-job enumeration or paid dispatch."
+}

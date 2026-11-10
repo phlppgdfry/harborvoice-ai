@@ -1,0 +1,26 @@
+{
+  "comments": [
+    {
+      "author": "vercel",
+      "createdAt": "2026-11-09T17:05:36Z",
+      "url": "https://github.com/elevenlabs/showcase/pull/113#issuecomment-6746265867",
+      "summary": "Vercel preview requires authorization by an ElevenLabs team member."
+    }
+  ],
+  "headRefOid": "70303407af6656fc178700e4b2c043cfba0cff43",
+  "isDraft": false,
+  "number": 113,
+  "reviewDecision": "",
+  "reviews": [],
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "StatusContext",
+      "context": "Vercel",
+      "startedAt": "2026-11-09T17:05:35Z",
+      "state": "FAILURE",
+      "targetUrl": "https://vercel.com/git/authorize"
+    }
+  ],
+  "url": "https://github.com/elevenlabs/showcase/pull/113"
+}

@@ -1,0 +1,22 @@
+{
+  "implementationCommit": "7df26847310d86ae8814576bf1dcf91372af322b",
+  "branch": "final/elevenlabs-excellence",
+  "pullRequest": "https://github.com/phlppgdfry/harborvoice-ai/pull/7",
+  "verifiedImplementationChecks": [
+    {
+      "name": "Verify",
+      "status": "success",
+      "url": "https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42726324172"
+    },
+    {
+      "name": "Phase 3 offline verification",
+      "status": "success",
+      "url": "https://github.com/phlppgdfry/harborvoice-ai/actions/runs/42726324010"
+    }
+  ],
+  "productionCommitPreserved": "234281a806150a79b12220d182df3fc9e97534b9",
+  "productionDraftPullRequest": 1,
+  "releaseCandidate": "v2.2.0-rc.2",
+  "releaseUrl": "https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.2.0-rc.2",
+  "scope": "Completed implementation-commit checks. Subsequent receipt-only commit/merge are identified by the PR and release tag. Exact-main CI, public deployment and downloaded-asset receipts are attached to the release. No production promotion."
+}

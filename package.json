@@ -1,6 +1,6 @@
 {
   "name": "harborvoice-ai",
-  "version": "2.2.0-rc.1",
+  "version": "2.2.0-rc.2",
   "private": true,
   "type": "module",
   "description": "A logistics voice operations workbench powered by ElevenLabs",
