@@ -22,6 +22,7 @@ jobs:
       - run: npm run test:postgres
       - run: npm run elite:validate
       - run: npm run recognition:validate
+      - run: npm run learn:validate
       - run: npx playwright install --with-deps chromium
       - name: Browser walkthrough
         env:

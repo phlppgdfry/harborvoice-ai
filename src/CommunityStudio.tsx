@@ -160,6 +160,9 @@ export default function CommunityStudio() {
           <a href="#voice-agents">
             Open real Nora voice interface <ArrowUpRight size={15} />
           </a>
+          <a href={import.meta.env.BASE_URL + "learn/"}>
+            Tutorials and workshop <ArrowUpRight size={15} />
+          </a>
           <a
             href={repo + "docs/recognition/hackathon.md"}
             target="_blank"

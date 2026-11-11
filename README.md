@@ -35,6 +35,17 @@ Nora looks up synthetic shipments, explains source-grounded procedures and prepa
 
 [Architecture](docs/elite/architecture.md) · [Setup and CLI](docs/elite/cli.md) · [Synchronization](docs/elite/synchronization.md) · [Security](SECURITY.md) · [Media provenance](docs/elite/creative-production.md)
 
+## Learn
+
+Free, reproducible tutorials and a runnable workshop are published at **[phlppgdfry.github.io/harborvoice-ai/learn/](https://phlppgdfry.github.io/harborvoice-ai/learn/)**:
+
+- [Building Reliable ElevenLabs Voice Agents: Tools, Grounding and Human Approval](https://phlppgdfry.github.io/harborvoice-ai/learn/reliable-voice-agents.html)
+- [Testing ElevenLabs Voice Agents with AgentProof and AgentOps Kit](https://phlppgdfry.github.io/harborvoice-ai/learn/testing-voice-agents.html)
+- [A narrated product film in ElevenCreative Flows](https://phlppgdfry.github.io/harborvoice-ai/learn/narrated-product-film-flow.html) (walkthrough of a private Flow; not a published template)
+- [Workshop: Build Reliable Multilingual Voice AI Agents](https://phlppgdfry.github.io/harborvoice-ai/learn/workshop.html) (materials only; no event scheduled)
+
+The tutorials and the workshop core run offline with Node 24 and no API key. Feedback goes through the [tutorial](https://github.com/phlppgdfry/harborvoice-ai/issues/new?template=tutorial-feedback.yml) and [workshop](https://github.com/phlppgdfry/harborvoice-ai/issues/new?template=workshop-feedback.yml) issue forms. Status and evidence: [docs/creative-community](docs/creative-community/FINAL-CREATIVE-COMMUNITY-REPORT-NL.md).
+
 ## Live workspace
 
 The [public static Experience lab](https://phlppgdfry.github.io/harborvoice-ai/#experience-lab) offers existing recordings, comparison takes and transcripts. The earlier bounded visitor trial has expired; the native Visitor agent still exists. The [protected hosted workbench](https://harborvoice-ai.vercel.app) uses server-side ElevenLabs configuration. Authorized operators can open **Settings** and use the existing operator sign-in. Never paste the ElevenLabs API key into the browser. New paid testing requires reconciled account liabilities and bounded reservations.
