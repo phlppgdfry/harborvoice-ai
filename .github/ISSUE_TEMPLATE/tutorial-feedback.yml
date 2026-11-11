@@ -1,0 +1,45 @@
+name: Tutorial feedback
+description: Report a mistake, a command that did not work, or something unclear in the Learn pages.
+title: "Tutorial feedback: "
+labels: ["feedback", "learn"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. This issue is public. Please do not include API keys, personal data, real customer records or private transcripts.
+  - type: dropdown
+    id: page
+    attributes:
+      label: Which page?
+      options:
+        - Building Reliable ElevenLabs Voice Agents
+        - Testing ElevenLabs Voice Agents with AgentProof and AgentOps Kit
+        - A narrated product film in ElevenCreative Flows
+        - Learn hub or other
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback?
+      options:
+        - A command or example did not work
+        - Something is factually wrong
+        - Something is unclear
+        - Something is missing
+        - It helped (tell us what you used it for)
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What happened?
+      description: For a failing command, paste the command and the output. Include your Node.js version and operating system.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: false

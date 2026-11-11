@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HarborVoice Learn · Practical ElevenLabs tutorials</title>
+    <meta
+      name="description"
+      content="Free, reproducible tutorials and a runnable workshop on reliable ElevenLabs voice agents, built on the open-source HarborVoice AI project."
+    />
+    <link rel="stylesheet" href="learn.css" />
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="top">
+      <nav aria-label="Learn">
+        <a class="brand" href="./" aria-current="page">HarborVoice Learn</a>
+        <a href="reliable-voice-agents.html">Reliable agents</a>
+        <a href="testing-voice-agents.html">Testing</a>
+        <a href="narrated-product-film-flow.html">Creative Flow</a>
+        <a href="workshop.html">Workshop</a>
+        <a href="../">Demo</a>
+      </nav>
+    </header>
+    <main id="content">
+      <h1>Learn to build voice agents you can check</h1>
+      <p class="lede">
+        Practical material for developers working with ElevenLabs. Every command on these pages was
+        run against the open-source HarborVoice AI repository, and the output you see is the output
+        it gave.
+      </p>
+      <ul class="meta">
+        <li>Free to read, no sign-up</li>
+        <li>Tutorials run offline, 0 credits</li>
+        <li>No analytics or cookies</li>
+        <li>MIT-licensed source</li>
+      </ul>
+
+      <ul class="cards">
+        <li>
+          <span class="kind">Tutorial 1 · 25 min</span>
+          <h2 class="h3"><a href="reliable-voice-agents.html">Building Reliable ElevenLabs Voice Agents: Tools, Grounding and Human Approval</a></h2>
+          <p>Where reliability comes from: tool contracts, typed “not found” results, five safe outcomes, and an escalation that can never be mistaken for an approval.</p>
+          <a class="more" href="reliable-voice-agents.html">Read the tutorial</a>
+        </li>
+        <li>
+          <span class="kind">Tutorial 2 · 30 min</span>
+          <h2 class="h3"><a href="testing-voice-agents.html">Testing ElevenLabs Voice Agents with AgentProof and AgentOps Kit</a></h2>
+          <p>Write scenarios, assert tool calls and stated facts, compare runs for regressions, catch risky configuration changes and keep live testing inside a budget.</p>
+          <a class="more" href="testing-voice-agents.html">Read the tutorial</a>
+        </li>
+        <li>
+          <span class="kind">Walkthrough · 12 min</span>
+          <h2 class="h3"><a href="narrated-product-film-flow.html">A narrated product film in ElevenCreative Flows</a></h2>
+          <p>One real Flow, including the version that “completed” and was unusable, the diagnosis, the repair and the measurements. Needs a paid plan to run.</p>
+          <a class="more" href="narrated-product-film-flow.html">Read the walkthrough</a>
+        </li>
+        <li>
+          <span class="kind">Workshop · 90 min</span>
+          <h2 class="h3"><a href="workshop.html">Build Reliable Multilingual Voice AI Agents</a></h2>
+          <p>A complete session you can run yourself: objectives, setup, six exercises with expected results, facilitator notes, slides and an answer key. No account needed.</p>
+          <a class="more" href="workshop.html">Open the workshop</a>
+        </li>
+      </ul>
+
+      <h2 id="start">Start in two minutes</h2>
+      <pre><code>git clone https://github.com/phlppgdfry/harborvoice-ai.git
+cd harborvoice-ai
+node --test community/elevenlabs-belgium/starter/agent.test.mjs</code></pre>
+      <p>Eight passing tests means you are ready for Tutorial 1 and the workshop. You need Node.js 24 and nothing else.</p>
+
+      <h2 id="tools">The tools used</h2>
+      <ul>
+        <li><a href="../">HarborVoice AI workbench</a> — the public demo of the fictional terminal agent.</li>
+        <li><a href="../agentproof/">AgentProof</a> — a static page for exploring evaluation evidence.</li>
+        <li><a href="https://github.com/phlppgdfry/harborvoice-ai/tree/main/packages/agentops-kit">AgentOps Kit</a> — a small library and CLI for configuration checks, scenario evaluation and reports.</li>
+        <li><a href="https://github.com/phlppgdfry/harborvoice-ai">Source code</a> and <a href="https://github.com/phlppgdfry/harborvoice-ai/releases/tag/v2.2.0">release v2.2.0</a>.</li>
+      </ul>
+
+      <h2 id="honest">What these pages do not claim</h2>
+      <ul>
+        <li>All data is synthetic. No real customers, shipments or callers are involved.</li>
+        <li>The offline tests check your own code and contracts. They do not measure how a language model or a voice behaves.</li>
+        <li>HarborVoice is an independent project. It is not affiliated with, sponsored by or endorsed by ElevenLabs.</li>
+        <li>No workshop has been delivered yet, and there are no users, attendees or testimonials to report.</li>
+      </ul>
+
+      <h2 id="feedback">Feedback</h2>
+      <p>
+        Something wrong, unclear or missing? Open a public issue. It needs a GitHub account; please
+        leave out personal data and credentials.
+      </p>
+      <p>
+        <a class="button" href="https://github.com/phlppgdfry/harborvoice-ai/issues/new?template=tutorial-feedback.yml">Tutorial feedback</a>
+        &nbsp;
+        <a class="button" href="https://github.com/phlppgdfry/harborvoice-ai/issues/new?template=workshop-feedback.yml">Workshop feedback</a>
+      </p>
+
+      <footer>
+        <p>
+          Published 11 November 2026 for HarborVoice AI v2.2.0. Drafted with an AI coding assistant
+          from the repository’s source, tests and run records, and verified by running the commands.
+        </p>
+      </footer>
+    </main>
+    <script src="learn.js" defer></script>
+  </body>
+</html>

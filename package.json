@@ -42,6 +42,7 @@
     "recognition:experiments": "node --import tsx scripts/recognition/experiments.ts",
     "test:community": "node --import tsx scripts/recognition/browser.ts",
     "typecheck": "tsc --noEmit",
+    "learn:validate": "node scripts/creative-community/validate-learn.mjs && node --test community/elevenlabs-belgium/solutions/solutions.test.mjs",
     "test:postgres": "node --import tsx scripts/test-postgres.ts",
     "test:production-browser": "node --import tsx scripts/production-browser-check.ts",
     "db:migrate": "node --import tsx scripts/migrate.ts",
