@@ -1,0 +1,154 @@
+{
+  "scope": "Creative & Community finalization, ElevenLabs account credits, 10-11 November 2026 (UTC)",
+  "source": "Provider subscription counter (character_count) and per-generation credit_costs returned by ElevenCreative Flows",
+  "balanceBefore": {
+    "readAt": "2026-11-10T05:02Z",
+    "used": 108689,
+    "limit": 128715,
+    "remaining": 20026
+  },
+  "settlementEvidence": {
+    "counterUnchangedAcrossReads": [
+      "2026-11-09T23:06Z",
+      "2026-11-10T00:08Z",
+      "2026-11-10T03:40Z",
+      "2026-11-10T05:02Z"
+    ],
+    "pendingOperationsInLocalLedgers": 0,
+    "pendingFlowNodes": 0,
+    "overage": "disabled (max_credit_limit_extension 0, current overage USD 0, no open invoices)"
+  },
+  "operatingCap": 6000,
+  "operations": [
+    {
+      "step": 1,
+      "node": "Voice-over script (LLM)",
+      "generation": "d5mAmH3W7u54Jb9zoVc3",
+      "reserved": 22,
+      "charged": 22,
+      "result": "script produced"
+    },
+    {
+      "step": 2,
+      "node": "English voice-over (TTS)",
+      "generation": "9IyT6xNSH1I0iQOH2P87",
+      "reserved": 131,
+      "charged": 131,
+      "result": "8.48 s; intelligible; too long for 8 s film"
+    },
+    {
+      "step": 2,
+      "node": "Launch underscore (music)",
+      "generation": "h5WE7OqNLE03GVHKzm5Z",
+      "reserved": 120,
+      "charged": 120,
+      "result": "9.00 s; replaced later"
+    },
+    {
+      "step": 3,
+      "node": "Voice-over script (LLM)",
+      "generation": "L51QWzz9ujBM1PlnpczO",
+      "reserved": 22,
+      "charged": 22,
+      "result": "shorter script"
+    },
+    {
+      "step": 3,
+      "node": "English voice-over (TTS)",
+      "generation": "TeKpaDFoFVbUXNg9WGKE",
+      "reserved": 131,
+      "charged": 131,
+      "result": "WASTED: started in parallel with the script node and re-read the old script"
+    },
+    {
+      "step": 3,
+      "node": "Product film (Veo 3.1 Lite)",
+      "generation": "e23czK0hYWGezjUXQ8P6",
+      "reserved": 2424,
+      "charged": 2424,
+      "result": "product retained; requested light sheen repainted a banner and garbled small text; rejected"
+    },
+    {
+      "step": 4,
+      "node": "English voice-over (TTS)",
+      "generation": "mpYsxcngO9AG9J1WeEkV",
+      "reserved": 108,
+      "charged": 108,
+      "result": "7.52 s; script missing a verb; rejected"
+    },
+    {
+      "step": 5,
+      "node": "Voice-over script (LLM)",
+      "generation": "BOt7tF38jzm5ETOQpITG",
+      "reserved": 22,
+      "charged": 22,
+      "result": "grammatical 17-word script"
+    },
+    {
+      "step": 5,
+      "node": "English voice-over (TTS)",
+      "generation": "MdgVFrMghlTR0sKQ9pTo",
+      "reserved": 112,
+      "charged": 112,
+      "result": "ACCEPTED: 7.44 s, transcript matches script"
+    },
+    {
+      "step": 6,
+      "node": "Product film (Veo 3.1 Lite)",
+      "generation": "d1UGB7P4ZoW6S9QJn2sM",
+      "reserved": 2424,
+      "charged": 2424,
+      "result": "BEST VERSION: no invented content; about 2 s of soft focus"
+    },
+    {
+      "step": 7,
+      "node": "Final film (composition)",
+      "generation": "i0JDruSyE0zfxvFHeUIV",
+      "reserved": 0,
+      "charged": 0,
+      "result": "audio 1 s longer than picture"
+    },
+    {
+      "step": 8,
+      "node": "Launch underscore (music)",
+      "generation": "ElUUXhTvsESYlwJSNs8I",
+      "reserved": 105,
+      "charged": 105,
+      "result": "ACCEPTED: 7.48 s"
+    },
+    {
+      "step": 9,
+      "node": "Final film (composition)",
+      "generation": "buHj1uamO0G8japCdGAB",
+      "reserved": 0,
+      "charged": 0,
+      "result": "FINAL EXPORT: 8.02 s, sha256 4bcdc329ad66136164fc17f7edde12bced0c658b7f2781f1a7b7065496ad1307"
+    }
+  ],
+  "sumOfReceipts": 5621,
+  "balanceAfterTask": {
+    "readAt": "2026-11-10 (after last operation)",
+    "used": 114306,
+    "remaining": 14409,
+    "delta": 5617
+  },
+  "reconciliation": "Receipts 5,621 versus counter delta 5,617: difference of 4 credits, consistent with the three LLM reservations settling slightly below 22 each. No unexplained movement during the task window.",
+  "laterObservation": {
+    "readAt": "2026-11-11",
+    "used": 117319,
+    "remaining": 11396,
+    "movementNotFromThisTask": 3013,
+    "note": "Music History shows a 3:04 song 'Summer Never Gets Old' created on 10 November outside this task. Another consumer is active on the account, so no further paid operation was dispatched."
+  },
+  "blockedPaidOperation": {
+    "what": "Template example run required before publishing to Explore",
+    "providerEstimate": 5550,
+    "status": "NOT DISPATCHED; owner decision"
+  },
+  "notDone": [
+    "no subscription upgrade",
+    "no credit purchase",
+    "no overage enabled",
+    "no retries in a loop"
+  ]
+}
