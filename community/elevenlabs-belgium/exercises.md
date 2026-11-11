@@ -8,3 +8,5 @@
 6. Design one new failure case without personal data. Add expected outcome and tool names before changing code. A good case distinguishes a safe boundary from a superficially helpful response.
 
 Stretch: extend assertions to tool arguments, response schema and side-effect authorization. Keep tool contract tests separate from provider behavior tests. Discuss how to obtain a held-out scenario set and qualified language review before a quality claim.
+
+Runnable answers for exercises 2, 3 and 6: `node --test community/elevenlabs-belgium/solutions/solutions.test.mjs`. Feedback: use the [workshop feedback form](https://github.com/phlppgdfry/harborvoice-ai/issues/new?template=workshop-feedback.yml); it is public, so leave out personal data.

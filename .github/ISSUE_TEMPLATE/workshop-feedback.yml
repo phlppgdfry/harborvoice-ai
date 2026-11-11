@@ -1,0 +1,46 @@
+name: Workshop feedback
+description: Tell us how the Reliable Multilingual Voice AI Agents workshop went, whether you ran it or followed it alone.
+title: "Workshop feedback: "
+labels: ["feedback", "workshop"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. This issue is public. Please do not name participants or include personal data, API keys or recordings. Only report what actually happened.
+  - type: dropdown
+    id: role
+    attributes:
+      label: How did you use the materials?
+      options:
+        - I followed the exercises on my own
+        - I facilitated a session
+        - I attended a session
+        - I only read the materials
+    validations:
+      required: true
+  - type: input
+    id: group
+    attributes:
+      label: If a session took place, roughly how many people took part?
+      description: Leave empty if you worked alone. A number is enough; no names.
+    validations:
+      required: false
+  - type: textarea
+    id: worked
+    attributes:
+      label: What worked?
+    validations:
+      required: true
+  - type: textarea
+    id: stuck
+    attributes:
+      label: Where did you or others get stuck?
+      description: Exercise number, the command and the output help most.
+    validations:
+      required: false
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change?
+    validations:
+      required: false
