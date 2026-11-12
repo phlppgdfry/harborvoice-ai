@@ -105,7 +105,7 @@ To: `support@elevenlabs.io` (or the in-app support form, which the help centre r
 > Kind regards,
 > Philippe Godfroy
 
-The request contains no credentials and no account email. It has not been sent, and no reply from ElevenLabs exists.
+The request contains no credentials. It has **not been sent**, and no reply from ElevenLabs exists. On 11 November the same text was saved as an unsent draft in the owner's Gmail (to `support@elevenlabs.io`), so sending it is one click. If the ElevenLabs account uses a different email address, send from that address instead.
 
 ## Publication strategy
 
