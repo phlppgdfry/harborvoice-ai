@@ -1,0 +1,178 @@
+{
+  "checkedAt": "2026-11-17T07:03:02.785Z",
+  "allOk": true,
+  "results": [
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5877,
+      "containsTitle": true
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/reliable-voice-agents.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 26089,
+      "containsTitle": true
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/testing-voice-agents.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 23943,
+      "containsTitle": true
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/narrated-product-film-flow.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 23580,
+      "containsTitle": true
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/workshop.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 19487,
+      "containsTitle": true
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/learn.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 7016
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/learn.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 633
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/img/agentproof-desktop.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 111803
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/img/flow-before.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 91228
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/img/flow-after.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 78888
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/media/product-film-example.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 6443308
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/media/product-film-voice-over.mp3",
+      "status": 200,
+      "contentType": "audio/mp3",
+      "bytes": 137123
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/learn/media/demo-footage.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 2170008
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 35514,
+      "containsTitle": true
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/app.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 977
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/showcase/showcase.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 20595
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/showcase/showcase.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 4849
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/showcase/img/workbench.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 134536
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/showcase/img/og-cover.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 113378
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/showcase/media/clip-workflow.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 455717
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/showcase/media/clip-agentproof.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 697907
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/showcase/media/clip-agentops.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 406253
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/showcase/media/harborvoice-demo.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 16938272
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/showcase/media/harborvoice-demo.vtt",
+      "status": 200,
+      "contentType": "text/vtt; charset=utf-8",
+      "bytes": 3675
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/showcase/media/harborvoice-preview.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 3179352
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/agentproof/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 704
+    },
+    {
+      "url": "https://phlppgdfry.github.io/harborvoice-ai/build-info.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 72,
+      "build": {
+        "commit": "7acf4b2ada9450dd80cb41b6b8d86e537e522a2e",
+        "version": "2.2.1"
+      }
+    }
+  ]
+}

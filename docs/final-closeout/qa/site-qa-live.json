@@ -1,0 +1,502 @@
+{
+  "checkedAt": "2026-11-17T02:48:49.461Z",
+  "base": "https://phlppgdfry.github.io/harborvoice-ai/",
+  "results": [
+    {
+      "engine": "chromium",
+      "viewport": "desktop",
+      "path": "/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Voice intelligence with evidence and human control",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop",
+      "path": "app.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Demo workspace",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop",
+      "path": "agentproof/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "AgentProof — Voice AI reliability",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop",
+      "path": "learn/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice Learn · Practical ElevenLabs tutorials",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop",
+      "path": "learn/reliable-voice-agents.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Building Reliable ElevenLabs Voice Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop",
+      "path": "learn/workshop.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Workshop: Build Reliable Multilingual Voice AI Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet",
+      "path": "/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Voice intelligence with evidence and human control",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet",
+      "path": "app.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Demo workspace",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet",
+      "path": "agentproof/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "AgentProof — Voice AI reliability",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet",
+      "path": "learn/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice Learn · Practical ElevenLabs tutorials",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet",
+      "path": "learn/reliable-voice-agents.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Building Reliable ElevenLabs Voice Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet",
+      "path": "learn/workshop.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Workshop: Build Reliable Multilingual Voice AI Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-390",
+      "path": "/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Voice intelligence with evidence and human control",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-390",
+      "path": "app.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Demo workspace",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-390",
+      "path": "agentproof/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "AgentProof — Voice AI reliability",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-390",
+      "path": "learn/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice Learn · Practical ElevenLabs tutorials",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-390",
+      "path": "learn/reliable-voice-agents.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Building Reliable ElevenLabs Voice Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-390",
+      "path": "learn/workshop.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Workshop: Build Reliable Multilingual Voice AI Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-360",
+      "path": "/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Voice intelligence with evidence and human control",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-360",
+      "path": "app.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Demo workspace",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-360",
+      "path": "agentproof/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "AgentProof — Voice AI reliability",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-360",
+      "path": "learn/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice Learn · Practical ElevenLabs tutorials",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-360",
+      "path": "learn/reliable-voice-agents.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Building Reliable ElevenLabs Voice Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "mobile-360",
+      "path": "learn/workshop.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Workshop: Build Reliable Multilingual Voice AI Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "chromium",
+      "interactions": {
+        "arrowKeyMovesTab": true,
+        "panelVisible": true,
+        "legacyHashRedirect": true,
+        "motionPause": true,
+        "film": {
+          "duration": 174,
+          "tracks": 1
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "reducedMotion": {
+        "waveAnimation": "none",
+        "revealVisible": "1",
+        "toggleHidden": "none"
+      }
+    },
+    {
+      "engine": "webkit",
+      "viewport": "desktop",
+      "path": "/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Voice intelligence with evidence and human control",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "desktop",
+      "path": "app.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Demo workspace",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "desktop",
+      "path": "agentproof/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "AgentProof — Voice AI reliability",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "desktop",
+      "path": "learn/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice Learn · Practical ElevenLabs tutorials",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "desktop",
+      "path": "learn/reliable-voice-agents.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Building Reliable ElevenLabs Voice Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "desktop",
+      "path": "learn/workshop.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Workshop: Build Reliable Multilingual Voice AI Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-390",
+      "path": "/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Voice intelligence with evidence and human control",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-390",
+      "path": "app.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Demo workspace",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-390",
+      "path": "agentproof/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "AgentProof — Voice AI reliability",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-390",
+      "path": "learn/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice Learn · Practical ElevenLabs tutorials",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-390",
+      "path": "learn/reliable-voice-agents.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Building Reliable ElevenLabs Voice Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-390",
+      "path": "learn/workshop.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Workshop: Build Reliable Multilingual Voice AI Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-360",
+      "path": "/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Voice intelligence with evidence and human control",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-360",
+      "path": "app.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice AI · Demo workspace",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-360",
+      "path": "agentproof/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "AgentProof — Voice AI reliability",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-360",
+      "path": "learn/",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "HarborVoice Learn · Practical ElevenLabs tutorials",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-360",
+      "path": "learn/reliable-voice-agents.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Building Reliable ElevenLabs Voice Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "viewport": "mobile-360",
+      "path": "learn/workshop.html",
+      "overflow": 0,
+      "images": [],
+      "h1": 1,
+      "title": "Workshop: Build Reliable Multilingual Voice AI Agents · HarborVoice Learn",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "engine": "webkit",
+      "interactions": {
+        "arrowKeyMovesTab": true,
+        "panelVisible": true,
+        "legacyHashRedirect": true,
+        "motionPause": true,
+        "film": {
+          "duration": 174,
+          "tracks": 1
+        }
+      }
+    }
+  ]
+}
