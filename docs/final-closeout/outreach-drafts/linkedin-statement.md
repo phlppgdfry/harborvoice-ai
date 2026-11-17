@@ -1,0 +1,1 @@
+I build voice-AI agents that can be checked: grounded tool use, human approval and evaluations you can re-run. Open-source example: HarborVoice, an ElevenLabs agent workbench with AgentProof and AgentOps Kit — https://phlppgdfry.github.io/harborvoice-ai/
