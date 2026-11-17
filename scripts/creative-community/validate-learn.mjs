@@ -44,7 +44,7 @@ for (const page of pages) {
       continue;
     }
     // "../" and "../agentproof/" are produced by the site build, not by this folder.
-    if (path === "../" || path === "../agentproof/") continue;
+    if (["../", "../agentproof/", "../app.html"].includes(path)) continue;
     const file = path.endsWith("/") ? join(path, "index.html") : path;
     const full = resolve(dirname(join(root, page)), file);
     if (!existsSync(full)) fail(`missing local target ${target}`);
