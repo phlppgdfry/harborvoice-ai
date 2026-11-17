@@ -1,0 +1,1 @@
+One thing that helped me: check what the agent _stated_, not only which outcome it chose. I had a case where it correctly refused an injected instruction and still said the shipment was released — an outcome-only test passed it. There's a 30-line runnable example here if useful: https://phlppgdfry.github.io/harborvoice-ai/learn/testing-voice-agents.html#assertions
