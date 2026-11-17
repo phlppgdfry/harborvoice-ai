@@ -1,0 +1,163 @@
+1
+00:00:05,500 --> 00:00:09,604
+A voice agent that sounds confident and is wrong is a liability.
+
+2
+00:00:09,604 --> 00:00:18,839
+This is HarborVoice AI: a fictional port terminal, with an ElevenLabs voice agent called Nora, who answers shipment questions in four languages.
+
+3
+00:00:18,839 --> 00:00:21,340
+Every record you will see is synthetic.
+
+4
+00:00:23,140 --> 00:00:25,142
+Nora can do exactly two things.
+
+5
+00:00:25,142 --> 00:00:30,891
+She can look up a shipment by its exact reference, and she can ask a person to review it.
+
+6
+00:00:30,891 --> 00:00:31,666
+That is all.
+
+7
+00:00:31,666 --> 00:00:37,286
+There is no tool to release cargo, so no wording from a caller can make her release it.
+
+8
+00:00:37,286 --> 00:00:38,513
+The model proposes.
+
+9
+00:00:38,513 --> 00:00:40,580
+The server decides what is true.
+
+10
+00:00:42,380 --> 00:00:46,503
+Those rules live in code you can test without a model.
+
+11
+00:00:46,503 --> 00:00:48,488
+No reference: ask for one.
+
+12
+00:00:48,488 --> 00:00:52,000
+Unknown reference: say so, and invent nothing.
+
+13
+00:00:52,000 --> 00:00:56,276
+Lookup system down: say it is down, and confirm nothing.
+
+14
+00:00:56,276 --> 00:00:59,864
+A record that looks wrong: send it to a person.
+
+15
+00:00:59,864 --> 00:01:00,780
+Eight tests.
+
+16
+00:01:00,780 --> 00:01:01,620
+No API key.
+
+17
+00:01:01,620 --> 00:01:02,460
+No credits.
+
+18
+00:01:04,260 --> 00:01:08,065
+Asking for a human is where many agents quietly mislead.
+
+19
+00:01:08,065 --> 00:01:11,734
+Here, an escalation is a ticket marked pending review.
+
+20
+00:01:11,734 --> 00:01:16,557
+Only an authenticated operator can approve or reject it, and only once.
+
+21
+00:01:16,557 --> 00:01:19,411
+And approval does not change the shipment.
+
+22
+00:01:19,411 --> 00:01:22,740
+The agent is told to say pending, never approved.
+
+23
+00:01:24,540 --> 00:01:28,513
+To check behaviour, write down what should happen before you look.
+
+24
+00:01:28,513 --> 00:01:35,495
+AgentProof shows a deliberately unsafe policy failing thirty of a hundred and ten scenarios, and exactly which ones.
+
+25
+00:01:35,495 --> 00:01:39,167
+Here, the lookup failed and the answer still claimed success.
+
+26
+00:01:39,167 --> 00:01:43,260
+Switch to the corrected policy, and the same case recovers honestly.
+
+27
+00:01:45,060 --> 00:01:48,036
+AgentOps Kit does the same for configuration.
+
+28
+00:01:48,036 --> 00:01:53,392
+Turn authentication off, or add a plain HTTP tool, and the check fails the build.
+
+29
+00:01:53,392 --> 00:01:56,500
+Secrets are removed before anything is printed.
+
+30
+00:01:58,300 --> 00:02:00,272
+Be clear about what this shows.
+
+31
+00:02:00,272 --> 00:02:02,053
+These are scripted fixtures.
+
+32
+00:02:02,053 --> 00:02:03,770
+They prove the checks work.
+
+33
+00:02:03,770 --> 00:02:09,240
+They do not prove that a language model is reliable, and they say nothing about audio.
+
+34
+00:02:09,240 --> 00:02:13,820
+The few real provider tests are reported separately, and they are small.
+
+35
+00:02:15,620 --> 00:02:18,267
+The creative work is documented the same way.
+
+36
+00:02:18,267 --> 00:02:24,795
+A narrated product film was rebuilt in ElevenCreative Flows after the first version lost the product on screen.
+
+37
+00:02:24,795 --> 00:02:30,500
+The walkthrough shows the failure, the fix and the measurements, including what still goes wrong.
+
+38
+00:02:32,300 --> 00:02:33,942
+Everything is open source.
+
+39
+00:02:33,942 --> 00:02:38,300
+Two tutorials and a ninety-minute workshop are free, and run offline.
+
+40
+00:02:38,300 --> 00:02:42,721
+HarborVoice is an independent project, not affiliated with ElevenLabs.
+
+41
+00:02:42,721 --> 00:02:45,500
+Try it, break it, and tell us what you find.

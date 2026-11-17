@@ -1,6 +1,6 @@
 {
   "name": "harborvoice-ai",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "private": true,
   "type": "module",
   "description": "A logistics voice operations workbench powered by ElevenLabs",
@@ -51,6 +51,7 @@
     "phase3:verify": "bash scripts/phase3/verify.sh",
     "phase3:browser": "node --import tsx scripts/phase3/browser-check.ts",
     "format:phase3:check": "prettier --check packages/agentops-kit apps/agentproof/src apps/agentproof/*.json apps/agentproof/*.ts apps/agentproof/index.html community/elevenlabs-belgium benchmarks/voice-ai/*.md benchmarks/voice-ai/scenarios scripts/phase3 docs/phase3",
+    "build:pages": "node scripts/showcase/build-pages.mjs",
     "build:agentproof": "node --import tsx scripts/final-mastery/build-agentproof.ts",
     "test:contracts": "node --import tsx scripts/final-mastery/contracts.ts",
     "test:mastery": "node --import tsx scripts/final-mastery/browser.ts"
