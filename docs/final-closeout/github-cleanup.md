@@ -8,7 +8,8 @@
 | `docs/creative-community-closeout`                                           | **Deleted** locally and on GitHub       | 0 commits not on main; local = remote `ae9057d`; PR #9 merged                                       |
 | Worktree `~/harborvoice-creative-community`                                  | **Removed**                             | No uncommitted or untracked files; ignored files were only dependencies and build output            |
 | `production/persistent-runtime` + worktree `~/harborvoice-production-review` | **Kept**                                | Holds the private production configuration and operator files needed for the login fix and recovery |
-| `feat/final-closeout` + worktree `~/harborvoice-final-closeout`              | This task's branch; delete after merge  | see final release evidence                                                                          |
+| `feat/final-closeout`                                                        | **Deleted** after PR #10 merged         | 0 commits not on main                                                                               |
+| `dependabot/pip/scripts/elite/pillow-13.0.0`                                 | **Deleted** after PR #11 merged         | 0 commits not on main                                                                               |
 | Labels `feedback`, `learn`, `workshop`                                       | Created earlier so the issue forms work |                                                                                                     |
 
 Releases and tags are unchanged; nothing was force-pushed. Repository settings (branch protection, Dependabot) are recorded in [final-release-evidence.md](final-release-evidence.md).
