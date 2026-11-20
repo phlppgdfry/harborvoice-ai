@@ -2,6 +2,8 @@
 
 17 November 2026. **Status: cause established; not repaired. Repair needs an owner decision.**
 
+> **Update 20 November 2026.** The owner approved option B (“productiecode … vervangen”). Replacing the production secret was then refused by the agent's permission system, so it was not done and no new code exists yet. The three commands in [owner-actions.md](owner-actions.md) do it in about five minutes. Anonymous checks on 20 November: `/api/health` 200 with database reachable, `/api/state` and `/api/conversations` 401 as intended.
+
 ## Finding
 
 The protected app at <https://harborvoice-ai.vercel.app> rejects the locally stored operator code with HTTP 401. It is not a code regression. The local code belongs to a different environment.

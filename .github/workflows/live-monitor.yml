@@ -1,0 +1,32 @@
+name: Live monitor
+# Anonymous checks of the public showcase and the production runtime.
+# A failed scheduled run makes GitHub email the repository owner.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 */6 * * *"
+permissions:
+  contents: read
+concurrency:
+  group: live-monitor
+  cancel-in-progress: false
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: mkdir -p var/monitor
+      - name: Public showcase (GitHub Pages)
+        run: node scripts/creative-community/verify-live.mjs var/monitor/pages.json
+      - name: Production runtime (Vercel, anonymous)
+        run: node scripts/ops/check-production.mjs | tee var/monitor/production.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-monitor
+          path: var/monitor/
+          retention-days: 14

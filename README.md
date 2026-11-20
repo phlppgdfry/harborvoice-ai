@@ -16,9 +16,9 @@
 
 **Current agent evidence.** Six native ElevenLabs simulation tests (EN/NL/FR) passed 6/6 on the agent version in use (`agtvrsn_9601m6xjw36beketcgn7tzzze8zb`, 17 November 2026, run once). Earlier provider results (50/52, 10/10, 6/6, 6/6) were on earlier versions. Text simulations are not audio or microphone tests.
 
-**External status (17 November 2026).** Showcase PR #113 and SDK PR #484: open, no maintainer review. Two Explore templates: submitted, not listed. ElevenReader book: changes requested (author name). Product Launch template: not submitted after a failed quality gate. Music Marketplace: no listings; support request sent. No official recognition is claimed.
+**External status (20 November 2026).** SDK PR [#484](https://github.com/elevenlabs/elevenlabs-js/pull/484): **approved and merged** by an ElevenLabs maintainer on 18 November 2026. Showcase PR #113: open, no maintainer review. Two Explore templates: submitted, not listed. ElevenReader book: byline corrected, ready for re-submission. Product Launch template: not submitted after a failed quality gate. Music Marketplace: no listings; support request sent. No official recognition is claimed.
 
-Build with Node 24: `npm ci`, `npm run check`, `npm run phase3:verify`, `npm run learn:validate`. The Pages build adds `npm run build:pages` (showcase at `/`, app at `/app.html`). Provider credentials are server-only. Automatic Vercel Git deployments stay disabled (`git.deploymentEnabled=false`).
+Build with Node 24: `npm ci`, `npm run check`, `npm run phase3:verify`, `npm run learn:validate`. The Pages build adds `npm run build:pages` (showcase at `/`, app at `/app.html`). Provider credentials are server-only. Automatic Vercel Git deployments stay disabled (`git.deploymentEnabled=false`). A scheduled [live monitor](.github/workflows/live-monitor.yml) checks the public site and the production runtime anonymously every six hours.
 
 Nora looks up synthetic shipments, explains source-grounded procedures and prepares human-review requests. The surrounding platform makes the engineering inspectable: versioned tests, native ElevenLabs resources, a Credit Governor, drift previews and reproducible production media.
 
