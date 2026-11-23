@@ -1,6 +1,23 @@
 # Production operator login — diagnosis
 
-17 November 2026. **Status: cause established; not repaired. Repair needs an owner decision.**
+**Status 23 November 2026: REPAIRED and verified.**
+
+| Step (23 November 2026)                                          | Result                                                                   |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| New code generated locally by the owner, stored git-ignored      | `~/harborvoice-production-review/.env.operator.production.local`, 64 hex |
+| Production `OPERATOR_TOKEN` replaced (sensitive)                 | done by the owner with the Vercel CLI                                    |
+| Redeploy of the same deployment `dpl_C9wP3S…` (commit `234281a`) | new production deployment `dpl_Aye4R6dFvuh8ankzgmx4oHi8EC3U`, Ready      |
+| Sign in (`POST /api/auth/session`)                               | **200**                                                                  |
+| Workspace (`/api/state`) and conversations with the cookie       | **200** / **200**                                                        |
+| Sign out (`DELETE /api/auth/session`)                            | **200**                                                                  |
+| Old cookie after sign-out                                        | **401** (revocation works)                                               |
+| Deployment freeze                                                | unchanged: `git.deploymentEnabled=false`, Git deployments disabled       |
+
+The code was never printed or committed; it was passed to `curl` from the file. One sign-in attempt was used.
+
+---
+
+Diagnosis of 17 November, kept for the record:
 
 > **Update 20 November 2026.** The owner approved option B (“productiecode … vervangen”). Replacing the production secret was then refused by the agent's permission system, so it was not done and no new code exists yet. The three commands in [owner-actions.md](owner-actions.md) do it in about five minutes. Anonymous checks on 20 November: `/api/health` 200 with database reachable, `/api/state` and `/api/conversations` 401 as intended.
 

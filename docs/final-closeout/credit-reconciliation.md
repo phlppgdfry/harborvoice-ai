@@ -16,12 +16,13 @@ Account: Creator plan, monthly period, overage disabled (`max_credit_limit_exten
 
 Owner cap: 11,396. Operating rule: re-read the counter before each dispatch; overage off makes the balance a hard ceiling.
 
-| #   | Purpose                                                                           | Estimate | Receipt   | Counter delta | Result                                                                       |
-| --- | --------------------------------------------------------------------------------- | -------- | --------- | ------------- | ---------------------------------------------------------------------------- |
-| 1   | Product Launch template example (template dialog, session `fQXyxs0nVOvvARIhySHp`) | 5,550    | 5,550     | 5,550         | Generated; **failed the quality gate** (title text rewritten); not published |
-| 2   | Demo video narration, 9 segments, Eleven v4, flow `iaFZxWqsK4PLNq2ZE0bn`          | 2,274    | 2,274     | 2,274         | Accepted; transcript matches the script                                      |
-| 3   | Agent regression, 6 native tests, suite `suite_7701m7kmzhrtenzsj6hh3qpqzk6y`      | ~1,900   | 1,725     | 1,725         | 6 / 6 passed on `agtvrsn_9601m6xjw36beketcgn7tzzze8zb`                       |
-|     | **Total**                                                                         |          | **9,549** | **9,549**     | no unexpected charges                                                        |
+| #   | Purpose                                                                                    | Estimate | Receipt   | Counter delta | Result                                                                       |
+| --- | ------------------------------------------------------------------------------------------ | -------- | --------- | ------------- | ---------------------------------------------------------------------------- |
+| 1   | Product Launch template example (template dialog, session `fQXyxs0nVOvvARIhySHp`)          | 5,550    | 5,550     | 5,550         | Generated; **failed the quality gate** (title text rewritten); not published |
+| 2   | Demo video narration, 9 segments, Eleven v4, flow `iaFZxWqsK4PLNq2ZE0bn`                   | 2,274    | 2,274     | 2,274         | Accepted; transcript matches the script                                      |
+| 3   | Agent regression, 6 native tests, suite `suite_7701m7kmzhrtenzsj6hh3qpqzk6y`               | ~1,900   | 1,725     | 1,725         | 6 / 6 passed on `agtvrsn_9601m6xjw36beketcgn7tzzze8zb`                       |
+|     | **Total 16–17 November**                                                                   |          | **9,549** | **9,549**     | no unexpected charges                                                        |
+| 4   | Agent regression after login rotation (23 Nov), suite `suite_7701m84wyfwyerha1bjyw6znt50h` | ~1,725   | 1,829     | 1,829         | 6 / 6 passed on `agtvrsn_9601m6xjw36beketcgn7tzzze8zb`                       |
 
 ## The 3,013-credit movement on 10–11 November
 
@@ -31,4 +32,4 @@ What is established: no HarborVoice script, Flow or tool in any task generated i
 
 ## Liabilities
 
-Earlier phases carried historical reservations that overlapped posted usage. The counter was unchanged for five days before this task and every receipt here posted in full, so there is no pending charge from this task. Remaining safe allowance: **1,847 credits**. Recommended: no further paid work this period; the plan resets at Unix time `1796610620`.
+Earlier phases carried historical reservations that overlapped posted usage. The counter was unchanged for five days before this task and every receipt here posted in full, so there is no pending charge from this task. Remaining after 23 November: **18 credits** (126,868 → 128,697 of 128,715). Overage is not possible on this account (`max_credit_limit_extension` 0, overage $0). The plan resets on **7 December 2026 03:30 CET** (Unix `1796610620`). Owner confirmed on 20 November that the 3,013-credit song is fine.

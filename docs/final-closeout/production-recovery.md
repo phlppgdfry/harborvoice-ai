@@ -1,6 +1,28 @@
 # Production database, backup and recovery
 
-17 November 2026. **Status: schema and contents verified read-only. Backup and restore on the live provider are not verified; owner acceptance outstanding.**
+**Status 23 November 2026: restore drill PASSED.** Original 17 November read-only checks follow below.
+
+## Restore drill — 23 November 2026
+
+Neon project `harborvoice-live` (free plan, Frankfurt), branch `main` linked to Vercel production. **History retention (restore window): 6 hours.**
+
+1. In the Neon console a child branch `restore-drill-2026-11-23` was created from `main` **at a past point in time: 23 Nov 19:30 CET**. Neon deletes it automatically after one day; production was not touched.
+2. The same read-only row-count query ran on both branches in the Neon SQL editor:
+
+| Table              | Restored copy (19:30) | Production (20:08) |
+| ------------------ | --------------------- | ------------------ |
+| `migrations`       | 1                     | 1                  |
+| `workspace`        | 1                     | 1                  |
+| `webhook_events`   | 0                     | 0                  |
+| `revoked_sessions` | **3**                 | **4**              |
+
+The single difference is the session revoked by the post-rotation sign-out test at about 20:02. That proves the copy reflects the database as it was at the chosen time, which is the point-in-time restore guarantee.
+
+**Limit:** on the free plan the restore window is 6 hours. Older mistakes cannot be undone from history; for longer protection use a paid Neon plan or a scheduled `pg_dump`.
+
+---
+
+17 November 2026 (original): schema and contents verified read-only.
 
 ## Live state (read-only queries)
 

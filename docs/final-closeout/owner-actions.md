@@ -1,44 +1,38 @@
 # Owner actions
 
-Updated 20 November 2026. Only things that need your identity, a legal statement, a login or a production permission.
+Updated 23 November 2026.
 
 ## Still open
 
-1. **Production operator login** (5 min). The code cannot be recovered, so it has to be replaced. The agent's permission system blocked changing a production secret, so run these three commands yourself from `~/harborvoice-production-review`:
+1. **Real voice test with a microphone** (15 min, after the credit reset on 7 December). Live calls use credits and only 18 are left this month.
+   - Where: <https://harborvoice-ai.vercel.app> on a laptop with Chrome (or a phone) and a headset.
+   - Sign in: **Settings** → paste the operator code from `~/harborvoice-production-review/.env.operator.production.local` (or your password manager).
+   - Go to **Voice agents** → choose a language → **Start live voice** → allow the microphone.
+   - Script (2–3 minutes per language, EN, NL and FR):
+     1. Ask for a shipment without a reference. Nora should ask for the exact reference.
+     2. Give a reference and interrupt her halfway through her answer. She should stop and listen.
+     3. Ask her to release a shipment past customs. She should refuse and offer human review.
+     4. Listen for pronunciation of place names and numbers, and how long she takes to answer.
+   - Then open **Conversations** and check the transcript was saved. Write down anything odd; I'll turn it into fixes and tests.
+2. **Product Launch template** (~5,550 credits). This is not possible next week: credits reset on **7 December 2026**. Do it after that, with a product photo that has no printed text. See [product-launch.md](product-launch.md#options-for-later-next-billing-period).
+3. **After 7 December, optional:** test webhook delivery after a call (one real call is enough, combined with item 1).
 
-   ```sh
-   umask 077; openssl rand -hex 32 | tr -d '\n' > .env.operator.production.local   # new code, git-ignored
-   vercel env rm OPERATOR_TOKEN production -y && vercel env add OPERATOR_TOKEN production --sensitive < .env.operator.production.local
-   vercel redeploy dpl_C9wP3SGQr748FqB2ifTt3ruRtnTZ --target production             # same commit 234281a
-   ```
+## Done on 20–23 November
 
-   Put the code in your password manager, then sign in at <https://harborvoice-ai.vercel.app> → Settings, open the workspace and sign out. Or allow the agent to do it (see the closing note in the status update). Details: [production-auth.md](production-auth.md).
-
-2. **ElevenReader — press Submit** (2 min). Everything is corrected to “Philippe Godfroy”; only the final legal confirmation is yours. Steps in [native-publication-status.md](native-publication-status.md#elevenreader--status-20-november).
-
-3. **Real voice test on a phone or laptop** (15 min). The 6/6 agent results are text simulations. Talk to Nora once in English, Dutch and French: interrupt her, ask for a shipment reference, check pronunciation and delay.
-
-4. **Neon restore drill** (optional, 20 min). It needs your Neon login (Google/GitHub). Steps in [production-recovery.md](production-recovery.md#procedure-for-the-owner-non-destructive). Health is checked automatically every six hours by the live monitor.
-
-## Next billing period (fresh credits)
-
-5. **Agent regression** (~1,700 credits). Not urgent, because the retention setting stays as it is.
-6. **Product Launch template** (~5,550 credits, optional). Only with a product photo that has no printed text; see [product-launch.md](product-launch.md#options-for-later-next-billing-period). There aren't enough credits for this now (1,847 left).
-
-## Decided or done by the owner (20 November)
-
-- Demo video watched with sound — OK.
-- 3,013 credits (“Summer Never Gets Old”, 10 November) — owner confirmed it's fine.
-- Provider retention for Nora — kept as is (owner decision).
-- Three music tracks listened to — OK.
-- Outreach posts — dropped; nothing will be posted.
+- Production login repaired and verified: sign-in, workspace, sign-out and cookie revocation ([production-auth.md](production-auth.md)).
+- ElevenReader book re-submitted as “Philippe Godfroy”, pending review.
+- Neon restore drill passed; restore window 6 hours ([production-recovery.md](production-recovery.md)).
+- Agent regression re-run: 6/6 on the current version (1,829 credits).
+- Follow-ups sent to ElevenLabs support (Music + Explore) and on Showcase PR #113.
+- Live monitor checks the site and production every 6 hours and emails on failure.
+- Owner decisions: video and music OK, 3,013 credits OK, retention unchanged, no outreach posts.
 
 ## Waiting on others, no action needed
 
-- Showcase PR #113 — the ElevenLabs team must authorize its Vercel preview and review it.
-- Two Explore templates — submitted 9 November, not yet public.
-- Music Marketplace — ElevenLabs support has passed the questions to a staff member (automatic reply 17 November); there is a backlog. Don't open a second ticket.
+- ElevenReader review (decision by email).
+- ElevenLabs support: Music Marketplace answer and Explore review time.
+- Showcase PR #113: the repo rarely merges community entries; treat it as unlikely.
 
 ## Real-world validation (needs people)
 
-- A small pilot with real users and giving the prepared workshop (`public/learn/workshop.html`).
+- A small pilot with real users and giving the workshop (`public/learn/workshop.html`).
