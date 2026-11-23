@@ -1,6 +1,6 @@
 # Eindrapport — HarborVoice AI, definitieve afronding
 
-> **Bijgewerkt op 20 november 2026:** zie [STATUS-UPDATE-2026-11-20-NL.md](STATUS-UPDATE-2026-11-20-NL.md). De SDK-PR is gemerged, het ElevenReader-boek staat klaar om opnieuw in te dienen en er draait nu monitoring.
+> **Bijgewerkt op 23 november 2026:** zie [STATUS-UPDATE-2026-11-23-NL.md](STATUS-UPDATE-2026-11-23-NL.md). Productielogin hersteld, boek opnieuw ingediend, hersteltest en agenttests geslaagd, SDK-PR gemerged.
 
 16–17 november 2026. Alles hieronder is gecontroleerd tegen echte bronnen: GitHub, de ElevenLabs-app en -API, Vercel-metadata, de productiedatabase (alleen-lezen), Gmail en de gebouwde site. Waar iets niet geverifieerd is, staat dat erbij.
 
