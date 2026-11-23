@@ -35,6 +35,8 @@ Nora looks up synthetic shipments, explains source-grounded procedures and prepa
 
 [Architecture](docs/elite/architecture.md) · [Setup and CLI](docs/elite/cli.md) · [Synchronization](docs/elite/synchronization.md) · [Security](SECURITY.md) · [Media provenance](docs/elite/creative-production.md)
 
+> **Runtime closure · 23 November 2026:** production sign-in and browser flow verified; encrypted live export restored successfully in isolation. Physical voice acceptance remains explicitly open. [Evidence and remaining boundaries](docs/final-closeout/RUNTIME-CLOSURE-2026-11-23-NL.md).
+
 ## Learn
 
 Free, reproducible tutorials and a runnable workshop are published at **[phlppgdfry.github.io/harborvoice-ai/learn/](https://phlppgdfry.github.io/harborvoice-ai/learn/)**:
@@ -138,7 +140,7 @@ This shared operator token is for a single-user workbench, not enterprise SSO or
 
 ### Webhooks
 
-Expose `POST /api/webhooks/elevenlabs` over HTTPS using your deployment infrastructure, set `ELEVENLABS_WEBHOOK_SECRET`, and configure the matching ElevenLabs webhook. Signature verification is covered by local tests. Real ElevenLabs webhook delivery has not been verified. Raw payloads are retained in the configured SQLite or PostgreSQL store. PostgreSQL prunes records older than 30 days on workspace mutation; scheduled retention and provider-side deletion still require owner decisions.
+Expose `POST /api/webhooks/elevenlabs` over HTTPS using your deployment infrastructure, set `ELEVENLABS_WEBHOOK_SECRET`, and configure the matching ElevenLabs webhook. Signature verification is covered by local tests. The Nora-only HMAC webhook is configured on 24 November with transcript excluded and audio disabled; analysis fields can still contain sensitive content. Actual ElevenLabs post-call delivery has not been verified. Raw payloads are retained in the configured SQLite or PostgreSQL store. PostgreSQL prunes records older than 30 days on workspace mutation; scheduled retention and provider-side deletion still require owner decisions.
 
 ## Verification
 

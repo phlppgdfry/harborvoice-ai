@@ -13,7 +13,9 @@
 | Old cookie after sign-out                                        | **401** (revocation works)                                               |
 | Deployment freeze                                                | unchanged: `git.deploymentEnabled=false`, Git deployments disabled       |
 
-The code was never printed or committed; it was passed to `curl` from the file. One sign-in attempt was used.
+The code was never printed or committed. Subsequent automated hosted checks on 23 November also passed HTTPS sign-in, real database/provider readiness, agent selection, mobile layout and logout revocation without starting a call. The verifier now requires explicit environment selection and supports a private raw-code file; preview credential files are no longer auto-loaded.
+
+The already configured 21 November production value was activated by redeploying the same source and promoting `dpl_Aye4R6dFvuh8ankzgmx4oHi8EC3U`. No second rotation was necessary.
 
 ---
 
@@ -57,6 +59,6 @@ Rollback: the previous deployment stays available; `vercel rollback` restores it
 
 Option B was not executed: the task forbids rotating production credentials without explicit approval.
 
-## Not verified
+## Historical verification limit (17 November; superseded above)
 
 The authenticated workflow (workspace read, features, logout revocation) was not re-tested on production, because no valid production credential is available. Anonymous requests to private routes still return 401, as intended.

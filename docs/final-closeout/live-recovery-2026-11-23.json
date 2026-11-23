@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-23T20:51:18.823Z",
+  "passed": true,
+  "scope": "Live Neon source READ ONLY, consistent exported snapshot; encrypted local backup decrypted and restored only to a disposable unexposed local PostgreSQL 18 container.",
+  "sourceVersion": 180007,
+  "rows": {
+    "workspace": 1,
+    "webhooks": 0,
+    "revokedSessions": 4
+  },
+  "schemaVersion": 1,
+  "workspaceDigestMatched": true,
+  "workspaceSchemaValid": true,
+  "encryptedArtifactVerified": true,
+  "elapsedSeconds": 32,
+  "productionWrites": false,
+  "productionRestore": false,
+  "limitations": "Not provider point-in-time recovery or offsite/scheduled backup. Encryption key is private on this Mac alongside backup; owner must arrange separate key custody for disaster recovery."
+}

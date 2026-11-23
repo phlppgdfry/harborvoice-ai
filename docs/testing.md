@@ -52,6 +52,13 @@ access. The latter is attached only to the selected deployment origin. Secrets c
 loaded from ignored `.env.smoke.local` (`HARBORVOICE_SMOKE_ENV` overrides the path).
 This default checks real database/provider readiness and login/logout without a call.
 
+For production, set `HARBORVOICE_OPERATOR_CODE_FILE` to a private file containing only
+the raw production operator code (no dotenv assignment). It takes precedence over
+ambient `OPERATOR_TOKEN`. Preview `.env.operator.local` and `.env.development.local`
+are deliberately not loaded automatically: preview and production credentials differ.
+No-call example: `HOSTED_URL=https://harborvoice-ai.vercel.app HARBORVOICE_OPERATOR_CODE_FILE=/private/path/to/code npm run verify:production`.
+Never commit that file or pass its contents on the command line.
+
 `npm run verify:production -- --live` requires explicit authorization to use existing
 included credits. It checks the included balance, uses one prerecorded synthetic question,
 closes the browser within 30 seconds, and writes an attempt marker before starting.

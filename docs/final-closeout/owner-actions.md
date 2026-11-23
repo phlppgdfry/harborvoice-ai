@@ -4,7 +4,7 @@ Updated 23 November 2026.
 
 ## Still open
 
-1. **Real voice test with a microphone** (15 min, after the credit reset on 7 December). Live calls use credits and only 18 are left this month.
+1. **Real voice test with a microphone — explicitly left OPEN by owner decision on 23 November.** Optional acceptance session after the credit reset on 7 December. Live calls use credits and only 18 are left this month.
    - Where: <https://harborvoice-ai.vercel.app> on a laptop with Chrome (or a phone) and a headset.
    - Sign in: **Settings** → paste the operator code from `~/harborvoice-production-review/.env.operator.production.local` (or your password manager).
    - Go to **Voice agents** → choose a language → **Start live voice** → allow the microphone.
@@ -15,7 +15,7 @@ Updated 23 November 2026.
      4. Listen for pronunciation of place names and numbers, and how long she takes to answer.
    - Then open **Conversations** and check the transcript was saved. Write down anything odd; I'll turn it into fixes and tests.
 2. **Product Launch template** (~5,550 credits). This is not possible next week: credits reset on **7 December 2026**. Do it after that, with a product photo that has no printed text. See [product-launch.md](product-launch.md#options-for-later-next-billing-period).
-3. **After 7 December, optional:** test webhook delivery after a call (one real call is enough, combined with item 1).
+3. **After 7 December, optional:** verify real post-call webhook delivery (combine with item 1). The Nora-only HMAC endpoint is now configured, with transcript excluded and no audio; no fresh call was made.
 
 ## Done on 20–23 November
 

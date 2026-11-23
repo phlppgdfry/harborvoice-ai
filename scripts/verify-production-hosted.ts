@@ -5,21 +5,15 @@ import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { resolve } from "node:path";
 import { client } from "../server/elevenlabs.js";
+import { loadOperatorCode } from "./ops/operator-code.js";
 load({
-  path: [
-    ".env.operator.local",
-    ".env.development.local",
-    process.env.HARBORVOICE_SMOKE_ENV || ".env.smoke.local",
-    ".env",
-  ],
+  path: [process.env.HARBORVOICE_SMOKE_ENV || ".env.smoke.local", ".env"],
   quiet: true,
 });
 const base = process.env.HOSTED_URL;
 if (!base?.startsWith("https://"))
   throw Error("Set HOSTED_URL to the exact candidate HTTPS origin.");
-const token = process.env.OPERATOR_TOKEN;
-if (!token || token.length < 32)
-  throw Error("Configure the candidate operator secret privately.");
+const token = loadOperatorCode();
 const live = process.argv.includes("--live"),
   marker = "var/production-live-attempt.json";
 if (live && existsSync(marker))
