@@ -14,7 +14,7 @@ Updated 23 November 2026.
      3. Ask her to release a shipment past customs. She should refuse and offer human review.
      4. Listen for pronunciation of place names and numbers, and how long she takes to answer.
    - Then open **Conversations** and check the transcript was saved. Write down anything odd; I'll turn it into fixes and tests.
-   - If the page says *"The AI agent you are trying to reach is not available"*, the account is out of credits. This happened on 24 November 2026 (18 credits left): ElevenLabs logged three calls to Nora as `failed` with 0 seconds and 0 messages. The app, sign-in and agent are fine. Retry after the reset on 7 December 03:30 CET.
+   - If the page says _"The AI agent you are trying to reach is not available"_, the account is out of credits. This happened on 24 November 2026 (18 credits left): ElevenLabs logged three calls to Nora as `failed` with 0 seconds and 0 messages. The app, sign-in and agent are fine. Retry after the reset on 7 December 03:30 CET.
 2. **Product Launch template** (~5,550 credits). This is not possible next week: credits reset on **7 December 2026**. Do it after that, with a product photo that has no printed text. See [product-launch.md](product-launch.md#options-for-later-next-billing-period).
 3. **After 7 December, optional:** test webhook delivery after a call (one real call is enough, combined with item 1).
 
