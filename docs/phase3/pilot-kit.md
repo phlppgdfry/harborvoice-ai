@@ -22,7 +22,7 @@ What problem does this solve? Which label confused you? Could you identify a fai
 
 ## Consent and privacy text
 
-Participation is voluntary; you may stop or skip questions. No recording by default. We request permission to retain anonymized task notes for 30 days to improve the product. Do not include confidential information. Organizer must provide a real private contact/deletion route and confirm the lawful collection setup before collecting data. Declining data retention does not prevent using the demo. Quotes/testimonials need separate explicit approval.
+Participation is voluntary; you may stop or skip questions. The demo itself records nothing. **If you speak with the live voice agent, ElevenLabs stores the audio and transcript of that call** (account setting checked 17 November 2026: voice recording on, no automatic deletion). The organizer deletes pilot conversations at ElevenLabs after the pilot and confirms this to you; you can also use the text and fixture parts of the demo without any recording. Do not say personal or confidential details during a call. We request permission to retain anonymized task notes for 30 days to improve the product. Do not include confidential information. Organizer must provide a real private contact/deletion route and confirm the lawful collection setup before collecting data. Declining data retention does not prevent using the demo. Quotes/testimonials need separate explicit approval.
 
 ## Issue workflow and backlog
 

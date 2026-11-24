@@ -14,6 +14,7 @@ Updated 23 November 2026.
      3. Ask her to release a shipment past customs. She should refuse and offer human review.
      4. Listen for pronunciation of place names and numbers, and how long she takes to answer.
    - Then open **Conversations** and check the transcript was saved. Write down anything odd; I'll turn it into fixes and tests.
+   - If the page says _"The AI agent you are trying to reach is not available"_, the account is out of credits. This happened on 24 November 2026 (18 credits left): ElevenLabs logged three calls to Nora as `failed` with 0 seconds and 0 messages. The app, sign-in and agent are fine. Retry after the reset on 7 December 03:30 CET.
 2. **Product Launch template** (~5,550 credits). This is not possible next week: credits reset on **7 December 2026**. Do it after that, with a product photo that has no printed text. See [product-launch.md](product-launch.md#options-for-later-next-billing-period).
 3. **After 7 December, optional:** verify real post-call webhook delivery (combine with item 1). The Nora-only HMAC endpoint is now configured, with transcript excluded and no audio; no fresh call was made.
 
@@ -23,6 +24,8 @@ Updated 23 November 2026.
 - ElevenReader book re-submitted as “Philippe Godfroy”, pending review.
 - Neon restore drill passed; restore window 6 hours ([production-recovery.md](production-recovery.md)).
 - Agent regression re-run: 6/6 on the current version (1,829 credits).
+- Next Reply and Tool Call unit tests added: 40/40 over five repeats, 0 credits (24 Nov). See [agent-unit-tests.md](agent-unit-tests.md).
+- Pilot consent text now matches the provider setting (calls are recorded and kept until deleted).
 - Follow-ups sent to ElevenLabs support (Music + Explore) and on Showcase PR #113.
 - Live monitor checks the site and production every 6 hours and emails on failure.
 - Owner decisions: video and music OK, 3,013 credits OK, retention unchanged, no outreach posts.
