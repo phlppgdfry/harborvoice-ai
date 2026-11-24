@@ -2,7 +2,7 @@
 
 Run on 24 November 2026 against `HarborVoice · Nora` (`agent_6901m6t6k3tpfnk9n2z3q2h1et7a`), main branch, version `agtvrsn_8401m85awcpgex5vzk25szr2kdte`. This is the version that carries the Nora-only post-call webhook configured on 24 November ([webhook evidence](webhook-configuration-2026-11-24.json)), so these runs are the first quality check of that version. Before this date the workspace held only simulation tests.
 
-Unit tests evaluate one agent turn. They consumed **0 credits** (account counter unchanged at 18 remaining), so they can run at any time, also before the 7 December reset.
+Unit tests evaluate one agent turn. The first run consumed **0 credits** (counter unchanged at 18 remaining). After the 5× run and one music composition plan the counter reached 0; the counter cannot show which of the two used those 18 credits, so treat repeated runs as possibly paid and read the balance first.
 
 ## Tests
 

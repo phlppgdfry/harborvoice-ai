@@ -1,5 +1,7 @@
 # HarborVoice AI v2.1 — Recognition & Community Sprint
 
+> **Historical snapshot.** Statuses below describe the date of this report. Current status: [MASTER-COMPLETION-TRACKER.md](../final-closeout/MASTER-COMPLETION-TRACKER.md). Since then, among others: production sign-in repaired (23 Nov), Neon restore drill passed, SDK PR #484 merged, Next Reply/Tool Call tests 40/40 (24 Nov).
+
 This report records an independent project delivery. It does not claim completion of all requested publication goals, official affiliation, certification, Showcase acceptance or Top User status.
 
 ## Delivered work and exact states

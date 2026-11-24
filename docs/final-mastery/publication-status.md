@@ -1,5 +1,7 @@
 # External publication dashboard
 
+> **Historical snapshot.** Statuses below describe the date of this report. Current status: [MASTER-COMPLETION-TRACKER.md](../final-closeout/MASTER-COMPLETION-TRACKER.md). Since then, among others: production sign-in repaired (23 Nov), Neon restore drill passed, SDK PR #484 merged, Next Reply/Tool Call tests 40/40 (24 Nov).
+
 Last reviewed 9 November 2026. Statuses describe actual outcomes, never acceptance inferred from preparation. No external submissions or personal-account connections were performed in Phase 4.
 
 | Opportunity                    | State                  | Evidence                                                                                                                                                                            | Required next action                                                                                                      |

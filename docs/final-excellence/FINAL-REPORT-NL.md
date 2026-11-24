@@ -1,5 +1,7 @@
 # HarborVoice AI — definitief audit- en overdrachtsrapport
 
+> **Historisch overzicht.** Statussen hieronder gelden voor de datum van dit rapport. De actuele stand staat in [MASTER-COMPLETION-TRACKER.md](../final-closeout/MASTER-COMPLETION-TRACKER.md). Sindsdien o.a.: productielogin hersteld (23 nov), Neon-hersteltest geslaagd, SDK-PR #484 gemerged, Next Reply/Tool Call-tests 40/40 (24 nov).
+
 10 november 2026, Europe/Brussels. Het ecosysteem is geschikt voor een professionele publieke presentatie **als aantoonbare software-, integratie- en creatieve case study met duidelijke beperkingen**. Het is niet verantwoord om het geheel als volledig geaccepteerde enterpriseproductie, bewezen algemene agentbetrouwbaarheid of officieel onderscheiden portfolio te presenteren.
 
 ## Wat daadwerkelijk bestaat

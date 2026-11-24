@@ -1,6 +1,6 @@
 # Owner actions
 
-Updated 23 November 2026.
+Updated 24 November 2026.
 
 ## Still open
 
@@ -17,6 +17,9 @@ Updated 23 November 2026.
    - If the page says _"The AI agent you are trying to reach is not available"_, the account is out of credits. This happened on 24 November 2026 (18 credits left): ElevenLabs logged three calls to Nora as `failed` with 0 seconds and 0 messages. The app, sign-in and agent are fine. Retry after the reset on 7 December 03:30 CET.
 2. **Product Launch template** (~5,550 credits). This is not possible next week: credits reset on **7 December 2026**. Do it after that, with a product photo that has no printed text. See [product-launch.md](product-launch.md#options-for-later-next-billing-period).
 3. **After 7 December, optional:** verify real post-call webhook delivery (combine with item 1). The Nora-only HMAC endpoint is now configured, with transcript excluded and no audio; no fresh call was made.
+
+4. **December feature plan** — every unused ElevenLabs feature with a plan and cost band is in [capability-status.md](capability-status.md). Agent items first (guardrails, structured procedure, workflows, handoff, realtime latency), then audio/creative items. Owner decisions there: server tools (needs a deploy), npm release of AgentOps Kit, Startup Grant, Capability Explorer page.
+5. **Credits:** 0 left on 24 November; the reset is 7 December 03:30 CET. Read the balance before any paid step.
 
 ## Done on 20–23 November
 
