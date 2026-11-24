@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-23T23:16:04.151Z",
+  "url": "https://harborvoice-ai.vercel.app",
+  "live": false,
+  "audioFrames": 0,
+  "observedAccountCreditDelta": null,
+  "checks": [
+    "HTTPS operator sign-in; secure HttpOnly Strict cookie; anonymous workspace denied",
+    "Real remote PostgreSQL and authenticated ElevenLabs agent readiness; production demo rejected",
+    "Real configured-agent selection and read-only provider verification render",
+    "Hosted mobile view has no horizontal overflow",
+    "Hosted logout denies subsequent workspace access"
+  ],
+  "errors": [],
+  "passed": true,
+  "limitations": "Synthetic prerecorded microphone; physical device permissions and subjective speech quality not assessed. Account delta can include concurrent usage/delayed billing."
+}

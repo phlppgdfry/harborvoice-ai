@@ -44,7 +44,7 @@ No row content was read.
 
 From the 10 November consolidation (unchanged code): migrations, transactions, parallel updates, rollback, restart persistence, authorization, logout revocation, import and deletion pass against a disposable PostgreSQL 17 container, and a real `pg_dump`/`pg_restore` round trip to a second database succeeds (`npm run test:postgres`). That proves the application can be backed up and restored. It does not prove the live provider's backups.
 
-## Not verified
+## Historical gaps (17 November; superseded by the dated results above)
 
 - Neon backup settings, history retention window and point-in-time restore: they live in the Neon console and need the Neon account. No Neon credentials or CLI are configured here, and the Vercel integration does not expose them.
 - Who is responsible for a restore, and the target recovery point and time.
@@ -59,3 +59,26 @@ From the 10 November consolidation (unchanged code): migrations, transactions, p
 5. Record: restore window, time taken, who did it. Proposed targets for this demo app: recovery point ≤ 24 hours, recovery time ≤ 1 hour.
 
 Never restore over the production branch; promote a verified branch only as a separate, approved rollout.
+
+## Independent encrypted export / local restore — 23 November 2026
+
+In addition to the console drill recorded above, `scripts/ops/verify-live-recovery.ts`
+exported the live PostgreSQL 18.7 schema using a repeatable-read **READ ONLY**
+transaction and shared snapshot. A real custom-format dump was encrypted with
+AES-256-GCM, read back, decrypted, checksum-verified and restored into a disposable,
+unexposed local PostgreSQL 18 container. Rows, workspace digest and application
+schema validation matched: workspace 1, webhook events 0, revoked sessions 4,
+migration version 1. PASS at 20:51 UTC; elapsed 32 seconds. No production writes
+or restore over production occurred. This is independent of provider PITR.
+
+To repeat deliberately: configure a private dotenv file with the production
+`DATABASE_URL_UNPOOLED`, then run
+`HARBORVOICE_RECOVERY_ENV=/private/path/to/env node --import tsx scripts/ops/verify-live-recovery.ts --live-readonly`.
+Docker and the official PostgreSQL 18 image are required. No database port is exposed.
+Reports go to ignored `var/closure`; encrypted artifacts default to a private dated
+folder under `~/harborvoice-private-recovery`. Never publish dumps or encryption keys.
+
+**Remaining operational limit:** the encrypted export and its key currently reside
+on the same Mac. This verifies recovery mechanics, not offsite disaster protection
+or an automatic backup schedule. Separate key custody and backup ownership remain
+necessary for real customer production use.

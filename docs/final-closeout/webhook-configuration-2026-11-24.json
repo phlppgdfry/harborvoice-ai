@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-23T23:14:35.102Z",
+  "agentName": "HarborVoice \u00b7 Nora",
+  "versionId": "agtvrsn_8401m85awcpgex5vzk25szr2kdte",
+  "agentWebhooks": {
+    "postCallWebhookId": "b1d6ce07b4c847cb9b90a7f20840f9ad",
+    "events": ["transcript"],
+    "transcriptFormat": "json",
+    "excludeTranscript": true,
+    "sendAudio": false
+  },
+  "workspacePostCallWebhookConfigured": false,
+  "limitations": "Configuration readback only. No call, provider delivery, speech or fresh quality evaluation executed."
+}
