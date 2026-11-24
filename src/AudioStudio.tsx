@@ -384,10 +384,7 @@ function StudioForm({
                       ["music_v2_5", "Music v2.5"],
                       ["music_v2", "Music v2"],
                     ]
-                  : [
-                      ["eleven_text_to_sound_v3", "Sound Effects v3"],
-                      ["eleven_text_to_sound_v2", "Sound Effects v2"],
-                    ]
+                  : [["eleven_text_to_sound_v3", "Sound Effects v3"]]
               ).map(([value, label]) => (
                 <option value={value} key={value}>
                   {label}

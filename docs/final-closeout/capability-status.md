@@ -1,6 +1,6 @@
 # ElevenLabs capability status (current)
 
-Checked 24 November 2026. This file is the **current** view of the 122 rows in the historical [capability matrix](../final-excellence/capability-matrix.json); older matrices are snapshots. Per-item project status lives in [MASTER-COMPLETION-TRACKER.md](MASTER-COMPLETION-TRACKER.md).
+Checked 24 November 2026; changelog re-checked 25 November. This file is the **current** view of the 122 rows in the historical [capability matrix](../final-excellence/capability-matrix.json); older matrices are snapshots. Per-item project status lives in [MASTER-COMPLETION-TRACKER.md](MASTER-COMPLETION-TRACKER.md).
 
 ## Counts
 
@@ -59,6 +59,18 @@ Credits: the included monthly credits are used up (0 left on 24 November); nothi
 | Image editing, Flows agent               | One edit of an existing still; one flow built by the agent       | low–medium    |
 | Lip sync, avatars, Dubbing Studio, GenFM | One short clip each, only if it improves the showcase            | high          |
 | Audio Native                             | Narration player on one Learn page                               | low           |
+
+### New since the 10 November matrix (changelog checked 25 November)
+
+| Change                                                                       | What it means here                                                                                                                                                            | Cost   |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `music_v1` removed 31 Jan 2027, `eleven_text_to_sound_v2` removed 1 Mar 2027 | **Done in code:** both dropped from the live generation options; existing sample files stay. Production picks this up at the next deploy (deploys are frozen; owner decision) | 0      |
+| Tools as code (SDK 2.79.0, Python and JS)                                    | Define `lookup_shipment` / `request_escalation` in code next to agents-as-code                                                                                                | 0      |
+| Hosted MCP: create, test and manage agents                                   | Already used in this project for tests                                                                                                                                        | 0      |
+| Eleven Realtime models for agents                                            | Part of the December latency comparison                                                                                                                                       | medium |
+| More redaction entity types                                                  | Redaction stays plan restricted on Creator                                                                                                                                    | —      |
+| Content Provenance API (beta)                                                | Check one of our generated files against the ElevenLabs watermark                                                                                                             | low    |
+| Lower Speech to Text prices                                                  | Makes multichannel and realtime transcription tests cheaper in December                                                                                                       | —      |
 
 ### Needs an owner decision (no credits)
 
