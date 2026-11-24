@@ -1,5 +1,7 @@
 # Final capability evidence matrix
 
+> **Historical snapshot.** Statuses below describe the evidence at the time this file was written. The current status of every open item is in [docs/final-closeout/MASTER-COMPLETION-TRACKER.md](../final-closeout/MASTER-COMPLETION-TRACKER.md). Since then: privacy/retention was reviewed and decided by the owner, Next Reply/Tool Call tests and repeated runs exist ([agent-unit-tests.md](../final-closeout/agent-unit-tests.md)), and site/production monitoring runs every 6 h. Post-call webhook delivery is still unproven.
+
 119 provider capability rows reconciled against historical evidence, read-only account/resource observations and official URL audit. Native IDs unavailable per individual capability are null; see linked resource audit instead of inferring IDs. Full new provider coverage is not claimed. Focused current documentation review is in capability-updates.md.
 
 The [complete JSON](capability-matrix.json) records interfaces, plan restrictions, evidence and remaining work per row. The later approved learning/Scribe QA and private template repair supersede the initial zero-budget observation for those specific rows.
