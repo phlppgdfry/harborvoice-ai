@@ -24,6 +24,8 @@ Updated 23 November 2026.
 - ElevenReader book re-submitted as “Philippe Godfroy”, pending review.
 - Neon restore drill passed; restore window 6 hours ([production-recovery.md](production-recovery.md)).
 - Agent regression re-run: 6/6 on the current version (1,829 credits).
+- Next Reply and Tool Call unit tests added: 40/40 over five repeats, 0 credits (24 Nov). See [agent-unit-tests.md](agent-unit-tests.md).
+- Pilot consent text now matches the provider setting (calls are recorded and kept until deleted).
 - Follow-ups sent to ElevenLabs support (Music + Explore) and on Showcase PR #113.
 - Live monitor checks the site and production every 6 hours and emails on failure.
 - Owner decisions: video and music OK, 3,013 credits OK, retention unchanged, no outreach posts.
