@@ -1,5 +1,7 @@
 # Statusupdate — 20 november 2026
 
+> **Historisch overzicht.** Statussen hieronder gelden voor de datum van dit rapport. De actuele stand staat in [MASTER-COMPLETION-TRACKER.md](MASTER-COMPLETION-TRACKER.md). Sindsdien o.a.: productielogin hersteld (23 nov), Neon-hersteltest geslaagd, SDK-PR #484 gemerged, Next Reply/Tool Call-tests 40/40 (24 nov).
+
 Vervolg op het [eindrapport](ULTIMATE-COMPLETION-REPORT-NL.md). Alles hieronder is vandaag gecontroleerd in GitHub, de ElevenLabs-app, Gmail en op de live site.
 
 ## Wat er sinds 17 november veranderd is

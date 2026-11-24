@@ -1,5 +1,7 @@
 # Pre-Phase 4 integration and release audit
 
+> **Historical snapshot.** Statuses below describe the date of this report. Current status: [MASTER-COMPLETION-TRACKER.md](../final-closeout/MASTER-COMPLETION-TRACKER.md). Since then, among others: production sign-in repaired (23 Nov), Neon restore drill passed, SDK PR #484 merged, Next Reply/Tool Call tests 40/40 (24 Nov).
+
 Audit: 9 November 2026 (Europe/Brussels). Read this with the linked GitHub PR/check receipts. This is an engineering release review, not an independent security certification. No paid ElevenLabs generation/evaluation, credit purchase, npm publication, external article, application or upstream submission was performed.
 
 ## Stable release, Git and integration scope

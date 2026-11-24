@@ -1,5 +1,7 @@
 # Phase 3 — Ecosystem Leadership: uitvoeringsrapport
 
+> **Historisch overzicht.** Statussen hieronder gelden voor de datum van dit rapport. De actuele stand staat in [MASTER-COMPLETION-TRACKER.md](../final-closeout/MASTER-COMPLETION-TRACKER.md). Sindsdien o.a.: productielogin hersteld (23 nov), Neon-hersteltest geslaagd, SDK-PR #484 gemerged, Next Reply/Tool Call-tests 40/40 (24 nov).
+
 Datum: 9 november 2026, Belgische tijd. Dit rapport beschrijft de daadwerkelijke oplevering en maakt onderscheid tussen werkende software, voorbereid materiaal en nog niet uitgevoerd onderzoek. De kandidaten zijn niet als stabiele producten, officiële erkenning of extern gevalideerde diensten uitgebracht.
 
 ## Wat gebouwd is

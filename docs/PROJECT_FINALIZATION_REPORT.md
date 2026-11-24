@@ -1,5 +1,7 @@
 # Project finalization report — HarborVoice persistent runtime
 
+> **Historical snapshot.** Statuses below describe the date of this report. Current status: [MASTER-COMPLETION-TRACKER.md](final-closeout/MASTER-COMPLETION-TRACKER.md). Since then, among others: production sign-in repaired (23 Nov), Neon restore drill passed, SDK PR #484 merged, Next Reply/Tool Call tests 40/40 (24 Nov).
+
 Verified 9 November 2026. This report concerns the private single-operator application,
 with synthetic logistics records. It does not certify a customer deployment or enterprise SaaS.
 
