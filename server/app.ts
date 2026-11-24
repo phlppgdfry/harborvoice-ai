@@ -783,9 +783,7 @@ export function createApp(
     const v = z
       .object({
         text,
-        modelId: z
-          .enum(["eleven_text_to_sound_v2", "eleven_text_to_sound_v3"])
-          .optional(),
+        modelId: z.enum(["eleven_text_to_sound_v3"]).optional(),
         durationSeconds: z.number().min(0.5).max(30).default(5),
       })
       .parse(req.body);
@@ -802,7 +800,7 @@ export function createApp(
     const v = z
       .object({
         text,
-        modelId: z.enum(["music_v1", "music_v2", "music_v2_5"]).optional(),
+        modelId: z.enum(["music_v2", "music_v2_5"]).optional(),
         durationSeconds: z.number().min(3).max(30).default(10),
       })
       .parse(req.body);
