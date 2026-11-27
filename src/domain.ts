@@ -201,11 +201,7 @@ export function demoReply(
   language = "en",
 ): Message {
   const l = localized[language as keyof typeof localized] || localized.en;
-  if (
-    /ignore.*(instruction|rule)|bypass|remove.*hold|release.*customs/i.test(
-      text,
-    )
-  )
+  if (looksLikeOverride(text))
     return {
       role: "agent",
       text: "I cannot bypass customs controls or release cargo. I can prepare an escalation for an operator.",
@@ -293,4 +289,23 @@ export function runEvaluations() {
       scope: "Deterministic demo logic; not an LLM evaluation",
     };
   });
+}
+
+// Linear-time version of /ignore.*(instruction|rule)|bypass|remove.*hold|release.*customs/i.
+// The regex backtracks quadratically on long user text (CodeQL js/polynomial-redos).
+function looksLikeOverride(text: string): boolean {
+  const t = text.toLowerCase();
+  const after = (word: string, ...targets: string[]) => {
+    const i = t.indexOf(word);
+    return (
+      i !== -1 &&
+      targets.some((target) => t.indexOf(target, i + word.length) !== -1)
+    );
+  };
+  return (
+    after("ignore", "instruction", "rule") ||
+    t.includes("bypass") ||
+    after("remove", "hold") ||
+    after("release", "customs")
+  );
 }

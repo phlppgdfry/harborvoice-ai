@@ -135,8 +135,17 @@ export function createApp(
       res.status(503).json({ status: "unavailable", database: "unavailable" });
     }
   });
+  // ElevenLabs sends a handful of webhooks per call; 120/min leaves headroom
+  // while capping how often an unauthenticated caller can make us verify HMACs.
+  const webhookLimit = rateLimit({
+    windowMs: 60_000,
+    limit: 120,
+    standardHeaders: "draft-7",
+    legacyHeaders: false,
+  });
   app.post(
     "/api/webhooks/elevenlabs",
+    webhookLimit,
     express.raw({ type: "application/json", limit: "1mb" }),
     async (req, res) => {
       const secret = process.env.ELEVENLABS_WEBHOOK_SECRET;
@@ -891,7 +900,13 @@ export function createApp(
   );
   if (options.serveFrontend !== false) {
     app.use(express.static(resolve("dist")));
-    app.get("/{*path}", (_req, res) =>
+    const pageLimit = rateLimit({
+      windowMs: 60_000,
+      limit: 600,
+      standardHeaders: "draft-7",
+      legacyHeaders: false,
+    });
+    app.get("/{*path}", pageLimit, (_req, res) =>
       res.sendFile(resolve("dist/index.html")),
     );
   }
